@@ -1,7 +1,7 @@
 """
 CBS Sports NCAAB Scoreboard Scraper
 Scrapes final game scores for NCAA Men's D-I Basketball over a date range.
-Default range: Feb 16, 2026 – Mar 2, 2026
+Window: 3 weeks ending yesterday (computed dynamically at runtime).
 """
 
 from __future__ import annotations
@@ -17,8 +17,8 @@ from bs4 import BeautifulSoup
 # CONFIG
 # =============================================================================
 
-START_DATE = date(2026, 2, 16)
-END_DATE   = date(2026, 3, 2)
+END_DATE   = date.today() - timedelta(days=1)       # yesterday
+START_DATE = END_DATE - timedelta(days=21)           # 3 weeks back
 
 BASE_URL      = "https://www.cbssports.com/college-basketball/scoreboard/FBS/{date_str}/"
 REQUEST_TIMEOUT  = 20          # seconds
