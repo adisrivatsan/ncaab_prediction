@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude Code internals
+.claude/
+memory/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+
+# Trained model files (regeneratable — run model_training.py)
+Python scripts/model_cache/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Test artifacts
+CSV Tests/
+
+# Misc
+*.log

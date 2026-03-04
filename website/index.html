@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCAAB Predictions</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #eef2f7;
+  color: #1a202c;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2040 100%);
+  color: #fff;
+  padding: 28px 24px 36px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 20px;
+  background: #eef2f7;
+  border-radius: 20px 20px 0 0;
+}
+.header-inner { max-width: 1100px; margin: 0 auto; }
+.header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+.header .sub {
+  font-size: 0.8rem; color: rgba(255,255,255,0.6);
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.header .sub span::before { content: '·'; margin-right: 12px; opacity: 0.4; }
+.header .sub span:first-child::before { content: ''; margin-right: 0; }
+
+/* ── Stale banner ───────────────────────────────────────────────────────── */
+.stale-banner {
+  background: #fffbeb; border: 1px solid #fbbf24; color: #92400e;
+  padding: 10px 24px; font-size: 0.82rem; display: none;
+  max-width: 1100px; margin: 16px auto 0; border-radius: 8px;
+}
+
+/* ── Main layout ────────────────────────────────────────────────────────── */
+.main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+
+/* ── Stat cards ─────────────────────────────────────────────────────────── */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px; margin-bottom: 24px;
+}
+.stat-card {
+  background: #fff; border-radius: 10px; padding: 16px 18px;
+  border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+.stat-card .sc-label {
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: #718096; margin-bottom: 6px;
+}
+.stat-card .sc-value { font-size: 2rem; font-weight: 800; line-height: 1; letter-spacing: -1px; }
+.sc-total { color: #2d3748; }
+.sc-high  { color: #276749; }
+.sc-med   { color: #c05621; }
+.sc-low   { color: #718096; }
+
+/* ── Section header ─────────────────────────────────────────────────────── */
+.sec-hdr { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+.sec-hdr h2 { font-size: 0.95rem; font-weight: 700; color: #2d3748; }
+.sec-hdr .sec-count { font-size: 0.72rem; color: #718096; }
+
+/* ── Confidence legend ──────────────────────────────────────────────────── */
+.legend-card {
+  background: #fff; border-radius: 10px; border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  padding: 16px 20px; margin-bottom: 24px;
+}
+.legend-title {
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: #718096; margin-bottom: 12px;
+}
+.legend-rows { display: flex; gap: 16px; flex-wrap: wrap; }
+.legend-row {
+  display: flex; align-items: flex-start; gap: 10px;
+  flex: 1; min-width: 200px;
+}
+.legend-dot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 3px;
+}
+.legend-dot.HIGH { background: #38a169; }
+.legend-dot.MED  { background: #ed8936; }
+.legend-dot.LOW  { background: #a0aec0; }
+.legend-text .legend-label {
+  font-size: 0.75rem; font-weight: 700;
+}
+.legend-label.HIGH { color: #276749; }
+.legend-label.MED  { color: #c05621; }
+.legend-label.LOW  { color: #718096; }
+.legend-text .legend-desc {
+  font-size: 0.72rem; color: #718096; margin-top: 2px; line-height: 1.4;
+}
+.legend-formula {
+  font-size: 0.65rem; color: #a0aec0; margin-top: 4px;
+  font-family: 'SF Mono', 'Menlo', monospace;
+}
+
+/* ── Picks table ────────────────────────────────────────────────────────── */
+.picks-card {
+  background: #fff; border-radius: 10px;
+  border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  overflow: hidden; margin-bottom: 24px;
+}
+.picks-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.picks-table thead th {
+  text-align: left; padding: 10px 16px;
+  font-size: 0.67rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: #718096;
+  border-bottom: 1px solid #e2e8f0; white-space: nowrap; background: #f7fafc;
+}
+.picks-table tbody tr { border-bottom: 1px solid #f0f4f8; transition: background 0.1s; }
+.picks-table tbody tr:hover { background: #f7fafc; }
+.picks-table tbody tr:last-child { border-bottom: none; }
+.picks-table tbody td { padding: 11px 16px; vertical-align: middle; }
+.picks-table tbody tr.row-HIGH { border-left: 3px solid #38a169; }
+.picks-table tbody tr.row-MED  { border-left: 3px solid #ed8936; }
+
+.conf-dot {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.conf-dot::before {
+  content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+}
+.conf-dot.HIGH { color: #276749; }
+.conf-dot.HIGH::before { background: #38a169; }
+.conf-dot.MED  { color: #c05621; }
+.conf-dot.MED::before  { background: #ed8936; }
+
+.pick-winner  { font-size: 0.95rem; font-weight: 700; color: #1a202c; }
+.pick-matchup { font-size: 0.72rem; color: #a0aec0; margin-top: 1px; }
+.prob-value   { font-weight: 700; font-size: 0.95rem; }
+.prob-HIGH    { color: #276749; }
+.prob-MED     { color: #c05621; }
+.ml-fav       { font-weight: 600; color: #e53e3e; }
+.ml-und       { font-weight: 600; color: #3182ce; }
+.std-val      { color: #a0aec0; font-size: 0.78rem; }
+
+/* ── Betting Optimizer ──────────────────────────────────────────────────── */
+.optimizer-card {
+  background: #fff; border-radius: 10px;
+  border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  overflow: hidden; margin-bottom: 24px;
+}
+.optimizer-header {
+  background: #1e3a5f; color: #fff;
+  padding: 12px 18px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.optimizer-header .oh-title { font-size: 0.8rem; font-weight: 700; }
+.optimizer-header .oh-sub   { font-size: 0.68rem; color: rgba(255,255,255,0.6); }
+.optimizer-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.optimizer-table thead th {
+  text-align: left; padding: 8px 16px;
+  font-size: 0.63rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: #718096;
+  background: #f7fafc; border-bottom: 1px solid #e2e8f0; white-space: nowrap;
+}
+.optimizer-table tbody tr { border-bottom: 1px solid #f0f4f8; }
+.optimizer-table tbody tr:last-child { border-bottom: none; }
+.optimizer-table tbody td { padding: 10px 16px; vertical-align: middle; }
+.rank-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  font-size: 0.7rem; font-weight: 800; color: #fff;
+}
+.rank-1 { background: #d4af37; }
+.rank-2 { background: #9e9e9e; }
+.rank-3 { background: #cd7f32; }
+.ev-pos { color: #276749; font-weight: 700; }
+.ev-neg { color: #c53030; font-weight: 700; }
+.ev-neutral { color: #718096; }
+.optimizer-footer {
+  background: #f7fafc; padding: 10px 18px;
+  display: flex; gap: 20px; flex-wrap: wrap;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.72rem; color: #4a5568;
+}
+.optimizer-footer .of-item { display: flex; gap: 6px; align-items: center; }
+.of-label { color: #718096; }
+
+/* ── Pick Analysis (feature drivers + articles) ─────────────────────────── */
+.pa-section-hdr { margin-bottom: 14px; }
+.pa-details {
+  background: #fff; border-radius: 10px;
+  border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  margin-bottom: 10px; overflow: hidden;
+}
+.pa-summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 18px;
+  font-size: 0.8rem; font-weight: 600; color: #4a5568;
+  user-select: none;
+}
+.pa-summary::-webkit-details-marker { display: none; }
+.pa-summary:hover { background: #f7fafc; color: #2d3748; }
+.pa-details[open] .pa-summary { border-bottom: 1px solid #e2e8f0; }
+.pa-summary-left { display: flex; align-items: center; gap: 10px; }
+.pa-winner-name  { font-weight: 700; color: #1a202c; }
+.pa-matchup-sub  { font-size: 0.7rem; color: #a0aec0; margin-left: 4px; font-weight: 400; }
+.pa-chev { transition: transform 0.2s; color: #a0aec0; font-size: 1.1rem; }
+.pa-details[open] .pa-chev { transform: rotate(90deg); }
+
+.pa-body {
+  padding: 16px 18px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+@media (max-width: 640px) { .pa-body { grid-template-columns: 1fr; } }
+
+.pa-col-title {
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: #718096; margin-bottom: 12px;
+}
+.pa-note {
+  font-size: 0.63rem; color: #a0aec0; margin-top: 8px; line-height: 1.4;
+  padding-top: 8px; border-top: 1px solid #f0f4f8;
+}
+
+/* Feature bars */
+.feat-row { margin-bottom: 10px; }
+.feat-label-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 3px;
+}
+.feat-name  { font-size: 0.72rem; color: #4a5568; font-weight: 500; }
+.feat-contrib { font-size: 0.68rem; font-family: 'SF Mono','Menlo',monospace; }
+.feat-pos { color: #276749; }
+.feat-neg { color: #c53030; }
+.feat-track {
+  height: 6px; background: #f0f4f8; border-radius: 3px; overflow: hidden;
+}
+.feat-fill {
+  height: 100%; border-radius: 3px; transition: width 0.4s ease;
+}
+.feat-fill.pos { background: #38a169; }
+.feat-fill.neg { background: #e53e3e; }
+.feat-direction {
+  font-size: 0.62rem; color: #a0aec0; margin-top: 2px;
+}
+
+/* Articles */
+.team-articles-block { margin-bottom: 14px; }
+.team-articles-block:last-child { margin-bottom: 0; }
+.team-label {
+  font-size: 0.68rem; font-weight: 700; color: #4a5568;
+  margin-bottom: 6px;
+}
+.article-link {
+  display: block; padding: 5px 0;
+  border-bottom: 1px solid #f0f4f8;
+  text-decoration: none;
+}
+.article-link:last-child { border-bottom: none; }
+.article-link:hover .art-title { color: #2b6cb0; text-decoration: underline; }
+.art-source { font-size: 0.6rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 0.06em; }
+.art-title  { font-size: 0.72rem; color: #4a5568; margin-top: 1px; line-height: 1.35; }
+.art-search { font-size: 0.7rem; color: #3182ce; }
+
+/* ── Collapsibles (existing all-data tables) ────────────────────────────── */
+details { margin-bottom: 12px; }
+summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 18px; background: #fff; border-radius: 10px;
+  font-size: 0.8rem; font-weight: 600; color: #4a5568;
+  border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  user-select: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary:hover { background: #f7fafc; color: #2d3748; }
+details[open] summary {
+  border-bottom-left-radius: 0; border-bottom-right-radius: 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.chev { transition: transform 0.2s; color: #a0aec0; font-size: 1.1rem; }
+details[open] .chev { transform: rotate(90deg); }
+.detail-body {
+  background: #fff; border: 1px solid #e2e8f0; border-top: none;
+  border-radius: 0 0 10px 10px; overflow: hidden;
+}
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%; border-collapse: collapse; font-size: 0.78rem; min-width: 480px;
+}
+thead th {
+  text-align: left; padding: 8px 14px;
+  font-size: 0.63rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: #718096;
+  background: #f7fafc; border-bottom: 1px solid #e2e8f0; white-space: nowrap;
+}
+tbody tr { border-bottom: 1px solid #f0f4f8; }
+tbody tr:hover { background: #f7fafc; }
+tbody tr:last-child { border-bottom: none; }
+tbody td { padding: 8px 14px; white-space: nowrap; color: #4a5568; }
+.fw       { font-weight: 700; color: #2d3748; }
+.conf-HIGH { color: #276749; font-weight: 700; }
+.conf-MED  { color: #c05621; font-weight: 700; }
+.conf-LOW  { color: #a0aec0; }
+.ml-n { color: #e53e3e; font-weight: 600; }
+.ml-p { color: #3182ce; font-weight: 600; }
+
+footer {
+  text-align: center; padding: 24px; color: #a0aec0; font-size: 0.72rem;
+  border-top: 1px solid #e2e8f0; margin-top: 20px;
+  background: #fff; border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <h1>NCAAB Predictions</h1>
+    <div class="sub" id="header-sub"><span>Loading…</span></div>
+  </div>
+</header>
+
+<div class="stale-banner" id="stale-banner">
+  ⚠️ Predictions may be stale — last updated <span id="stale-date"></span>
+</div>
+
+<main class="main">
+  <div id="stat-cards"></div>
+  <div id="legend-section"></div>
+  <div id="picks-section"></div>
+  <div id="optimizer-section"></div>
+  <div id="pick-analysis-section"></div>
+  <div id="tables-section"></div>
+</main>
+
+<footer id="footer">Predictions refresh daily · Not financial advice</footer>
+
+<script>
+// ── Formatters ───────────────────────────────────────────────────────────────
+const fPct  = n => (n * 100).toFixed(1) + '%';
+const fML   = n => n >= 0 ? `+${n}` : `${n}`;
+const fDiff = n => (n >= 0 ? '+' : '') + n.toFixed(2);
+
+function winProb(p) {
+  return p.predicted_winner === p.home_team ? p.final_win_prob_home : p.final_win_prob_away;
+}
+function winML(p) {
+  return p.predicted_winner === p.home_team ? p.home_ml : p.away_ml;
+}
+function sortedPicks(preds) {
+  return preds
+    .filter(p => p.confidence === 'HIGH' || p.confidence === 'MED')
+    .sort((a, b) => {
+      if (a.confidence !== b.confidence) return a.confidence === 'HIGH' ? -1 : 1;
+      return winProb(b) - winProb(a);
+    });
+}
+
+function checkStale(gen) {
+  const hours = (Date.now() - new Date(gen)) / 3600000;
+  if (hours > 36) {
+    document.getElementById('stale-banner').style.display = 'block';
+    document.getElementById('stale-date').textContent =
+      new Date(gen).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+  }
+}
+
+// ── Stat cards ───────────────────────────────────────────────────────────────
+function renderStatCards(data) {
+  const s = data.summary;
+  document.getElementById('stat-cards').innerHTML = `
+    <div class="stat-cards" style="margin-bottom:24px">
+      <div class="stat-card">
+        <div class="sc-label">Total Games</div>
+        <div class="sc-value sc-total">${s.total_games}</div>
+      </div>
+      <div class="stat-card">
+        <div class="sc-label">HIGH Confidence</div>
+        <div class="sc-value sc-high">${s.confidence.HIGH}</div>
+      </div>
+      <div class="stat-card">
+        <div class="sc-label">MED Confidence</div>
+        <div class="sc-value sc-med">${s.confidence.MED}</div>
+      </div>
+      <div class="stat-card">
+        <div class="sc-label">LOW Confidence</div>
+        <div class="sc-value sc-low">${s.confidence.LOW}</div>
+      </div>
+      <div class="stat-card">
+        <div class="sc-label">Home Picks</div>
+        <div class="sc-value" style="color:#2b6cb0">${s.home_picks}</div>
+      </div>
+      <div class="stat-card">
+        <div class="sc-label">Away Picks</div>
+        <div class="sc-value" style="color:#9f7aea">${s.away_picks}</div>
+      </div>
+    </div>
+  `;
+}
+
+// ── Confidence legend ─────────────────────────────────────────────────────────
+function renderLegend() {
+  document.getElementById('legend-section').innerHTML = `
+    <div class="legend-card">
+      <div class="legend-title">Confidence Tiers — How to Read Picks</div>
+      <div class="legend-rows">
+        <div class="legend-row">
+          <div class="legend-dot HIGH"></div>
+          <div class="legend-text">
+            <div class="legend-label HIGH">HIGH</div>
+            <div class="legend-desc">All models strongly agree on a decisive winner.
+              Best-quality signal — least model disagreement.</div>
+            <div class="legend-formula">std_dev &lt; 0.08 · margin &gt; 15% from 50/50 (win prob ≥ 65%)</div>
+          </div>
+        </div>
+        <div class="legend-row">
+          <div class="legend-dot MED"></div>
+          <div class="legend-text">
+            <div class="legend-label MED">MED</div>
+            <div class="legend-desc">Models broadly lean toward this winner, but with
+              more spread between outputs. Use alongside your own research.</div>
+            <div class="legend-formula">std_dev &lt; 0.15 · margin &gt; 8% from 50/50 (win prob ≥ 58%)</div>
+          </div>
+        </div>
+        <div class="legend-row">
+          <div class="legend-dot LOW"></div>
+          <div class="legend-text">
+            <div class="legend-label LOW">LOW</div>
+            <div class="legend-desc">Models disagree or the edge is too thin to act on.
+              A best-guess pick only — no meaningful betting signal.</div>
+            <div class="legend-formula">Everything else · std_dev ≥ 0.15 or margin ≤ 8%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ── Picks table ───────────────────────────────────────────────────────────────
+function renderPicks(data) {
+  const picks = sortedPicks(data.predictions);
+  const rows = picks.map(p => `
+    <tr class="row-${p.confidence}">
+      <td><span class="conf-dot ${p.confidence}">${p.confidence}</span></td>
+      <td>
+        <div class="pick-winner">${p.predicted_winner}</div>
+        <div class="pick-matchup">${p.away_team} @ ${p.home_team}</div>
+      </td>
+      <td><span class="prob-value prob-${p.confidence}">${fPct(winProb(p))}</span></td>
+      <td class="${winML(p) < 0 ? 'ml-fav' : 'ml-und'}">${fML(winML(p))}</td>
+      <td class="std-val">${p.model_std_dev.toFixed(3)}</td>
+    </tr>
+  `).join('');
+
+  document.getElementById('picks-section').innerHTML = `
+    <div class="sec-hdr">
+      <h2>Today's Picks</h2>
+      <span class="sec-count">${picks.length} games · HIGH + MED confidence</span>
+    </div>
+    <div class="picks-card">
+      <table class="picks-table">
+        <thead><tr>
+          <th>Confidence</th>
+          <th>Pick &amp; Matchup</th>
+          <th>Win Prob</th>
+          <th>Moneyline</th>
+          <th>Std Dev</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+// ── Betting Optimizer (Cell 14) ───────────────────────────────────────────────
+function renderOptimizer(data) {
+  const picks = data.top_picks || [];
+  if (!picks.length) {
+    document.getElementById('optimizer-section').innerHTML = '';
+    return;
+  }
+
+  const combined_ev   = (data.summary && data.summary.combined_ev != null)
+    ? data.summary.combined_ev : picks.reduce((s, p) => s + p.ev, 0);
+  const total_stake   = picks.reduce((s, p) => s + (p.stake || 5), 0).toFixed(2);
+  const total_if_win  = picks.reduce((s, p) => s + (p.if_win || 0), 0).toFixed(2);
+  const rankColors    = ['rank-1','rank-2','rank-3'];
+
+  const rows = picks.map(p => {
+    const evClass = p.ev > 0 ? 'ev-pos' : p.ev < 0 ? 'ev-neg' : 'ev-neutral';
+    const sideTag = p.bet_side === 'HOME'
+      ? `<span style="color:#2b6cb0;font-size:0.65rem;font-weight:700">HOME</span>`
+      : `<span style="color:#9f7aea;font-size:0.65rem;font-weight:700">AWAY</span>`;
+    return `
+      <tr>
+        <td><span class="rank-badge ${rankColors[(p.rank||1)-1]}">${p.rank}</span></td>
+        <td>
+          <div style="font-weight:700;color:#1a202c">${p.pick} ${sideTag}</div>
+          <div style="font-size:0.7rem;color:#a0aec0">${p.matchup}</div>
+        </td>
+        <td class="${p.confidence === 'HIGH' ? 'conf-HIGH' : 'conf-MED'}">${p.confidence}</td>
+        <td style="font-weight:600;color:${p.ml && p.ml.startsWith('-') ? '#e53e3e' : '#3182ce'}">${p.ml}</td>
+        <td style="font-weight:700">${fPct(p.win_prob)}</td>
+        <td style="color:#4a5568">$${(p.stake||5).toFixed(2)}</td>
+        <td style="color:#276749;font-weight:600">+$${p.if_win.toFixed(2)}</td>
+        <td class="${evClass}">$${p.ev > 0 ? '+' : ''}${p.ev.toFixed(3)}</td>
+      </tr>
+    `;
+  }).join('');
+
+  const evClass = combined_ev > 0 ? 'ev-pos' : combined_ev < 0 ? 'ev-neg' : 'ev-neutral';
+
+  document.getElementById('optimizer-section').innerHTML = `
+    <div class="optimizer-card" style="margin-bottom:24px">
+      <div class="optimizer-header">
+        <div>
+          <div class="oh-title">Betting Optimizer — Top ${picks.length} Straight Picks</div>
+          <div class="oh-sub">Sorted by confidence → expected value → win probability · $5 stake each</div>
+        </div>
+        <div class="oh-sub" style="text-align:right">
+          Combined EV <span class="${evClass}" style="font-size:0.85rem;font-weight:700">$${combined_ev > 0 ? '+' : ''}${combined_ev.toFixed(3)}</span>
+        </div>
+      </div>
+      <table class="optimizer-table">
+        <thead><tr>
+          <th>#</th><th>Pick &amp; Matchup</th><th>Conf</th>
+          <th>ML</th><th>Win Prob</th><th>Stake</th><th>If Win</th><th>EV</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <div class="optimizer-footer">
+        <div class="of-item">
+          <span class="of-label">Total staked:</span>
+          <span style="font-weight:700">$${total_stake}</span>
+        </div>
+        <div class="of-item">
+          <span class="of-label">If all hit:</span>
+          <span style="font-weight:700;color:#276749">+$${total_if_win}</span>
+        </div>
+        <div class="of-item">
+          <span class="of-label">Combined EV:</span>
+          <span class="${evClass}" style="font-weight:700">$${combined_ev > 0 ? '+' : ''}${combined_ev.toFixed(3)}</span>
+        </div>
+        <div class="of-item" style="margin-left:auto">
+          <span style="color:#a0aec0;font-size:0.63rem">EV = educational model output only · not financial advice</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ── Pick Analysis: feature drivers + articles (Cell 14B + 14C) ───────────────
+function renderFeatureBar(driver, maxAbs) {
+  const pct    = maxAbs > 0 ? Math.min((Math.abs(driver.contribution) / maxAbs) * 100, 100) : 0;
+  const isPos  = driver.contribution > 0;
+  const cls    = isPos ? 'pos' : 'neg';
+  const valCls = isPos ? 'feat-pos' : 'feat-neg';
+  const sign   = isPos ? '+' : '';
+  const dir    = isPos ? '↑ favors home' : '↓ favors away';
+  return `
+    <div class="feat-row">
+      <div class="feat-label-row">
+        <span class="feat-name">${driver.label}</span>
+        <span class="feat-contrib ${valCls}">${sign}${driver.contribution.toFixed(4)}</span>
+      </div>
+      <div class="feat-track">
+        <div class="feat-fill ${cls}" style="width:${pct.toFixed(1)}%"></div>
+      </div>
+      <div class="feat-direction">${dir}</div>
+    </div>
+  `;
+}
+
+function renderArticleBlock(teamName, side, articles) {
+  if (!articles || !articles.length) return '';
+  const links = articles.map(a => {
+    if (a.source === 'search') {
+      return `<a class="article-link" href="${a.url}" target="_blank" rel="noopener">
+        <div class="art-source">Google News Search</div>
+        <div class="art-search">🔍 ${a.title}</div>
+      </a>`;
+    }
+    return `<a class="article-link" href="${a.url}" target="_blank" rel="noopener">
+      <div class="art-source">${a.source}</div>
+      <div class="art-title">${a.title}</div>
+    </a>`;
+  }).join('');
+  return `
+    <div class="team-articles-block">
+      <div class="team-label">${teamName} <span style="font-weight:400;color:#a0aec0">(${side})</span></div>
+      ${links}
+    </div>
+  `;
+}
+
+function renderPickAnalysis(data) {
+  // Top 3 optimizer picks first, then remaining MED/HIGH picks
+  const topMatchups = (data.top_picks || []).map(tp => tp.matchup);
+  const allPicks    = sortedPicks(data.predictions);
+  const top3        = allPicks.filter(p =>
+    topMatchups.includes(`${p.away_team} @ ${p.home_team}`)
+  );
+  const rest        = allPicks.filter(p =>
+    !topMatchups.includes(`${p.away_team} @ ${p.home_team}`)
+  );
+  const picks = [...top3, ...rest];
+  if (!picks.length) {
+    document.getElementById('pick-analysis-section').innerHTML = '';
+    return;
+  }
+
+  const cards = picks.map(p => {
+    const drivers  = p.feature_drivers || [];
+    const artHome  = p.articles_home   || [];
+    const artAway  = p.articles_away   || [];
+    const hasArt   = artHome.length || artAway.length;
+
+    // Feature bars
+    const maxAbs   = drivers.length ? Math.max(...drivers.map(d => Math.abs(d.contribution))) : 1;
+    const bars     = drivers.length
+      ? drivers.map(d => renderFeatureBar(d, maxAbs)).join('')
+      : '<div style="font-size:0.72rem;color:#a0aec0">No feature data available for this pick.</div>';
+
+    const driverNote = drivers.length ? `
+      <div class="pa-note">
+        Contributions averaged from Ridge, Gradient Boosting &amp; Logistic models.
+        ↑ positive = home team advantage · ↓ negative = away team advantage.
+        GB contribution is always unsigned (magnitude only).
+      </div>` : '';
+
+    // Articles
+    const artSection = hasArt
+      ? renderArticleBlock(p.home_team, 'Home', artHome) +
+        renderArticleBlock(p.away_team, 'Away', artAway)
+      : '<div style="font-size:0.72rem;color:#a0aec0">Articles available for top 3 picks only.</div>';
+
+    const conf = p.confidence;
+    const dotColor = conf === 'HIGH' ? '#38a169' : '#ed8936';
+
+    return `
+      <details class="pa-details">
+        <summary class="pa-summary">
+          <div class="pa-summary-left">
+            <span style="width:8px;height:8px;border-radius:50%;background:${dotColor};display:inline-block;flex-shrink:0"></span>
+            <span class="pa-winner-name">${p.predicted_winner}</span>
+            <span class="pa-matchup-sub">${p.away_team} @ ${p.home_team} · ${fPct(winProb(p))} · ${conf}</span>
+          </div>
+          <span class="pa-chev">›</span>
+        </summary>
+        <div class="pa-body">
+          <div>
+            <div class="pa-col-title">Feature Drivers (top 5)</div>
+            ${bars}
+            ${driverNote}
+          </div>
+          <div>
+            <div class="pa-col-title">Source Articles</div>
+            ${artSection}
+          </div>
+        </div>
+      </details>
+    `;
+  }).join('');
+
+  document.getElementById('pick-analysis-section').innerHTML = `
+    <div class="sec-hdr pa-section-hdr">
+      <h2>Pick Analysis</h2>
+      <span class="sec-count">Feature drivers + news sources per pick</span>
+    </div>
+    ${cards}
+    <div style="margin-bottom:24px"></div>
+  `;
+}
+
+// ── All-data collapsible tables ───────────────────────────────────────────────
+function rows3(preds) {
+  return preds.map(p => `
+    <tr>
+      <td>${p.home_team}</td><td>${p.away_team}</td>
+      <td>${fPct(p.reg_implied_prob)}</td>
+      <td>${fPct(p.cls_ensemble_prob)}</td>
+      <td class="fw">${fPct(p.final_win_prob_home)}</td>
+      <td class="fw">${p.predicted_winner}</td>
+      <td class="${p.home_ml < 0 ? 'ml-n' : 'ml-p'}">${fML(p.home_ml)}</td>
+      <td class="${p.away_ml < 0 ? 'ml-n' : 'ml-p'}">${fML(p.away_ml)}</td>
+      <td>${p.model_std_dev.toFixed(3)}</td>
+      <td class="conf-${p.confidence}">${p.confidence}</td>
+    </tr>`).join('');
+}
+function rows2(preds) {
+  return preds.map(p => `
+    <tr>
+      <td>${p.home_team}</td><td>${p.away_team}</td>
+      <td>${fPct(p.logistic_prob)}</td>
+      <td>${fPct(p.bayes_prob)}</td>
+      <td>${p.nn_cls_prob != null ? fPct(p.nn_cls_prob) : 'N/A'}</td>
+      <td class="fw">${fPct(p.cls_ensemble_prob)}</td>
+    </tr>`).join('');
+}
+function rows1(preds) {
+  return preds.map(p => `
+    <tr>
+      <td>${p.home_team}</td><td>${p.away_team}</td>
+      <td>${p.ridge_diff != null ? fDiff(p.ridge_diff) : 'N/A'}</td>
+      <td>${p.gb_diff    != null ? fDiff(p.gb_diff)    : 'N/A'}</td>
+      <td>${p.nn_reg_diff != null ? fDiff(p.nn_reg_diff) : 'N/A'}</td>
+      <td class="fw">${p.reg_ensemble_diff != null ? fDiff(p.reg_ensemble_diff) : 'N/A'}</td>
+    </tr>`).join('');
+}
+
+function renderTables(data) {
+  const preds = data.predictions;
+  const n     = preds.length;
+  const makeSection = (title, tableHtml) => `
+    <details>
+      <summary>${title} <span style="color:#a0aec0;font-weight:400;font-size:0.7rem">${n} games</span>
+        <span class="chev">›</span>
+      </summary>
+      <div class="detail-body"><div class="table-wrap">
+        <table>${tableHtml}</table>
+      </div></div>
+    </details>
+  `;
+  const t3 = `<thead><tr><th>Home</th><th>Away</th><th>Reg→Prob</th><th>Cls Prob</th><th>Final%</th><th>Winner</th><th>Home ML</th><th>Away ML</th><th>Std Dev</th><th>Conf</th></tr></thead><tbody>${rows3(preds)}</tbody>`;
+  const t2 = `<thead><tr><th>Home</th><th>Away</th><th>Logistic</th><th>Bayes</th><th>NN Cls</th><th>Cls Ensemble</th></tr></thead><tbody>${rows2(preds)}</tbody>`;
+  const t1 = `<thead><tr><th>Home</th><th>Away</th><th>Ridge</th><th>GB</th><th>NN Reg</th><th>Ensemble Diff</th></tr></thead><tbody>${rows1(preds)}</tbody>`;
+  document.getElementById('tables-section').innerHTML =
+    '<div class="sec-hdr" style="margin-top:8px"><h2>All Data</h2></div>' +
+    makeSection('All Games — Final Ensemble', t3) +
+    makeSection('Model Breakdown — Classification', t2) +
+    makeSection('Model Breakdown — Regression', t1);
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const data = await fetch('predictions_latest.json').then(r => r.json());
+
+    checkStale(data.generated_at);
+
+    const d      = new Date(data.date + 'T12:00:00');
+    const dateStr = d.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric', year:'numeric'});
+    const genStr  = new Date(data.generated_at + 'Z').toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit'});
+    document.getElementById('header-sub').innerHTML = `
+      <span>${dateStr}</span>
+      <span>${data.predictions.length} games</span>
+      <span>Generated ${genStr}</span>
+      <span>TF: ${data.summary.tensorflow_available ? 'Active' : 'Offline'}</span>
+    `;
+    document.getElementById('footer').textContent =
+      `Last updated ${data.generated_at} UTC · Not financial advice`;
+
+    renderStatCards(data);
+    renderLegend();
+    renderPicks(data);
+    renderOptimizer(data);
+    renderPickAnalysis(data);
+    renderTables(data);
+  } catch (e) {
+    document.querySelector('.main').innerHTML =
+      '<p style="color:#c05621;padding:40px;font-size:0.9rem">⚠ Could not load predictions_latest.json. Make sure you are serving from the website/ directory.</p>';
+  }
+}
+init();
+</script>
+</body>
+</html>

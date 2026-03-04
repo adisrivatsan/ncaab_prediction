@@ -1,0 +1,366 @@
+source_name,cbs_name,match_type
+Abilene Christian,Abilene Chr.,fuzzy
+Air Force,Air Force,exact
+Akron,Akron,exact
+Alabama,Alabama,exact
+Alabama A&M,Alabama A&M,exact
+Alabama St.,Alabama St.,exact
+Albany,UAlbany,fuzzy
+Alcorn St.,Alcorn St.,exact
+American,American,exact
+Appalachian St.,Michigan St.,fuzzy
+Arizona,Arizona,exact
+Arizona St.,Arizona St.,exact
+Arkansas,Arkansas,exact
+Arkansas Pine Bluff,Ark.-Pine Bluff,fuzzy
+Arkansas St.,Arkansas St.,exact
+Army,Army,exact
+Auburn,Auburn,exact
+Austin Peay,Austin Peay,exact
+BYU,BYU,exact
+Ball St.,Ball St.,exact
+Baylor,Baylor,exact
+Bellarmine,Bellarmine,exact
+Belmont,Belmont,exact
+Bethune Cookman,Bethune-Cook.,fuzzy
+Binghamton,Binghamton,exact
+Boise St.,Boise St.,exact
+Boston College,Boston College,exact
+Boston University,Boston U.,fuzzy
+Bowling Green,Bowling Green,exact
+Bradley,Bradley,exact
+Brown,Brown,exact
+Bryant,Bryant,exact
+Bucknell,Bucknell,exact
+Buffalo,Buffalo,exact
+Butler,Butler,exact
+Cal Baptist,Cal Baptist,exact
+Cal Poly,Cal Poly,exact
+Cal St. Bakersfield,,unmatched
+Cal St. Fullerton,CS Fullerton,fuzzy
+Cal St. Northridge,CSNorthridge,fuzzy
+California,California,exact
+Campbell,Campbell,exact
+Canisius,Canisius,exact
+Central Arkansas,Cent. Arkansas,fuzzy
+Central Connecticut,,unmatched
+Central Michigan,C. Michigan,fuzzy
+Charleston,Charleston,exact
+Charleston Southern,Charleston So.,fuzzy
+Charlotte,Charlotte,exact
+Chattanooga,Chattanooga,exact
+Chicago St.,Chicago St.,exact
+Cincinnati,Cincinnati,exact
+Clemson,Clemson,exact
+Cleveland St.,Clev. St.,fuzzy
+Coastal Carolina,East Carolina,fuzzy
+Colgate,Colgate,exact
+Colorado,Colorado,exact
+Colorado St.,Colorado,fuzzy
+Columbia,Columbia,exact
+Connecticut,,unmatched
+Coppin St.,Coppin St.,exact
+Cornell,Cornell,exact
+Creighton,Creighton,exact
+Dartmouth,Dartmouth,exact
+Davidson,Davidson,exact
+Dayton,Dayton,exact
+DePaul,DePaul,exact
+Delaware,Delaware,exact
+Delaware St.,Delaware St.,exact
+Denver,Denver,exact
+Detroit Mercy,Detroit,fuzzy
+Drake,Drake,exact
+Drexel,Drexel,exact
+Duke,Duke,exact
+Duquesne,Duquesne,exact
+East Carolina,East Carolina,exact
+East Tennessee St.,Tennessee St.,fuzzy
+East Texas A&M,East Texas A&M,exact
+Eastern Illinois,E. Illinois,fuzzy
+Eastern Kentucky,E. Kentucky,fuzzy
+Eastern Michigan,E. Michigan,fuzzy
+Eastern Washington,E. Washington,fuzzy
+Elon,Elon,exact
+Evansville,Evansville,exact
+FIU,FIU,exact
+Fairfield,Fairfield,exact
+Fairleigh Dickinson,,unmatched
+Florida,Florida,exact
+Florida A&M,Florida A&M,exact
+Florida Atlantic,Florida St.,fuzzy
+Florida Gulf Coast,Florida St.,fuzzy
+Florida St.,Florida St.,exact
+Fordham,Fordham,exact
+Fresno St.,Fresno St.,exact
+Furman,Furman,exact
+Gardner Webb,Gardner-Webb,fuzzy
+George Mason,George Mason,exact
+George Washington,George Wash.,fuzzy
+Georgetown,Georgetown,exact
+Georgia,Georgia,exact
+Georgia Southern,Ga. Southern,fuzzy
+Georgia St.,Georgia St.,exact
+Georgia Tech,Georgia,fuzzy
+Gonzaga,Gonzaga,exact
+Grambling St.,Grambling St.,exact
+Grand Canyon,Grand Canyon,exact
+Green Bay,Green Bay,exact
+Hampton,Hampton,exact
+Harvard,Harvard,exact
+Hawaii,Hawaii,exact
+High Point,High Point,exact
+Hofstra,Hofstra,exact
+Holy Cross,Holy Cross,exact
+Houston,Houston,exact
+Houston Christian,Houston Chr.,fuzzy
+Howard,Howard,exact
+IU Indy,IUI,fuzzy
+Idaho,Idaho,exact
+Idaho St.,Idaho St.,exact
+Illinois,Illinois,exact
+Illinois Chicago,Illinois,fuzzy
+Illinois St.,Illinois St.,exact
+Incarnate Word,Incarnate Word,exact
+Indiana,Indiana,exact
+Indiana St.,Indiana St.,exact
+Iona,Iona,exact
+Iowa,Iowa,exact
+Iowa St.,Iowa St.,exact
+Jackson St.,Jackson St.,exact
+Jacksonville,Jacksonville,exact
+Jacksonville St.,Jacksonville,fuzzy
+James Madison,James Madison,exact
+Kansas,Kansas,exact
+Kansas St.,Kansas St.,exact
+Kennesaw St.,Kennesaw St.,exact
+Kent St.,Kent St.,exact
+Kentucky,Kentucky,exact
+LIU,LIU,exact
+LSU,LSU,exact
+La Salle,La Salle,exact
+Lafayette,Lafayette,exact
+Lamar,Lamar,exact
+Le Moyne,Le Moyne,exact
+Lehigh,Lehigh,exact
+Liberty,Liberty,exact
+Lindenwood,Lindenwood,exact
+Lipscomb,Lipscomb,exact
+Little Rock,Little Rock,exact
+Long Beach St.,,unmatched
+Longwood,Longwood,exact
+Louisiana,Louisiana,exact
+Louisiana Monroe,Louisiana,fuzzy
+Louisiana Tech,Louisiana,fuzzy
+Louisville,Louisville,exact
+Loyola Chicago,Loyola Chi.,fuzzy
+Loyola MD,Loyola-Md.,fuzzy
+Loyola Marymount,,unmatched
+Maine,Maine,exact
+Manhattan,Manhattan,exact
+Marist,Marist,exact
+Marquette,Marquette,exact
+Marshall,Marshall,exact
+Maryland,Maryland,exact
+Maryland Eastern Shore,,unmatched
+Massachusetts,Massachusetts,exact
+McNeese St.,McNeese,fuzzy
+Memphis,Memphis,exact
+Mercer,Mercer,exact
+Mercyhurst,Mercyhurst,exact
+Merrimack,Merrimack,exact
+Miami FL,Miami,fuzzy
+Miami OH,Miami,fuzzy
+Michigan,Michigan,exact
+Michigan St.,Michigan St.,exact
+Middle Tennessee,Middle Tenn.,fuzzy
+Milwaukee,Milwaukee,exact
+Minnesota,Minnesota,exact
+Mississippi,,unmatched
+Mississippi St.,Missouri St.,fuzzy
+Mississippi Valley St.,Miss Valley St.,fuzzy
+Missouri,Missouri,exact
+Missouri St.,Missouri St.,exact
+Monmouth,Monmouth,exact
+Montana,Montana,exact
+Montana St.,Montana St.,exact
+Morehead St.,Morehead St.,exact
+Morgan St.,Morgan St.,exact
+Mount St. Mary's,Mt St Mary's,fuzzy
+Murray St.,Murray St.,exact
+N.C. State,NC State,fuzzy
+NJIT,,unmatched
+Navy,Navy,exact
+Nebraska,Nebraska,exact
+Nebraska Omaha,Nebraska,fuzzy
+Nevada,Nevada,exact
+New Hampshire,New Hamp.,fuzzy
+New Haven,New Haven,exact
+New Mexico,New Mexico,exact
+New Mexico St.,New Mexico,fuzzy
+New Orleans,New Orleans,exact
+Niagara,Niagara,exact
+Nicholls St.,Nicholls,fuzzy
+Norfolk St.,Norfolk St.,exact
+North Alabama,South Alabama,fuzzy
+North Carolina,N. Carolina,fuzzy
+North Carolina A&T,N. Carolina,fuzzy
+North Carolina Central,NC Central,fuzzy
+North Dakota,North Dakota,exact
+North Dakota St.,North Dakota,fuzzy
+North Florida,North Florida,exact
+North Texas,North Texas,exact
+Northeastern,Northeastern,exact
+Northern Arizona,N. Arizona,fuzzy
+Northern Colorado,N. Colorado,fuzzy
+Northern Illinois,N. Illinois,fuzzy
+Northern Iowa,Northwestern,fuzzy
+Northern Kentucky,N. Kentucky,fuzzy
+Northwestern,Northwestern,exact
+Northwestern St.,Northwestern St.,exact
+Notre Dame,Notre Dame,exact
+Oakland,Oakland,exact
+Ohio,Ohio,exact
+Ohio St.,Ohio St.,exact
+Oklahoma,Oklahoma,exact
+Oklahoma St.,Oklahoma,fuzzy
+Old Dominion,Old Dominion,exact
+Oral Roberts,Oral Roberts,exact
+Oregon,Oregon,exact
+Oregon St.,Oregon St.,exact
+Pacific,Pacific,exact
+Penn,Penn,exact
+Penn St.,Penn St.,exact
+Pepperdine,Pepperdine,exact
+Pittsburgh,Pittsburgh,exact
+Portland,Portland,exact
+Portland St.,Portland St.,exact
+Prairie View A&M,Prairie View,fuzzy
+Presbyterian,Presbyterian,exact
+Princeton,Princeton,exact
+Providence,Providence,exact
+Purdue,Purdue,exact
+Purdue Fort Wayne,,unmatched
+Queens,Queens,exact
+Quinnipiac,Quinnipiac,exact
+Radford,Radford,exact
+Rhode Island,Rhode Island,exact
+Rice,Rice,exact
+Richmond,Richmond,exact
+Rider,Rider,exact
+Robert Morris,Robert Morris,exact
+Rutgers,Rutgers,exact
+SIU Edwardsville,Evansville,fuzzy
+SMU,SMU,exact
+Sacramento St.,Sacramento St.,exact
+Sacred Heart,Sacred Heart,exact
+Saint Francis,Saint Francis,exact
+Saint Joseph's,Saint Joseph's,exact
+Saint Louis,Saint Louis,exact
+Saint Mary's,Saint Mary's,exact
+Saint Peter's,Saint Peter's,exact
+Sam Houston St.,Sam Houston,fuzzy
+Samford,Samford,exact
+San Diego,San Diego,exact
+San Diego St.,San Diego St.,exact
+San Francisco,Saint Francis,fuzzy
+San Jose St.,San Jose St.,exact
+Santa Clara,Santa Clara,exact
+Seattle,Seattle,exact
+Seton Hall,Seton Hall,exact
+Siena,Siena,exact
+South Alabama,South Alabama,exact
+South Carolina,S. Carolina,fuzzy
+South Carolina St.,S. Carolina,fuzzy
+South Dakota,South Dakota,exact
+South Dakota St.,South Dakota,fuzzy
+South Florida,South Florida,exact
+Southeast Missouri St.,SE Missouri St.,fuzzy
+Southeastern Louisiana,SE Louisiana,fuzzy
+Southern,Southern U.,fuzzy
+Southern Illinois,S. Illinois,fuzzy
+Southern Indiana,So. Indiana,fuzzy
+Southern Miss,Southern U.,fuzzy
+Southern Utah,Southern U.,fuzzy
+St. Bonaventure,St. Bona.,fuzzy
+St. John's,St. John's,exact
+St. Thomas,St. Thomas (MN),fuzzy
+Stanford,Stanford,exact
+Stephen F. Austin,SF Austin,fuzzy
+Stetson,Stetson,exact
+Stonehill,Stonehill,exact
+Stony Brook,Stony Brook,exact
+Syracuse,Syracuse,exact
+TCU,TCU,exact
+Tarleton St.,Tarleton St.,exact
+Temple,Temple,exact
+Tennessee,Tennessee,exact
+Tennessee Martin,Tennessee St.,fuzzy
+Tennessee St.,Tennessee St.,exact
+Tennessee Tech,Tennessee,fuzzy
+Texas,Texas,exact
+Texas A&M,Texas A&M,exact
+Texas A&M Corpus Chris,,unmatched
+Texas Southern,Ga. Southern,fuzzy
+Texas St.,Texas St.,exact
+Texas Tech,Texas Tech,exact
+The Citadel,The Citadel,exact
+Toledo,Toledo,exact
+Towson,Towson,exact
+Troy,Troy,exact
+Tulane,Tulane,exact
+Tulsa,Tulsa,exact
+UAB,UAB,exact
+UC Davis,UC Davis,exact
+UC Irvine,UC Irvine,exact
+UC Riverside,UC Riverside,exact
+UC San Diego,UC San Diego,exact
+UC Santa Barbara,Santa Clara,fuzzy
+UCF,UCF,exact
+UCLA,UCLA,exact
+UMBC,UMBC,exact
+UMKC,UMBC,fuzzy
+UMass Lowell,UMass Lowell,exact
+UNC Asheville,Louisville,fuzzy
+UNC Greensboro,,unmatched
+UNC Wilmington,UT Arlington,fuzzy
+UNLV,UNLV,exact
+USC,USC,exact
+USC Upstate,SC Upstate,fuzzy
+UT Arlington,UT Arlington,exact
+UT Rio Grande Valley,UT-Rio Grande Valley,fuzzy
+UTEP,UTEP,exact
+UTSA,UTSA,exact
+Utah,Utah,exact
+Utah St.,Utah St.,exact
+Utah Tech,Utah Tech,exact
+Utah Valley,Utah Valley,exact
+VCU,VCU,exact
+VMI,VMI,exact
+Valparaiso,Valparaiso,exact
+Vanderbilt,Vanderbilt,exact
+Vermont,Vermont,exact
+Villanova,Villanova,exact
+Virginia,Virginia,exact
+Virginia Tech,Virginia,fuzzy
+Wagner,Wagner,exact
+Wake Forest,Wake Forest,exact
+Washington,Washington,exact
+Washington St.,Washington,fuzzy
+Weber St.,Weber St.,exact
+West Georgia,W. Georgia,fuzzy
+West Virginia,West Virginia,exact
+Western Carolina,East Carolina,fuzzy
+Western Illinois,W. Illinois,fuzzy
+Western Kentucky,W. Kentucky,fuzzy
+Western Michigan,W. Michigan,fuzzy
+Wichita St.,Wichita St.,exact
+William & Mary,William & Mary,exact
+Winthrop,Winthrop,exact
+Wisconsin,Wisconsin,exact
+Wofford,Wofford,exact
+Wright St.,Wright St.,exact
+Wyoming,Wyoming,exact
+Xavier,Xavier,exact
+Yale,Yale,exact
+Youngstown St.,Youngstown St.,exact

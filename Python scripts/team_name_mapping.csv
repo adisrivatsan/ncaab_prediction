@@ -1,0 +1,366 @@
+source_name,cbs_name,match_confidence
+Abilene Christian,Abilene Chr.,0.7857
+Air Force,Air Force,1.0
+Akron,Akron,1.0
+Alabama,Alabama,1.0
+Alabama A&M,Alabama A&M,1.0
+Alabama State,Alabama St.,0.8696
+Albany (NY),UAlbany,0.6667
+Alcorn State,Alcorn St.,0.8571
+American,American,1.0
+Appalachian State,LBSU,0.6061
+Arizona,Arizona,1.0
+Arizona State,Arizona St.,0.8696
+Arkansas,Arkansas,1.0
+Arkansas State,Arkansas St.,0.88
+Arkansas-Pine Bluff,Ark.-Pine Bluff,0.9474
+Army,Army,1.0
+Auburn,Auburn,1.0
+Austin Peay,Austin Peay,1.0
+Ball State,Ball St.,0.8235
+Baylor,Baylor,1.0
+Bellarmine,Bellarmine,1.0
+Belmont,Belmont,1.0
+Bethune-Cookman,Bethune-Cook.,0.9333
+Binghamton,Binghamton,1.0
+Boise State,Boise St.,0.8421
+Boston College,Boston College,1.0
+Boston University,Boston U.,1.0
+Bowling Green,Bowling Green,1.0
+Bradley,Bradley,1.0
+Brigham Young,Binghamton,0.6957
+Brown,Brown,1.0
+Bryant,Bryant,1.0
+Bucknell,Bucknell,1.0
+Buffalo,Buffalo,1.0
+Butler,Butler,1.0
+Cal Poly,Cal Poly,1.0
+Cal State Bakersfield,Cal-Baker.,1.0
+Cal State Fullerton,CS Fullerton,0.7742
+Cal State Northridge,CSNorthridge,1.0
+California,California,1.0
+California Baptist,Cal Baptist,0.7586
+Campbell,Campbell,1.0
+Canisius,Canisius,1.0
+Central Arkansas,Cent. Arkansas,1.0
+Central Connecticut State,,0.0
+Central Michigan,C. Michigan,1.0
+Charleston Southern,Charleston So.,0.8125
+Charlotte,Charlotte,1.0
+Chattanooga,Chattanooga,1.0
+Chicago State,Chicago St.,0.8696
+Cincinnati,Cincinnati,1.0
+Clemson,Clemson,1.0
+Cleveland State,SC State,0.6087
+Coastal Carolina,East Carolina,0.8276
+Colgate,Colgate,1.0
+College of Charleston,Charleston,0.6452
+Colorado,Colorado,1.0
+Colorado State,Colorado,0.7273
+Columbia,Columbia,1.0
+Connecticut,,0.0
+Coppin State,Coppin St.,0.8571
+Cornell,Cornell,1.0
+Creighton,Creighton,1.0
+Dartmouth,Dartmouth,1.0
+Davidson,Davidson,1.0
+Dayton,Dayton,1.0
+DePaul,DePaul,1.0
+Delaware,Delaware,1.0
+Delaware State,Delaware St.,0.88
+Denver,Denver,1.0
+Detroit Mercy,Detroit,0.7
+Drake,Drake,1.0
+Drexel,Drexel,1.0
+Duke,Duke,1.0
+Duquesne,Duquesne,1.0
+East Carolina,East Carolina,1.0
+East Tennessee State,Tennessee St.,0.75
+East Texas A&M,East Texas A&M,1.0
+Eastern Illinois,S. Illinois,0.8485
+Eastern Kentucky,E. Kentucky,1.0
+Eastern Michigan,E. Michigan,1.0
+Eastern Washington,E. Washington,1.0
+Elon,Elon,1.0
+Evansville,Evansville,1.0
+FDU,FDU,1.0
+Fairfield,Fairfield,1.0
+Florida,Florida,1.0
+Florida A&M,Florida A&M,1.0
+Florida Atlantic,FAU,1.0
+Florida Gulf Coast,FGCU,1.0
+Florida International,FIU,1.0
+Florida State,Florida St.,0.8696
+Fordham,Fordham,1.0
+Fresno State,Fresno St.,0.8571
+Furman,Furman,1.0
+Gardner-Webb,Gardner-Webb,1.0
+George Mason,George Mason,1.0
+George Washington,George Wash.,0.7857
+Georgetown,Georgetown,1.0
+Georgia,Georgia,1.0
+Georgia Southern,Ga. Southern,1.0
+Georgia State,Georgia St.,0.8696
+Georgia Tech,Ga. Tech,1.0
+Gonzaga,Gonzaga,1.0
+Grambling,Grambling St.,0.8571
+Grand Canyon,Grand Canyon,1.0
+Green Bay,Green Bay,1.0
+Hampton,Hampton,1.0
+Harvard,Harvard,1.0
+Hawaii,Hawaii,1.0
+High Point,High Point,1.0
+Hofstra,Hofstra,1.0
+Holy Cross,Holy Cross,1.0
+Houston,Houston,1.0
+Houston Christian,Houston Chr.,0.7857
+Howard,Howard,1.0
+IU Indy,,0.0
+Idaho,Idaho,1.0
+Idaho State,Idaho St.,0.8421
+Illinois,Illinois,1.0
+Illinois State,Illinois St.,0.88
+Illinois-Chicago,UIC,0.9375
+Incarnate Word,Incarnate Word,1.0
+Indiana,Indiana,1.0
+Indiana State,Indiana St.,0.8696
+Iona,Iona,1.0
+Iowa,Iowa,1.0
+Iowa State,Iowa St.,0.8235
+Jackson State,Jackson St.,0.8696
+Jacksonville,Jacksonville,1.0
+Jacksonville State,Jax. State,1.0
+James Madison,James Madison,1.0
+Kansas,Kansas,1.0
+Kansas City,Kansas City,1.0
+Kansas State,Kansas St.,0.8571
+Kennesaw State,Kennesaw St.,0.88
+Kent State,Kent St.,0.8235
+Kentucky,Kentucky,1.0
+La Salle,La Salle,1.0
+Lafayette,Lafayette,1.0
+Lamar,Lamar,1.0
+Le Moyne,Le Moyne,1.0
+Lehigh,Lehigh,1.0
+Liberty,Liberty,1.0
+Lindenwood,Lindenwood,1.0
+Lipscomb,Lipscomb,1.0
+Little Rock,Little Rock,1.0
+Long Beach State,LBSU,1.0
+Long Island University,Boston U.,0.6667
+Longwood,Longwood,1.0
+Louisiana,Louisiana,1.0
+Louisiana State,La. Tech,0.8276
+Louisiana Tech,La. Tech,1.0
+Louisiana-Monroe,Louisiana,0.72
+Louisville,Louisville,1.0
+Loyola (IL),Loyola Chi.,0.64
+Loyola (MD),Loyola-Md.,0.6923
+Loyola Marymount,LMU,1.0
+Maine,Maine,1.0
+Manhattan,Manhattan,1.0
+Marist,Marist,1.0
+Marquette,Marquette,1.0
+Marshall,Marshall,1.0
+Maryland,Maryland,1.0
+Maryland-Baltimore County,,0.0
+Maryland-Eastern Shore,,0.0
+Massachusetts,Massachusetts,1.0
+Massachusetts-Lowell,Massachusetts,0.7879
+McNeese State,McNeese,0.7
+Memphis,Memphis,1.0
+Mercer,Mercer,1.0
+Mercyhurst,Mercyhurst,1.0
+Merrimack,Merrimack,1.0
+Miami (FL),Miami,0.6667
+Miami (OH),Miami (Ohio),0.8
+Michigan,Michigan,1.0
+Michigan State,Michigan St.,0.88
+Middle Tennessee,Middle Tenn.,0.8148
+Milwaukee,Milwaukee,1.0
+Minnesota,Minnesota,1.0
+Mississippi,So. Miss,0.7097
+Mississippi State,,0.0
+Mississippi Valley State,Miss Valley St.,0.7368
+Missouri,Missouri,1.0
+Missouri State,Missouri St.,0.88
+Monmouth,Monmouth,1.0
+Montana,Montana,1.0
+Montana State,Montana St.,0.8696
+Morehead State,Morehead St.,0.88
+Morgan State,Morgan St.,0.8571
+Mount St. Mary's,Mt St Mary's,1.0
+Murray State,Murray St.,0.8571
+NC State,NC State,1.0
+NJIT,,0.0
+Navy,Navy,1.0
+Nebraska,Nebraska,1.0
+Nevada,Nevada,1.0
+Nevada-Las Vegas,,0.0
+New Hampshire,New Hamp.,0.7619
+New Haven,New Haven,1.0
+New Mexico,New Mexico,1.0
+New Mexico State,N. Mex. St.,1.0
+New Orleans,New Orleans,1.0
+Niagara,Niagara,1.0
+Nicholls State,Nicholls,0.7273
+Norfolk State,Norfolk St.,0.8696
+North Alabama,N. Alabama,1.0
+North Carolina,N. Carolina,1.0
+North Carolina A&T,N. Carolina,0.875
+North Carolina Central,N. Carolina,0.7778
+North Dakota,North Dakota,1.0
+North Dakota State,N. Dakota St.,1.0
+North Florida,North Florida,1.0
+North Texas,North Texas,1.0
+Northeastern,Northeastern,1.0
+Northern Arizona,N. Iowa,0.6897
+Northern Colorado,N. Iowa,0.7333
+Northern Illinois,N. Illinois,1.0
+Northern Iowa,N. Iowa,1.0
+Northern Kentucky,N. Kentucky,1.0
+Northwestern,Northwestern,1.0
+Northwestern State,Northwestern St.,0.9091
+Notre Dame,Notre Dame,1.0
+Oakland,Oakland,1.0
+Ohio,Ohio,1.0
+Ohio State,Ohio St.,0.8235
+Oklahoma,Oklahoma,1.0
+Oklahoma State,Oklahoma,0.7273
+Old Dominion,Old Dominion,1.0
+Omaha,Omaha,1.0
+Oral Roberts,Oral Roberts,1.0
+Oregon,Oregon,1.0
+Oregon State,Oregon St.,0.8571
+Pacific,Pacific,1.0
+Penn State,Penn St.,0.8235
+Pennsylvania,,0.0
+Pepperdine,Pepperdine,1.0
+Pittsburgh,Pittsburgh,1.0
+Portland,Portland,1.0
+Portland State,Portland St.,0.88
+Prairie View,Prairie View,1.0
+Presbyterian,Presbyterian,1.0
+Princeton,Princeton,1.0
+Providence,Providence,1.0
+Purdue,Purdue,1.0
+Purdue Fort Wayne,PFW,1.0
+Queens (NC),Queens,0.7059
+Quinnipiac,Quinnipiac,1.0
+Radford,Radford,1.0
+Rhode Island,Rhode Island,1.0
+Rice,Rice,1.0
+Richmond,Richmond,1.0
+Rider,Rider,1.0
+Robert Morris,Robert Morris,1.0
+Rutgers,Rutgers,1.0
+SIU Edwardsville,SIUE,0.6522
+Sacramento State,Sacramento St.,0.8966
+Sacred Heart,Sacred Heart,1.0
+Saint Francis (PA),Saint Francis,0.8387
+Saint Joseph's,Saint Joseph's,1.0
+Saint Louis,Saint Louis,1.0
+Saint Mary's (CA),Saint Mary's,0.8276
+Saint Peter's,Saint Peter's,1.0
+Sam Houston,Sam Houston,1.0
+Samford,Samford,1.0
+San Diego,San Diego,1.0
+San Diego State,San Diego St.,0.8889
+San Francisco,Saint Francis,0.8462
+San Jose State,San Jose St.,0.88
+Santa Clara,Santa Clara,1.0
+Seattle,Seattle,1.0
+Seton Hall,Seton Hall,1.0
+Siena,Siena,1.0
+South Alabama,South Alabama,1.0
+South Carolina,S. Carolina,1.0
+South Carolina State,S. Carolina,0.8235
+South Carolina Upstate,S. Carolina,0.7778
+South Dakota,South Dakota,1.0
+South Dakota State,S. Dak. St.,1.0
+South Florida,South Florida,1.0
+Southeast Missouri State,SE Missouri St.,1.0
+Southeastern Louisiana,SE Louisiana,1.0
+Southern,Southern U.,0.8889
+Southern California,So. Indiana,0.7429
+Southern Illinois,S. Illinois,1.0
+Southern Indiana,So. Indiana,1.0
+Southern Methodist,So. Utah,0.7097
+Southern Mississippi,So. Miss,1.0
+Southern Utah,So. Utah,1.0
+St. Bonaventure,St. Bona.,1.0
+St. John's (NY),St. John's,0.8
+St. Thomas,St. Thomas (MN),1.0
+Stanford,Stanford,1.0
+Stephen F. Austin,SF Austin,1.0
+Stetson,Stetson,1.0
+Stonehill,Stonehill,1.0
+Stony Brook,Stony Brook,1.0
+Syracuse,Syracuse,1.0
+TCU,TCU,1.0
+Tarleton State,Tarleton St.,0.88
+Temple,Temple,1.0
+Tennessee,Tennessee,1.0
+Tennessee State,Tennessee St.,0.8889
+Tennessee Tech,Tenn. Tech,1.0
+Tennessee-Martin,UT Martin,0.9375
+Texas,Texas,1.0
+Texas A&M,Texas A&M,1.0
+Texas A&M-Corpus Christi,TX A&M-CC,0.9583
+Texas Southern,Ga. Southern,0.7333
+Texas State,Texas St.,0.8421
+Texas Tech,Texas Tech,1.0
+Texas-Rio Grande Valley,UT-Rio Grande Valley,0.9565
+The Citadel,The Citadel,1.0
+Toledo,Toledo,1.0
+Towson,Towson,1.0
+Troy,Troy,1.0
+Tulane,Tulane,1.0
+Tulsa,Tulsa,1.0
+UAB,UAB,1.0
+UC Davis,UC Davis,1.0
+UC Irvine,UC Irvine,1.0
+UC Riverside,UC Riverside,1.0
+UC San Diego,UC San Diego,1.0
+UC Santa Barbara,UCSB,1.0
+UCF,UCF,1.0
+UCLA,UCLA,1.0
+UNC Asheville,UNC-Ash.,1.0
+UNC Greensboro,UNCG,1.0
+UNC Wilmington,UNCW,1.0
+UT Arlington,UT Arlington,1.0
+UTEP,UTEP,1.0
+UTSA,UTSA,1.0
+Utah,Utah,1.0
+Utah State,Utah St.,0.8235
+Utah Tech,Utah Tech,1.0
+Utah Valley,Utah Valley,1.0
+VMI,VMI,1.0
+Valparaiso,Valparaiso,1.0
+Vanderbilt,Vanderbilt,1.0
+Vermont,Vermont,1.0
+Villanova,Villanova,1.0
+Virginia,Virginia,1.0
+Virginia Commonwealth,VCU,1.0
+Virginia Tech,Va. Tech,1.0
+Wagner,Wagner,1.0
+Wake Forest,Wake Forest,1.0
+Washington,Washington,1.0
+Washington State,Washington,0.7692
+Weber State,Weber St.,0.8421
+West Georgia,W. Georgia,0.8889
+West Virginia,West Virginia,1.0
+Western Carolina,East Carolina,0.8276
+Western Illinois,S. Illinois,0.8485
+Western Kentucky,W. Kentucky,1.0
+Western Michigan,W. Michigan,1.0
+Wichita State,Wichita St.,0.8696
+William & Mary,William & Mary,1.0
+Winthrop,Winthrop,1.0
+Wisconsin,Wisconsin,1.0
+Wofford,Wofford,1.0
+Wright State,Wright St.,0.8571
+Wyoming,Wyoming,1.0
+Xavier,Xavier,1.0
+Yale,Yale,1.0
+Youngstown State,Youngstown St.,0.8966
