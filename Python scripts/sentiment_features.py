@@ -7,6 +7,7 @@ Output: sentiment_features.csv
 
 from __future__ import annotations
 
+import os
 import time
 import re
 import logging
@@ -22,8 +23,11 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 # SECTION — Configuration and Constants
 # =============================================================================
 
-CBS_GAMES_PATH       = "/Users/adityasrivatsan/Documents/NCAAB Prediction/cbs_games.csv"
-OUTPUT_PATH          = "/Users/adityasrivatsan/Documents/NCAAB Prediction/Python scripts/sentiment_features.csv"
+_SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_DIR = os.path.dirname(_SCRIPT_DIR)
+
+CBS_GAMES_PATH       = os.path.join(_PROJECT_DIR, "cbs_games.csv")
+OUTPUT_PATH          = os.path.join(_SCRIPT_DIR, "sentiment_features.csv")
 RATE_LIMIT_SLEEP     = 0.4   # seconds between teams
 REQUEST_TIMEOUT      = 11    # seconds (within 10-12s window)
 FULL_BODY_TOP_N      = 3     # fetch full body for top N Google News articles

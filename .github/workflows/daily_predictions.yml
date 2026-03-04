@@ -1,0 +1,72 @@
+name: Daily NCAAB Predictions
+
+on:
+  schedule:
+    - cron: '0 20 * * *'   # 3 PM EST / 4 PM EDT (20:00 UTC)
+  workflow_dispatch:         # manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write            # needed to commit predictions_latest.json back to repo
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-ncaab-v1
+
+      - name: Install dependencies
+        run: |
+          pip install \
+            feedparser \
+            vaderSentiment \
+            joblib \
+            scikit-learn \
+            numpy \
+            pandas \
+            tensorflow-cpu \
+            tabulate \
+            requests \
+            beautifulsoup4 \
+            lxml
+
+      - name: Step 1 — Scrape CBS training games (3 weeks ending yesterday)
+        run: python "Python scripts/cbs_scraper.py"
+
+      - name: Step 2 — Collect sentiment features
+        run: python "Python scripts/sentiment_features.py"
+
+      - name: Step 3 — Collect efficiency metrics
+        run: python "Python scripts/efficiency_metrics.py"
+
+      - name: Step 4 — Collect KenPom ratings
+        run: python "Python scripts/kenpom_ratings.py"
+
+      - name: Step 5 — Assemble training_df.csv
+        run: python "Python scripts/feature_assembly.py"
+
+      - name: Step 6 — Train all 6 models
+        run: python "Python scripts/model_training.py"
+
+      - name: Step 7 — Generate today's predictions
+        run: python "Python scripts/predict_today.py" --export-json
+
+      - name: Commit and push predictions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add website/predictions_latest.json
+          git diff --staged --quiet || git commit -m "chore: update predictions $(date -u +%Y-%m-%d)"
+          git push

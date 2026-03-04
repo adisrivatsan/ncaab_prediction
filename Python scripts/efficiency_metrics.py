@@ -25,6 +25,7 @@ import difflib
 import json
 import logging
 import math
+import os
 import time
 from datetime import date
 from typing import Optional
@@ -37,12 +38,15 @@ from bs4 import BeautifulSoup
 # CONFIG
 # =============================================================================
 
+_SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_DIR = os.path.dirname(_SCRIPT_DIR)
+
 AS_OF_DATE     = date.today().isoformat()          # "2026-03-03"
 SCHEMA_VERSION = "1.0"
 
-CBS_CSV_PATH        = "/Users/adityasrivatsan/Documents/NCAAB Prediction/cbs_games.csv"
-OUTPUT_METRICS_PATH = "/Users/adityasrivatsan/Documents/NCAAB Prediction/Python scripts/efficiency_metrics.csv"
-OUTPUT_MAPPING_PATH = "/Users/adityasrivatsan/Documents/NCAAB Prediction/Python scripts/team_name_mapping.csv"
+CBS_CSV_PATH        = os.path.join(_PROJECT_DIR, "cbs_games.csv")
+OUTPUT_METRICS_PATH = os.path.join(_SCRIPT_DIR, "efficiency_metrics.csv")
+OUTPUT_MAPPING_PATH = os.path.join(_SCRIPT_DIR, "team_name_mapping.csv")
 
 # Barttorvik
 TORVIK_JSON_URL = "https://barttorvik.com/2026_team_results.json"
