@@ -11,6 +11,7 @@ permissions:
 jobs:
   predict:
     runs-on: ubuntu-latest
+    timeout-minutes: 75          # kill job if it exceeds 75 min (protects free tier budget)
 
     steps:
       - name: Checkout repo
