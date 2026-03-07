@@ -43,10 +43,10 @@ NCAAB Prediction/
 ├── website/                             ← Vercel static frontend
 │   ├── index.html                       ← Dashboard layout (Option C) ✅ COMPLETE (with legend, optimizer, pick analysis)
 │   ├── predictions_latest.json          ← Real predictions data (written by predict_today.py --export-json ✅)
-│   └── vercel.json                      ← Vercel config (🔲 to add)
+│   └── vercel.json                      ← Vercel config ✅ COMPLETE
 ├── .github/
 │   └── workflows/
-│       └── daily_predictions.yml        ← GitHub Actions cron (🔲 planned)
+│       └── daily_predictions.yml        ← GitHub Actions cron ✅ COMPLETE (runs 3 PM EST daily)
 ├── Agents/
 │   ├── CBS_games.md                     ← CBS scraper agent spec (IMPLEMENTED)
 │   ├── sentiment.md                     ← News sentiment agent spec (IMPLEMENTED)
@@ -323,22 +323,22 @@ Validate: `adj_em` range is typically −30 to +40; `adj_o` and `adj_d` are typi
 
 This section tracks the status of the standalone Python scripts in `Python scripts/`. These are independent of the notebooks and form a complete local execution pipeline.
 
-### All Scripts / Components Status (Mar 4 2026)
+### All Scripts / Components Status (Mar 7 2026)
 
 | Script / Component | Status | Output | Notes |
 |---|---|---|---|
-| `cbs_scraper.py` | ✅ **COMPLETE** | `cbs_games.csv` (709 rows × 12 cols) at project root | Feb 16–Mar 2 2026; 365 unique teams |
-| `sentiment_features.py` | ✅ **COMPLETE** | `sentiment_features.csv` (365 teams × 31 features) | Requires `feedparser` + `vaderSentiment` |
-| `efficiency_metrics.py` | ✅ **COMPLETE** | `efficiency_metrics.csv` (365 rows × 4 metrics) | Sports Reference fallback active; 9 teams unmatched → 0.0 |
-| `kenpom_ratings.py` | ✅ **COMPLETE** ⚠️ CSV stale | `kenpom_ratings.csv` (365 rows) | Bug fixed Mar 3; must re-run to get valid CSV |
+| `cbs_scraper.py` | ✅ **COMPLETE** | `cbs_games.csv` at project root | Dynamic 3-week window ending yesterday (updated Mar 7) |
+| `sentiment_features.py` | ✅ **COMPLETE** | `sentiment_features.csv` (365 teams × 31 features) | Hardcoded paths fixed Mar 7; uses `__file__`-based paths |
+| `efficiency_metrics.py` | ✅ **COMPLETE** | `efficiency_metrics.csv` (365 rows × 4 metrics) | Hardcoded paths fixed Mar 7; uses `__file__`-based paths |
+| `kenpom_ratings.py` | ✅ **COMPLETE** | `kenpom_ratings.csv` (365 rows) | adj_em/adj_d bug fixed + CSV regenerated Mar 4 ✅ |
 | `feature_assembly.py` | ✅ **COMPLETE** | `training_df.csv` (709 rows × 90 cols) | 0 NaN; 61.1% home win rate |
 | `test_feature_assembly.py` | ✅ **COMPLETE** | console output | Test harness for feature shapes and null checks |
 | `model_training.py` | ✅ **COMPLETE** | `model_cache/` (8 files) | 6 models; X=(1418,118); home bias 🟢 57.1% |
-| `predict_today.py` | ✅ **COMPLETE** | console (4 tables) + `predictions_latest.json` | `--export-json` flag added Mar 4; enriches JSON with feature_drivers, articles, top_picks |
-| `website/index.html` | ✅ **COMPLETE** | Static dashboard (localhost:8080) | Confidence legend; Betting Optimizer (Cell 14); Pick Analysis with feature drivers (Cell 14B) + article links (Cell 14C); top 3 picks shown first |
-| `website/predictions_latest.json` | ✅ **REAL DATA** | 40 predictions (Mar 4 2026) | Written by predict_today.py --export-json; includes feature_drivers + articles for top picks |
-| `website/vercel.json` | 🔲 **Planned** | Vercel deploy config | Cache-Control + SPA rewrite |
-| `.github/workflows/daily_predictions.yml` | 🔲 **Planned** | Daily cron | Runs predict_today.py --export-json, commits JSON, triggers Vercel deploy |
+| `predict_today.py` | ✅ **COMPLETE** | console (4 tables) + `predictions_latest.json` | `--export-json` flag; enriches JSON with feature_drivers, articles, top_picks |
+| `website/index.html` | ✅ **COMPLETE** | Deployed on Vercel | Confidence legend; Betting Optimizer; Pick Analysis with feature drivers + article links |
+| `website/predictions_latest.json` | ✅ **AUTO-UPDATED** | Daily via GitHub Actions | Written by workflow cron; Vercel auto-deploys on push |
+| `website/vercel.json` | ✅ **COMPLETE** | Vercel deploy config | Cache-Control + SPA rewrite (added Mar 7) |
+| `.github/workflows/daily_predictions.yml` | ✅ **COMPLETE** | Daily cron at 3 PM EST | Full pipeline: scrape → sentiment → efficiency → kenpom → assemble → train → predict → commit (added Mar 7) |
 
 ### Known Bugs
 
@@ -347,6 +347,8 @@ This section tracks the status of the standalone Python scripts in `Python scrip
 | `kenpom_ratings.py` | adj_em/adj_d columns swapped in existing CSV | **FIXED + CSV regenerated Mar 4** ✅ |
 | `efficiency_metrics.py` | Barttorvik JSON W-L parse fails (`int("19-12")` raises ValueError) | **Non-blocking** — Sports Reference fallback delivers correct data |
 | `feature_assembly.py` | Fuzzy name matching creates duplicate cbs_name rows (25 efficiency, 36 kenpom) | **FIXED** — deduplication by averaging per cbs_name |
+| `sentiment_features.py` | Hardcoded absolute path `/Users/adityasrivatsan/...` broke GitHub Actions runner | **FIXED Mar 7** — replaced with `__file__`-based paths ✅ |
+| `efficiency_metrics.py` | Hardcoded absolute path `/Users/adityasrivatsan/...` broke GitHub Actions runner | **FIXED Mar 7** — replaced with `__file__`-based paths ✅ |
 
 ### Verified Dimensions (Mar 3 2026)
 

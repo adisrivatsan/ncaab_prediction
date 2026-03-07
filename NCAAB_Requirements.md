@@ -2,29 +2,29 @@
 
 ---
 
-## 0. Implementation Status (as of Mar 4, 2026)
+## 0. Implementation Status (as of Mar 7, 2026)
 
 ### Standalone Python Scripts (`Python scripts/`)
 
 | Script | Status | Output | Notes |
 |---|---|---|---|
-| `cbs_scraper.py` | ✅ **Complete + tested** | `cbs_games.csv` — 709 rows × 12 cols (at project root) | Feb 16–Mar 2 2026; 365 unique teams; 0 parse errors |
-| `sentiment_features.py` | ✅ **Complete + tested** | `sentiment_features.csv` — 365 teams × 32 cols | 31 features + team_name; requires feedparser + vaderSentiment |
-| `efficiency_metrics.py` | ✅ **Complete + tested** | `efficiency_metrics.csv` — 365 rows × 4 metrics | Barttorvik JSON bug (non-blocking); Sports Reference fallback works; 9 CBS teams unmatched → 0.0 |
-| `kenpom_ratings.py` | ✅ **Complete + bug fixed** ⚠️ needs re-run | `kenpom_ratings.csv` — 365 rows | adj_em/adj_d swap fixed in script; existing CSV stale — re-run before training |
-| `feature_assembly.py` | ✅ **Complete + tested** | `training_df.csv` — 709 rows × 90 cols | X.shape=(709,78); 0 NaN; 61.1% home win rate; dedup fix applied |
+| `cbs_scraper.py` | ✅ **Complete** | `cbs_games.csv` at project root | Dynamic 3-week window ending yesterday (updated Mar 7); no longer hardcoded |
+| `sentiment_features.py` | ✅ **Complete** | `sentiment_features.csv` — 365 teams × 32 cols | Hardcoded absolute paths replaced with `__file__`-based paths (fixed Mar 7) |
+| `efficiency_metrics.py` | ✅ **Complete** | `efficiency_metrics.csv` — 365 rows × 4 metrics | Hardcoded absolute paths replaced with `__file__`-based paths (fixed Mar 7) |
+| `kenpom_ratings.py` | ✅ **Complete** | `kenpom_ratings.csv` — 365 rows | adj_em/adj_d swap fixed + CSV regenerated Mar 4 ✅ |
+| `feature_assembly.py` | ✅ **Complete** | `training_df.csv` — 709 rows × 90 cols | X.shape=(709,78); 0 NaN; 61.1% home win rate; dedup fix applied |
 | `test_feature_assembly.py` | ✅ **Complete** | console output | Test harness verifying X shape, nulls, home win rate, feature inventory |
-| `model_training.py` | ✅ **Complete + tested Mar 3 2026** | `model_cache/` — 8 files | 6 models (Ridge, GB, NN Reg, Logistic, GaussianNB, NN Cls); X=(1418,118); home bias 🟢 57.1% |
-| `predict_today.py` | ✅ **Complete + tested Mar 4 2026** | console (4 tables) + `predictions_latest.json` | `--export-json` flag added; enriches JSON with feature_drivers (Cell 14B), articles (Cell 14C), top_picks (Cell 14); 40 games predicted Mar 4 |
+| `model_training.py` | ✅ **Complete** | `model_cache/` — 8 files | 6 models (Ridge, GB, NN Reg, Logistic, GaussianNB, NN Cls); X=(1418,118); home bias 🟢 57.1% |
+| `predict_today.py` | ✅ **Complete** | console (4 tables) + `predictions_latest.json` | `--export-json` flag; enriches JSON with feature_drivers, articles, top_picks |
 
 ### Website (`website/`)
 
 | Component | Status | Output | Notes |
 |---|---|---|---|
-| `website/index.html` | ✅ **Complete Mar 4 2026** | Static dashboard at localhost:8080 | Confidence legend; Betting Optimizer (Cell 14); Pick Analysis with feature drivers (Cell 14B) + article links (Cell 14C); top 3 picks shown first in analysis section |
-| `website/predictions_latest.json` | ✅ **Real data** | 40-game dataset (Mar 4 2026) | Written by `predict_today.py --export-json`; includes `feature_drivers`, `articles_home`, `articles_away`, `top_picks` |
-| `website/vercel.json` | 🔲 **Planned** | Vercel deploy config | Cache-Control headers; SPA rewrite rule |
-| `.github/workflows/daily_predictions.yml` | 🔲 **Planned** | Daily cron at 11 AM ET | Installs deps, runs predict_today.py --export-json, commits JSON, triggers Vercel deploy |
+| `website/index.html` | ✅ **Complete** | Deployed on Vercel | Confidence legend; Betting Optimizer; Pick Analysis with feature drivers + article links |
+| `website/predictions_latest.json` | ✅ **Auto-updated daily** | Written by GitHub Actions cron | Vercel auto-deploys on every push; includes `feature_drivers`, `articles_home`, `articles_away`, `top_picks` |
+| `website/vercel.json` | ✅ **Complete Mar 7 2026** | Vercel deploy config | Cache-Control headers (`s-maxage=3600`); SPA rewrite rule |
+| `.github/workflows/daily_predictions.yml` | ✅ **Complete Mar 7 2026** | Daily cron at 3 PM EST (20:00 UTC) | Full pipeline: scrape → sentiment → efficiency → kenpom → assemble → train → predict → commit JSON; 75-min timeout; ~45 min/run |
 
 ### Verified X Matrix — feature_assembly.py output (Mar 3 2026)
 
