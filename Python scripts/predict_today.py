@@ -808,6 +808,7 @@ def _build_top_picks(
         ev     = round(win_prob * profit - (1 - win_prob) * stake, 4)
 
         # Vegas lines enrichment (no-op if odds_lookup not available)
+        odds_entry = None
         if odds_lookup and r["Home Team"] in odds_lookup:
             odds_entry    = odds_lookup[r["Home Team"]]
             vegas_ml      = odds_entry["home_ml"] if bet_side == "HOME" else odds_entry["away_ml"]
