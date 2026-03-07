@@ -57,6 +57,13 @@ except ImportError:
     _feedparser = None  # type: ignore
     _FEEDPARSER_AVAILABLE = False
 
+try:
+    import odds_features as _odds_features
+    _ODDS_AVAILABLE = True
+except ImportError:
+    _odds_features = None  # type: ignore
+    _ODDS_AVAILABLE = False
+
 warnings.filterwarnings("ignore", category=UserWarning)
 
 # =============================================================================
@@ -764,11 +771,19 @@ def _ml_to_decimal(ml_str: str) -> Optional[float]:
         return None
 
 
-def _build_top_picks(results: list[dict], stake: float = 5.0, top_n: int = 3) -> list[dict]:
+def _build_top_picks(
+    results: list[dict],
+    odds_lookup: Optional[dict] = None,
+    stake: float = 5.0,
+    top_n: int = 3,
+) -> list[dict]:
     """
     Top N straight picks sorted by confidence → EV → win_prob.
     Mirrors Cell 14 of the predictor notebook.
     Only includes MED/HIGH confidence picks with win_prob ≥ 55%.
+
+    odds_lookup: dict[cbs_home_name → {home_ml, away_ml, spread}] from odds_features.
+    If provided, each pick is enriched with vegas_ml and vegas_spread.
     """
     conf_rank = {"HIGH": 3, "MED": 2}
     candidates = []
@@ -791,19 +806,41 @@ def _build_top_picks(results: list[dict], stake: float = 5.0, top_n: int = 3) ->
             continue
         profit = round((dec - 1) * stake, 2)
         ev     = round(win_prob * profit - (1 - win_prob) * stake, 4)
+
+        # Vegas lines enrichment (no-op if odds_lookup not available)
+        if odds_lookup and r["Home Team"] in odds_lookup:
+            odds_entry    = odds_lookup[r["Home Team"]]
+            vegas_ml      = odds_entry["home_ml"] if bet_side == "HOME" else odds_entry["away_ml"]
+            vegas_spread  = odds_entry["spread"]
+            odds_movement = (
+                odds_entry["home_ml_movement"] if bet_side == "HOME"
+                else odds_entry["away_ml_movement"]
+            )
+        else:
+            vegas_ml      = "N/A"
+            vegas_spread  = "N/A"
+            odds_movement = "—"
+
+        home_ml_mov = odds_entry.get("home_ml_movement", "—") if odds_entry else "—"
+        away_ml_mov = odds_entry.get("away_ml_movement", "—") if odds_entry else "—"
         candidates.append({
-            "pick":       r["Predicted Winner"],
-            "matchup":    f"{r['Away Team']} @ {r['Home Team']}",
-            "home_team":  r["Home Team"],
-            "away_team":  r["Away Team"],
-            "bet_side":   bet_side,
-            "ml":         str(ml_str),
-            "win_prob":   round(win_prob, 3),
-            "confidence": conf,
-            "stake":      stake,
-            "if_win":     profit,
-            "ev":         ev,
-            "_cr":        conf_rank[conf],
+            "pick":             r["Predicted Winner"],
+            "matchup":          f"{r['Away Team']} @ {r['Home Team']}",
+            "home_team":        r["Home Team"],
+            "away_team":        r["Away Team"],
+            "bet_side":         bet_side,
+            "ml":               str(ml_str),
+            "win_prob":         round(win_prob, 3),
+            "confidence":       conf,
+            "stake":            stake,
+            "if_win":           profit,
+            "ev":               ev,
+            "vegas_ml":         vegas_ml,
+            "vegas_spread":     vegas_spread,
+            "odds_movement":    odds_movement,
+            "home_ml_movement": home_ml_mov,
+            "away_ml_movement": away_ml_mov,
+            "_cr":              conf_rank[conf],
         })
     candidates.sort(key=lambda x: (x["_cr"], x["ev"], x["win_prob"]), reverse=True)
     out = []
@@ -825,6 +862,7 @@ def export_json(
     models: Optional[dict] = None,
     metadata: Optional[dict] = None,
     lookup: Optional[dict] = None,
+    odds_lookup: Optional[dict] = None,
 ) -> str:
     """
     Serialise predictions to predictions_latest.json (§6.3 schema).
@@ -848,7 +886,7 @@ def export_json(
             return None
 
     # ── Betting optimizer top picks (Cell 14) ─────────────────────────────────
-    top_picks    = _build_top_picks(results)
+    top_picks    = _build_top_picks(results, odds_lookup=odds_lookup)
     combined_ev  = round(sum(tp["ev"] for tp in top_picks), 4)
 
     # ── Article cache: fetch only for top-pick teams (Cell 14C) ───────────────
@@ -887,6 +925,7 @@ def export_json(
         articles_home = article_cache.get(r["Home Team"], [])
         articles_away = article_cache.get(r["Away Team"], [])
 
+        odds_entry = odds_lookup.get(r["Home Team"]) if odds_lookup else None
         predictions.append({
             "home_team":           r["Home Team"],
             "away_team":           r["Away Team"],
@@ -907,6 +946,8 @@ def export_json(
             "away_ml":             r["Away ML"],
             "model_std_dev":       _safe_float(r["Model Std Dev"]),
             "confidence":          r["Confidence"],
+            "home_ml_movement":    odds_entry.get("home_ml_movement", "—") if odds_entry else "—",
+            "away_ml_movement":    odds_entry.get("away_ml_movement", "—") if odds_entry else "—",
             "feature_drivers":     feature_drivers,
             "articles_home":       articles_home,
             "articles_away":       articles_away,
@@ -966,6 +1007,20 @@ def main() -> None:
         print(f"\n  No games found on CBS for {TODAY.isoformat()}.\n")
         return
 
+    # ── Step 1.5: Fetch Vegas lines ────────────────────────────────────────────
+    log.info("Step 1.5 — Fetching Vegas lines from The Odds API")
+    odds_lookup: dict = {}
+    if _ODDS_AVAILABLE:
+        cbs_names_today = list(
+            {g["home_name"] for g in games} | {g["away_name"] for g in games}
+        )
+        odds_lookup = _odds_features.build_odds_lookup(
+            _odds_features.fetch_odds(), cbs_names_today
+        )
+        log.info("Vegas odds coverage : %d/%d games matched", len(odds_lookup), len(games))
+    else:
+        log.warning("odds_features module not available — skipping Vegas lines")
+
     # ── Step 2: Load models from cache ────────────────────────────────────────
     log.info("Step 2/4 — Loading models from cache")
     models, metadata = load_models(CACHE_DIR)
@@ -1012,7 +1067,8 @@ def main() -> None:
     # ── JSON export ────────────────────────────────────────────────────────────
     if args.export_json:
         export_json(results, _SCRIPT_DIR, _PROJECT_DIR,
-                    models=models, metadata=metadata, lookup=lookup)
+                    models=models, metadata=metadata, lookup=lookup,
+                    odds_lookup=odds_lookup)
 
 
 if __name__ == "__main__":

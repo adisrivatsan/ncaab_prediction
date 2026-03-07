@@ -352,6 +352,51 @@ const fPct  = n => (n * 100).toFixed(1) + '%';
 const fML   = n => n >= 0 ? `+${n}` : `${n}`;
 const fDiff = n => (n >= 0 ? '+' : '') + n.toFixed(2);
 
+// ── Line move helpers ─────────────────────────────────────────────────────────
+function parseMLNum(s) {
+  if (!s || s === 'N/A' || s === '—') return null;
+  const n = parseInt(String(s).replace('+', ''));
+  return isNaN(n) ? null : n;
+}
+// Which team did the line move toward?
+// Uses home_ml_movement string ("prev → curr") to decide:
+// if home ML went more negative or less positive → home team more favored; else away team.
+function favoredTeam(p) {
+  const mov = p.home_ml_movement || '—';
+  if (mov === '—') return null;
+  const parts = mov.split('→').map(s => s.trim());
+  if (parts.length !== 2) return null;
+  const prev = parseMLNum(parts[0]);
+  const curr = parseMLNum(parts[1]);
+  if (prev === null || curr === null) return null;
+  return curr < prev ? p.home_team : p.away_team;
+}
+// Render a line-move cell for a given pick (prediction or top-pick entry).
+// Shows favored team name + movement string for the pick's side.
+function renderLineMoveCell(p) {
+  const isHome   = p.predicted_winner === p.home_team;
+  const mov      = isHome ? (p.home_ml_movement || '—') : (p.away_ml_movement || '—');
+  if (mov === '—') return '<span style="color:#a0aec0">—</span>';
+  const fav      = favoredTeam(p);
+  const favorsPickSide = fav === p.predicted_winner;
+  const teamColor = favorsPickSide ? '#276749' : '#c53030';
+  const teamLabel = fav || '';
+  return `<div style="font-size:0.7rem;font-weight:700;color:${teamColor}">${teamLabel}</div>
+          <div style="font-size:0.65rem;font-family:'SF Mono','Menlo',monospace;color:#718096">${mov}</div>`;
+}
+// Same but for top-picks entries (field names differ slightly).
+function renderLineMoveTop(p) {
+  if (!p.odds_movement || p.odds_movement === '—') return '<span style="color:#a0aec0">—</span>';
+  // For top-picks we already have the correct-side movement in odds_movement,
+  // but we need home_ml_movement to determine favored team direction.
+  const fav = favoredTeam(p);
+  const favorsPickSide = fav === p.pick;
+  const teamColor = favorsPickSide ? '#276749' : '#c53030';
+  const teamLabel = fav || '';
+  return `<div style="font-size:0.7rem;font-weight:700;color:${teamColor}">${teamLabel}</div>
+          <div style="font-size:0.65rem;font-family:'SF Mono','Menlo',monospace;color:#718096">${p.odds_movement}</div>`;
+}
+
 function winProb(p) {
   return p.predicted_winner === p.home_team ? p.final_win_prob_home : p.final_win_prob_away;
 }
@@ -459,6 +504,7 @@ function renderPicks(data) {
       </td>
       <td><span class="prob-value prob-${p.confidence}">${fPct(winProb(p))}</span></td>
       <td class="${winML(p) < 0 ? 'ml-fav' : 'ml-und'}">${fML(winML(p))}</td>
+      <td>${renderLineMoveCell(p)}</td>
       <td class="std-val">${p.model_std_dev.toFixed(3)}</td>
     </tr>
   `).join('');
@@ -475,6 +521,7 @@ function renderPicks(data) {
           <th>Pick &amp; Matchup</th>
           <th>Win Prob</th>
           <th>Moneyline</th>
+          <th>Line Move</th>
           <th>Std Dev</th>
         </tr></thead>
         <tbody>${rows}</tbody>
@@ -512,6 +559,9 @@ function renderOptimizer(data) {
         <td class="${p.confidence === 'HIGH' ? 'conf-HIGH' : 'conf-MED'}">${p.confidence}</td>
         <td style="font-weight:600;color:${p.ml && p.ml.startsWith('-') ? '#e53e3e' : '#3182ce'}">${p.ml}</td>
         <td style="font-weight:700">${fPct(p.win_prob)}</td>
+        <td style="font-weight:600;color:${p.vegas_ml && p.vegas_ml !== 'N/A' ? (p.vegas_ml.startsWith('-') ? '#e53e3e' : '#3182ce') : '#a0aec0'}">${p.vegas_ml || 'N/A'}</td>
+        <td style="color:${p.vegas_spread && p.vegas_spread !== 'N/A' ? '#4a5568' : '#a0aec0'}">${p.vegas_spread || 'N/A'}</td>
+        <td>${renderLineMoveTop(p)}</td>
         <td style="color:#4a5568">$${(p.stake||5).toFixed(2)}</td>
         <td style="color:#276749;font-weight:600">+$${p.if_win.toFixed(2)}</td>
         <td class="${evClass}">$${p.ev > 0 ? '+' : ''}${p.ev.toFixed(3)}</td>
@@ -535,7 +585,7 @@ function renderOptimizer(data) {
       <table class="optimizer-table">
         <thead><tr>
           <th>#</th><th>Pick &amp; Matchup</th><th>Conf</th>
-          <th>ML</th><th>Win Prob</th><th>Stake</th><th>If Win</th><th>EV</th>
+          <th>ML</th><th>Win Prob</th><th>Vegas ML</th><th>Spread</th><th>Line Move</th><th>Stake</th><th>If Win</th><th>EV</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>

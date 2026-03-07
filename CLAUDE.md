@@ -19,6 +19,7 @@ NCAAB Prediction/
 │   ├── sentiment_features.py            ← News sentiment feature builder (COMPLETE ✅)
 │   ├── efficiency_metrics.py            ← Efficiency metrics collector (COMPLETE ✅)
 │   ├── kenpom_ratings.py                ← KenPom-style ratings via Bart Torvik (COMPLETE ✅)
+│   ├── odds_features.py                 ← Vegas odds + line-move tracker via The Odds API (COMPLETE ✅)
 │   ├── feature_assembly.py              ← Joins all sources → training_df.csv (COMPLETE ✅)
 │   ├── model_training.py                ← Trains 6 models + home bias audit (COMPLETE ✅)
 │   ├── predict_today.py                 ← Fetches CBS + predicts today's games (COMPLETE ✅)
@@ -31,6 +32,8 @@ NCAAB Prediction/
 │   ├── predictions_latest.json          ← Output: daily predictions export (✅ --export-json flag added)
 │   ├── team_name_mapping.csv            ← Efficiency source→CBS name map
 │   ├── kenpom_name_mapping.csv          ← T-Rank source→CBS name map
+│   ├── odds_name_mapping.csv            ← Odds API source→CBS name map (written each run)
+│   ├── odds_snapshot.json               ← Previous-run odds cache for line-move tracking
 │   └── model_cache/                     ← Trained model files (8 files, schema v1.0)
 │       ├── scaler.joblib
 │       ├── ridge_model.joblib
@@ -41,12 +44,12 @@ NCAAB Prediction/
 │       ├── nn_classifier.keras
 │       └── metadata.joblib              ← feature_names, numeric_cols, ensemble_weights
 ├── website/                             ← Vercel static frontend
-│   ├── index.html                       ← Dashboard layout (Option C) ✅ COMPLETE (with legend, optimizer, pick analysis)
+│   ├── index.html                       ← Dashboard layout (Option C) ✅ COMPLETE (legend, optimizer, pick analysis, Vegas ML, Spread, Line Move)
 │   ├── predictions_latest.json          ← Real predictions data (written by predict_today.py --export-json ✅)
 │   └── vercel.json                      ← Vercel config ✅ COMPLETE
 ├── .github/
 │   └── workflows/
-│       └── daily_predictions.yml        ← GitHub Actions cron ✅ COMPLETE (runs 3 PM EST daily)
+│       └── daily_predictions.yml        ← GitHub Actions cron ✅ COMPLETE (Mon-Fri 3pm EDT, Sat-Sun 10am EDT; every-other-day training; odds key injected)
 ├── Agents/
 │   ├── CBS_games.md                     ← CBS scraper agent spec (IMPLEMENTED)
 │   ├── sentiment.md                     ← News sentiment agent spec (IMPLEMENTED)
@@ -110,6 +113,20 @@ training_df = training_df.merge(away_feats, on='away_name', how='left')
 ```
 
 Rows with null `home_team_won` are dropped before training.
+
+### Stage 1.5 — Vegas Odds Fetch (`predict_today.py`, Step 1.5 — standalone only)
+
+Function calls: `odds_features.fetch_odds()` → `odds_features.build_odds_lookup()`
+
+- Fires after CBS games are scraped; uses today's CBS team name list as the target set
+- `GET https://api.the-odds-api.com/v4/sports/basketball_ncaab/odds/?...&markets=h2h,spreads`
+- Averages moneylines + spreads across preferred books (DraftKings, FanDuel, BetMGM, Caesars; falls back to all if none present)
+- Logs `x-requests-remaining` header for quota monitoring
+- Graceful no-op: if `ODDS_API_KEY` env var is empty, returns `[]` and skips enrichment
+- Compares current odds to `odds_snapshot.json` (previous run) to compute line-move strings (e.g. `"-145 → -160"`)
+- Saves new snapshot to `odds_snapshot.json` for the next run
+- Output: `dict[cbs_home_name → {home_ml, away_ml, spread, home_ml_movement, away_ml_movement}]`
+- Name mapping: 6-step matching (override → exact → exact_ci → fuzzy → fuzzy_prefix → ci_fuzzy); writes `odds_name_mapping.csv`
 
 ### Stage 5 — Today's Games (`Copy of ncaab_predictor.ipynb`, Cell 3)
 
@@ -218,11 +235,11 @@ These are hard constraints; do not soften them for convenience:
 
 | # | Limitation | Pipeline | Triage |
 |---|---|---|---|
-| 1 | 14-day training window — poor generalization | Both | Expand to full season |
+| 1 | 21-day rolling training window — poor generalization | Both | Expand to full season |
 | 2 | KenPom / Efficiency not in notebooks — 8 features missing from notebook models | Notebook only | Port to notebooks; bump schema version; clear notebook cache |
 | 3 | bayes_model (GaussianNB) not in notebook — ensemble diverges between pipelines | Notebook only | Port bayes_model to Cell 10; update classification ensemble weights |
 | 4 | No out-of-sample validation — CV folds share teams | Both | Use time-based splits |
-| 5 | Manual Vegas moneylines — spread analysis returns N/A | Both | Integrate odds API |
+| 5 | Manual Vegas moneylines — spread analysis returns N/A | Both | **Partially resolved** — real Vegas ML + spread shown in Top Picks and All Picks tables on website via `odds_features.py` (The Odds API); line-move column added; full predictions table still uses model-derived MLs; requires `ODDS_API_KEY` env var |
 | 6 | `sgd_model` is actually GradientBoosting — confusing name | Both | Rename; clear cache |
 | 7 | No women's filter in training notebook — possible label corruption | Notebook only | Port filter to training Cell 3 |
 | 8 | Team name brittleness — no alias table | Both | Build alias table; add normalization step |
@@ -277,8 +294,8 @@ python "Python scripts/feature_assembly.py"
 # Step 4: Train all 6 models (runs home bias audit; exits with code 1 if 🔴)
 python "Python scripts/model_training.py"
 
-# Step 5: Predict today's games
-python "Python scripts/predict_today.py"
+# Step 5: Predict today's games (ODDS_API_KEY optional — graceful no-op if omitted)
+ODDS_API_KEY=your_key python "Python scripts/predict_today.py" --export-json
 ```
 
 Re-train from scratch: set `FORCE_RETRAIN = True` in `model_training.py`, then re-run Step 4.
@@ -331,14 +348,15 @@ This section tracks the status of the standalone Python scripts in `Python scrip
 | `sentiment_features.py` | ✅ **COMPLETE** | `sentiment_features.csv` (365 teams × 31 features) | Hardcoded paths fixed Mar 7; uses `__file__`-based paths |
 | `efficiency_metrics.py` | ✅ **COMPLETE** | `efficiency_metrics.csv` (365 rows × 4 metrics) | Hardcoded paths fixed Mar 7; uses `__file__`-based paths |
 | `kenpom_ratings.py` | ✅ **COMPLETE** | `kenpom_ratings.csv` (365 rows) | adj_em/adj_d bug fixed + CSV regenerated Mar 4 ✅ |
+| `odds_features.py` | ✅ **COMPLETE** | `odds_name_mapping.csv`, `odds_snapshot.json` | Vegas ML + spread via The Odds API; snapshot-based line-move tracking across runs; graceful no-op without key |
 | `feature_assembly.py` | ✅ **COMPLETE** | `training_df.csv` (709 rows × 90 cols) | 0 NaN; 61.1% home win rate |
 | `test_feature_assembly.py` | ✅ **COMPLETE** | console output | Test harness for feature shapes and null checks |
 | `model_training.py` | ✅ **COMPLETE** | `model_cache/` (8 files) | 6 models; X=(1418,118); home bias 🟢 57.1% |
-| `predict_today.py` | ✅ **COMPLETE** | console (4 tables) + `predictions_latest.json` | `--export-json` flag; enriches JSON with feature_drivers, articles, top_picks |
-| `website/index.html` | ✅ **COMPLETE** | Deployed on Vercel | Confidence legend; Betting Optimizer; Pick Analysis with feature drivers + article links |
+| `predict_today.py` | ✅ **COMPLETE** | console (4 tables) + `predictions_latest.json` | Step 1.5 odds fetch; top_picks enriched with vegas_ml, vegas_spread, odds_movement; all predictions enriched with home_ml_movement, away_ml_movement |
+| `website/index.html` | ✅ **COMPLETE** | Deployed on Vercel | Legend; Betting Optimizer; Pick Analysis; Today's Picks + Optimizer tables both show Vegas ML, Spread, Line Move (team-labeled) |
 | `website/predictions_latest.json` | ✅ **AUTO-UPDATED** | Daily via GitHub Actions | Written by workflow cron; Vercel auto-deploys on push |
 | `website/vercel.json` | ✅ **COMPLETE** | Vercel deploy config | Cache-Control + SPA rewrite (added Mar 7) |
-| `.github/workflows/daily_predictions.yml` | ✅ **COMPLETE** | Daily cron at 3 PM EST | Full pipeline: scrape → sentiment → efficiency → kenpom → assemble → train → predict → commit (added Mar 7) |
+| `.github/workflows/daily_predictions.yml` | ✅ **COMPLETE** | Mon-Fri 3pm EDT + Sat-Sun 10am EDT | Every-other-day training (odd day-of-month); Steps 1–6 conditional on `is_training_day`; model cache saved/restored via `actions/cache`; `ODDS_API_KEY` secret injected into Step 7 |
 
 ### Known Bugs
 
