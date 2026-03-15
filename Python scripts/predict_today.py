@@ -268,7 +268,7 @@ def _load_kenpom(path: str) -> pd.DataFrame:
     result = df[["cbs_name"] + KENPOM_FEATURE_COLS].copy()
     for col in KENPOM_FEATURE_COLS:
         result[col] = pd.to_numeric(result[col], errors="coerce").fillna(0.0)
-    result = result.dropna(subset=["cbs_name"])
+    result = result[result["cbs_name"].str.strip() != ""].dropna(subset=["cbs_name"])
     dup_count = result["cbs_name"].duplicated().sum()
     if dup_count > 0:
         result = result.groupby("cbs_name", as_index=False)[KENPOM_FEATURE_COLS].mean()

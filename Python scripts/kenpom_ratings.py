@@ -425,6 +425,20 @@ def fetch_barttorvik_ratings() -> list[dict]:
             log.warning("  Skipping — empty response body")
             continue
 
+        # Detect browser-challenge / bot-detection pages (e.g. Cloudflare, barttorvik custom)
+        if any(marker in content for marker in (
+            "Verifying your browser",
+            "Verifying Browser",
+            "js_required",
+            "document.forms[0].submit",
+            "Enable JavaScript",
+        )):
+            log.warning(
+                "  Skipping — browser challenge / JS-required page returned "
+                "(barttorvik.com is blocking automated requests)"
+            )
+            continue
+
         # Determine parse strategy
         content_type = resp.headers.get("Content-Type", "").lower()
         is_json = (
@@ -790,7 +804,16 @@ def main() -> None:
         raw_teams = fetch_barttorvik_ratings()
     except RuntimeError as exc:
         log.error(str(exc))
+        if os.path.isfile(RATINGS_OUT_PATH):
+            log.warning(
+                "WARNING: All barttorvik.com endpoints failed — "
+                "using existing cached ratings from: %s  "
+                "(data may be stale; re-run when barttorvik.com is accessible)",
+                RATINGS_OUT_PATH,
+            )
+            sys.exit(0)
         log.error(
+            "No cached ratings file found. "
             "Manual fallback: call load_manual_csv('/path/to/trank_export.csv') "
             "to ingest a manually downloaded file."
         )
