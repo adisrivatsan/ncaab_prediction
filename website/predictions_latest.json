@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-03-14T14:15:55",
-  "date": "2026-03-14",
+  "generated_at": "2026-03-15T19:11:09",
+  "date": "2026-03-15",
   "summary": {
-    "total_games": 21,
-    "home_picks": 18,
+    "total_games": 6,
+    "home_picks": 3,
     "away_picks": 3,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 1,
-      "MED": 10,
-      "LOW": 10
+      "MED": 2,
+      "LOW": 3
     },
-    "combined_ev": 0.0163
+    "combined_ev": -0.004
   },
   "top_picks": [
     {
-      "pick": "South Florida",
-      "matchup": "Charlotte @ South Florida",
-      "home_team": "South Florida",
-      "away_team": "Charlotte",
+      "pick": "VCU",
+      "matchup": "Dayton @ VCU",
+      "home_team": "VCU",
+      "away_team": "Dayton",
       "bet_side": "HOME",
-      "ml": "-275",
-      "win_prob": 0.734,
+      "ml": "-192",
+      "win_prob": 0.658,
       "confidence": "HIGH",
       "stake": 5.0,
-      "if_win": 1.82,
-      "ev": 0.0059,
+      "if_win": 2.6,
+      "ev": 0.0008,
       "vegas_ml": "N/A",
       "vegas_spread": "N/A",
       "odds_movement": "\u2014",
@@ -34,17 +34,17 @@
       "rank": 1
     },
     {
-      "pick": "Duke",
-      "matchup": "Virginia @ Duke",
-      "home_team": "Duke",
-      "away_team": "Virginia",
+      "pick": "Michigan",
+      "matchup": "Purdue @ Michigan",
+      "home_team": "Michigan",
+      "away_team": "Purdue",
       "bet_side": "HOME",
-      "ml": "-613",
-      "win_prob": 0.86,
+      "ml": "-149",
+      "win_prob": 0.598,
       "confidence": "MED",
       "stake": 5.0,
-      "if_win": 0.82,
-      "ev": 0.0052,
+      "if_win": 3.36,
+      "ev": -0.0007,
       "vegas_ml": "N/A",
       "vegas_spread": "N/A",
       "odds_movement": "\u2014",
@@ -53,17 +53,17 @@
       "rank": 2
     },
     {
-      "pick": "Wichita St.",
-      "matchup": "Tulsa @ Wichita St.",
-      "home_team": "Wichita St.",
-      "away_team": "Tulsa",
+      "pick": "Yale",
+      "matchup": "Penn @ Yale",
+      "home_team": "Yale",
+      "away_team": "Penn",
       "bet_side": "HOME",
-      "ml": "-139",
-      "win_prob": 0.582,
+      "ml": "-224",
+      "win_prob": 0.691,
       "confidence": "MED",
       "stake": 5.0,
-      "if_win": 3.6,
-      "ev": 0.0052,
+      "if_win": 2.23,
+      "ev": -0.0041,
       "vegas_ml": "N/A",
       "vegas_spread": "N/A",
       "odds_movement": "\u2014",
@@ -74,24 +74,139 @@
   ],
   "predictions": [
     {
-      "home_team": "San Diego St.",
-      "away_team": "New Mexico",
+      "home_team": "VCU",
+      "away_team": "Dayton",
+      "status": "2nd 1:20",
+      "ridge_diff": 6.42,
+      "gb_diff": 0.59,
+      "nn_reg_diff": 5.33,
+      "reg_ensemble_diff": 4.24,
+      "logistic_prob": 0.674,
+      "bayes_prob": 0.655,
+      "nn_cls_prob": 0.793,
+      "cls_ensemble_prob": 0.724,
+      "reg_implied_prob": 0.604,
+      "final_win_prob_home": 0.658,
+      "final_win_prob_away": 0.342,
+      "predicted_winner": "VCU",
+      "home_ml": "-192",
+      "away_ml": "+192",
+      "model_std_dev": 0.069,
+      "confidence": "HIGH",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "feature_drivers": [
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 0.8723,
+          "favors_home": true
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 0.8493,
+          "favors_home": true
+        },
+        {
+          "feature": "away_adj_em",
+          "label": "Away Adj Em",
+          "contribution": -0.5678,
+          "favors_home": false
+        },
+        {
+          "feature": "diff_tov_pct",
+          "label": "\u0394 Tov Pct",
+          "contribution": 0.3534,
+          "favors_home": true
+        },
+        {
+          "feature": "away_tov_pct",
+          "label": "Away Tov Pct",
+          "contribution": 0.313,
+          "favors_home": true
+        }
+      ],
+      "articles_home": [
+        {
+          "title": "How to watch Dayton vs. VCU men\u2019s basketball: A-10 Tournament TV channel and streaming options for March 15 - The New Yo",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNc0ZmNnBuYWFhdGJYTGFRSlFyTGlZTFJlbEcteUw0QUg4c3FiaHQ5aTNiSXNMMVFhRTdNYVdFZmFpMTZzbG95Y0pJemVCSVJLd1IyVUZuVm9FNHdHRUxtbEotcmhXTXF6Q1dIeVFpY0x2VkhiWU9yODBwUmtvTDBad2ZiMFRNQ2xyUWI1SWtzZDJ0U1N4SFpqWlNLTmNTNW9LSUpVSlNTdTRrOThCeEhfSVo5T1d3OFRhU1J2cUxvVXJRWEFSUVd1R3NocWNwR2NTVEppWDd6dXFWQTJHMGdKLVdNNXlRc1lIaktCV3V3?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Dayton vs. VCU odds, prediction: 2026 A-10 Tournament Final picks for March 15 from proven model - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVDFlU29hNElCZllwTG03Uy1UYUlnN3JSSDNNZldvVE9UQTFkRjFrVml5bHFkbGFldlgtcnpvSHdXT05QeGFmeHFUcDFmeG11SlN6ZG9neVozZ1BQWFlZT0lqMGpKYzFwRklvZVRaTnM5UDU5RHBsUGFaMFYwQlczM0ZxUnVzOTdqRXZYNFhKZGVKN0s5OVhCQnk1ZUJKc1pBM09IUWp6RXVHLTZ2bGI0?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "March Madness bubble winners, losers: 1 bid stealer lives, another fades away - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSlhmR1dEbXFQVjVDSS1ORVN0NFN2YjA1aWZsRVZkT05JWDh5ejFmNGFlM1hGMXB5WjNRTktESm5tNUlTZGdrWWpuWW00TF83MDRLcGpjbVFfaDkyU24yYmZrRVIzeEcyV0FwTENMWXRLSmxOWjRkSVJQMlpmZ3NyUUloSUdmMGk1WXktUWV0UnpYRW1yeV9rMjRoQTJ3cVh4MGZyMy1Qakh5N2gxS2NybkM4anByYkZVOW5meFhDZVNhYW9RNWRoMUFtS1puUE5jS3c?oc=5",
+          "source": "Google News"
+        }
+      ],
+      "articles_away": [
+        {
+          "title": "How to watch Dayton vs. VCU men\u2019s basketball: A-10 Tournament TV channel and streaming options for March 15 - The New Yo",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNc0ZmNnBuYWFhdGJYTGFRSlFyTGlZTFJlbEcteUw0QUg4c3FiaHQ5aTNiSXNMMVFhRTdNYVdFZmFpMTZzbG95Y0pJemVCSVJLd1IyVUZuVm9FNHdHRUxtbEotcmhXTXF6Q1dIeVFpY0x2VkhiWU9yODBwUmtvTDBad2ZiMFRNQ2xyUWI1SWtzZDJ0U1N4SFpqWlNLTmNTNW9LSUpVSlNTdTRrOThCeEhfSVo5T1d3OFRhU1J2cUxvVXJRWEFSUVd1R3NocWNwR2NTVEppWDd6dXFWQTJHMGdKLVdNNXlRc1lIaktCV3V3?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "2026 March Madness: Men's NCAA tournament schedule, dates - NCAA.com",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVUh4bXVLMXY4VEVLeWJLcnZqVXhGd2oySW02cWdFcWx5YThZeGFTZGRMdUhpOUJhUUdBdllVVEVMUDBieDFkNGhaekZZSmh3NU1oamwwRUZCbU0xLTBaYnBrREhhcndQSjlpVUMtckt6NVFqV3pJTmdOUGJQcFMtelhVb3VvM1Q2cVYxNDA3cGpMN0xtdDA2TDVHUGNfTkF5ZkllODFOU1VYZk9JUzF6YXA1eW_SAboBQVVfeXFMTy1fNXZmTzJmUFFhM2c5NW5MWmdhTTlrSVNya082UVREMkJFdG54RTQ5N2NodlNRTk5xZV9sUjdXUFE0MDNOa1JocFVfSU9SSE9zcUZHYVdIdTFfRFZxcmtybDlfX3pLWm8tNEM3blhKaGlLMmhUZklQd1hSU3g0NkVCdENXTTlHR3hVQ0NFODNBNXI2OEEzY2pnMnNnN2pEWXhoZ3k3alJfX0hEUWhLWkZUNGJVZ2xmbGtR?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Dayton vs. VCU odds, prediction: 2026 A-10 Tournament Final picks for March 15 from proven model - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVDFlU29hNElCZllwTG03Uy1UYUlnN3JSSDNNZldvVE9UQTFkRjFrVml5bHFkbGFldlgtcnpvSHdXT05QeGFmeHFUcDFmeG11SlN6ZG9neVozZ1BQWFlZT0lqMGpKYzFwRklvZVRaTnM5UDU5RHBsUGFaMFYwQlczM0ZxUnVzOTdqRXZYNFhKZGVKN0s5OVhCQnk1ZUJKc1pBM09IUWp6RXVHLTZ2bGI0?oc=5",
+          "source": "Google News"
+        }
+      ]
+    },
+    {
+      "home_team": "Arkansas",
+      "away_team": "Vanderbilt",
+      "status": "2nd 41.0",
+      "ridge_diff": -1.29,
+      "gb_diff": -4.22,
+      "nn_reg_diff": -7.09,
+      "reg_ensemble_diff": -4.49,
+      "logistic_prob": 0.413,
+      "bayes_prob": 0.001,
+      "nn_cls_prob": 0.184,
+      "cls_ensemble_prob": 0.227,
+      "reg_implied_prob": 0.39,
+      "final_win_prob_home": 0.316,
+      "final_win_prob_away": 0.684,
+      "predicted_winner": "Vanderbilt",
+      "home_ml": "+216",
+      "away_ml": "-216",
+      "model_std_dev": 0.168,
+      "confidence": "LOW",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "feature_drivers": [],
+      "articles_home": [],
+      "articles_away": []
+    },
+    {
+      "home_team": "Utah Valley",
+      "away_team": "Cal Baptist",
       "status": "final",
-      "ridge_diff": 4.07,
-      "gb_diff": 3.57,
-      "nn_reg_diff": 4.6,
-      "reg_ensemble_diff": 4.13,
-      "logistic_prob": 0.641,
-      "bayes_prob": 0.986,
-      "nn_cls_prob": 0.848,
-      "cls_ensemble_prob": 0.803,
-      "reg_implied_prob": 0.602,
-      "final_win_prob_home": 0.692,
-      "final_win_prob_away": 0.308,
-      "predicted_winner": "San Diego St.",
-      "home_ml": "-225",
-      "away_ml": "+225",
-      "model_std_dev": 0.156,
+      "ridge_diff": 1.91,
+      "gb_diff": 6.34,
+      "nn_reg_diff": -0.82,
+      "reg_ensemble_diff": 2.15,
+      "logistic_prob": 0.489,
+      "bayes_prob": 0.004,
+      "nn_cls_prob": 0.186,
+      "cls_ensemble_prob": 0.256,
+      "reg_implied_prob": 0.553,
+      "final_win_prob_home": 0.419,
+      "final_win_prob_away": 0.581,
+      "predicted_winner": "Cal Baptist",
+      "home_ml": "+138",
+      "away_ml": "-138",
+      "model_std_dev": 0.224,
       "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -101,647 +216,112 @@
     },
     {
       "home_team": "Yale",
-      "away_team": "Cornell",
-      "status": "",
-      "ridge_diff": 5.98,
-      "gb_diff": 6.0,
-      "nn_reg_diff": 2.83,
-      "reg_ensemble_diff": 4.73,
-      "logistic_prob": 0.725,
-      "bayes_prob": 0.858,
-      "nn_cls_prob": 0.962,
-      "cls_ensemble_prob": 0.859,
-      "reg_implied_prob": 0.616,
-      "final_win_prob_home": 0.725,
-      "final_win_prob_away": 0.275,
-      "predicted_winner": "Yale",
-      "home_ml": "-264",
-      "away_ml": "+264",
-      "model_std_dev": 0.131,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 1.2536,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.4755,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_tov_pct",
-          "label": "\u0394 Tov Pct",
-          "contribution": 0.3373,
-          "favors_home": true
-        },
-        {
-          "feature": "away_efg_pct",
-          "label": "Away Efg Pct",
-          "contribution": -0.2608,
-          "favors_home": false
-        },
-        {
-          "feature": "home_efg_pct",
-          "label": "Home Efg Pct",
-          "contribution": 0.2018,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "UMBC",
-      "away_team": "Vermont",
-      "status": "",
-      "ridge_diff": -4.75,
-      "gb_diff": -1.97,
-      "nn_reg_diff": -0.52,
-      "reg_ensemble_diff": -2.22,
-      "logistic_prob": 0.37,
-      "bayes_prob": 0.001,
-      "nn_cls_prob": 0.899,
-      "cls_ensemble_prob": 0.534,
-      "reg_implied_prob": 0.445,
-      "final_win_prob_home": 0.485,
-      "final_win_prob_away": 0.515,
-      "predicted_winner": "Vermont",
-      "home_ml": "+106",
-      "away_ml": "-106",
-      "model_std_dev": 0.319,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Saint Louis",
-      "away_team": "Dayton",
-      "status": "",
-      "ridge_diff": 7.08,
-      "gb_diff": 0.82,
-      "nn_reg_diff": 5.36,
-      "reg_ensemble_diff": 4.52,
-      "logistic_prob": 0.64,
-      "bayes_prob": 0.783,
-      "nn_cls_prob": 0.919,
-      "cls_ensemble_prob": 0.794,
-      "reg_implied_prob": 0.611,
-      "final_win_prob_home": 0.693,
-      "final_win_prob_away": 0.307,
-      "predicted_winner": "Saint Louis",
-      "home_ml": "-226",
-      "away_ml": "+226",
-      "model_std_dev": 0.123,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 1.2283,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.9549,
-          "favors_home": true
-        },
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": -0.5603,
-          "favors_home": false
-        },
-        {
-          "feature": "away_tov_pct",
-          "label": "Away Tov Pct",
-          "contribution": 0.3412,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_ctx_ranking_mention_rate",
-          "label": "\u0394 Ctx Ranking Mention Rate",
-          "contribution": 0.3257,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Howard",
-      "away_team": "NC Central",
-      "status": "",
-      "ridge_diff": 8.84,
-      "gb_diff": 22.45,
-      "nn_reg_diff": 11.86,
-      "reg_ensemble_diff": 14.13,
-      "logistic_prob": 0.798,
-      "bayes_prob": 1.0,
-      "nn_cls_prob": 0.989,
-      "cls_ensemble_prob": 0.925,
-      "reg_implied_prob": 0.804,
-      "final_win_prob_home": 0.858,
-      "final_win_prob_away": 0.142,
-      "predicted_winner": "Howard",
-      "home_ml": "-606",
-      "away_ml": "+606",
-      "model_std_dev": 0.097,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 3.501,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_tov_pct",
-          "label": "\u0394 Tov Pct",
-          "contribution": -2.5951,
-          "favors_home": false
-        },
-        {
-          "feature": "away_tov_pct",
-          "label": "Away Tov Pct",
-          "contribution": -1.8366,
-          "favors_home": false
-        },
-        {
-          "feature": "diff_orb_pct",
-          "label": "\u0394 Orb Pct",
-          "contribution": 1.7409,
-          "favors_home": true
-        },
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": 1.2372,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Florida",
-      "away_team": "Vanderbilt",
-      "status": "",
-      "ridge_diff": 5.8,
-      "gb_diff": 14.98,
-      "nn_reg_diff": 6.3,
-      "reg_ensemble_diff": 8.75,
-      "logistic_prob": 0.666,
-      "bayes_prob": 0.862,
-      "nn_cls_prob": 0.958,
-      "cls_ensemble_prob": 0.836,
-      "reg_implied_prob": 0.706,
-      "final_win_prob_home": 0.765,
-      "final_win_prob_away": 0.235,
-      "predicted_winner": "Florida",
-      "home_ml": "-325",
-      "away_ml": "+325",
-      "model_std_dev": 0.118,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 1.8806,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 1.4341,
-          "favors_home": true
-        },
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": -1.4141,
-          "favors_home": false
-        },
-        {
-          "feature": "home_orb_pct",
-          "label": "Home Orb Pct",
-          "contribution": 0.5798,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_orb_pct",
-          "label": "\u0394 Orb Pct",
-          "contribution": 0.5378,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Michigan",
-      "away_team": "Wisconsin",
-      "status": "",
-      "ridge_diff": 4.98,
-      "gb_diff": 8.61,
-      "nn_reg_diff": 2.59,
-      "reg_ensemble_diff": 5.11,
-      "logistic_prob": 0.417,
-      "bayes_prob": 0.0,
-      "nn_cls_prob": 0.751,
-      "cls_ensemble_prob": 0.484,
-      "reg_implied_prob": 0.625,
-      "final_win_prob_home": 0.561,
-      "final_win_prob_away": 0.439,
-      "predicted_winner": "Michigan",
-      "home_ml": "-128",
-      "away_ml": "+128",
-      "model_std_dev": 0.285,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Harvard",
       "away_team": "Penn",
-      "status": "",
-      "ridge_diff": -0.11,
-      "gb_diff": 0.77,
-      "nn_reg_diff": 2.47,
-      "reg_ensemble_diff": 1.19,
-      "logistic_prob": 0.442,
-      "bayes_prob": 0.997,
-      "nn_cls_prob": 0.419,
-      "cls_ensemble_prob": 0.543,
-      "reg_implied_prob": 0.53,
-      "final_win_prob_home": 0.536,
-      "final_win_prob_away": 0.464,
-      "predicted_winner": "Harvard",
-      "home_ml": "-115",
-      "away_ml": "+115",
-      "model_std_dev": 0.235,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "South Florida",
-      "away_team": "Charlotte",
-      "status": "",
-      "ridge_diff": 11.31,
-      "gb_diff": 9.29,
-      "nn_reg_diff": 7.22,
-      "reg_ensemble_diff": 9.07,
-      "logistic_prob": 0.846,
-      "bayes_prob": 0.8,
-      "nn_cls_prob": 0.674,
-      "cls_ensemble_prob": 0.76,
-      "reg_implied_prob": 0.712,
-      "final_win_prob_home": 0.734,
-      "final_win_prob_away": 0.266,
-      "predicted_winner": "South Florida",
-      "home_ml": "-275",
-      "away_ml": "+275",
-      "model_std_dev": 0.068,
-      "confidence": "HIGH",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 2.4971,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.7881,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_tov_pct",
-          "label": "\u0394 Tov Pct",
-          "contribution": 0.5301,
-          "favors_home": true
-        },
-        {
-          "feature": "home_orb_pct",
-          "label": "Home Orb Pct",
-          "contribution": 0.3946,
-          "favors_home": true
-        },
-        {
-          "feature": "away_tov_pct",
-          "label": "Away Tov Pct",
-          "contribution": 0.3553,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [
-        {
-          "title": "How to watch Charlotte vs. South Florida men\u2019s basketball: AAC Tournament TV channel and streaming options for March 14 ",
-          "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOSGI4d2VqOGR5aGFJTEhYQ0NFY08xX3VVNmVyTm5jYVFNVi03cC1OY0pEdnc4V2o2bzNydDVCcWF6TFowWlJYYlNlQWliaG5UWl9ud3BGdE5oS0VsNHJpTDZUZG8xdzRrbzFEbkkyT01vX1l0R0JoNjFNYkRTS2JyZDVycXBBX2NLSHZ6UFBVeFRCYTIwUzl2NG5qcS14YUFaT3VqY1FJUmNxbmtVY3pueXZiREJBNll5aHpNVjF0Ry1qSGs2bnBzNXN3U1pYRUNzVnlvLWtZQzY5YXZjWEVPem9BUG9oQnNsOHJaTHVIRmFiWm56Uy1DZnZ6V3hjZw?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "USF Men's Basketball Faces Charlotte in American Conference Semis, Two Wins From an Automatic NCAA Bid - USF Athletics",
-          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQclI0OHNoOXZSX2xtbE1nSWhscmQtQ0ViWmlvWGRxcF9OUFNYeG56RFM3dWtEVGwtMUtRR0I5U1RqWW9zdUFYMFZKZklzdWN2TGhUNUE1WFpjd2poZ2FOLVY2cXZEQVZFMTFFX3QtaDFtWUR4amw5RDJiNHV0ZmtOQ294QkxsMVo2b1FqQmNvR3ZGT01sR2V0Q3FlWlpJOG8yTWhCMm9pRjhwVmhxNE45T1FfbXVLdjRVOFpnaXYtS2NDMGY4Qy1VNkltTTlFSlBZbFFHaWE4MWhWdXM?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "2026 March Madness: Men's NCAA tournament schedule, dates - NCAA.com",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUkg2VTRub0hMb1NTVzBkd1RIek1WRThQa3QxSW5XMGhZLTM4eERVMVJRaEFheURJbzFfYnV4MUFuRlM1MHZxU2RsZE9mODFSLWFzaXlJZjdEZzl5RmxaWVZtTk5UdURIOVAzTmp1Q0hrVVEyVkhQUU5OcVlWWWZ0a19GcXpsWXJDT2hhNUJrRVhHdXMtckV1TFAycVdLN2E5TW52a1JSUW95Yk5kMW1QNkp1WTDSAboBQVVfeXFMTjl6a3JVSkxiSXFvZU43WXBVSG5XWlkyOXd6eVNTTVRsMURpYjNOZ29JM2ZPSVVCaHMtRl9aQjBneTV5S0dHNFdtQ0Nta3Rka0J4TW1sa3VFelBpaUxqY2JYcnlGaUlCcDJaWWhSRzlDVWFEVzMxMnRfYWJGcDM4eUM0czhkRXdxLTZ0ckdTQkdTd2VWSlVGWjdMcUdLd1RSVWRKS3BVdDNFbWUycUdoMXNCRUN4dDZqRFN3?oc=5",
-          "source": "Google News"
-        }
-      ],
-      "articles_away": [
-        {
-          "title": "USF Men's Basketball Faces Charlotte in American Conference Semis, Two Wins From an Automatic NCAA Bid - USF Athletics",
-          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQclI0OHNoOXZSX2xtbE1nSWhscmQtQ0ViWmlvWGRxcF9OUFNYeG56RFM3dWtEVGwtMUtRR0I5U1RqWW9zdUFYMFZKZklzdWN2TGhUNUE1WFpjd2poZ2FOLVY2cXZEQVZFMTFFX3QtaDFtWUR4amw5RDJiNHV0ZmtOQ294QkxsMVo2b1FqQmNvR3ZGT01sR2V0Q3FlWlpJOG8yTWhCMm9pRjhwVmhxNE45T1FfbXVLdjRVOFpnaXYtS2NDMGY4Qy1VNkltTTlFSlBZbFFHaWE4MWhWdXM?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "2026 ACC men's basketball tournament bracket, schedule, how to watch: Can Duke run the table in Charlotte? - Yahoo Sport",
-          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQODZZa1dibnJkamNuSGNuZWlxU2FYNzNWeENCU3ZQU0lmQl8yeXRzcGRzbS10MzFDcUZpRE9FNXZuOEZkcG9XWDMzbm1zUW5zZDdmUDJuRXpLODJiQTJ4VVFrVEpKZERhYVNzbTVLdk5uRHlEUGhIZk52OUpGVTd4bXp5bHF6QWtMNE5EU1BjamFkc29mRUx5VUpRSG5tbTAxdXlRWWVXaVprMU40WGs1TE5EOG05b3h4aHVTMGJnbVJZZGp4Q2ZUbER6RkRzVkhHVXFZeVdSS3RfcW1iUjBPU2xrbFBfMnk3NU4tLTJ2UGxya2lzUVMxTW9aVHQzaEpjQ2NF?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Charlotte man admits to role in college basketball bribery and gambling scheme - Charlotte Observer",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOalpNOVNrdUhTbUdiQ1pZV2tKT2RNQV9TWE42NnNMbGJwZjN1elVVSHZMbmZpVW5DVGtvZUFfc0FGeUhtSmkwbnI1eTFneVVFU01OLWZwSG5HSE1CZEstTUppMkNjeEg4Yl9EYzJHRzVfX3FmLXB4d3R5RUhwOV9OUnY1UFU3RHM0M0o0cDVXUdIBjwFBVV95cUxQVnBqS3Z2UzA1enhKRVIwVXhXT05hT19LWjczV2NJdUVjdU1tYmM0dl83Rk80NjNQQ24zd0ppcXNWSDB1VlgwamNIRUZDb1JjZVlfTG9BQXQwQWR5aG1qSUVTM3JLTTNlT2MxNHpld2hZaU5Bckp6cUZGT09oYjFkcjh6RHpuV3lldmxDOHJyUQ?oc=5",
-          "source": "Google News"
-        }
-      ]
-    },
-    {
-      "home_team": "Arkansas",
-      "away_team": "Ole Miss",
-      "status": "",
-      "ridge_diff": 19.9,
-      "gb_diff": 6.15,
-      "nn_reg_diff": 12.82,
-      "reg_ensemble_diff": 12.95,
-      "logistic_prob": 0.94,
+      "status": "final/OT",
+      "ridge_diff": 8.3,
+      "gb_diff": 1.47,
+      "nn_reg_diff": 5.28,
+      "reg_ensemble_diff": 5.04,
+      "logistic_prob": 0.73,
       "bayes_prob": 1.0,
-      "nn_cls_prob": 0.767,
-      "cls_ensemble_prob": 0.874,
-      "reg_implied_prob": 0.785,
-      "final_win_prob_home": 0.825,
-      "final_win_prob_away": 0.175,
-      "predicted_winner": "Arkansas",
-      "home_ml": "-472",
-      "away_ml": "+472",
-      "model_std_dev": 0.1,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 4.4138,
-          "favors_home": true
-        },
-        {
-          "feature": "away_tov_pct",
-          "label": "Away Tov Pct",
-          "contribution": -1.8366,
-          "favors_home": false
-        },
-        {
-          "feature": "diff_tov_pct",
-          "label": "\u0394 Tov Pct",
-          "contribution": -1.6829,
-          "favors_home": false
-        },
-        {
-          "feature": "diff_orb_pct",
-          "label": "\u0394 Orb Pct",
-          "contribution": 1.5191,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 1.4129,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "UCLA",
-      "away_team": "Purdue",
-      "status": "",
-      "ridge_diff": -9.85,
-      "gb_diff": -12.82,
-      "nn_reg_diff": -11.2,
-      "reg_ensemble_diff": -11.28,
-      "logistic_prob": 0.237,
-      "bayes_prob": 0.025,
-      "nn_cls_prob": 0.612,
-      "cls_ensemble_prob": 0.363,
-      "reg_implied_prob": 0.245,
-      "final_win_prob_home": 0.298,
-      "final_win_prob_away": 0.702,
-      "predicted_winner": "Purdue",
-      "home_ml": "+236",
-      "away_ml": "-236",
-      "model_std_dev": 0.211,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "VCU",
-      "away_team": "Saint Joseph's",
-      "status": "",
-      "ridge_diff": 4.71,
-      "gb_diff": 4.47,
-      "nn_reg_diff": 5.5,
-      "reg_ensemble_diff": 4.96,
-      "logistic_prob": 0.69,
-      "bayes_prob": 0.967,
-      "nn_cls_prob": 0.632,
-      "cls_ensemble_prob": 0.719,
-      "reg_implied_prob": 0.621,
-      "final_win_prob_home": 0.665,
-      "final_win_prob_away": 0.335,
-      "predicted_winner": "VCU",
-      "home_ml": "-199",
-      "away_ml": "+199",
+      "nn_cls_prob": 0.708,
+      "cls_ensemble_prob": 0.774,
+      "reg_implied_prob": 0.623,
+      "final_win_prob_home": 0.691,
+      "final_win_prob_away": 0.309,
+      "predicted_winner": "Yale",
+      "home_ml": "-224",
+      "away_ml": "+224",
       "model_std_dev": 0.141,
       "confidence": "MED",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
       "feature_drivers": [
         {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 1.2351,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.7989,
-          "favors_home": true
-        },
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": -0.4033,
-          "favors_home": false
-        },
-        {
           "feature": "diff_tov_pct",
           "label": "\u0394 Tov Pct",
-          "contribution": 0.2249,
-          "favors_home": true
+          "contribution": -1.903,
+          "favors_home": false
         },
         {
           "feature": "away_tov_pct",
           "label": "Away Tov Pct",
-          "contribution": 0.2145,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Wichita St.",
-      "away_team": "Tulsa",
-      "status": "",
-      "ridge_diff": -2.1,
-      "gb_diff": 3.77,
-      "nn_reg_diff": -0.16,
-      "reg_ensemble_diff": 0.44,
-      "logistic_prob": 0.48,
-      "bayes_prob": 0.609,
-      "nn_cls_prob": 0.844,
-      "cls_ensemble_prob": 0.67,
-      "reg_implied_prob": 0.511,
-      "final_win_prob_home": 0.582,
-      "final_win_prob_away": 0.418,
-      "predicted_winner": "Wichita St.",
-      "home_ml": "-139",
-      "away_ml": "+139",
-      "model_std_dev": 0.143,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": -0.7788,
+          "contribution": -1.8366,
           "favors_home": false
-        },
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": -0.7583,
-          "favors_home": false
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.4862,
-          "favors_home": true
-        },
-        {
-          "feature": "home_orb_pct",
-          "label": "Home Orb Pct",
-          "contribution": 0.4349,
-          "favors_home": true
         },
         {
           "feature": "diff_orb_pct",
           "label": "\u0394 Orb Pct",
-          "contribution": 0.2359,
+          "contribution": 1.571,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_efg_pct",
+          "label": "\u0394 Efg Pct",
+          "contribution": 1.2951,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 1.2266,
           "favors_home": true
         }
       ],
       "articles_home": [
         {
-          "title": "How to watch Tulsa vs. Wichita State men\u2019s basketball: AAC Tournament TV channel and streaming options for March 14 - Th",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaGFQNUVyWmJZejlWaWpRQXd2dWxSVHNzYlVoOThqSThfUHBfbFFzaThrZ2RrcmVWNUR4TTQ0M3FielAwYWNlMzg2QkNkdE0yYjVpRlRYM24wMDkyZkQ4WmxpcHNaNm14ZThrMUlMZURibkdFaVA4TzZqR0Nkdm1wWUFIaElsR3Y3MEVXNXpKdEUtNW80RjBvUkVRbV9LNEJSWVZxUWJhYw?oc=5",
+          "title": "How to watch Pennsylvania vs. Yale men\u2019s basketball: Ivy League Tournament TV channel and streaming options for March 15",
+          "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQaC1SSmotNlhiLURtU05PUDNDQm1fenlCLWZEZGhSTV9uV2JILVJlS01PSzYyWUc5UUhlUmpBQzFyUDNiMWhoNTIxVi04R1VwLUIxX29hU1BWMmpKVjlRM1NRcV9PWklPc0F1eTU2b2QzYm1sZDNBVzczQkhmY01odlIxeWJ2eUtqNXVRWFhFREoxME5nWmZEVUVGZjB0aklWTEdBdzVveHY0Z2d1bkhHdkdkWTR4NTFoZEQwcnFDdG5SZDVhdGp6U0RuU1BJbl91U2h5OWVGd2RkQkNZWV9nUnY1OVRzX3JnVGdjdWRSREktVjFwUVNsZEp6bkFsMlk?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Wichita State 75-58 Milwaukee (Nov 22, 2025) Final Score - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUHV5RFBkdjNUdG9qWlVCUFZCWmE5aTBBeEpValIzMXF5YkpteW15MHJKbldTZVc2V3lpNmtucGlDQTdPRVRjSlQyeHlfN3Y2TWpnS0hOY0RkSjVzWG5aY3dwb1JNVDc3Zk1zZlp6SU9UUV85VzJxTDQ3d20tdXpKbE9NWGRhSEZZTGxaOC1HS3U0MG8?oc=5",
+          "title": "March Madness 2026: Penn rallies to force OT with 2 late 3s, stun No. 1 seed Yale for Ivy League championship, NCAA bid ",
+          "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPVU4tcHZsQnNMd2gxZEVXWlJwQXZ3SWpTbEJrcFpDckZEem1ITzRqSTJ0cDZoMUN1VzRYOU1zanE2MGxnWkQ0akhTMmRUa01Xa0x5U2MtMTN5Vy02dW9CRkF3anVib0daNlVGMldmbjhSU3dEdUE2X0oyVWZ1UUdHcURXUnowZU9wcERaOUNVaU1DOGY0RVZ3aS1zNV8wYlAxT0pMbzRwNTYyRHY1Q1NiS09taEwwUjdFVnFVb1VqUUQ5STMzWUdZa1BrNVBQdWNxSkFUeVB6WFQwRUVFaWpOMzBCdkV6a0lOYWpqTDJDVDlfRVVSVXhjaEJneWNLQ0Q1VWRlMk94SDhpaWxvdDhWYjVndFBmcnlPRUVDZVZYeE9iTm12c3ByRA?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Is Wichita State really the most \u2018unlucky\u2019 team in college basketball? - Wichita Eagle",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA4ckRlc3NRNjNCZ0p4d3lpaGNZMUU3ZFliRVJ2LWVLaFV0OUVTMVRvdUxVSnN0UWl5U3d5NmlKRVFzYkZiZmlwcU8wZ0NySjc0TWtqb1huenIxdEtnX0p2SV9ubXlsY2JaZVlhODZ6UzhZMHpHNGZzUU16WU82UdIBfkFVX3lxTE9RLWRaYzNiVHJxQ2tvLUZQc0IyWGF3aUhta3pSN1p0RjJZN3ByWG9UcGZ6NGxmN09tNFdOalB6czdRZ1NZOXhUTkxOY3kwV0VCQmZjRmZMNVhvLVdyZldTZ2pjMUhCckVaS3BJenZPRzVMSmJ0S00zWGc4LWdfUQ?oc=5",
+          "title": "Pennsylvania vs. Yale Basketball Prediction, Starting Lineup And Injury Report Ft. Ethan Roberts - College Sports Networ",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPT1N4cHp1S0tGMVhBTlV5SUZ5TGZzeExwNlNvMWhkNk9OSGFVRWVHTTZEZ1ZSV2JrX2hha1VmQkJ0MzBySU44MUxxcU83M2FDZjI1T3hIbnpmQmJyTVpnRzlscjg1YnRjUWh0UGFORlFNcE1YTFNUbHlJWUdqa1pCWXVvTFJMdUJIZ1RKUnVNd2xSQVZaWW5HZEhzSmcwYldSQy1oVQ?oc=5",
           "source": "Google News"
         }
       ],
       "articles_away": [
         {
-          "title": "North Texas Mean Green vs. Tulsa Golden Hurricane Live Score and Stats - March 13, 2026 Gametracker - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTHpyZ19WNEVkQTh6QXlpYTVITzRITXpZNXlHdEhLS28xRTRwTmtZT3hMNGpWcElEcjZhd2lTMW1yQTdJT3QyTmpOd0xLZmxoRjRuOGtZZklmbHpRWEtKclU0YWJnLU04YXBOWlEzRDVackIzSXlncV8wMk1FTXloYXo4bzl0QmIzN0FEWlpna09CUWFj?oc=5",
+          "title": "How to watch Pennsylvania vs. Yale men\u2019s basketball: Ivy League Tournament TV channel and streaming options for March 15",
+          "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQaC1SSmotNlhiLURtU05PUDNDQm1fenlCLWZEZGhSTV9uV2JILVJlS01PSzYyWUc5UUhlUmpBQzFyUDNiMWhoNTIxVi04R1VwLUIxX29hU1BWMmpKVjlRM1NRcV9PWklPc0F1eTU2b2QzYm1sZDNBVzczQkhmY01odlIxeWJ2eUtqNXVRWFhFREoxME5nWmZEVUVGZjB0aklWTEdBdzVveHY0Z2d1bkhHdkdkWTR4NTFoZEQwcnFDdG5SZDVhdGp6U0RuU1BJbl91U2h5OWVGd2RkQkNZWV9nUnY1OVRzX3JnVGdjdWRSREktVjFwUVNsZEp6bkFsMlk?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Watch QF: Tulsa v North Texas Live - Kayo Sports",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZ0t0b3RybU51RE1XM2tjQXFubkYxY1NQbEhMRExXM01VWmY5QThtMm5kOTBQWl9ubWF4QTVqWE1GbGEwRW52OV9RX05NSlRWZ3RXSl96cVBvVXR1RWp4ZThDdEZ6clc3M1lXUTdVX0pHWXdSZFBacEFUYTJLNEZ4U0JUbXc3dENiczhBWA?oc=5",
+          "title": "March Madness 2026: Penn rallies to force OT with 2 late 3s, stun No. 1 seed Yale for Ivy League championship, NCAA bid ",
+          "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPVU4tcHZsQnNMd2gxZEVXWlJwQXZ3SWpTbEJrcFpDckZEem1ITzRqSTJ0cDZoMUN1VzRYOU1zanE2MGxnWkQ0akhTMmRUa01Xa0x5U2MtMTN5Vy02dW9CRkF3anVib0daNlVGMldmbjhSU3dEdUE2X0oyVWZ1UUdHcURXUnowZU9wcERaOUNVaU1DOGY0RVZ3aS1zNV8wYlAxT0pMbzRwNTYyRHY1Q1NiS09taEwwUjdFVnFVb1VqUUQ5STMzWUdZa1BrNVBQdWNxSkFUeVB6WFQwRUVFaWpOMzBCdkV6a0lOYWpqTDJDVDlfRVVSVXhjaEJneWNLQ0Q1VWRlMk94SDhpaWxvdDhWYjVndFBmcnlPRUVDZVZYeE9iTm12c3ByRA?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Tulsa vs North Texas College Basketball Prediction, Odds, Picks, Best Bets for AAC Tournament - FanDuel",
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPOE1ZcHQ5MUVNTmttMVVFZjlhdXJDYjJGSlVCRDJiZVBER1pQNE82emhvOVJWS1ZRTFI1NmcxWnpUTmVUYl9JXzMwbnZqLWxMVEZLS0c2bTNlbFlIeXoxbnRtNk4xdXNZd0pLNTdWX0lTWlZqQTRTeHRsWTFEZzNjWFZwYkJCc2pOTWhPLXUwbXlJQjZRRzl0R0pEZzBFa0NpWDBieUNKYVVuYUtUbzhuWmRRQkktUUY4a0dhRDdSU3BCQUpzOGRwUmdBY1dnTFk?oc=5",
+          "title": "Former Iowa coach Fran McCaffery leads Penn to NCAA Tournament - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOSzliS3d1OUZzZVdWNTNwTUwxS3RSWlhnajRrUGxCMk5BbDBlbVV3Y1U2VWMyYWxTeVBxMXdOYTVnVGxQY2lVUi1uYlh4R01vejdLNnZiTEFHTndYR0w1Q3Y5NGt5cUxiSjRJQ0tIMFZvdEFwc0gwYldZSkprd1FRbDM4LXFfb1V4R3VpbEpQM2hTc3h2UWs4N1BWRmd6cVRIMTg4NlpjbHc1bm5vWmlwbzIyZlhxMTZqV3U5RmZDUzJVcWRsSTBfNWFtT2NLaXlOLWY5TDR5Tzk3dzBYaVBfRHh3?oc=5",
           "source": "Google News"
         }
       ]
     },
     {
-      "home_team": "Arizona",
-      "away_team": "Houston",
+      "home_team": "South Florida",
+      "away_team": "Wichita St.",
       "status": "",
-      "ridge_diff": 2.05,
-      "gb_diff": 4.32,
-      "nn_reg_diff": 2.17,
-      "reg_ensemble_diff": 2.78,
-      "logistic_prob": 0.747,
-      "bayes_prob": 0.997,
-      "nn_cls_prob": 0.91,
-      "cls_ensemble_prob": 0.87,
-      "reg_implied_prob": 0.569,
-      "final_win_prob_home": 0.705,
-      "final_win_prob_away": 0.295,
-      "predicted_winner": "Arizona",
-      "home_ml": "-239",
-      "away_ml": "+239",
-      "model_std_dev": 0.163,
+      "ridge_diff": 0.6,
+      "gb_diff": -3.17,
+      "nn_reg_diff": -4.01,
+      "reg_ensemble_diff": -2.38,
+      "logistic_prob": 0.45,
+      "bayes_prob": 0.11,
+      "nn_cls_prob": 0.03,
+      "cls_ensemble_prob": 0.193,
+      "reg_implied_prob": 0.441,
+      "final_win_prob_home": 0.329,
+      "final_win_prob_away": 0.671,
+      "predicted_winner": "Wichita St.",
+      "home_ml": "+204",
+      "away_ml": "-204",
+      "model_std_dev": 0.19,
       "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -750,311 +330,93 @@
       "articles_away": []
     },
     {
-      "home_team": "Utah St.",
-      "away_team": "San Diego St.",
+      "home_team": "Michigan",
+      "away_team": "Purdue",
       "status": "",
-      "ridge_diff": 2.61,
-      "gb_diff": 0.52,
-      "nn_reg_diff": 0.68,
-      "reg_ensemble_diff": 1.21,
-      "logistic_prob": 0.539,
-      "bayes_prob": 0.505,
-      "nn_cls_prob": 0.926,
-      "cls_ensemble_prob": 0.706,
-      "reg_implied_prob": 0.53,
-      "final_win_prob_home": 0.609,
-      "final_win_prob_away": 0.391,
-      "predicted_winner": "Utah St.",
-      "home_ml": "-156",
-      "away_ml": "+156",
-      "model_std_dev": 0.174,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "St. John's",
-      "away_team": "UConn",
-      "status": "",
-      "ridge_diff": 17.16,
-      "gb_diff": 8.49,
-      "nn_reg_diff": 6.06,
-      "reg_ensemble_diff": 10.12,
-      "logistic_prob": 0.922,
-      "bayes_prob": 1.0,
-      "nn_cls_prob": 0.499,
-      "cls_ensemble_prob": 0.747,
-      "reg_implied_prob": 0.733,
-      "final_win_prob_home": 0.74,
-      "final_win_prob_away": 0.26,
-      "predicted_winner": "St. John's",
-      "home_ml": "-284",
-      "away_ml": "+284",
-      "model_std_dev": 0.193,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Southern U.",
-      "away_team": "Prairie View",
-      "status": "",
-      "ridge_diff": 2.4,
-      "gb_diff": 2.72,
-      "nn_reg_diff": 6.42,
-      "reg_ensemble_diff": 4.1,
-      "logistic_prob": 0.543,
-      "bayes_prob": 0.0,
-      "nn_cls_prob": 0.656,
-      "cls_ensemble_prob": 0.485,
-      "reg_implied_prob": 0.601,
-      "final_win_prob_home": 0.549,
-      "final_win_prob_away": 0.451,
-      "predicted_winner": "Southern U.",
-      "home_ml": "-122",
-      "away_ml": "+122",
-      "model_std_dev": 0.263,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Akron",
-      "away_team": "Toledo",
-      "status": "",
-      "ridge_diff": 6.2,
-      "gb_diff": 9.24,
-      "nn_reg_diff": 5.84,
-      "reg_ensemble_diff": 6.97,
-      "logistic_prob": 0.692,
-      "bayes_prob": 0.857,
-      "nn_cls_prob": 0.852,
-      "cls_ensemble_prob": 0.797,
-      "reg_implied_prob": 0.668,
-      "final_win_prob_home": 0.726,
-      "final_win_prob_away": 0.274,
-      "predicted_winner": "Akron",
-      "home_ml": "-265",
-      "away_ml": "+265",
-      "model_std_dev": 0.088,
+      "ridge_diff": 0.08,
+      "gb_diff": -0.78,
+      "nn_reg_diff": 5.85,
+      "reg_ensemble_diff": 2.13,
+      "logistic_prob": 0.534,
+      "bayes_prob": 0.583,
+      "nn_cls_prob": 0.776,
+      "cls_ensemble_prob": 0.653,
+      "reg_implied_prob": 0.553,
+      "final_win_prob_home": 0.598,
+      "final_win_prob_away": 0.402,
+      "predicted_winner": "Michigan",
+      "home_ml": "-149",
+      "away_ml": "+149",
+      "model_std_dev": 0.097,
       "confidence": "MED",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
       "feature_drivers": [
         {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 1.6518,
-          "favors_home": true
-        },
-        {
           "feature": "home_adj_em",
           "label": "Home Adj Em",
-          "contribution": 0.6691,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_sent_pct_positive_articles",
-          "label": "\u0394 Sent Pct Positive Articles",
-          "contribution": -0.3672,
-          "favors_home": false
-        },
-        {
-          "feature": "away_sent_pct_positive_articles",
-          "label": "Away Sent Pct Positive Articles",
-          "contribution": -0.3511,
-          "favors_home": false
-        },
-        {
-          "feature": "home_efg_pct",
-          "label": "Home Efg Pct",
-          "contribution": 0.2499,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "La. Tech",
-      "away_team": "Kennesaw St.",
-      "status": "",
-      "ridge_diff": -4.27,
-      "gb_diff": 4.56,
-      "nn_reg_diff": -6.52,
-      "reg_ensemble_diff": -2.52,
-      "logistic_prob": 0.244,
-      "bayes_prob": 0.0,
-      "nn_cls_prob": 0.099,
-      "cls_ensemble_prob": 0.13,
-      "reg_implied_prob": 0.437,
-      "final_win_prob_home": 0.299,
-      "final_win_prob_away": 0.701,
-      "predicted_winner": "Kennesaw St.",
-      "home_ml": "+235",
-      "away_ml": "-235",
-      "model_std_dev": 0.165,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Duke",
-      "away_team": "Virginia",
-      "status": "",
-      "ridge_diff": 13.17,
-      "gb_diff": 15.96,
-      "nn_reg_diff": 13.04,
-      "reg_ensemble_diff": 13.96,
-      "logistic_prob": 0.834,
-      "bayes_prob": 0.994,
-      "nn_cls_prob": 0.978,
-      "cls_ensemble_prob": 0.931,
-      "reg_implied_prob": 0.801,
-      "final_win_prob_home": 0.86,
-      "final_win_prob_away": 0.14,
-      "predicted_winner": "Duke",
-      "home_ml": "-613",
-      "away_ml": "+613",
-      "model_std_dev": 0.085,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 2.9594,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 2.0082,
+          "contribution": 2.0029,
           "favors_home": true
         },
         {
           "feature": "away_adj_em",
           "label": "Away Adj Em",
-          "contribution": -1.0596,
+          "contribution": -1.7314,
           "favors_home": false
         },
         {
-          "feature": "diff_ctx_ranking_mention_rate",
-          "label": "\u0394 Ctx Ranking Mention Rate",
-          "contribution": 0.5211,
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 0.8132,
           "favors_home": true
         },
         {
-          "feature": "diff_sent_pct_positive_articles",
-          "label": "\u0394 Sent Pct Positive Articles",
-          "contribution": -0.459,
+          "feature": "diff_tov_pct",
+          "label": "\u0394 Tov Pct",
+          "contribution": -0.4404,
+          "favors_home": false
+        },
+        {
+          "feature": "away_ctx_ranking_mention_rate",
+          "label": "Away Ctx Ranking Mention Rate",
+          "contribution": -0.3733,
           "favors_home": false
         }
       ],
       "articles_home": [
         {
-          "title": "ACC tournament bracket update: It's No. 1 Duke vs. 2 Virginia in final - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUktxSFRqTV95WVM2dnhFM3V1ZFpWVmkyQlJvdmdNeG5EMklPeXVXbWx1eVljYXRFTWlzNmhaWlNkUUtQdEtaR0hSU0hGTEZ2OHRTNXVEVkZlVmhOWW16ZnVoUW9IV3VFLXFKYWhWWEJfaFQ0NGp3eXIweEY0aXNjOC1vTmxIazFDQ28yZGdsal9mdTR6d2lDcjdVU2ZJdHc3R0E5Tmo4eFFQTE9EakN0T2NRMWNubENIUlNWeElxazdYSlR5WTBMVDRxRGpVbjM2SGxHaXBOTVh3Z3owVTRoaG5HT1NTOGo0Y1JHbg?oc=5",
+          "title": "Purdue vs. Michigan prediction: Big Ten Championship pick, odds, best bet Sunday - New York Post",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYTBTVDRoZXFGNEVhbVFycHhQWF9KMGdnaDVYLU9YMWRyNUlYalRZazZ4bXlrS04tOEpULUpvY0pBSmgwc0p6S3ZyM3FWNThKbDRQSGRBQkdrUlN2em4yczhIcnU4Y1dSLXpIQ0VVVFp1M0pnNXBMVFFwQ0FuX1Q5QkNoWTU5djdRT2Q1Wmo3ZzFCRWNnRTlhSE4xQ1h2aEhKRU5VVUw0UlNYb2ZWZWduSlY0Uk91UQ?oc=5",
           "source": "Google News"
         },
         {
-          "title": "ACC basketball tournament updates, scores, bracket: Duke, Virginia advance to title game - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPYXdIazJsM2VRV1M2NWJqTlMxdUVIU3hDWTVUZVFvQmFRaElheVZwWDNZRy1iZ3pLOExfZjc4eXUyOVpwX25OOVlscm9DV1A3cFlYM0VPMlRtLUJlczU5LTVtOVQzNVpxUlhiMHNPVjdWaGJjQUFzMHBWRmF2dzJSb3paYjEzVHhNTDk2LWh4MHVob3lLejFxMkhFdGNnQUtXVVVla2M4R2hiQkFQLWN5UllmWXVpUEJpX1JDaldrX2w4RzNDQm1IN25uWl8yVUFvQ1hFT25YQk5WVnRSaE1UUFlHOUp4TFJN?oc=5",
+          "title": "Michigan vs. Purdue odds, prediction: 2026 Big Ten Tournament Final picks for March 15 from proven model - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa2RmSUpIWUJDdFkwQ0xaZmQ3SjhnT2x5TnVoQXZSQzR3R1dadFplVzJwelpNV0dpMk5uU3F0NFAzSnlMbGJrQlBLWVdxWlQtQXIwajBqNVZLcnpvTENxaU1DMW9Nd201dV9MN1lxVWJRZlpqSWZtOWJrSTMyR2trd1ZmUHQyM3NPOXcwaGp2bU1KRVl0U3BReGI4aFlRakFaNFNDUTloQTdlWTJzVkRfQnNuLVFYc3hfQUE?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Duke 68-63 Michigan (Feb 21, 2026) Final Score - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQM0txdmJCTTFsYzRQVDN3ZG1aYjlfTWFPdDZXLWZNakd3dndGMjdkaFg2QW9lV1R1RG50ekJwWW5kb3RZOHdjYW5YQU1YWmRTSnliNU5POWRRTENoT0ZjNHo0dlk1aEM4VWg5UmJuVmNHS1N5RWJsanhPWkZyRUxlaHVCVmpheVBNVVE?oc=5",
+          "title": "Purdue Boilermakers vs. Michigan Wolverines odds, picks and predictions - Sportsbook Wire",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbVJWc0oxQWJseXliUHRJQmF1Ukd1OHgxRnREMDdFa3Q3R3dOUHR5UWxnMXdibFJnZGtIUGNtdGVpWWNwM1ZaaDdmLTRjLTMtc3k5UlFmVWsxdXpzRlA2dW9DTngxdG1RSTYwSnBUckdFS2tRcU5oa3Bwb3lrWExhVnBWYVJXWTNmdnhTajFyenZrZnNZaHdOYkRLOUFibmhFTUJUUGRnbE5hMEFlUTBxYVROSC0tcHN1N2ZNT0dkbnpaNjR2dlBHOUxJUExhRzJRNXdCVlRNb1p5Z2s?oc=5",
           "source": "Google News"
         }
       ],
       "articles_away": [
         {
-          "title": "ACC tournament bracket update: It's No. 1 Duke vs. 2 Virginia in final - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUktxSFRqTV95WVM2dnhFM3V1ZFpWVmkyQlJvdmdNeG5EMklPeXVXbWx1eVljYXRFTWlzNmhaWlNkUUtQdEtaR0hSU0hGTEZ2OHRTNXVEVkZlVmhOWW16ZnVoUW9IV3VFLXFKYWhWWEJfaFQ0NGp3eXIweEY0aXNjOC1vTmxIazFDQ28yZGdsal9mdTR6d2lDcjdVU2ZJdHc3R0E5Tmo4eFFQTE9EakN0T2NRMWNubENIUlNWeElxazdYSlR5WTBMVDRxRGpVbjM2SGxHaXBOTVh3Z3owVTRoaG5HT1NTOGo0Y1JHbg?oc=5",
+          "title": "Michigan vs. Purdue odds, prediction: 2026 Big Ten Tournament Final picks for March 15 from proven model - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa2RmSUpIWUJDdFkwQ0xaZmQ3SjhnT2x5TnVoQXZSQzR3R1dadFplVzJwelpNV0dpMk5uU3F0NFAzSnlMbGJrQlBLWVdxWlQtQXIwajBqNVZLcnpvTENxaU1DMW9Nd201dV9MN1lxVWJRZlpqSWZtOWJrSTMyR2trd1ZmUHQyM3NPOXcwaGp2bU1KRVl0U3BReGI4aFlRakFaNFNDUTloQTdlWTJzVkRfQnNuLVFYc3hfQUE?oc=5",
           "source": "Google News"
         },
         {
-          "title": "ACC basketball tournament updates, scores, bracket: Duke, Virginia advance to title game - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPYXdIazJsM2VRV1M2NWJqTlMxdUVIU3hDWTVUZVFvQmFRaElheVZwWDNZRy1iZ3pLOExfZjc4eXUyOVpwX25OOVlscm9DV1A3cFlYM0VPMlRtLUJlczU5LTVtOVQzNVpxUlhiMHNPVjdWaGJjQUFzMHBWRmF2dzJSb3paYjEzVHhNTDk2LWh4MHVob3lLejFxMkhFdGNnQUtXVVVla2M4R2hiQkFQLWN5UllmWXVpUEJpX1JDaldrX2w4RzNDQm1IN25uWl8yVUFvQ1hFT25YQk5WVnRSaE1UUFlHOUp4TFJN?oc=5",
+          "title": "Purdue vs Michigan Predictions, Start Time, Big Ten Championship Odds: NCAAB Picks for Sunday, March 15 - Action Network",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNYW9nMWZ1bk04OUFwcjBOYU42YWRPT04zSm5JX3dUSnp5eXNHS3lQSUVTaHFLVjRITmVZMjBNOWstZzFPbjd6WktRNk9yWG5kMnFnOUgtYmtKbkZ3WUJyRnBfaWtDVUxDQVZKeVVqWUJVcTlDbHE4MlBlNDUyZEZFR21mWDlVS3Z2QzEwSjVOVTJTVm9peHREb1dhd1QxVEdtcEc4Y2VLVnJUU0xjU2h0RlFaUWE0YlhhOW03NEZMM2ZxdndKSlJteHdib1RiQUJkTmdsNA?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Miami vs Virginia Odds, Picks, Predictions \u2014 3/13 - Action Network",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQOVNKWFdMLTZITWNGMGFxOXdOU2Q4MmVYZWtOQ3E2TUFnLWtmN0EyNi04RmpIdF8xWkVGblhUaTJmYWo3dUZ6NGZRTGxnTG9CLTJ2ZmFCOXlUY3lidWF5S255YmFBZmI3ck15aW1ZcVZQc0hDZlk3LXZxOTduNjR3ZXhLRjlUbW5jZ2RuSGt1S3VpcWZVcmVxZjNOWi1hU3psYnl2ZzBPVWx2Y1U3VVhzUHFsX2EyM3pHeXdfQjVPb0RQTXNY?oc=5",
+          "title": "Michigan vs. Purdue basketball live updates: Start time, TV channel for Big Ten Championship - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOLWVRWTFFdUtHQWVxRVFRSzZ0RG8yV2EyOVdHWXhqeVl2QmU1WU1NRFM5a2V0S1dSd2dQOHFNcFBLYjdiOE55RzR6RFRuN0sxMEllbDdRRFIxNmduM1UzNE5tdTFGTGhsYjQwc1NvazVMcGhocWR6aGRnUTBWbFlWZ2hyZkJ1VFVIeERaYUtlWi1IXzMwV1FPcWp5QXliR0ExUFpWQkd5V0ZxT3FXZUxDQ1ZYOUY2MWZudmtfdkhGTm1RWGY2aEtNMllCM2ZVX3c?oc=5",
           "source": "Google News"
         }
       ]
-    },
-    {
-      "home_team": "UC Irvine",
-      "away_team": "Hawaii",
-      "status": "",
-      "ridge_diff": 1.77,
-      "gb_diff": -0.95,
-      "nn_reg_diff": 1.64,
-      "reg_ensemble_diff": 0.9,
-      "logistic_prob": 0.558,
-      "bayes_prob": 0.523,
-      "nn_cls_prob": 0.786,
-      "cls_ensemble_prob": 0.654,
-      "reg_implied_prob": 0.523,
-      "final_win_prob_home": 0.581,
-      "final_win_prob_away": 0.419,
-      "predicted_winner": "UC Irvine",
-      "home_ml": "-139",
-      "away_ml": "+139",
-      "model_std_dev": 0.11,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_sent_google",
-          "label": "\u0394 Sent Google",
-          "contribution": 0.4203,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_sent_overall",
-          "label": "\u0394 Sent Overall",
-          "contribution": 0.4197,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_momentum_win_loss_ratio",
-          "label": "\u0394 Momentum Win Loss Ratio",
-          "contribution": 0.4036,
-          "favors_home": true
-        },
-        {
-          "feature": "away_tov_pct",
-          "label": "Away Tov Pct",
-          "contribution": 0.3975,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_sent_pct_positive_articles",
-          "label": "\u0394 Sent Pct Positive Articles",
-          "contribution": -0.3672,
-          "favors_home": false
-        }
-      ],
-      "articles_home": [],
-      "articles_away": []
     }
   ]
 }
