@@ -4,7 +4,7 @@ Model Training — NCAAB Prediction System
 Reads training_df.csv (produced by feature_assembly.py) and trains 6 ML models:
 
     lr_model       : Ridge(alpha=RIDGE_ALPHA)                  — regressor
-    sgd_model      : GradientBoostingRegressor                 — regressor  [misnomer]
+    sgd_model      : XGBoostRegressor (XGBRegressor)            — regressor  [misnomer]
     nn_reg_model   : Neural Network Regressor                  — regressor
     logistic_model : LogisticRegression(elasticnet)            — classifier
     bayes_model    : GaussianNB (Bayesian probability)         — classifier  [NEW]
@@ -30,7 +30,7 @@ Model cache: Python scripts/model_cache/
     logistic_model.joblib, bayes_model.joblib,
     nn_regressor.keras, nn_classifier.keras, metadata.joblib
 
-Schema version: 1.0  (bump and clear cache when feature schema changes)
+Schema version: 2.0  (bump and clear cache when feature schema changes)
 """
 
 from __future__ import annotations
@@ -45,12 +45,26 @@ from typing import Optional
 import joblib
 import numpy as np
 import pandas as pd
+from sklearn.base import clone
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import LogisticRegression, Ridge
-from sklearn.metrics import accuracy_score, mean_absolute_error, roc_auc_score
-from sklearn.model_selection import KFold, StratifiedKFold, cross_val_score
+from sklearn.metrics import (
+    accuracy_score,
+    brier_score_loss,
+    log_loss,
+    mean_absolute_error,
+    mean_squared_error,
+    roc_auc_score,
+)
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
+
+# XGBoost is optional — falls back to GradientBoostingRegressor if not installed
+try:
+    import xgboost as xgb
+    XGB_AVAILABLE = True
+except ImportError:
+    XGB_AVAILABLE = False
 
 # TensorFlow is optional — NNs are skipped gracefully if not installed
 try:
@@ -75,7 +89,7 @@ TRAINING_CSV_PATH = os.path.join(_SCRIPT_DIR, "training_df.csv")
 CACHE_DIR         = os.path.join(_SCRIPT_DIR, "model_cache")
 
 AS_OF_DATE     = date.today().isoformat()
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "2.0"
 
 # ── Cache control ──────────────────────────────────────────────────────────────
 USE_CACHE     = True   # load models from cache if they exist
@@ -83,6 +97,19 @@ FORCE_RETRAIN = False  # if True: always retrain and overwrite cache
 
 # ── Regularization hyperparameters ────────────────────────────────────────────
 RIDGE_ALPHA      = 20.0
+
+# XGBoost hyperparameters (used when XGB_AVAILABLE; otherwise GB fallback is used)
+XGB_N_ESTIMATORS   = 300
+XGB_LEARNING_RATE  = 0.05
+XGB_MAX_DEPTH      = 4
+XGB_MIN_CHILD_WT   = 3
+XGB_SUBSAMPLE      = 0.85
+XGB_COLSAMPLE      = 0.85
+XGB_L2_REG         = 1.0
+XGB_L1_REG         = 0.1
+XGB_EARLY_STOPPING = 20
+
+# GradientBoosting fallback (used only when XGBoost not installed)
 GB_N_ESTIMATORS  = 200
 GB_LEARNING_RATE = 0.05
 GB_MAX_DEPTH     = 4
@@ -399,17 +426,40 @@ def train_models(
     models["lr_model"] = lr_model
     log.info("  ✓ lr_model")
 
-    # ── 2. Gradient Boosting Regressor (sgd_model — variable name is a misnomer) ──
-    log.info("Training sgd_model  (GradientBoosting, n_est=%d) ...", GB_N_ESTIMATORS)
-    sgd_model = GradientBoostingRegressor(
-        n_estimators=GB_N_ESTIMATORS,
-        learning_rate=GB_LEARNING_RATE,
-        max_depth=GB_MAX_DEPTH,
-        min_samples_leaf=GB_MIN_SAMPLES,
-        subsample=GB_SUBSAMPLE,
-        random_state=42,
-    )
-    sgd_model.fit(X_scaled, y_diff)
+    # ── 2. XGBoost Regressor (sgd_model — variable name is a documented misnomer) ─
+    if XGB_AVAILABLE:
+        log.info("Training sgd_model  (XGBoost, n_est=%d) ...", XGB_N_ESTIMATORS)
+        eval_size = max(1, int(0.15 * len(X_scaled)))
+        sgd_model = xgb.XGBRegressor(
+            n_estimators=XGB_N_ESTIMATORS,
+            learning_rate=XGB_LEARNING_RATE,
+            max_depth=XGB_MAX_DEPTH,
+            min_child_weight=XGB_MIN_CHILD_WT,
+            subsample=XGB_SUBSAMPLE,
+            colsample_bytree=XGB_COLSAMPLE,
+            reg_lambda=XGB_L2_REG,
+            reg_alpha=XGB_L1_REG,
+            early_stopping_rounds=XGB_EARLY_STOPPING,
+            eval_metric="mae",
+            random_state=42,
+            verbosity=0,
+        )
+        sgd_model.fit(
+            X_scaled[:-eval_size], y_diff[:-eval_size],
+            eval_set=[(X_scaled[-eval_size:], y_diff[-eval_size:])],
+            verbose=False,
+        )
+    else:
+        log.info("Training sgd_model  (GradientBoosting fallback, n_est=%d) ...", GB_N_ESTIMATORS)
+        sgd_model = GradientBoostingRegressor(
+            n_estimators=GB_N_ESTIMATORS,
+            learning_rate=GB_LEARNING_RATE,
+            max_depth=GB_MAX_DEPTH,
+            min_samples_leaf=GB_MIN_SAMPLES,
+            subsample=GB_SUBSAMPLE,
+            random_state=42,
+        )
+        sgd_model.fit(X_scaled, y_diff)
     models["sgd_model"] = sgd_model
     log.info("  ✓ sgd_model")
 
@@ -504,76 +554,117 @@ def evaluate_models(
     y_diff: np.ndarray,
     y_binary: np.ndarray,
     is_home_idx: int,
+    training_df: pd.DataFrame,
 ) -> dict:
     """
-    Compute performance metrics for all trained models.
+    Compute time-based 80/20 holdout performance metrics for all trained models.
 
-    Regressors  : train MAE + 5-fold CV MAE
-    Classifiers : train accuracy + 5-fold CV accuracy + ROC-AUC
+    Games are sorted by date; the first 80% form the train split, the last 20%
+    the test split. Sklearn models are cloned and re-fit on the train portion so
+    test metrics are true out-of-sample. NNs use the already-fitted weights on
+    the test rows (re-training NNs twice would be prohibitively slow).
 
-    CV is skipped for NNs (no sklearn-compatible clone; train metrics reported only).
+    Returns a dict:
+        "_split"       : { split_date, n_train_games, n_test_games }
+        "lr_model"     : { test_mae, test_rmse, split_date, n_train_games, n_test_games }
+        "sgd_model"    : { test_mae, test_rmse, ... }
+        "nn_reg_model" : { test_mae, test_rmse, ... }   (no re-fit)
+        "logistic_model": { test_acc, test_brier, test_logloss, test_auc, ... }
+        "bayes_model"  : { test_acc, test_brier, test_logloss, test_auc, ... }
+        "nn_cls_model" : { test_acc, test_brier, test_logloss, test_auc, ... }  (no re-fit)
     """
     X_eval = X.copy()
     X_eval[:, is_home_idx] = 0.0
     X_scaled = models["scaler"].transform(X_eval)
     y_int    = y_binary.astype(int)
 
-    results = {}
+    # ── Time-based 80/20 split ────────────────────────────────────────────────
+    sorted_game_idx  = np.argsort(training_df["date"].values)
+    n_games          = len(training_df)
+    n_train_games    = int(0.80 * n_games)
+    n_test_games     = n_games - n_train_games
+    train_game_idx   = sorted_game_idx[:n_train_games]
+    test_game_idx    = sorted_game_idx[n_train_games:]
+    split_date       = str(training_df.iloc[sorted_game_idx[n_train_games]]["date"])
 
-    # ── Regressors ────────────────────────────────────────────────────────────
+    # Map game indices to mirrored X rows
+    train_rows = np.concatenate([[2 * i, 2 * i + 1] for i in train_game_idx])
+    test_rows  = np.concatenate([[2 * i, 2 * i + 1] for i in test_game_idx])
+
+    X_tr   = X_scaled[train_rows];  X_te   = X_scaled[test_rows]
+    yd_tr  = y_diff[train_rows];    yd_te  = y_diff[test_rows]
+    yb_tr  = y_int[train_rows];     yb_te  = y_int[test_rows]
+
+    log.info(
+        "  Time-based split    : train=%d games / test=%d games  (split_date=%s)",
+        n_train_games, n_test_games, split_date,
+    )
+
+    split_meta = {
+        "split_date":    split_date,
+        "n_train_games": n_train_games,
+        "n_test_games":  n_test_games,
+    }
+    results: dict = {"_split": split_meta}
+
+    # ── Regressors (sklearn — clone + re-fit) ─────────────────────────────────
     for name in ("lr_model", "sgd_model"):
-        m = models[name]
-        pred      = m.predict(X_scaled)
-        train_mae = mean_absolute_error(y_diff, pred)
-        cv_mae    = float(-cross_val_score(
-            m, X_scaled, y_diff,
-            cv=KFold(n_splits=5, shuffle=True, random_state=42),
-            scoring="neg_mean_absolute_error",
-        ).mean())
-        results[name] = {"train_mae": train_mae, "cv_mae": cv_mae}
-        log.info("  %-22s  train_MAE=%.3f  cv_MAE=%.3f", name, train_mae, cv_mae)
+        tmp = clone(models[name])
+        tmp.fit(X_tr, yd_tr)
+        pred_te   = tmp.predict(X_te)
+        test_mae  = float(mean_absolute_error(yd_te, pred_te))
+        test_rmse = float(np.sqrt(mean_squared_error(yd_te, pred_te)))
+        results[name] = {**split_meta, "test_mae": round(test_mae, 4), "test_rmse": round(test_rmse, 4)}
+        log.info("  %-22s  test_MAE=%.3f  test_RMSE=%.3f", name, test_mae, test_rmse)
 
+    # ── NN Regressor (no re-fit — evaluate pre-trained weights on test rows) ──
     if models["nn_reg_model"] is not None:
-        pred      = models["nn_reg_model"].predict(X_scaled, verbose=0).flatten()
-        train_mae = mean_absolute_error(y_diff, pred)
-        results["nn_reg_model"] = {"train_mae": train_mae, "cv_mae": float("nan")}
-        log.info("  %-22s  train_MAE=%.3f  (CV skipped for NNs)", "nn_reg_model", train_mae)
+        pred_te   = models["nn_reg_model"].predict(X_te, verbose=0).flatten()
+        test_mae  = float(mean_absolute_error(yd_te, pred_te))
+        test_rmse = float(np.sqrt(mean_squared_error(yd_te, pred_te)))
+        results["nn_reg_model"] = {**split_meta, "test_mae": round(test_mae, 4), "test_rmse": round(test_rmse, 4)}
+        log.info("  %-22s  test_MAE=%.3f  test_RMSE=%.3f  (no re-fit)", "nn_reg_model", test_mae)
 
-    # ── Classifiers ───────────────────────────────────────────────────────────
+    # ── Classifiers (sklearn — clone + re-fit) ────────────────────────────────
     for name in ("logistic_model", "bayes_model"):
-        m         = models[name]
-        pred_prob = m.predict_proba(X_scaled)[:, 1]
-        pred_cls  = (pred_prob >= 0.5).astype(int)
-        train_acc = accuracy_score(y_int, pred_cls)
-        train_auc = roc_auc_score(y_int, pred_prob)
-        cv_acc    = float(cross_val_score(
-            m, X_scaled, y_int,
-            cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
-            scoring="accuracy",
-        ).mean())
+        tmp          = clone(models[name])
+        tmp.fit(X_tr, yb_tr)
+        pred_prob_te = tmp.predict_proba(X_te)[:, 1]
+        pred_cls_te  = (pred_prob_te >= 0.5).astype(int)
+        test_acc     = float(accuracy_score(yb_te, pred_cls_te))
+        test_brier   = float(brier_score_loss(yb_te, pred_prob_te))
+        test_logloss = float(log_loss(yb_te, pred_prob_te))
+        test_auc     = float(roc_auc_score(yb_te, pred_prob_te))
         results[name] = {
-            "train_acc": train_acc,
-            "cv_acc":    cv_acc,
-            "train_auc": train_auc,
+            **split_meta,
+            "test_acc":     round(test_acc, 4),
+            "test_brier":   round(test_brier, 4),
+            "test_logloss": round(test_logloss, 4),
+            "test_auc":     round(test_auc, 4),
         }
         log.info(
-            "  %-22s  train_acc=%.3f  cv_acc=%.3f  AUC=%.3f",
-            name, train_acc, cv_acc, train_auc,
+            "  %-22s  test_acc=%.3f  Brier=%.3f  LogLoss=%.3f  AUC=%.3f",
+            name, test_acc, test_brier, test_logloss, test_auc,
         )
 
+    # ── NN Classifier (no re-fit) ─────────────────────────────────────────────
     if models["nn_cls_model"] is not None:
-        pred_prob = models["nn_cls_model"].predict(X_scaled, verbose=0).flatten()
-        pred_cls  = (pred_prob >= 0.5).astype(int)
-        train_acc = accuracy_score(y_int, pred_cls)
-        train_auc = roc_auc_score(y_int, pred_prob)
+        pred_prob_te = models["nn_cls_model"].predict(X_te, verbose=0).flatten()
+        pred_cls_te  = (pred_prob_te >= 0.5).astype(int)
+        test_acc     = float(accuracy_score(yb_te, pred_cls_te))
+        test_brier   = float(brier_score_loss(yb_te, pred_prob_te))
+        test_logloss = float(log_loss(yb_te, pred_prob_te))
+        test_auc     = float(roc_auc_score(yb_te, pred_prob_te))
         results["nn_cls_model"] = {
-            "train_acc": train_acc,
-            "cv_acc":    float("nan"),
-            "train_auc": train_auc,
+            **split_meta,
+            "test_acc":     round(test_acc, 4),
+            "test_brier":   round(test_brier, 4),
+            "test_logloss": round(test_logloss, 4),
+            "test_auc":     round(test_auc, 4),
         }
         log.info(
-            "  %-22s  train_acc=%.3f  AUC=%.3f  (CV skipped for NNs)",
-            "nn_cls_model", train_acc, train_auc,
+            "  %-22s  test_acc=%.3f  Brier=%.3f  AUC=%.3f  (no re-fit)",
+            "nn_cls_model", test_acc, test_brier, test_auc,
         )
 
     return results
@@ -666,6 +757,7 @@ def save_models(
     feature_names: list[str],
     numeric_cols: list[str],
     is_home_idx: int,
+    validation_metrics: Optional[dict] = None,
 ) -> None:
     """Serialize all fitted models and metadata to CACHE_DIR."""
     os.makedirs(CACHE_DIR, exist_ok=True)
@@ -698,6 +790,7 @@ def save_models(
             "final_w_reg":    FINAL_W_REG,
             "final_w_cls":    FINAL_W_CLS,
         },
+        "validation_metrics": validation_metrics or {},
     }
     joblib.dump(metadata, os.path.join(CACHE_DIR, "metadata.joblib"))
     log.info("Models saved        : %s", CACHE_DIR)
@@ -779,25 +872,32 @@ def print_summary(
     print(f"  Class balance     : {y_binary.mean():.1%} positive (home win)")
     print()
 
-    print("  MODEL PERFORMANCE")
-    print(f"  {'Model':<24}  {'Type':<12}  {'Metric 1':<20}  {'Metric 2'}")
-    print(f"  {'-'*24}  {'-'*12}  {'-'*20}  {'-'*16}")
+    print("  MODEL PERFORMANCE  (time-based holdout: 80% train / 20% test)")
+    split_info = metrics.get("_split", {})
+    if split_info:
+        print(f"  Split date: {split_info.get('split_date','?')}  "
+              f"train={split_info.get('n_train_games','?')} games  "
+              f"test={split_info.get('n_test_games','?')} games")
+    print(f"  {'Model':<24}  {'Type':<12}  {'Metric 1':<22}  {'Metric 2':<22}  {'Metric 3'}")
+    print(f"  {'-'*24}  {'-'*12}  {'-'*22}  {'-'*22}  {'-'*16}")
 
     for name in ("lr_model", "sgd_model", "nn_reg_model"):
         if name not in metrics:
             continue
-        m      = metrics[name]
-        cv_str = f"cv_MAE={m['cv_mae']:.3f}" if not np.isnan(m["cv_mae"]) else "cv_MAE=N/A (NN)"
-        print(f"  {name:<24}  {'Regressor':<12}  train_MAE={m['train_mae']:.3f}         {cv_str}")
+        m = metrics[name]
+        print(f"  {name:<24}  {'Regressor':<12}  "
+              f"test_MAE={m['test_mae']:.3f}             "
+              f"test_RMSE={m['test_rmse']:.3f}")
 
     for name in ("logistic_model", "bayes_model", "nn_cls_model"):
         if name not in metrics:
             continue
-        m      = metrics[name]
-        cv_str = f"cv_acc={m['cv_acc']:.3f}" if not np.isnan(m["cv_acc"]) else "cv_acc=N/A (NN)"
+        m = metrics[name]
         print(
             f"  {name:<24}  {'Classifier':<12}  "
-            f"train_acc={m['train_acc']:.3f}  AUC={m['train_auc']:.3f}  {cv_str}"
+            f"test_acc={m['test_acc']:.3f}              "
+            f"Brier={m['test_brier']:.3f}                "
+            f"AUC={m['test_auc']:.3f}"
         )
 
     print()
@@ -838,6 +938,7 @@ def main() -> None:
     log.info("Step 3/5 — Training / loading models")
     from_cache = False
 
+    needs_save = False
     if USE_CACHE and not FORCE_RETRAIN:
         cached = load_models_from_cache(CACHE_DIR)
         if cached is not None:
@@ -849,20 +950,24 @@ def main() -> None:
                     metadata["n_features"], len(feature_names),
                 )
                 models = train_models(X, y_diff, y_binary, is_home_idx)
-                save_models(models, feature_names, numeric_cols, is_home_idx)
+                needs_save = True
             else:
                 from_cache = True
         else:
             models = train_models(X, y_diff, y_binary, is_home_idx)
-            save_models(models, feature_names, numeric_cols, is_home_idx)
+            needs_save = True
     else:
         models = train_models(X, y_diff, y_binary, is_home_idx)
         if USE_CACHE:
-            save_models(models, feature_names, numeric_cols, is_home_idx)
+            needs_save = True
 
     # ── Step 4: Evaluate model performance ────────────────────────────────────
-    log.info("Step 4/5 — Evaluating model performance")
-    metrics = evaluate_models(models, X, y_diff, y_binary, is_home_idx)
+    log.info("Step 4/5 — Evaluating model performance (time-based 80/20 holdout)")
+    metrics = evaluate_models(models, X, y_diff, y_binary, is_home_idx, training_df)
+
+    # Save models after evaluation so validation_metrics are included in metadata
+    if needs_save:
+        save_models(models, feature_names, numeric_cols, is_home_idx, validation_metrics=metrics)
 
     # ── Step 5: Home bias audit ────────────────────────────────────────────────
     log.info("Step 5/5 — Running home bias audit")

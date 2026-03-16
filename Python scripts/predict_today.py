@@ -954,6 +954,7 @@ def export_json(
             "articles_away":       articles_away,
         })
 
+    perf = metadata.get("validation_metrics", {}) if metadata else {}
     payload = {
         "generated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S"),
         "date":         TODAY.isoformat(),
@@ -964,6 +965,10 @@ def export_json(
             "tensorflow_available": TF_AVAILABLE,
             "confidence":           conf_counts,
             "combined_ev":          combined_ev,
+        },
+        "model_performance": {
+            "schema_version": metadata.get("schema_version") if metadata else None,
+            "metrics":        perf,
         },
         "top_picks":   top_picks,
         "predictions": predictions,

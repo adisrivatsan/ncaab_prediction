@@ -1,331 +1,4 @@
 date,away_name,away_score,home_name,home_score,status,home_team_won,winner_name,winner_score,loser_name,loser_score,score_diff
-2026-02-16,SE Louisiana,53,East Texas A&M,70,Final,1,East Texas A&M,70,SE Louisiana,53,17
-2026-02-16,Coppin St.,59,SC State,57,Final,0,Coppin St.,59,SC State,57,-2
-2026-02-16,Louisiana,72,Old Dominion,83,Final,1,Old Dominion,83,Louisiana,72,11
-2026-02-16,Colgate,58,Boston U.,85,Final,1,Boston U.,85,Colgate,58,27
-2026-02-16,Bethune-Cook.,86,Jackson St.,91,Final,1,Jackson St.,91,Bethune-Cook.,86,5
-2026-02-16,Syracuse,64,Duke,101,Final,1,Duke,101,Syracuse,64,37
-2026-02-16,Grambling St.,63,Prairie View,68,Final,1,Prairie View,68,Grambling St.,63,5
-2026-02-16,Howard,91,Delaware St.,59,Final,0,Howard,91,Delaware St.,59,-32
-2026-02-16,Morgan St.,76,NC Central,80,Final,1,NC Central,80,Morgan St.,76,4
-2026-02-16,Miss Valley St.,55,Alabama St.,92,Final,1,Alabama St.,92,Miss Valley St.,55,37
-2026-02-16,Norfolk St.,70,Md.-E. Shore,66,Final,0,Norfolk St.,70,Md.-E. Shore,66,-4
-2026-02-16,South Alabama,80,Marshall,84,Final,1,Marshall,84,South Alabama,80,4
-2026-02-16,Wagner,65,LIU,83,Final,1,LIU,83,Wagner,65,18
-2026-02-16,Lamar,65,UT-Rio Grande Valley,70,Final,1,UT-Rio Grande Valley,70,Lamar,65,5
-2026-02-16,McNeese,75,Northwestern St.,64,Final,0,McNeese,75,Northwestern St.,64,-11
-2026-02-16,New Orleans,78,Incarnate Word,64,Final,0,New Orleans,78,Incarnate Word,64,-14
-2026-02-16,Abilene Chr.,62,Tarleton St.,65,Final,1,Tarleton St.,65,Abilene Chr.,62,3
-2026-02-16,Ark.-Pine Bluff,70,Alabama A&M,82,Final,1,Alabama A&M,82,Ark.-Pine Bluff,70,12
-2026-02-16,Drexel,69,Stony Brook,72,Final,1,Stony Brook,72,Drexel,69,3
-2026-02-16,Florida A&M,86,Alcorn St.,78,Final,0,Florida A&M,86,Alcorn St.,78,-8
-2026-02-16,Nicholls,68,Houston Chr.,72,Final,1,Houston Chr.,72,Nicholls,68,4
-2026-02-16,SF Austin,78,TX A&M-CC,68,Final,0,SF Austin,78,TX A&M-CC,68,-10
-2026-02-16,Southern U.,73,Texas So.,74,Final,1,Texas So.,74,Southern U.,73,1
-2026-02-16,Houston,67,Iowa St.,70,Final,1,Iowa St.,70,Houston,67,3
-2026-02-17,Boston College,72,Florida St.,80,Final,1,Florida St.,80,Boston College,72,8
-2026-02-17,Gardner-Webb,66,Charleston So.,75,Final,1,Charleston So.,75,Gardner-Webb,66,9
-2026-02-17,C. Michigan,54,E. Michigan,66,Final,1,E. Michigan,66,C. Michigan,54,12
-2026-02-17,Michigan,91,Purdue,80,Final,0,Michigan,91,Purdue,80,-11
-2026-02-17,N. Illinois,72,Buffalo,70,Final,0,N. Illinois,72,Buffalo,70,-2
-2026-02-17,Villanova,92,Xavier,89,Final,0,Villanova,92,Xavier,89,-3
-2026-02-17,Akron,90,W. Michigan,73,Final,0,Akron,90,W. Michigan,73,-17
-2026-02-17,Ball St.,57,Ohio,69,Final,1,Ohio,69,Ball St.,57,12
-2026-02-17,Kent St.,78,Bowling Green,71,Final,0,Kent St.,78,Bowling Green,71,-7
-2026-02-17,Louisville,85,SMU,95,Final,1,SMU,95,Louisville,85,10
-2026-02-17,Miami (Ohio),86,Massachusetts,77,Final,0,Miami (Ohio),86,Massachusetts,77,-9
-2026-02-17,S. Carolina,62,Florida,76,Final,1,Florida,76,S. Carolina,62,14
-2026-02-17,Saint Louis,76,Rhode Island,81,Final,1,Rhode Island,81,Saint Louis,76,5
-2026-02-17,TCU,71,UCF,82,Final,1,UCF,82,TCU,71,11
-2026-02-17,N. Carolina,58,NC State,82,Final,1,NC State,82,N. Carolina,58,24
-2026-02-17,George Wash.,75,VCU,89,Final,1,VCU,89,George Wash.,75,14
-2026-02-17,Va. Tech,66,Miami,67,Final,1,Miami,67,Va. Tech,66,1
-2026-02-17,Fresno St.,82,Wyoming,92,Final,1,Wyoming,92,Fresno St.,82,10
-2026-02-17,UCLA,59,Michigan St.,82,Final,1,Michigan St.,82,UCLA,59,23
-2026-02-17,Wisconsin,69,Ohio St.,86,Final,1,Ohio St.,86,Wisconsin,69,17
-2026-02-17,SE Missouri St.,56,UT Martin,53,Final,0,SE Missouri St.,56,UT Martin,53,-3
-2026-02-17,Air Force,61,New Mexico,98,Final,1,New Mexico,98,Air Force,61,37
-2026-02-17,Baylor,74,Kansas St.,90,Final,1,Kansas St.,90,Baylor,74,16
-2026-02-17,LSU,85,Texas,88,Final,1,Texas,88,LSU,85,3
-2026-02-17,Nebraska,52,Iowa,57,Final,1,Iowa,57,Nebraska,52,5
-2026-02-17,Georgia,86,Kentucky,78,Final,0,Georgia,86,Kentucky,78,-8
-2026-02-17,Grand Canyon,73,San Diego St.,63,Final,0,Grand Canyon,73,San Diego St.,63,-10
-2026-02-17,Nevada,71,San Jose St.,87,Final,1,San Jose St.,87,Nevada,71,16
-2026-02-17,Minnesota,61,Oregon,44,Final,0,Minnesota,61,Oregon,44,-17
-2026-02-17,Texas Tech,67,Arizona St.,72,Final,1,Arizona St.,72,Texas Tech,67,5
-2026-02-18,Lafayette,86,Holy Cross,83,Final,0,Lafayette,86,Holy Cross,83,-3
-2026-02-18,Rutgers,85,Penn St.,72,Final,0,Rutgers,85,Penn St.,72,-13
-2026-02-18,VMI,76,Wofford,82,Final,1,Wofford,82,VMI,76,6
-2026-02-18,Butler,93,Georgetown,89,Final,0,Butler,93,Georgetown,89,-4
-2026-02-18,Clev. St.,82,Youngstown St.,106,Final,1,Youngstown St.,106,Clev. St.,82,24
-2026-02-18,ETSU,78,Furman,69,Final,0,ETSU,78,Furman,69,-9
-2026-02-18,American,75,Bucknell,57,Final,0,American,75,Bucknell,57,-18
-2026-02-18,Arkansas,115,Alabama,117,Final,1,Alabama,117,Arkansas,115,2
-2026-02-18,Army,87,Loyola-Md.,77,Final,0,Army,87,Loyola-Md.,77,-10
-2026-02-18,Bradley,72,Valparaiso,79,Final,1,Valparaiso,79,Bradley,72,7
-2026-02-18,Clemson,77,Wake Forest,85,Final,1,Wake Forest,85,Clemson,77,8
-2026-02-18,Creighton,91,UConn,84,Final,0,Creighton,91,UConn,84,-7
-2026-02-18,Dayton,82,George Mason,67,Final,0,Dayton,82,George Mason,67,-15
-2026-02-18,PFW,71,N. Kentucky,87,Final,1,N. Kentucky,87,PFW,71,16
-2026-02-18,James Madison,67,C. Carolina,65,Final,0,James Madison,67,C. Carolina,65,-2
-2026-02-18,Jacksonville,84,FGCU,86,Final,1,FGCU,86,Jacksonville,84,2
-2026-02-18,Lehigh,49,Navy,72,Final,1,Navy,72,Lehigh,49,23
-2026-02-18,Loyola Chi.,59,Fordham,62,Final,1,Fordham,62,Loyola Chi.,59,3
-2026-02-18,La Salle,61,Duquesne,62,Final,1,Duquesne,62,La Salle,61,1
-2026-02-18,Ole Miss,77,Texas A&M,80,Final,1,Texas A&M,80,Ole Miss,77,3
-2026-02-18,UNCG,77,W. Carolina,91,Final,1,W. Carolina,91,UNCG,77,14
-2026-02-18,N. Iowa,81,Indiana St.,60,Final,0,N. Iowa,81,Indiana St.,60,-21
-2026-02-18,Oklahoma,66,Tennessee,89,Final,1,Tennessee,89,Oklahoma,66,23
-2026-02-18,Queens,85,N. Alabama,78,Final,0,Queens,85,N. Alabama,78,-7
-2026-02-18,Richmond,63,Davidson,65,Final,1,Davidson,65,Richmond,63,2
-2026-02-18,Saint Joseph's,71,St. Bona.,65,Final,0,Saint Joseph's,71,St. Bona.,65,-6
-2026-02-18,UAB,76,Temple,71,Final,0,UAB,76,Temple,71,-5
-2026-02-18,W. Georgia,80,E. Kentucky,81,Final,1,E. Kentucky,81,W. Georgia,80,1
-2026-02-18,Wichita St.,92,East Carolina,89,Final,0,Wichita St.,92,East Carolina,89,-3
-2026-02-18,W. Kentucky,88,Delaware,87,Final,0,W. Kentucky,88,Delaware,87,-1
-2026-02-18,Jax. State,71,La. Tech,77,Final,1,La. Tech,77,Jax. State,71,6
-2026-02-18,Lipscomb,75,Bellarmine,72,Final,0,Lipscomb,75,Bellarmine,72,-3
-2026-02-18,Middle Tenn.,70,Sam Houston,78,Final,1,Sam Houston,78,Middle Tenn.,70,8
-2026-02-18,S. Illinois,66,Drake,61,Final,0,S. Illinois,66,Drake,61,-5
-2026-02-18,Troy,77,UL-Monroe,76,Final,0,Troy,77,UL-Monroe,76,-1
-2026-02-18,Charlotte,74,Tulsa,79,Final,1,Tulsa,79,Charlotte,74,5
-2026-02-18,DePaul,69,Seton Hall,57,Final,0,DePaul,69,Seton Hall,57,-12
-2026-02-18,FAU,60,UTSA,52,Final,0,FAU,60,UTSA,52,-8
-2026-02-18,UIC,84,Evansville,46,Final,0,UIC,84,Evansville,46,-38
-2026-02-18,Kennesaw St.,91,Missouri St.,87,Final,0,Kennesaw St.,91,Missouri St.,87,-4
-2026-02-18,Maryland,74,Northwestern,78,Final,1,Northwestern,78,Maryland,74,4
-2026-02-18,NC Central,72,SC State,85,Final,1,SC State,85,NC Central,72,13
-2026-02-18,N. Dakota St.,74,S. Dak. St.,66,Final,0,N. Dakota St.,74,S. Dak. St.,66,-8
-2026-02-18,Oral Roberts,71,Omaha,80,Final,1,Omaha,80,Oral Roberts,71,9
-2026-02-18,Utah,61,West Virginia,56,Final,0,Utah,61,West Virginia,56,-5
-2026-02-18,Auburn,85,Miss. St.,91,Final,1,Miss. St.,91,Auburn,85,6
-2026-02-18,BYU,68,Arizona,75,Final,1,Arizona,75,BYU,68,7
-2026-02-18,Kansas,81,Okla. St.,69,Final,0,Kansas,81,Okla. St.,69,-12
-2026-02-18,Saint Mary's,72,Seattle,70,Final,0,Saint Mary's,72,Seattle,70,-2
-2026-02-18,Murray St.,61,Illinois St.,78,Final,1,Illinois St.,78,Murray St.,61,17
-2026-02-18,St. John's,76,Marquette,70,Final,0,St. John's,76,Marquette,70,-6
-2026-02-18,Virginia,94,Ga. Tech,68,Final,0,Virginia,94,Ga. Tech,68,-26
-2026-02-18,Vanderbilt,80,Missouri,81,Final,1,Missouri,81,Vanderbilt,80,1
-2026-02-18,Pacific,70,Wash. St.,87,Final,1,Wash. St.,87,Pacific,70,17
-2026-02-18,Illinois,101,USC,65,Final,0,Illinois,101,USC,65,-36
-2026-02-18,Pepperdine,95,Portland,87,Final,0,Pepperdine,95,Portland,87,-8
-2026-02-18,Boise St.,56,Utah St.,75,Final,1,Utah St.,75,Boise St.,56,19
-2026-02-18,Colo. St.,91,UNLV,86,Final,0,Colo. St.,91,UNLV,86,-5
-2026-02-18,Gonzaga,80,San Fran.,59,Final,0,Gonzaga,80,San Fran.,59,-21
-2026-02-19,Binghamton,79,Bryant,67,Final,0,Binghamton,79,Bryant,67,-12
-2026-02-19,FIU,89,Liberty,90,Final,1,Liberty,90,FIU,89,1
-2026-02-19,New Hamp.,56,UMass Lowell,78,Final,1,UMass Lowell,78,New Hamp.,56,22
-2026-02-19,Vermont,62,UMBC,75,Final,1,UMBC,75,Vermont,62,13
-2026-02-19,Marshall,94,App. St.,93,Final,0,Marshall,94,App. St.,93,-1
-2026-02-19,SC Upstate,64,Winthrop,68,Final,1,Winthrop,68,SC Upstate,64,4
-2026-02-19,UAlbany,81,N.J. Tech,63,Final,0,UAlbany,81,N.J. Tech,63,-18
-2026-02-19,Charleston,74,NC A&T,61,Final,0,Charleston,74,NC A&T,61,-13
-2026-02-19,Chattanooga,94,Mercer,90,Final,0,Chattanooga,94,Mercer,90,-4
-2026-02-19,Drexel,70,Northeastern,61,Final,0,Drexel,70,Northeastern,61,-9
-2026-02-19,FDU,60,Chicago St.,59,Final,0,FDU,60,Chicago St.,59,-1
-2026-02-19,Gardner-Webb,70,Radford,82,Final,1,Radford,82,Gardner-Webb,70,12
-2026-02-19,IUI,73,Wright St.,85,Final,1,Wright St.,85,IUI,73,12
-2026-02-19,Le Moyne,77,CCSU,78,Final,1,CCSU,78,Le Moyne,77,1
-2026-02-19,LIU,91,Saint Francis,89,Final,0,LIU,91,Saint Francis,89,-2
-2026-02-19,Longwood,65,Presbyterian,72,Final,1,Presbyterian,72,Longwood,65,7
-2026-02-19,Memphis,66,South Florida,87,Final,1,South Florida,87,Memphis,66,21
-2026-02-19,Monmouth,69,UNCW,79,Final,1,UNCW,79,Monmouth,69,10
-2026-02-19,UNC-Ash.,48,High Point,74,Final,1,High Point,74,UNC-Ash.,48,26
-2026-02-19,Austin Peay,77,North Florida,76,Final,0,Austin Peay,77,North Florida,76,-1
-2026-02-19,Samford,78,The Citadel,75,Final,0,Samford,78,The Citadel,75,-3
-2026-02-19,Stonehill,51,New Haven,64,Final,1,New Haven,64,Stonehill,51,13
-2026-02-19,Wagner,83,Mercyhurst,80,Final,0,Wagner,83,Mercyhurst,80,-3
-2026-02-19,William & Mary,83,Campbell,84,Final,1,Campbell,84,William & Mary,83,1
-2026-02-19,Alabama St.,71,Bethune-Cook.,82,Final,1,Bethune-Cook.,82,Alabama St.,71,11
-2026-02-19,Arkansas St.,79,Louisiana,62,Final,0,Arkansas St.,79,Louisiana,62,-17
-2026-02-19,Cal Baptist,46,Utah Valley,65,Final,1,Utah Valley,65,Cal Baptist,46,19
-2026-02-19,Cent. Arkansas,88,Stetson,76,Final,0,Cent. Arkansas,88,Stetson,76,-12
-2026-02-19,Ga. Southern,64,Georgia St.,66,Final,1,Georgia St.,66,Ga. Southern,64,2
-2026-02-19,Hampton,43,Hofstra,79,Final,1,Hofstra,79,Hampton,43,36
-2026-02-19,So. Utah,74,Tarleton St.,78,Final,1,Tarleton St.,78,So. Utah,74,4
-2026-02-19,Texas St.,90,South Alabama,82,Final,0,Texas St.,90,South Alabama,82,-8
-2026-02-19,Kansas City,70,North Dakota,85,Final,1,North Dakota,85,Kansas City,70,15
-2026-02-19,Utah Tech,50,UT Arlington,63,Final,1,UT Arlington,63,Utah Tech,50,13
-2026-02-19,Lindenwood,80,Tennessee St.,89,Final,1,Tennessee St.,89,Lindenwood,80,9
-2026-02-19,Morehead St.,73,E. Illinois,70,Final,0,Morehead St.,73,E. Illinois,70,-3
-2026-02-19,So. Indiana,77,W. Illinois,70,Final,0,So. Indiana,77,W. Illinois,70,-7
-2026-02-19,UT Martin,65,Little Rock,67,Final,1,Little Rock,67,UT Martin,65,2
-2026-02-19,Prairie View,72,Miss Valley St.,62,Final,0,Prairie View,72,Miss Valley St.,62,-10
-2026-02-19,SIUE,52,Tenn. Tech,62,Final,1,Tenn. Tech,62,SIUE,52,10
-2026-02-19,CSNorthridge,85,UCSB,83,Final,0,CSNorthridge,85,UCSB,83,-2
-2026-02-19,Idaho,67,Portland St.,77,Final,1,Portland St.,77,Idaho,67,10
-2026-02-19,Montana,69,Idaho St.,73,Final,1,Idaho St.,73,Montana,69,4
-2026-02-19,Montana St.,79,Weber St.,82,Final,1,Weber St.,82,Montana St.,79,3
-2026-02-19,South Dakota,70,Denver,90,Final,1,Denver,90,South Dakota,70,20
-2026-02-19,Tulane,77,North Texas,71,Final,0,Tulane,77,North Texas,71,-6
-2026-02-19,Alabama A&M,63,Florida A&M,61,Final,0,Alabama A&M,63,Florida A&M,61,-2
-2026-02-19,Texas So.,83,Ark.-Pine Bluff,64,Final,0,Texas So.,83,Ark.-Pine Bluff,64,-19
-2026-02-19,Cal-Baker.,65,UC Riverside,93,Final,1,UC Riverside,93,Cal-Baker.,65,28
-2026-02-19,E. Washington,102,Sacramento St.,94,Final,0,E. Washington,102,Sacramento St.,94,-8
-2026-02-19,UC Davis,92,CS Fullerton,93,Final,1,CS Fullerton,93,UC Davis,92,1
-2026-02-19,UC Irvine,69,LBSU,58,Final,0,UC Irvine,69,LBSU,58,-11
-2026-02-20,Cal Poly,86,Hawaii,75,Final,0,Cal Poly,86,Hawaii,75,-11
-2026-02-20,Akron,78,Ball St.,65,Final,0,Akron,78,Ball St.,65,-13
-2026-02-20,Canisius,72,Rider,66,Final,0,Canisius,72,Rider,66,-6
-2026-02-20,Marist,84,Manhattan,70,Final,0,Marist,84,Manhattan,70,-14
-2026-02-20,Milwaukee,86,Detroit,91,Final,1,Detroit,91,Milwaukee,86,5
-2026-02-20,Niagara,63,Mt St Mary's,76,Final,1,Mt St Mary's,76,Niagara,63,13
-2026-02-20,Princeton,71,Brown,80,Final,1,Brown,80,Princeton,71,9
-2026-02-20,Sacred Heart,68,Fairfield,78,Final,1,Fairfield,78,Sacred Heart,68,10
-2026-02-20,Saint Peter's,64,Iona,72,Final,1,Iona,72,Saint Peter's,64,8
-2026-02-20,VCU,75,Saint Louis,88,Final,1,Saint Louis,88,VCU,75,13
-2026-02-20,Green Bay,73,Oakland,68,Final,0,Green Bay,73,Oakland,68,-5
-2026-02-20,Indiana,64,Purdue,93,Final,1,Purdue,93,Indiana,64,29
-2026-02-20,Siena,72,Merrimack,79,Final,1,Merrimack,79,Siena,72,7
-2026-02-20,Bowling Green,77,Miami (Ohio),91,Final,1,Miami (Ohio),91,Bowling Green,77,14
-2026-02-21,Creighton,52,St. John's,81,Final,1,St. John's,81,Creighton,52,29
-2026-02-21,East Carolina,56,Charlotte,68,Final,1,Charlotte,68,East Carolina,56,12
-2026-02-21,Florida,94,Ole Miss,75,Final,0,Florida,94,Ole Miss,75,-19
-2026-02-21,Florida St.,70,Clemson,65,Final,0,Florida St.,70,Clemson,65,-5
-2026-02-21,Loyola Chi.,61,Saint Joseph's,75,Final,1,Saint Joseph's,75,Loyola Chi.,61,14
-2026-02-21,NC Central,67,Howard,100,Final,1,Howard,100,NC Central,67,33
-2026-02-21,Rutgers,61,Minnesota,80,Final,1,Minnesota,80,Rutgers,61,19
-2026-02-21,Wake Forest,63,Va. Tech,82,Final,1,Va. Tech,82,Wake Forest,63,19
-2026-02-21,UAlbany,62,UMBC,66,Final,1,UMBC,66,UAlbany,62,4
-2026-02-21,Binghamton,79,UMass Lowell,92,Final,1,UMass Lowell,92,Binghamton,79,13
-2026-02-21,Chattanooga,93,The Citadel,72,Final,0,Chattanooga,93,The Citadel,72,-21
-2026-02-21,Cincinnati,84,Kansas,68,Final,0,Cincinnati,84,Kansas,68,-16
-2026-02-21,Ga. Southern,74,App. St.,89,Final,1,App. St.,89,Ga. Southern,74,15
-2026-02-21,Miss. St.,89,S. Carolina,97,Final,1,S. Carolina,97,Miss. St.,89,8
-2026-02-21,Marshall,75,C. Carolina,79,Final,1,C. Carolina,79,Marshall,75,4
-2026-02-21,Texas St.,54,Louisiana,67,Final,1,Louisiana,67,Texas St.,54,13
-2026-02-21,N. Carolina,77,Syracuse,64,Final,0,N. Carolina,77,Syracuse,64,-13
-2026-02-21,W. Carolina,81,VMI,62,Final,0,W. Carolina,81,VMI,62,-19
-2026-02-21,Navy,81,Army,63,Final,0,Navy,81,Army,63,-18
-2026-02-21,Xavier,75,Butler,80,Final,1,Butler,80,Xavier,75,5
-2026-02-21,Cent. Arkansas,71,FGCU,75,Final,1,FGCU,75,Cent. Arkansas,71,4
-2026-02-21,CCSU,51,Chicago St.,70,Final,1,Chicago St.,70,CCSU,51,19
-2026-02-21,Dartmouth,64,Columbia,63,Final,0,Dartmouth,64,Columbia,63,-1
-2026-02-21,Davidson,59,Fordham,63,Final,1,Fordham,63,Davidson,59,4
-2026-02-21,Delaware,66,Middle Tenn.,78,Final,1,Middle Tenn.,78,Delaware,66,12
-2026-02-21,Duquesne,66,Dayton,78,Final,1,Dayton,78,Duquesne,66,12
-2026-02-21,Harvard,73,Cornell,54,Final,0,Harvard,73,Cornell,54,-19
-2026-02-21,Hofstra,82,Northeastern,68,Final,0,Hofstra,82,Northeastern,68,-14
-2026-02-21,Le Moyne,68,Stonehill,77,Final,1,Stonehill,77,Le Moyne,68,9
-2026-02-21,LIU,83,Mercyhurst,91,Final,1,Mercyhurst,91,LIU,83,8
-2026-02-21,Loyola-Md.,98,Colgate,101,Final,1,Colgate,101,Loyola-Md.,98,3
-2026-02-21,Miami,83,Virginia,86,Final,1,Virginia,86,Miami,83,3
-2026-02-21,Notre Dame,68,Pittsburgh,73,Final,1,Pittsburgh,73,Notre Dame,68,5
-2026-02-21,Penn,70,Yale,74,Final,1,Yale,74,Penn,70,4
-2026-02-21,Penn St.,64,Nebraska,87,Final,1,Nebraska,87,Penn St.,64,23
-2026-02-21,Samford,86,Mercer,89,Final,1,Mercer,89,Samford,86,3
-2026-02-21,SIUE,53,Tennessee St.,80,Final,1,Tennessee St.,80,SIUE,53,27
-2026-02-21,Tennessee,69,Vanderbilt,65,Final,0,Tennessee,69,Vanderbilt,65,-4
-2026-02-21,Kansas City,59,N. Dakota St.,95,Final,1,N. Dakota St.,95,Kansas City,59,36
-2026-02-21,Wagner,65,Saint Francis,56,Final,0,Wagner,65,Saint Francis,56,-9
-2026-02-21,Ga. Tech,70,Louisville,87,Final,1,Louisville,87,Ga. Tech,70,17
-2026-02-21,Kansas St.,72,Texas Tech,100,Final,1,Texas Tech,100,Kansas St.,72,28
-2026-02-21,Rhode Island,46,La Salle,59,Final,1,La Salle,59,Rhode Island,46,13
-2026-02-21,Arizona,73,Houston,66,Final,0,Arizona,73,Houston,66,-7
-2026-02-21,Arkansas St.,102,UL-Monroe,94,Final,0,Arkansas St.,102,UL-Monroe,94,-8
-2026-02-21,Missouri St.,67,FIU,70,Final,1,FIU,70,Missouri St.,67,3
-2026-02-21,North Dakota,83,S. Dak. St.,91,Final,1,S. Dak. St.,91,North Dakota,83,8
-2026-02-21,Old Dominion,81,So. Miss,86,Final,1,So. Miss,86,Old Dominion,81,5
-2026-02-21,Ohio,74,N. Illinois,66,Final,0,Ohio,74,N. Illinois,66,-8
-2026-02-21,UNLV,91,Air Force,66,Final,0,UNLV,91,Air Force,66,-25
-2026-02-21,Utah Valley,66,UT Arlington,54,Final,0,Utah Valley,66,UT Arlington,54,-12
-2026-02-21,Valparaiso,71,UIC,67,Final,0,Valparaiso,71,UIC,67,-4
-2026-02-21,Washington,60,Maryland,64,Final,1,Maryland,64,Washington,60,4
-2026-02-21,W. Georgia,84,Queens,91,Final,1,Queens,91,W. Georgia,84,7
-2026-02-21,Jax. State,78,Sam Houston,82,Final,1,Sam Houston,82,Jax. State,78,4
-2026-02-21,Okla. St.,69,Colorado,83,Final,1,Colorado,83,Okla. St.,69,14
-2026-02-21,Texas,80,Georgia,91,Final,1,Georgia,91,Texas,80,11
-2026-02-21,North Florida,71,Stetson,76,Final,1,Stetson,76,North Florida,71,5
-2026-02-21,James Madison,80,Georgia St.,65,Final,0,James Madison,80,Georgia St.,65,-15
-2026-02-21,Arizona St.,68,Baylor,73,Final,1,Baylor,73,Arizona St.,68,5
-2026-02-21,Boston College,70,SMU,94,Final,1,SMU,94,Boston College,70,24
-2026-02-21,ETSU,87,UNCG,75,Final,0,ETSU,87,UNCG,75,-12
-2026-02-21,Evansville,75,Murray St.,88,Final,1,Murray St.,88,Evansville,75,13
-2026-02-21,Hampton,72,Stony Brook,79,Final,1,Stony Brook,79,Hampton,72,7
-2026-02-21,Jackson St.,65,Alcorn St.,83,Final,1,Alcorn St.,83,Jackson St.,65,18
-2026-02-21,Lindenwood,57,Tenn. Tech,72,Final,1,Tenn. Tech,72,Lindenwood,57,15
-2026-02-21,Longwood,107,Charleston So.,96,Final,0,Longwood,107,Charleston So.,96,-11
-2026-02-21,Maine,61,New Hamp.,58,Final,0,Maine,61,New Hamp.,58,-3
-2026-02-21,Missouri,86,Arkansas,94,Final,1,Arkansas,94,Missouri,86,8
-2026-02-21,Monmouth,63,Charleston,74,Final,1,Charleston,74,Monmouth,63,11
-2026-02-21,UNCW,73,Campbell,68,Final,0,UNCW,73,Campbell,68,-5
-2026-02-21,Oregon,71,USC,70,Final,0,Oregon,71,USC,70,-1
-2026-02-21,SC State,71,Norfolk St.,90,Final,1,Norfolk St.,90,SC State,71,19
-2026-02-21,SE Missouri St.,70,Little Rock,65,Final,0,SE Missouri St.,70,Little Rock,65,-5
-2026-02-21,San Jose St.,69,Boise St.,84,Final,1,Boise St.,84,San Jose St.,69,15
-2026-02-21,So. Utah,83,Abilene Chr.,87,Final,1,Abilene Chr.,87,So. Utah,83,4
-2026-02-21,Troy,54,South Alabama,65,Final,1,South Alabama,65,Troy,54,11
-2026-02-21,Winthrop,87,High Point,89,Final,1,High Point,89,Winthrop,87,2
-2026-02-21,W. Kentucky,94,Liberty,73,Final,0,W. Kentucky,94,Liberty,73,-21
-2026-02-21,Houston Chr.,53,Northwestern St.,71,Final,1,Northwestern St.,71,Houston Chr.,53,18
-2026-02-21,Morehead St.,81,W. Illinois,59,Final,0,Morehead St.,81,W. Illinois,59,-22
-2026-02-21,Presbyterian,74,SC Upstate,76,Final,1,SC Upstate,76,Presbyterian,74,2
-2026-02-21,Radford,73,UNC-Ash.,74,Final,1,UNC-Ash.,74,Radford,73,1
-2026-02-21,So. Indiana,70,E. Illinois,68,Final,0,So. Indiana,70,E. Illinois,68,-2
-2026-02-21,UT-Rio Grande Valley,96,SE Louisiana,75,Final,0,UT-Rio Grande Valley,96,SE Louisiana,75,-21
-2026-02-21,Md.-E. Shore,65,Coppin St.,71,Final,1,Coppin St.,71,Md.-E. Shore,65,6
-2026-02-21,Delaware St.,68,Morgan St.,82,Final,1,Morgan St.,82,Delaware St.,68,14
-2026-02-21,E. Michigan,75,Toledo,94,Final,1,Toledo,94,E. Michigan,75,19
-2026-02-21,E. Washington,67,Portland St.,55,Final,0,E. Washington,67,Portland St.,55,-12
-2026-02-21,La. Tech,55,Kennesaw St.,58,Final,1,Kennesaw St.,58,La. Tech,55,3
-2026-02-21,N. Alabama,51,Lipscomb,73,Final,1,Lipscomb,73,N. Alabama,51,22
-2026-02-21,UC Davis,78,UC Riverside,73,Final,0,UC Davis,78,UC Riverside,73,-5
-2026-02-21,Utah Tech,80,Tarleton St.,72,Final,0,Utah Tech,80,Tarleton St.,72,-8
-2026-02-21,W. Michigan,70,C. Michigan,83,Final,1,C. Michigan,83,W. Michigan,70,13
-2026-02-21,West Virginia,54,TCU,60,Final,1,TCU,60,West Virginia,54,6
-2026-02-21,Alabama A&M,76,Bethune-Cook.,85,Final,1,Bethune-Cook.,85,Alabama A&M,76,9
-2026-02-21,UConn,73,Villanova,63,Final,0,UConn,73,Villanova,63,-10
-2026-02-21,Alabama,90,LSU,83,Final,0,Alabama,90,LSU,83,-7
-2026-02-21,Buffalo,86,Massachusetts,82,Final,0,Buffalo,86,Massachusetts,82,-4
-2026-02-21,Grambling St.,73,Southern U.,87,Final,1,Southern U.,87,Grambling St.,73,14
-2026-02-21,Georgetown,47,Seton Hall,51,Final,1,Seton Hall,51,Georgetown,47,4
-2026-02-21,LMU,77,San Diego,65,Final,0,LMU,77,San Diego,65,-12
-2026-02-21,Montana St.,76,Idaho St.,91,Final,1,Idaho St.,91,Montana St.,76,15
-2026-02-21,Nicholls,78,SF Austin,81,Final,1,SF Austin,81,Nicholls,78,3
-2026-02-21,San Diego St.,74,Colo. St.,83,Final,1,Colo. St.,83,San Diego St.,74,9
-2026-02-21,S. Illinois,59,N. Iowa,57,Final,0,S. Illinois,59,N. Iowa,57,-2
-2026-02-21,St. Bona.,94,Richmond,99,Final,1,Richmond,99,St. Bona.,94,5
-2026-02-21,Stanford,66,California,72,Final,1,California,72,Stanford,66,6
-2026-02-21,St. Thomas (MN),80,Denver,82,Final,1,Denver,82,St. Thomas (MN),80,2
-2026-02-21,Temple,57,Wichita St.,69,Final,1,Wichita St.,69,Temple,57,12
-2026-02-21,Incarnate Word,82,East Texas A&M,73,Final,0,Incarnate Word,82,East Texas A&M,73,-9
-2026-02-21,Michigan,63,Duke,68,Final,1,Duke,68,Michigan,63,5
-2026-02-21,Prairie View,82,Ark.-Pine Bluff,84,Final,1,Ark.-Pine Bluff,84,Prairie View,82,2
-2026-02-21,Alabama St.,63,Florida A&M,76,Final,1,Florida A&M,76,Alabama St.,63,13
-2026-02-21,E. Kentucky,95,Bellarmine,92,Final,0,E. Kentucky,95,Bellarmine,92,-3
-2026-02-21,Furman,76,Wofford,67,Final,0,Furman,76,Wofford,67,-9
-2026-02-21,NC A&T,102,Elon,82,Final,0,NC A&T,102,Elon,82,-20
-2026-02-21,New Haven,84,FDU,77,Final,0,New Haven,84,FDU,77,-7
-2026-02-21,New Orleans,77,Lamar,71,Final,0,New Orleans,77,Lamar,71,-6
-2026-02-21,Austin Peay,65,Jacksonville,61,Final,0,Austin Peay,65,Jacksonville,61,-4
-2026-02-21,Texas So.,71,Miss Valley St.,72,Final,1,Miss Valley St.,72,Texas So.,71,1
-2026-02-21,Vermont,70,N.J. Tech,64,Final,0,Vermont,70,N.J. Tech,64,-6
-2026-02-21,Illinois,94,UCLA,95,Final,1,UCLA,95,Illinois,94,1
-2026-02-21,Illinois St.,60,Bradley,74,Final,1,Bradley,74,Illinois St.,60,14
-2026-02-21,Indiana St.,70,Belmont,87,Final,1,Belmont,87,Indiana St.,70,17
-2026-02-21,N. Arizona,77,N. Colorado,78,Final,1,N. Colorado,78,N. Arizona,77,1
-2026-02-21,New Mexico,80,Fresno St.,78,Final,0,New Mexico,80,Fresno St.,78,-2
-2026-02-21,Pepperdine,73,Oregon St.,83,Final,1,Oregon St.,83,Pepperdine,73,10
-2026-02-21,Providence,71,DePaul,68,Final,0,Providence,71,DePaul,68,-3
-2026-02-21,South Dakota,62,Oral Roberts,67,Final,1,Oral Roberts,67,South Dakota,62,5
-2026-02-21,TX A&M-CC,54,McNeese,70,Final,1,McNeese,70,TX A&M-CC,54,16
-2026-02-21,Wyoming,70,Grand Canyon,65,Final,0,Wyoming,70,Grand Canyon,65,-5
-2026-02-21,Texas A&M,75,Oklahoma,71,Final,0,Texas A&M,75,Oklahoma,71,-4
-2026-02-21,Kentucky,74,Auburn,75,Final,1,Auburn,75,Kentucky,74,1
-2026-02-21,CSNorthridge,78,LBSU,76,Final,0,CSNorthridge,78,LBSU,76,-2
-2026-02-21,UCF,73,Utah,71,Final,0,UCF,73,Utah,71,-2
-2026-02-21,Pacific,62,Gonzaga,71,Final,1,Gonzaga,71,Pacific,62,9
-2026-02-21,UTEP,63,N. Mex. St.,67,Final,1,N. Mex. St.,67,UTEP,63,4
-2026-02-21,CS Fullerton,88,Cal-Baker.,80,Final,0,CS Fullerton,88,Cal-Baker.,80,-8
-2026-02-21,Montana,72,Weber St.,92,Final,1,Weber St.,92,Montana,72,20
-2026-02-21,UC San Diego,71,UC Irvine,69,Final,0,UC San Diego,71,UC Irvine,69,-2
-2026-02-21,Idaho,86,Sacramento St.,80,Final,0,Idaho,86,Sacramento St.,80,-6
-2026-02-21,Saint Mary's,83,Wash. St.,67,Final,0,Saint Mary's,83,Wash. St.,67,-16
-2026-02-21,Portland,59,Seattle,71,Final,1,Seattle,71,Portland,59,12
-2026-02-21,Santa Clara,94,San Fran.,73,Final,0,Santa Clara,94,San Fran.,73,-21
-2026-02-21,UCSB,75,Hawaii,78,Final,1,Hawaii,78,UCSB,75,3
-2026-02-21,Utah St.,77,Nevada,80,Final,1,Nevada,80,Utah St.,77,3
-2026-02-21,Iowa St.,69,BYU,79,Final,1,BYU,79,Iowa St.,69,10
 2026-02-22,American,75,Lafayette,61,Final,0,American,75,Lafayette,61,-14
 2026-02-22,Boston U.,67,Lehigh,70,Final,1,Lehigh,70,Boston U.,67,3
 2026-02-22,Holy Cross,72,Bucknell,63,Final,0,Holy Cross,72,Bucknell,63,-9
@@ -484,7 +157,7 @@ date,away_name,away_score,home_name,home_score,status,home_team_won,winner_name,
 2026-02-26,Alcorn St.,87,Texas So.,92,Final,1,Texas So.,92,Alcorn St.,87,5
 2026-02-26,E. Illinois,71,Lindenwood,67,Final,0,E. Illinois,71,Lindenwood,67,-4
 2026-02-26,Florida A&M,82,Southern U.,71,Final,0,Florida A&M,82,Southern U.,71,-11
-2026-02-26,Tennessee St.,79,SE Missouri St.,71,Final,0,Tennessee St.,79,SE Missouri St.,71,-8
+2026-02-26,Tenn. State,79,SE Missouri St.,71,Final,0,Tenn. State,79,SE Missouri St.,71,-8
 2026-02-26,Tenn. Tech,49,UT Martin,64,Final,1,UT Martin,64,Tenn. Tech,49,15
 2026-02-26,W. Illinois,47,SIUE,67,Final,1,SIUE,67,W. Illinois,47,20
 2026-02-26,Morehead St.,76,Little Rock,70,Final,0,Morehead St.,76,Little Rock,70,-6
@@ -565,7 +238,7 @@ date,away_name,away_score,home_name,home_score,status,home_team_won,winner_name,
 2026-02-28,S. Dak. St.,70,South Dakota,75,Final,1,South Dakota,75,S. Dak. St.,70,5
 2026-02-28,San Diego St.,76,New Mexico,81,Final,1,New Mexico,81,San Diego St.,76,5
 2026-02-28,St. Bona.,58,George Mason,71,Final,1,George Mason,71,St. Bona.,58,13
-2026-02-28,Tennessee St.,67,UT Martin,42,Final,0,Tennessee St.,67,UT Martin,42,-25
+2026-02-28,Tenn. State,67,UT Martin,42,Final,0,Tenn. State,67,UT Martin,42,-25
 2026-02-28,UCLA,73,Minnesota,78,Final,1,Minnesota,78,UCLA,73,5
 2026-02-28,Massachusetts,62,Bowling Green,81,Final,1,Bowling Green,81,Massachusetts,62,19
 2026-02-28,Vanderbilt,77,Kentucky,91,Final,1,Kentucky,91,Vanderbilt,77,14
@@ -708,3 +381,483 @@ date,away_name,away_score,home_name,home_score,status,home_team_won,winner_name,
 2026-03-02,Iowa St.,57,Arizona,73,Final,1,Arizona,73,Iowa St.,57,16
 2026-03-02,Idaho St.,65,Sacramento St.,83,Final,1,Sacramento St.,83,Idaho St.,65,18
 2026-03-02,Weber St.,60,Portland St.,84,Final,1,Portland St.,84,Weber St.,60,24
+2026-03-03,Bryant,83,New Hamp.,88,Final,1,New Hamp.,88,Bryant,83,5
+2026-03-03,Georgia St.,75,Louisiana,84,Final,1,Louisiana,84,Georgia St.,75,9
+2026-03-03,UMass Lowell,67,Maine,56,Final,0,UMass Lowell,67,Maine,56,-11
+2026-03-03,Tennessee,78,S. Carolina,59,Final,0,Tennessee,78,S. Carolina,59,-19
+2026-03-03,UMBC,91,N.J. Tech,52,Final,0,UMBC,91,N.J. Tech,52,-39
+2026-03-03,Alabama,88,Georgia,98,Final,1,Georgia,98,Alabama,88,10
+2026-03-03,E. Michigan,67,Buffalo,72,Final,1,Buffalo,72,E. Michigan,67,5
+2026-03-03,Towson,69,Stony Brook,57,Final,0,Towson,69,Stony Brook,57,-12
+2026-03-03,Akron,77,C. Michigan,64,Final,0,Akron,77,C. Michigan,64,-13
+2026-03-03,UAlbany,56,Vermont,69,Final,1,Vermont,69,UAlbany,56,13
+2026-03-03,Army,55,Bucknell,65,Final,1,Bucknell,65,Army,55,10
+2026-03-03,Ball St.,74,W. Michigan,71,Final,0,Ball St.,74,W. Michigan,71,-3
+2026-03-03,Clemson,63,N. Carolina,67,Final,1,N. Carolina,67,Clemson,63,4
+2026-03-03,Dayton,65,Richmond,60,Final,0,Dayton,65,Richmond,60,-5
+2026-03-03,Drexel,51,Hofstra,62,Final,1,Hofstra,62,Drexel,51,11
+2026-03-03,George Mason,65,VCU,70,Final,1,VCU,70,George Mason,65,5
+2026-03-03,Georgetown,69,St. John's,72,Final,1,St. John's,72,Georgetown,69,3
+2026-03-03,Hampton,85,William & Mary,94,Final,1,William & Mary,94,Hampton,85,9
+2026-03-03,Holy Cross,82,Lafayette,77,Final,0,Holy Cross,82,Lafayette,77,-5
+2026-03-03,Missouri,64,Oklahoma,80,Final,1,Oklahoma,80,Missouri,64,16
+2026-03-03,Monmouth,89,Northeastern,83,Final,0,Monmouth,89,Northeastern,83,-6
+2026-03-03,NC A&T,72,Campbell,90,Final,1,Campbell,90,NC A&T,72,18
+2026-03-03,UNCW,76,Elon,57,Final,0,UNCW,76,Elon,57,-19
+2026-03-03,Ohio,82,Massachusetts,94,Final,1,Massachusetts,94,Ohio,82,12
+2026-03-03,Okla. St.,111,UCF,104,Final,0,Okla. St.,111,UCF,104,-7
+2026-03-03,Seton Hall,77,Xavier,68,Final,0,Seton Hall,77,Xavier,68,-9
+2026-03-03,TCU,73,Texas Tech,65,Final,0,TCU,73,Texas Tech,65,-8
+2026-03-03,Toledo,72,Miami (Ohio),74,Final,1,Miami (Ohio),74,Toledo,72,2
+2026-03-03,Kentucky,85,Texas A&M,96,Final,1,Texas A&M,96,Kentucky,85,11
+2026-03-03,Wake Forest,70,Virginia,75,Final,1,Virginia,75,Wake Forest,70,5
+2026-03-03,PFW,56,Green Bay,64,Final,1,Green Bay,64,PFW,56,8
+2026-03-03,Kent St.,102,N. Illinois,76,Final,0,Kent St.,102,N. Illinois,76,-26
+2026-03-03,Miss. St.,74,Florida,108,Final,1,Florida,108,Miss. St.,74,34
+2026-03-03,West Virginia,63,Kansas St.,65,Final,1,Kansas St.,65,West Virginia,63,2
+2026-03-03,Ark.-Pine Bluff,78,Jackson St.,81,Final,1,Jackson St.,81,Ark.-Pine Bluff,78,3
+2026-03-03,UL-Monroe,80,Old Dominion,87,Final,1,Old Dominion,87,UL-Monroe,80,7
+2026-03-03,Southern U.,71,Alabama St.,64,Final,0,Southern U.,71,Alabama St.,64,-7
+2026-03-03,Boston College,63,Va. Tech,72,Final,1,Va. Tech,72,Boston College,63,9
+2026-03-03,BYU,68,Cincinnati,90,Final,1,Cincinnati,90,BYU,68,22
+2026-03-03,Colorado,92,Utah,78,Final,0,Colorado,92,Utah,78,-14
+2026-03-03,Syracuse,62,Louisville,77,Final,1,Louisville,77,Syracuse,62,15
+2026-03-03,Grand Canyon,86,Air Force,60,Final,0,Grand Canyon,86,Air Force,60,-26
+2026-03-03,Grambling St.,63,Alabama A&M,77,Final,1,Alabama A&M,77,Grambling St.,63,14
+2026-03-03,Kansas,60,Arizona St.,70,Final,1,Arizona St.,70,Kansas,60,10
+2026-03-03,Oregon,54,Illinois,80,Final,1,Illinois,80,Oregon,54,26
+2026-03-03,San Diego St.,77,Boise St.,86,Final,1,Boise St.,86,San Diego St.,77,9
+2026-03-03,San Jose St.,68,Fresno St.,82,Final,1,Fresno St.,82,San Jose St.,68,14
+2026-03-03,Vanderbilt,89,Ole Miss,86,Final,0,Vanderbilt,89,Ole Miss,86,-3
+2026-03-03,Miss Valley St.,64,Alcorn St.,67,Final,1,Alcorn St.,67,Miss Valley St.,64,3
+2026-03-03,LSU,74,Auburn,88,Final,1,Auburn,88,LSU,74,14
+2026-03-03,Nevada,73,Wyoming,83,Final,1,Wyoming,83,Nevada,73,10
+2026-03-03,Nebraska,52,UCLA,72,Final,1,UCLA,72,Nebraska,52,20
+2026-03-03,Utah St.,65,UNLV,92,Final,1,UNLV,92,Utah St.,65,27
+2026-03-04,Jacksonville,79,Bellarmine,82,Final,1,Bellarmine,82,Jacksonville,79,3
+2026-03-04,N. Alabama,58,FGCU,69,Final,1,FGCU,69,N. Alabama,58,11
+2026-03-04,Stetson,92,E. Kentucky,76,Final,0,Stetson,92,E. Kentucky,76,-16
+2026-03-04,Creighton,76,Butler,59,Final,0,Creighton,76,Butler,59,-17
+2026-03-04,Louisiana,72,James Madison,87,Final,1,James Madison,87,Louisiana,72,15
+2026-03-04,Fordham,84,La Salle,87,Final,1,La Salle,87,Fordham,84,3
+2026-03-04,Minnesota,47,Indiana,77,Final,1,Indiana,77,Minnesota,47,30
+2026-03-04,California,76,Ga. Tech,65,Final,0,California,76,Ga. Tech,65,-11
+2026-03-04,Chicago St.,75,LIU,79,Final,1,LIU,79,Chicago St.,75,4
+2026-03-04,Clev. St.,61,Wright St.,90,Final,1,Wright St.,90,Clev. St.,61,29
+2026-03-04,Duquesne,52,Rhode Island,64,Final,1,Rhode Island,64,Duquesne,52,12
+2026-03-04,E. Illinois,77,SIUE,71,Final,0,E. Illinois,77,SIUE,71,-6
+2026-03-04,FDU,61,Mercyhurst,70,Final,1,Mercyhurst,70,FDU,61,9
+2026-03-04,Marquette,78,Providence,56,Final,0,Marquette,78,Providence,56,-22
+2026-03-04,Miami,77,SMU,69,Final,0,Miami,77,SMU,69,-8
+2026-03-04,Milwaukee,63,Detroit,84,Final,1,Detroit,84,Milwaukee,63,21
+2026-03-04,N. Kentucky,85,Oakland,84,Final,0,N. Kentucky,85,Oakland,84,-1
+2026-03-04,St. Bona.,82,George Wash.,91,Final,1,George Wash.,91,St. Bona.,82,9
+2026-03-04,Saint Joseph's,70,Davidson,67,Final,0,Saint Joseph's,70,Davidson,67,-3
+2026-03-04,Stonehill,81,Le Moyne,71,Final,0,Stonehill,81,Le Moyne,71,-10
+2026-03-04,Texas,85,Arkansas,105,Final,1,Arkansas,105,Texas,85,20
+2026-03-04,UAB,80,Charlotte,74,Final,0,UAB,80,Charlotte,74,-6
+2026-03-04,Wagner,70,CCSU,60,Final,0,Wagner,70,CCSU,60,-10
+2026-03-04,Youngstown St.,53,Robert Morris,68,Final,1,Robert Morris,68,Youngstown St.,53,15
+2026-03-04,Gardner-Webb,65,SC Upstate,64,Final,0,Gardner-Webb,65,SC Upstate,64,-1
+2026-03-04,Ohio St.,94,Penn St.,62,Final,0,Ohio St.,94,Penn St.,62,-32
+2026-03-04,North Florida,85,W. Georgia,93,Final,1,W. Georgia,93,North Florida,85,8
+2026-03-04,Loyola Chi.,65,Saint Louis,79,Final,1,Saint Louis,79,Loyola Chi.,65,14
+2026-03-04,Maryland,45,Wisconsin,78,Final,1,Wisconsin,78,Maryland,45,33
+2026-03-04,Villanova,76,DePaul,57,Final,0,Villanova,76,DePaul,57,-19
+2026-03-04,Rice,58,North Texas,62,Final,1,North Texas,62,Rice,58,4
+2026-03-04,Kansas City,62,Oral Roberts,84,Final,1,Oral Roberts,84,Kansas City,62,22
+2026-03-04,Old Dominion,84,Ga. Southern,88,Final,1,Ga. Southern,88,Old Dominion,84,4
+2026-03-04,Purdue,70,Northwestern,66,Final,0,Purdue,70,Northwestern,66,-4
+2026-03-04,Baylor,64,Houston,77,Final,1,Houston,77,Baylor,64,13
+2026-03-04,Florida St.,75,Pittsburgh,74,Final,0,Florida St.,75,Pittsburgh,74,-1
+2026-03-04,Stanford,86,Notre Dame,78,Final,0,Stanford,86,Notre Dame,78,-8
+2026-03-04,Little Rock,62,Lindenwood,72,Final,1,Lindenwood,72,Little Rock,62,10
+2026-03-04,Colo. St.,82,New Mexico,74,Final,0,Colo. St.,82,New Mexico,74,-8
+2026-03-04,USC,72,Washington,91,Final,1,Washington,91,USC,72,19
+2026-03-05,Drake,67,S. Illinois,63,Final,0,Drake,67,S. Illinois,63,-4
+2026-03-05,SC State,80,NC Central,64,Final,0,SC State,80,NC Central,64,-16
+2026-03-05,James Madison,80,So. Miss,86,Final,1,So. Miss,86,James Madison,80,6
+2026-03-05,Sacred Heart,91,Iona,80,Final,0,Sacred Heart,91,Iona,80,-11
+2026-03-05,American,73,Boston U.,75,Final,1,Boston U.,75,American,73,2
+2026-03-05,Bucknell,69,Navy,74,Final,1,Navy,74,Bucknell,69,5
+2026-03-05,E. Illinois,63,UT Martin,66,Final,1,UT Martin,66,E. Illinois,63,3
+2026-03-05,Holy Cross,66,Lehigh,69,Final,1,Lehigh,69,Holy Cross,66,3
+2026-03-05,Indiana St.,62,Valparaiso,63,Final,1,Valparaiso,63,Indiana St.,62,1
+2026-03-05,La. Tech,76,Liberty,71,Final,0,La. Tech,76,Liberty,71,-5
+2026-03-05,Loyola-Md.,77,Colgate,90,Final,1,Colgate,90,Loyola-Md.,77,13
+2026-03-05,Middle Tenn.,73,FIU,67,Final,0,Middle Tenn.,73,FIU,67,-6
+2026-03-05,Oral Roberts,65,N. Dakota St.,76,Final,1,N. Dakota St.,76,Oral Roberts,65,11
+2026-03-05,Sam Houston,80,Delaware,83,Final,1,Delaware,83,Sam Houston,80,3
+2026-03-05,Tulane,60,Temple,89,Final,1,Temple,89,Tulane,60,29
+2026-03-05,Tulsa,93,East Carolina,66,Final,0,Tulsa,93,East Carolina,66,-27
+2026-03-05,Bethune-Cook.,77,Florida A&M,81,Final,1,Florida A&M,81,Bethune-Cook.,77,4
+2026-03-05,Delaware St.,57,Md.-E. Shore,56,Final,0,Delaware St.,57,Md.-E. Shore,56,-1
+2026-03-05,Howard,84,Norfolk St.,76,Final,0,Howard,84,Norfolk St.,76,-8
+2026-03-05,Michigan,71,Iowa,68,Final,0,Michigan,71,Iowa,68,-3
+2026-03-05,Rutgers,87,Michigan St.,91,Final,1,Michigan St.,91,Rutgers,87,4
+2026-03-05,UT Arlington,65,Tarleton St.,60,Final,0,UT Arlington,65,Tarleton St.,60,-5
+2026-03-05,W. Kentucky,74,Missouri St.,87,Final,1,Missouri St.,87,W. Kentucky,74,13
+2026-03-05,Manhattan,60,Fairfield,71,Final,1,Fairfield,71,Manhattan,60,11
+2026-03-05,Utah Valley,92,So. Utah,88,Final,0,Utah Valley,92,So. Utah,88,-4
+2026-03-05,Coppin St.,66,Morgan St.,70,Final,1,Morgan St.,70,Coppin St.,66,4
+2026-03-05,Ga. Southern,80,Arkansas St.,77,Final,0,Ga. Southern,80,Arkansas St.,77,-3
+2026-03-05,Grambling St.,65,Alabama St.,63,Final,0,Grambling St.,65,Alabama St.,63,-2
+2026-03-05,Jax. State,75,N. Mex. St.,77,Final,1,N. Mex. St.,77,Jax. State,75,2
+2026-03-05,Kennesaw St.,71,UTEP,78,Final,1,UTEP,78,Kennesaw St.,71,7
+2026-03-05,Miss Valley St.,77,Jackson St.,85,Final,1,Jackson St.,85,Miss Valley St.,77,8
+2026-03-05,Pepperdine,68,Portland,77,Final,1,Portland,77,Pepperdine,68,9
+2026-03-05,Prairie View,70,Texas So.,59,Final,0,Prairie View,70,Texas So.,59,-11
+2026-03-05,South Florida,96,Memphis,89,Final,0,South Florida,96,Memphis,89,-7
+2026-03-05,CSNorthridge,86,Cal-Baker.,84,Final,0,CSNorthridge,86,Cal-Baker.,84,-2
+2026-03-05,Evansville,59,N. Iowa,68,Final,1,N. Iowa,68,Evansville,59,9
+2026-03-05,Lindenwood,66,SE Missouri St.,68,Final,1,SE Missouri St.,68,Lindenwood,66,2
+2026-03-05,S. Dak. St.,67,St. Thomas (MN),80,Final,1,St. Thomas (MN),80,S. Dak. St.,67,13
+2026-03-05,Southern U.,88,Alabama A&M,85,Final,0,Southern U.,88,Alabama A&M,85,-3
+2026-03-05,Ark.-Pine Bluff,83,Alcorn St.,48,Final,0,Ark.-Pine Bluff,83,Alcorn St.,48,-35
+2026-03-05,Abilene Chr.,48,Cal Baptist,87,Final,1,Cal Baptist,87,Abilene Chr.,48,39
+2026-03-05,UC San Diego,71,CS Fullerton,75,Final,1,CS Fullerton,75,UC San Diego,71,4
+2026-03-05,Cal Poly,85,UC Irvine,107,Final,1,UC Irvine,107,Cal Poly,85,22
+2026-03-05,UC Davis,76,LBSU,70,Final,0,UC Davis,76,LBSU,70,-6
+2026-03-05,San Diego,66,LMU,62,Final,0,San Diego,66,LMU,62,-4
+2026-03-06,UC Riverside,74,Hawaii,93,Final,1,Hawaii,93,UC Riverside,74,19
+2026-03-06,Bellarmine,73,Cent. Arkansas,86,Final,1,Cent. Arkansas,86,Bellarmine,73,13
+2026-03-06,Gardner-Webb,59,High Point,81,Final,1,High Point,81,Gardner-Webb,59,22
+2026-03-06,Drake,100,Belmont,81,Final,0,Drake,100,Belmont,81,-19
+2026-03-06,Northeastern,88,NC A&T,72,Final,0,Northeastern,88,NC A&T,72,-16
+2026-03-06,Charleston So.,81,Winthrop,86,Final,1,Winthrop,86,Charleston So.,81,5
+2026-03-06,FGCU,77,Lipscomb,53,Final,0,FGCU,77,Lipscomb,53,-24
+2026-03-06,UIC,92,Murray St.,79,Final,0,UIC,92,Murray St.,79,-13
+2026-03-06,The Citadel,88,Chattanooga,85,Final,0,The Citadel,88,Chattanooga,85,-3
+2026-03-06,Stetson,60,Austin Peay,69,Final,1,Austin Peay,69,Stetson,60,9
+2026-03-06,Longwood,82,UNC-Ash.,85,Final,1,UNC-Ash.,85,Longwood,82,3
+2026-03-06,N. Illinois,55,Akron,94,Final,1,Akron,94,N. Illinois,55,39
+2026-03-06,Sacred Heart,48,Merrimack,70,Final,1,Merrimack,70,Sacred Heart,48,22
+2026-03-06,So. Miss,81,Texas St.,77,Final,0,So. Miss,81,Texas St.,77,-4
+2026-03-06,Bowling Green,77,E. Michigan,69,Final,0,Bowling Green,77,E. Michigan,69,-8
+2026-03-06,Buffalo,78,Toledo,98,Final,1,Toledo,98,Buffalo,78,20
+2026-03-06,Columbia,71,Harvard,81,Final,1,Harvard,81,Columbia,71,10
+2026-03-06,C. Michigan,69,Ball St.,85,Final,1,Ball St.,85,C. Michigan,69,16
+2026-03-06,Omaha,76,South Dakota,62,Final,0,Omaha,76,South Dakota,62,-14
+2026-03-06,Penn,82,Brown,61,Final,0,Penn,82,Brown,61,-21
+2026-03-06,Valparaiso,84,Bradley,90,Final,1,Bradley,90,Valparaiso,84,6
+2026-03-06,VCU,68,Dayton,62,Final,0,VCU,68,Dayton,62,-6
+2026-03-06,W. Michigan,78,Kent St.,86,Final,1,Kent St.,86,W. Michigan,78,8
+2026-03-06,VMI,70,UNCG,84,Final,1,UNCG,84,VMI,70,14
+2026-03-06,W. Georgia,63,Queens,71,Final,1,Queens,71,W. Georgia,63,8
+2026-03-06,UT Martin,55,Tenn. State,68,Final,1,Tenn. State,68,UT Martin,55,13
+2026-03-06,UCF,62,West Virginia,77,Final,1,West Virginia,77,UCF,62,15
+2026-03-06,Fairfield,74,Saint Peter's,55,Final,0,Fairfield,74,Saint Peter's,55,-19
+2026-03-06,Ga. Southern,94,South Alabama,85,Final,0,Ga. Southern,94,South Alabama,85,-9
+2026-03-06,Miami (Ohio),110,Ohio,108,Final,0,Miami (Ohio),110,Ohio,108,-2
+2026-03-06,Portland,74,Wash. St.,68,Final,0,Portland,74,Wash. St.,68,-6
+2026-03-06,St. John's,72,Seton Hall,65,Final,0,St. John's,72,Seton Hall,65,-7
+2026-03-06,Denver,67,North Dakota,83,Final,1,North Dakota,83,Denver,67,16
+2026-03-06,Presbyterian,91,Radford,85,Final,0,Presbyterian,91,Radford,85,-6
+2026-03-06,UNLV,86,San Diego St.,89,Final,1,San Diego St.,89,UNLV,86,3
+2026-03-06,N. Iowa,74,Illinois St.,52,Final,0,N. Iowa,74,Illinois St.,52,-22
+2026-03-06,SE Missouri St.,61,Morehead St.,66,Final,1,Morehead St.,66,SE Missouri St.,61,5
+2026-03-06,San Diego,56,Seattle,58,Final,1,Seattle,58,San Diego,56,2
+2026-03-07,Arkansas,88,Missouri,84,Final,0,Arkansas,88,Missouri,84,-4
+2026-03-07,Butler,81,DePaul,71,Final,0,Butler,81,DePaul,71,-10
+2026-03-07,Campbell,96,Stony Brook,89,Final,0,Campbell,96,Stony Brook,89,-7
+2026-03-07,The Citadel,76,ETSU,83,Final,1,ETSU,83,The Citadel,76,7
+2026-03-07,Davidson,68,St. Bona.,63,Final,0,Davidson,68,St. Bona.,63,-5
+2026-03-07,Ga. Tech,76,Clemson,79,Final,1,Clemson,79,Ga. Tech,76,3
+2026-03-07,Houston,82,Okla. St.,75,Final,0,Houston,82,Okla. St.,75,-7
+2026-03-07,La. Tech,81,Delaware,38,Final,0,La. Tech,81,Delaware,38,-43
+2026-03-07,UNC-Ash.,71,High Point,75,Final,1,High Point,75,UNC-Ash.,71,4
+2026-03-07,Notre Dame,69,Boston College,77,Final,1,Boston College,77,Notre Dame,69,8
+2026-03-07,Stonehill,51,Mercyhurst,56,Final,1,Mercyhurst,56,Stonehill,51,5
+2026-03-07,Va. Tech,72,Virginia,76,Final,1,Virginia,76,Va. Tech,72,4
+2026-03-07,Xavier,78,Villanova,91,Final,1,Villanova,91,Xavier,78,13
+2026-03-07,UConn,62,Marquette,68,Final,1,Marquette,68,UConn,62,6
+2026-03-07,UAlbany,76,UMass Lowell,81,Final,1,UMass Lowell,81,UAlbany,76,5
+2026-03-07,La Salle,76,Saint Joseph's,88,Final,1,Saint Joseph's,88,La Salle,76,12
+2026-03-07,New Hamp.,69,UMBC,84,Final,1,UMBC,84,New Hamp.,69,15
+2026-03-07,S. Carolina,64,Ole Miss,61,Final,0,S. Carolina,64,Ole Miss,61,-3
+2026-03-07,Arizona St.,65,Iowa St.,86,Final,1,Iowa St.,86,Arizona St.,65,21
+2026-03-07,Bryant,57,Vermont,77,Final,1,Vermont,77,Bryant,57,20
+2026-03-07,Cincinnati,63,TCU,73,Final,1,TCU,73,Cincinnati,63,10
+2026-03-07,Cornell,111,Dartmouth,90,Final,0,Cornell,111,Dartmouth,90,-21
+2026-03-07,George Wash.,62,Loyola Chi.,68,Final,1,Loyola Chi.,68,George Wash.,62,6
+2026-03-07,Kansas St.,85,Kansas,104,Final,1,Kansas,104,Kansas St.,85,19
+2026-03-07,Louisville,92,Miami,89,Final,0,Louisville,92,Miami,89,-3
+2026-03-07,Princeton,53,Yale,78,Final,1,Yale,78,Princeton,53,25
+2026-03-07,Rhode Island,49,Fordham,61,Final,1,Fordham,61,Rhode Island,49,12
+2026-03-07,Richmond,77,Duquesne,79,Final,1,Duquesne,79,Richmond,77,2
+2026-03-07,Sam Houston,72,Liberty,79,Final,1,Liberty,79,Sam Houston,72,7
+2026-03-07,SMU,78,Florida St.,91,Final,1,Florida St.,91,SMU,78,13
+2026-03-07,Vanderbilt,86,Tennessee,82,Final,0,Vanderbilt,86,Tennessee,82,-4
+2026-03-07,Wagner,56,LIU,64,Final,1,LIU,64,Wagner,56,8
+2026-03-07,W. Kentucky,67,FIU,92,Final,1,FIU,92,W. Kentucky,67,25
+2026-03-07,Stanford,85,NC State,84,Final,0,Stanford,85,NC State,84,-1
+2026-03-07,UNCG,75,Wofford,72,Final,0,UNCG,75,Wofford,72,-3
+2026-03-07,Northeastern,77,Drexel,84,Final,1,Drexel,84,Northeastern,77,7
+2026-03-07,Presbyterian,71,Winthrop,73,Final,1,Winthrop,73,Presbyterian,71,2
+2026-03-07,Jax. State,64,UTEP,61,Final,0,Jax. State,64,UTEP,61,-3
+2026-03-07,Middle Tenn.,75,Missouri St.,63,Final,0,Middle Tenn.,75,Missouri St.,63,-12
+2026-03-07,Drake,51,UIC,72,Final,1,UIC,72,Drake,51,21
+2026-03-07,Georgia,102,Miss. St.,96,Final,0,Georgia,102,Miss. St.,96,-6
+2026-03-07,Boise St.,78,Colo. St.,67,Final,0,Boise St.,78,Colo. St.,67,-11
+2026-03-07,California,73,Wake Forest,80,Final,1,Wake Forest,80,California,73,7
+2026-03-07,FAU,70,Wichita St.,88,Final,1,Wichita St.,88,FAU,70,18
+2026-03-07,Florida,84,Kentucky,77,Final,0,Florida,84,Kentucky,77,-7
+2026-03-07,Kennesaw St.,76,N. Mex. St.,79,Final,1,N. Mex. St.,79,Kennesaw St.,76,3
+2026-03-07,Maine,58,N.J. Tech,60,Final,1,N.J. Tech,60,Maine,58,2
+2026-03-07,New Mexico,90,Utah St.,94,Final,1,Utah St.,94,New Mexico,90,4
+2026-03-07,Saint Louis,57,George Mason,86,Final,1,George Mason,86,Saint Louis,57,29
+2026-03-07,Wisconsin,97,Purdue,93,Final,0,Wisconsin,97,Purdue,93,-4
+2026-03-07,Pittsburgh,71,Syracuse,69,Final,0,Pittsburgh,71,Syracuse,69,-2
+2026-03-07,FGCU,63,Cent. Arkansas,73,Final,1,Cent. Arkansas,73,FGCU,63,10
+2026-03-07,Utah,75,Baylor,101,Final,1,Baylor,101,Utah,75,26
+2026-03-07,Wyoming,88,San Jose St.,78,Final,0,Wyoming,88,San Jose St.,78,-10
+2026-03-07,Indiana,78,Ohio St.,91,Final,1,Ohio St.,91,Indiana,78,13
+2026-03-07,Furman,86,Samford,81,Final,0,Furman,86,Samford,81,-5
+2026-03-07,Hampton,68,Towson,74,Final,1,Towson,74,Hampton,68,6
+2026-03-07,Marist,77,Quinnipiac,75,Final,0,Marist,77,Quinnipiac,75,-2
+2026-03-07,N. Iowa,73,Bradley,69,Final,0,N. Iowa,73,Bradley,69,-4
+2026-03-07,Texas A&M,94,LSU,91,Final,0,Texas A&M,94,LSU,91,-3
+2026-03-07,N. Carolina,61,Duke,76,Final,1,Duke,76,N. Carolina,61,15
+2026-03-07,So. Miss,86,App. St.,73,Final,0,So. Miss,86,App. St.,73,-13
+2026-03-07,Cal-Baker.,76,Cal Poly,108,Final,1,Cal Poly,108,Cal-Baker.,76,32
+2026-03-07,UT Arlington,64,Abilene Chr.,57,Final,0,UT Arlington,64,Abilene Chr.,57,-7
+2026-03-07,N. Arizona,65,Idaho St.,73,Final,1,Idaho St.,73,N. Arizona,65,8
+2026-03-07,Queens,90,Austin Peay,83,Final,0,Queens,90,Austin Peay,83,-7
+2026-03-07,CS Fullerton,90,CSNorthridge,77,Final,0,CS Fullerton,90,CSNorthridge,77,-13
+2026-03-07,Fresno St.,60,Grand Canyon,85,Final,1,Grand Canyon,85,Fresno St.,60,25
+2026-03-07,Omaha,50,N. Dakota St.,74,Final,1,N. Dakota St.,74,Omaha,50,24
+2026-03-07,Providence,79,Georgetown,80,Final,1,Georgetown,80,Providence,79,1
+2026-03-07,UC Davis,69,UC Irvine,79,Final,1,UC Irvine,79,UC Davis,69,10
+2026-03-07,Auburn,84,Alabama,96,Final,1,Alabama,96,Auburn,84,12
+2026-03-07,Cal Baptist,82,So. Utah,75,Final,0,Cal Baptist,82,So. Utah,75,-7
+2026-03-07,Elon,62,William & Mary,72,Final,1,William & Mary,72,Elon,62,10
+2026-03-07,Mt St Mary's,58,Siena,63,Final,1,Siena,63,Mt St Mary's,58,5
+2026-03-07,Oklahoma,88,Texas,85,Final,0,Oklahoma,88,Texas,85,-3
+2026-03-07,W. Carolina,77,Mercer,73,Final,0,W. Carolina,77,Mercer,73,-4
+2026-03-07,UC San Diego,64,UCSB,63,Final,0,UC San Diego,64,UCSB,63,-1
+2026-03-07,Ga. Southern,96,C. Carolina,72,Final,0,Ga. Southern,96,C. Carolina,72,-24
+2026-03-07,Morehead St.,67,Tenn. State,93,Final,1,Tenn. State,93,Morehead St.,67,26
+2026-03-07,Northwestern,66,Minnesota,67,Final,1,Minnesota,67,Northwestern,66,1
+2026-03-07,Portland,65,San Fran.,82,Final,1,San Fran.,82,Portland,65,17
+2026-03-07,UCLA,89,USC,68,Final,0,UCLA,89,USC,68,-21
+2026-03-07,Utah Valley,104,Utah Tech,101,Final,0,Utah Valley,104,Utah Tech,101,-3
+2026-03-07,Air Force,59,Nevada,74,Final,1,Nevada,74,Air Force,59,15
+2026-03-07,Sacramento St.,45,Idaho,68,Final,1,Idaho,68,Sacramento St.,45,23
+2026-03-07,North Dakota,67,St. Thomas (MN),66,Final,0,North Dakota,67,St. Thomas (MN),66,-1
+2026-03-07,Texas Tech,76,BYU,82,Final,1,BYU,82,Texas Tech,76,6
+2026-03-07,Arizona,89,Colorado,79,Final,0,Arizona,89,Colorado,79,-10
+2026-03-07,Washington,79,Oregon,85,Final,1,Oregon,85,Washington,79,6
+2026-03-07,Seattle,58,Pacific,61,Final,1,Pacific,61,Seattle,58,3
+2026-03-08,LBSU,84,Hawaii,75,Final,0,LBSU,84,Hawaii,75,-9
+2026-03-08,Campbell,85,UNCW,70,Final,0,Campbell,85,UNCW,70,-15
+2026-03-08,Colgate,69,Lehigh,76,Final,1,Lehigh,76,Colgate,69,7
+2026-03-08,N. Iowa,84,UIC,69,Final,0,N. Iowa,84,UIC,69,-15
+2026-03-08,Penn St.,62,Rutgers,74,Final,1,Rutgers,74,Penn St.,62,12
+2026-03-08,Winthrop,76,High Point,91,Final,1,High Point,91,Winthrop,76,15
+2026-03-08,Boston U.,73,Navy,72,Final,0,Boston U.,73,Navy,72,-1
+2026-03-08,Charlotte,60,South Florida,83,Final,1,South Florida,83,Charlotte,60,23
+2026-03-08,Memphis,96,Tulane,95,Final,0,Memphis,96,Tulane,95,-1
+2026-03-08,Queens,98,Cent. Arkansas,93,Final,0,Queens,98,Cent. Arkansas,93,-5
+2026-03-08,Drexel,57,Monmouth,65,Final,1,Monmouth,65,Drexel,57,8
+2026-03-08,East Carolina,83,UAB,90,Final,1,UAB,90,East Carolina,83,7
+2026-03-08,Illinois,78,Maryland,72,Final,0,Illinois,78,Maryland,72,-6
+2026-03-08,Temple,76,Tulsa,78,Final,1,Tulsa,78,Temple,76,2
+2026-03-08,UTSA,71,Rice,80,Final,1,Rice,80,UTSA,71,9
+2026-03-08,N. Kentucky,96,Green Bay,76,Final,0,N. Kentucky,96,Green Bay,76,-20
+2026-03-08,W. Carolina,67,ETSU,69,Final,1,ETSU,69,W. Carolina,67,2
+2026-03-08,Michigan St.,80,Michigan,90,Final,1,Michigan,90,Michigan St.,80,10
+2026-03-08,Iowa,75,Nebraska,84,Final,1,Nebraska,84,Iowa,75,9
+2026-03-08,Houston Chr.,60,New Orleans,73,Final,1,New Orleans,73,Houston Chr.,60,13
+2026-03-08,Marist,57,Merrimack,58,Final,1,Merrimack,58,Marist,57,1
+2026-03-08,Towson,81,Charleston,56,Final,0,Towson,81,Charleston,56,-25
+2026-03-08,So. Miss,70,Troy,78,Final,1,Troy,78,So. Miss,70,8
+2026-03-08,UNCG,75,Furman,81,Final,1,Furman,81,UNCG,75,6
+2026-03-08,Idaho St.,78,Portland St.,85,Final,1,Portland St.,85,Idaho St.,78,7
+2026-03-08,Fairfield,61,Siena,76,Final,1,Siena,76,Fairfield,61,15
+2026-03-08,Ga. Southern,82,Marshall,78,Final,0,Ga. Southern,82,Marshall,78,-4
+2026-03-08,Northwestern St.,47,Nicholls,61,Final,1,Nicholls,61,Northwestern St.,47,14
+2026-03-08,San Fran.,77,Oregon St.,78,Final,1,Oregon St.,78,San Fran.,77,1
+2026-03-08,William & Mary,61,Hofstra,92,Final,1,Hofstra,92,William & Mary,61,31
+2026-03-08,North Dakota,62,N. Dakota St.,70,Final,1,N. Dakota St.,70,North Dakota,62,8
+2026-03-08,Idaho,78,Montana St.,74,Final,0,Idaho,78,Montana St.,74,-4
+2026-03-08,Pacific,68,Santa Clara,76,Final,1,Santa Clara,76,Pacific,68,8
+2026-03-09,Alcorn St.,77,Alabama St.,65,Final,0,Alcorn St.,77,Alabama St.,65,-12
+2026-03-09,Campbell,64,Monmouth,74,Final,1,Monmouth,74,Campbell,64,10
+2026-03-09,New Orleans,61,TX A&M-CC,74,Final,1,TX A&M-CC,74,New Orleans,61,13
+2026-03-09,Furman,76,ETSU,61,Final,0,Furman,76,ETSU,61,-15
+2026-03-09,Ga. Southern,61,Troy,77,Final,1,Troy,77,Ga. Southern,61,16
+2026-03-09,N. Kentucky,90,Wright St.,103,Final,1,Wright St.,103,N. Kentucky,90,13
+2026-03-09,N. Colorado,89,Montana,95,Final,1,Montana,95,N. Colorado,89,6
+2026-03-09,Miss Valley St.,52,Grambling St.,77,Final,1,Grambling St.,77,Miss Valley St.,52,25
+2026-03-09,Towson,65,Hofstra,68,Final,1,Hofstra,68,Towson,65,3
+2026-03-09,Nicholls,68,UT-Rio Grande Valley,86,Final,1,UT-Rio Grande Valley,86,Nicholls,68,18
+2026-03-09,Oregon St.,56,Gonzaga,65,Final,1,Gonzaga,65,Oregon St.,56,9
+2026-03-09,Detroit,70,Robert Morris,64,Final,0,Detroit,70,Robert Morris,64,-6
+2026-03-09,Weber St.,79,E. Washington,84,Final,1,E. Washington,84,Weber St.,79,5
+2026-03-09,Santa Clara,76,Saint Mary's,71,Final,0,Santa Clara,76,Saint Mary's,71,-5
+2026-03-10,Baylor,79,Arizona St.,83,Final,1,Arizona St.,83,Baylor,79,4
+2026-03-10,Alcorn St.,56,Prairie View,65,Final,1,Prairie View,65,Alcorn St.,56,9
+2026-03-10,Pittsburgh,64,Stanford,63,Final,0,Pittsburgh,64,Stanford,63,-1
+2026-03-10,Utah,66,Cincinnati,73,Final,1,Cincinnati,73,Utah,66,7
+2026-03-10,Syracuse,69,SMU,86,Final,1,SMU,86,Syracuse,69,17
+2026-03-10,Maryland,70,Oregon,60,Final,0,Maryland,70,Oregon,60,-10
+2026-03-10,UMass Lowell,69,UMBC,91,Final,1,UMBC,91,UMass Lowell,69,22
+2026-03-10,Missouri St.,75,FIU,72,Final,0,Missouri St.,75,FIU,72,-3
+2026-03-10,Detroit,63,Wright St.,66,Final,1,Wright St.,66,Detroit,63,3
+2026-03-10,Kansas St.,91,BYU,105,Final,1,BYU,105,Kansas St.,91,14
+2026-03-10,Mercyhurst,70,LIU,79,Final,1,LIU,79,Mercyhurst,70,9
+2026-03-10,Monmouth,69,Hofstra,75,Final,1,Hofstra,75,Monmouth,69,6
+2026-03-10,N.J. Tech,54,Vermont,63,Final,1,Vermont,63,N.J. Tech,54,9
+2026-03-10,TX A&M-CC,58,SF Austin,60,Final,1,SF Austin,60,TX A&M-CC,58,2
+2026-03-10,Wake Forest,95,Va. Tech,89,Final,0,Wake Forest,95,Va. Tech,89,-6
+2026-03-10,Penn St.,66,Northwestern,76,Final,1,Northwestern,76,Penn St.,66,10
+2026-03-10,Grambling St.,65,Jackson St.,68,Final,1,Jackson St.,68,Grambling St.,65,3
+2026-03-10,Montana,75,Portland St.,72,Final,0,Montana,75,Portland St.,72,-3
+2026-03-10,Siena,64,Merrimack,54,Final,0,Siena,64,Merrimack,54,-10
+2026-03-10,Santa Clara,68,Gonzaga,79,Final,1,Gonzaga,79,Santa Clara,68,11
+2026-03-10,N. Mex. St.,68,Jax. State,63,Final,0,N. Mex. St.,68,Jax. State,63,-5
+2026-03-10,UT-Rio Grande Valley,80,McNeese,84,Final,1,McNeese,84,UT-Rio Grande Valley,80,4
+2026-03-10,Okla. St.,92,Colorado,83,Final,0,Okla. St.,92,Colorado,83,-9
+2026-03-10,Idaho,81,E. Washington,68,Final,0,Idaho,81,E. Washington,68,-13
+2026-03-11,St. Bona.,99,La Salle,80,Final,0,St. Bona.,99,La Salle,80,-19
+2026-03-11,Maryland,64,Iowa,75,Final,1,Iowa,75,Maryland,64,11
+2026-03-11,Pittsburgh,88,NC State,98,Final,1,NC State,98,Pittsburgh,88,10
+2026-03-11,Arizona St.,42,Iowa St.,91,Final,1,Iowa St.,91,Arizona St.,42,49
+2026-03-11,LSU,82,Kentucky,87,Final,1,Kentucky,87,LSU,82,5
+2026-03-11,Loyola Chi.,75,Richmond,67,Final,0,Loyola Chi.,75,Richmond,67,-8
+2026-03-11,Prairie View,71,Bethune-Cook.,67,Final,0,Prairie View,71,Bethune-Cook.,67,-4
+2026-03-11,USC,79,Washington,83,Final,1,Washington,83,USC,79,4
+2026-03-11,SMU,58,Louisville,62,Final,1,Louisville,62,SMU,58,4
+2026-03-11,Wyoming,70,UNLV,73,Final,1,UNLV,73,Wyoming,70,3
+2026-03-11,Cincinnati,65,UCF,66,Final,1,UCF,66,Cincinnati,65,1
+2026-03-11,Miss. St.,61,Auburn,79,Final,1,Auburn,79,Miss. St.,61,18
+2026-03-11,Providence,91,Butler,81,Final,0,Providence,91,Butler,81,-10
+2026-03-11,McNeese,76,SF Austin,59,Final,0,McNeese,76,SF Austin,59,-17
+2026-03-11,Air Force,45,Nevada,80,Final,1,Nevada,80,Air Force,45,35
+2026-03-11,Delaware St.,75,Morgan St.,70,Final,0,Delaware St.,75,Morgan St.,70,-5
+2026-03-11,Missouri St.,77,Liberty,69,Final,0,Missouri St.,77,Liberty,69,-8
+2026-03-11,Northwestern,74,Indiana,61,Final,0,Northwestern,74,Indiana,61,-13
+2026-03-11,Xavier,89,Marquette,87,Final,0,Xavier,89,Marquette,87,-2
+2026-03-11,Boston U.,60,Lehigh,74,Final,1,Lehigh,74,Boston U.,60,14
+2026-03-11,BYU,68,West Virginia,48,Final,0,BYU,68,West Virginia,48,-20
+2026-03-11,California,89,Florida St.,95,Final,1,Florida St.,95,California,89,6
+2026-03-11,Ole Miss,76,Texas,66,Final,0,Ole Miss,76,Texas,66,-10
+2026-03-11,Tulane,81,Memphis,69,Final,0,Tulane,81,Memphis,69,-12
+2026-03-11,Jackson St.,60,Florida A&M,70,Final,1,Florida A&M,70,Jackson St.,60,10
+2026-03-11,Tarleton St.,78,Abilene Chr.,84,Final,1,Abilene Chr.,84,Tarleton St.,78,6
+2026-03-11,Cal Poly,69,UC San Diego,72,Final,1,UC San Diego,72,Cal Poly,69,3
+2026-03-11,Fresno St.,63,Colo. St.,67,Final,1,Colo. St.,67,Fresno St.,63,4
+2026-03-11,N. Mex. St.,61,Sam Houston,69,Final,1,Sam Houston,69,N. Mex. St.,61,8
+2026-03-11,Rutgers,72,Minnesota,67,Final,0,Rutgers,72,Minnesota,67,-5
+2026-03-11,Georgetown,63,DePaul,56,Final,0,Georgetown,63,DePaul,56,-7
+2026-03-11,Okla. St.,88,TCU,95,Final,1,TCU,95,Okla. St.,88,7
+2026-03-11,S. Carolina,74,Oklahoma,86,Final,1,Oklahoma,86,S. Carolina,74,12
+2026-03-11,Wake Forest,62,Clemson,71,Final,1,Clemson,71,Wake Forest,62,9
+2026-03-11,Temple,59,FAU,63,Final,1,FAU,63,Temple,59,4
+2026-03-11,San Jose St.,84,Boise St.,74,Final,0,San Jose St.,84,Boise St.,74,-10
+2026-03-11,UCSB,73,UC Davis,79,Final,1,UC Davis,79,UCSB,73,6
+2026-03-11,Idaho,77,Montana,66,Final,0,Idaho,77,Montana,66,-11
+2026-03-12,Massachusetts,87,Miami (Ohio),83,Final,0,Massachusetts,87,Miami (Ohio),83,-4
+2026-03-12,George Wash.,66,Fordham,62,Final,0,George Wash.,66,Fordham,62,-4
+2026-03-12,Iowa,69,Ohio St.,72,Final,1,Ohio St.,72,Iowa,69,3
+2026-03-12,NC State,74,Virginia,81,Final,1,Virginia,81,NC State,74,7
+2026-03-12,Providence,72,St. John's,85,Final,1,St. John's,85,Providence,72,13
+2026-03-12,Iowa St.,75,Texas Tech,53,Final,0,Iowa St.,75,Texas Tech,53,-22
+2026-03-12,Kentucky,78,Missouri,72,Final,0,Kentucky,78,Missouri,72,-6
+2026-03-12,Bowling Green,76,Toledo,77,Final,1,Toledo,77,Bowling Green,76,1
+2026-03-12,Alabama A&M,85,Texas So.,74,Final,0,Alabama A&M,85,Texas So.,74,-11
+2026-03-12,St. Bona.,63,George Mason,57,Final,0,St. Bona.,63,George Mason,57,-6
+2026-03-12,Creighton,61,Seton Hall,72,Final,1,Seton Hall,72,Creighton,61,11
+2026-03-12,Louisville,73,Miami,78,Final,1,Miami,78,Louisville,73,5
+2026-03-12,Washington,82,Wisconsin,85,Final,1,Wisconsin,85,Washington,82,3
+2026-03-12,UCF,59,Arizona,81,Final,1,Arizona,81,UCF,59,22
+2026-03-12,Utah St.,80,UNLV,60,Final,0,Utah St.,80,UNLV,60,-20
+2026-03-12,Auburn,62,Tennessee,72,Final,1,Tennessee,72,Auburn,62,10
+2026-03-12,Buffalo,70,Akron,73,Final,1,Akron,73,Buffalo,70,3
+2026-03-12,Rhode Island,61,Duquesne,67,Final,1,Duquesne,67,Rhode Island,61,6
+2026-03-12,Nevada,84,Grand Canyon,80,Final,0,Nevada,84,Grand Canyon,80,-4
+2026-03-12,SC State,88,Norfolk St.,82,Final,0,SC State,88,Norfolk St.,82,-6
+2026-03-12,Middle Tenn.,69,La. Tech,80,Final,1,La. Tech,80,Middle Tenn.,69,11
+2026-03-12,Northwestern,68,Purdue,81,Final,1,Purdue,81,Northwestern,68,13
+2026-03-12,Ohio,75,Kent St.,86,Final,1,Kent St.,86,Ohio,75,11
+2026-03-12,BYU,66,Houston,73,Final,1,Houston,73,BYU,66,7
+2026-03-12,Florida St.,79,Duke,80,Final,1,Duke,80,Florida St.,79,1
+2026-03-12,Ole Miss,76,Georgia,72,Final,0,Ole Miss,76,Georgia,72,-4
+2026-03-12,Tulane,60,Charlotte,74,Final,1,Charlotte,74,Tulane,60,14
+2026-03-12,Xavier,68,UConn,93,Final,1,UConn,93,Xavier,68,25
+2026-03-12,Loyola Chi.,59,Davidson,64,Final,1,Davidson,64,Loyola Chi.,59,5
+2026-03-12,Ark.-Pine Bluff,81,Southern U.,84,Final,1,Southern U.,84,Ark.-Pine Bluff,81,3
+2026-03-12,UC San Diego,70,CSNorthridge,80,Final,1,CSNorthridge,80,UC San Diego,70,10
+2026-03-12,Colo. St.,62,San Diego St.,71,Final,1,San Diego St.,71,Colo. St.,62,9
+2026-03-12,FAU,70,North Texas,74,Final,1,North Texas,74,FAU,70,4
+2026-03-12,Rutgers,59,UCLA,72,Final,1,UCLA,72,Rutgers,59,13
+2026-03-12,So. Utah,63,UT Arlington,69,Final,1,UT Arlington,69,So. Utah,63,6
+2026-03-12,Md.-E. Shore,76,NC Central,83,Final,1,NC Central,83,Md.-E. Shore,76,7
+2026-03-12,Kennesaw St.,96,W. Kentucky,87,Final,0,Kennesaw St.,96,W. Kentucky,87,-9
+2026-03-12,Clemson,80,N. Carolina,79,Final,0,Clemson,80,N. Carolina,79,-1
+2026-03-12,Georgetown,78,Villanova,64,Final,0,Georgetown,78,Villanova,64,-14
+2026-03-12,Oklahoma,83,Texas A&M,63,Final,0,Oklahoma,83,Texas A&M,63,-20
+2026-03-12,TCU,73,Kansas,78,Final,1,Kansas,78,TCU,73,5
+2026-03-12,Abilene Chr.,74,Utah Tech,80,Final,1,Utah Tech,80,Abilene Chr.,74,6
+2026-03-12,UC Davis,70,CS Fullerton,82,Final,1,CS Fullerton,82,UC Davis,70,12
+2026-03-12,San Jose St.,77,New Mexico,93,Final,1,New Mexico,93,San Jose St.,77,16
+2026-03-13,George Wash.,81,Saint Louis,88,Final,1,Saint Louis,88,George Wash.,81,7
+2026-03-13,Ohio St.,67,Michigan,71,Final,1,Michigan,71,Ohio St.,67,4
+2026-03-13,Missouri St.,66,La. Tech,69,Final,1,La. Tech,69,Missouri St.,66,3
+2026-03-13,Charlotte,83,UAB,78,Final,0,Charlotte,83,UAB,78,-5
+2026-03-13,Kentucky,63,Florida,71,Final,1,Florida,71,Kentucky,63,8
+2026-03-13,Prairie View,74,Alabama A&M,55,Final,0,Prairie View,74,Alabama A&M,55,-19
+2026-03-13,St. Bona.,63,Dayton,68,Final,1,Dayton,68,St. Bona.,63,5
+2026-03-13,Wisconsin,91,Illinois,88,Final,0,Wisconsin,91,Illinois,88,-3
+2026-03-13,Kennesaw St.,79,Sam Houston,73,Final,0,Kennesaw St.,79,Sam Houston,73,-6
+2026-03-13,North Texas,84,Tulsa,90,Final,1,Tulsa,90,North Texas,84,6
+2026-03-13,Tennessee,68,Vanderbilt,75,Final,1,Vanderbilt,75,Tennessee,68,7
+2026-03-13,Duquesne,66,VCU,71,Final,1,VCU,71,Duquesne,66,5
+2026-03-13,Massachusetts,67,Toledo,77,Final,1,Toledo,77,Massachusetts,67,10
+2026-03-13,Seton Hall,68,St. John's,78,Final,1,St. John's,78,Seton Hall,68,10
+2026-03-13,SC State,61,Howard,78,Final,1,Howard,78,SC State,61,17
+2026-03-13,Purdue,74,Nebraska,58,Final,0,Purdue,74,Nebraska,58,-16
+2026-03-13,Iowa St.,80,Arizona,82,Final,1,Arizona,82,Iowa St.,80,2
+2026-03-13,Miami,62,Virginia,84,Final,1,Virginia,84,Miami,62,22
+2026-03-13,Kent St.,68,Akron,75,Final,1,Akron,75,Kent St.,68,7
+2026-03-13,Ole Miss,80,Alabama,79,Final,0,Ole Miss,80,Alabama,79,-1
+2026-03-13,Davidson,58,Saint Joseph's,70,Final,1,Saint Joseph's,70,Davidson,58,12
+2026-03-13,Delaware St.,53,NC Central,59,Final,1,NC Central,59,Delaware St.,53,6
+2026-03-13,Georgetown,51,UConn,67,Final,1,UConn,67,Georgetown,51,16
+2026-03-13,Southern U.,73,Florida A&M,70,Final,0,Southern U.,73,Florida A&M,70,-3
+2026-03-13,CSNorthridge,78,UC Irvine,93,Final,1,UC Irvine,93,CSNorthridge,78,15
+2026-03-13,UT Arlington,65,Utah Valley,67,Final,1,Utah Valley,67,UT Arlington,65,2
+2026-03-13,UCLA,88,Michigan St.,84,Final,0,UCLA,88,Michigan St.,84,-4
+2026-03-13,Clemson,61,Duke,73,Final,1,Duke,73,Clemson,61,12
+2026-03-13,Kansas,47,Houston,69,Final,1,Houston,69,Kansas,47,22
+2026-03-13,Nevada,66,Utah St.,79,Final,1,Utah St.,79,Nevada,66,13
+2026-03-13,Oklahoma,79,Arkansas,82,Final,1,Arkansas,82,Oklahoma,79,3
+2026-03-13,CS Fullerton,63,Hawaii,78,Final,1,Hawaii,78,CS Fullerton,63,15
+2026-03-13,Utah Tech,72,Cal Baptist,86,Final,1,Cal Baptist,86,Utah Tech,72,14
+2026-03-14,New Mexico,62,San Diego St.,64,Final,1,San Diego St.,64,New Mexico,62,2
+2026-03-14,Cornell,76,Yale,88,Final,1,Yale,88,Cornell,76,12
+2026-03-14,Vermont,59,UMBC,74,Final,1,UMBC,74,Vermont,59,15
+2026-03-14,Dayton,70,Saint Louis,69,Final,0,Dayton,70,Saint Louis,69,-1
+2026-03-14,NC Central,63,Howard,70,Final,1,Howard,70,NC Central,63,7
+2026-03-14,Vanderbilt,91,Florida,74,Final,0,Vanderbilt,91,Florida,74,-17
+2026-03-14,Wisconsin,65,Michigan,68,Final,1,Michigan,68,Wisconsin,65,3
+2026-03-14,Penn,62,Harvard,60,Final,0,Penn,62,Harvard,60,-2
+2026-03-14,Charlotte,64,South Florida,86,Final,1,South Florida,86,Charlotte,64,22
+2026-03-14,Ole Miss,90,Arkansas,93,Final,1,Arkansas,93,Ole Miss,90,3
+2026-03-14,Purdue,73,UCLA,66,Final,0,Purdue,73,UCLA,66,-7
+2026-03-14,Saint Joseph's,64,VCU,77,Final,1,VCU,77,Saint Joseph's,64,13
+2026-03-14,Tulsa,68,Wichita St.,81,Final,1,Wichita St.,81,Tulsa,68,13
+2026-03-14,Houston,74,Arizona,79,Final,1,Arizona,79,Houston,74,5
+2026-03-14,San Diego St.,62,Utah St.,73,Final,1,Utah St.,73,San Diego St.,62,11
+2026-03-14,UConn,52,St. John's,72,Final,1,St. John's,72,UConn,52,20
+2026-03-14,Prairie View,72,Southern U.,66,Final,0,Prairie View,72,Southern U.,66,-6
+2026-03-14,Toledo,76,Akron,79,Final,1,Akron,79,Toledo,76,3
+2026-03-14,Kennesaw St.,71,La. Tech,60,Final,0,Kennesaw St.,71,La. Tech,60,-11
+2026-03-14,Virginia,70,Duke,74,Final,1,Duke,74,Virginia,70,4
+2026-03-14,Hawaii,71,UC Irvine,64,Final,0,Hawaii,71,UC Irvine,64,-7
+2026-03-15,Cal Baptist,63,Utah Valley,61,Final,0,Cal Baptist,63,Utah Valley,61,-2
+2026-03-15,Penn,88,Yale,84,Final,0,Penn,88,Yale,84,-4
+2026-03-15,Dayton,62,VCU,70,Final,1,VCU,70,Dayton,62,8
+2026-03-15,Vanderbilt,75,Arkansas,86,Final,1,Arkansas,86,Vanderbilt,75,11
+2026-03-15,Wichita St.,55,South Florida,70,Final,1,South Florida,70,Wichita St.,55,15
+2026-03-15,Purdue,80,Michigan,72,Final,0,Purdue,80,Michigan,72,-8

@@ -75,7 +75,7 @@ Drexel,Drexel,exact
 Duke,Duke,exact
 Duquesne,Duquesne,exact
 East Carolina,East Carolina,exact
-East Tennessee St.,Tennessee St.,fuzzy
+East Tennessee St.,Tennessee,fuzzy
 East Texas A&M,East Texas A&M,exact
 Eastern Illinois,E. Illinois,fuzzy
 Eastern Kentucky,E. Kentucky,fuzzy
@@ -295,8 +295,8 @@ TCU,TCU,exact
 Tarleton St.,Tarleton St.,exact
 Temple,Temple,exact
 Tennessee,Tennessee,exact
-Tennessee Martin,Tennessee St.,fuzzy
-Tennessee St.,Tennessee St.,exact
+Tennessee Martin,Tennessee,fuzzy
+Tennessee St.,Tennessee,fuzzy
 Tennessee Tech,Tennessee,fuzzy
 Texas,Texas,exact
 Texas A&M,Texas A&M,exact
