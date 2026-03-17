@@ -610,6 +610,9 @@ def evaluate_models(
     # ── Regressors (sklearn — clone + re-fit) ─────────────────────────────────
     for name in ("lr_model", "sgd_model"):
         tmp = clone(models[name])
+        # XGBoost: disable early stopping for holdout eval (no eval_set provided)
+        if XGB_AVAILABLE and isinstance(tmp, xgb.XGBRegressor):
+            tmp.set_params(early_stopping_rounds=None)
         tmp.fit(X_tr, yd_tr)
         pred_te   = tmp.predict(X_te)
         test_mae  = float(mean_absolute_error(yd_te, pred_te))
@@ -623,7 +626,7 @@ def evaluate_models(
         test_mae  = float(mean_absolute_error(yd_te, pred_te))
         test_rmse = float(np.sqrt(mean_squared_error(yd_te, pred_te)))
         results["nn_reg_model"] = {**split_meta, "test_mae": round(test_mae, 4), "test_rmse": round(test_rmse, 4)}
-        log.info("  %-22s  test_MAE=%.3f  test_RMSE=%.3f  (no re-fit)", "nn_reg_model", test_mae)
+        log.info("  %-22s  test_MAE=%.3f  test_RMSE=%.3f  (no re-fit)", "nn_reg_model", test_mae, test_rmse)
 
     # ── Classifiers (sklearn — clone + re-fit) ────────────────────────────────
     for name in ("logistic_model", "bayes_model"):
