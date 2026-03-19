@@ -129,4 +129,5 @@ jobs:
           git add website/predictions_latest.json
           git add website/bracket_predictions_2026.json
           git diff --staged --quiet || git commit -m "chore: update predictions $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
