@@ -23,8 +23,8 @@ jobs:
       - name: Determine training day
         id: training_check
         run: |
-          DAY=$(date -u +%-d)
-          if [ $(( DAY % 2 )) -eq 1 ]; then
+          DOW=$(date -u +%u)  # 1=Monday, 7=Sunday
+          if [ "$DOW" -eq 1 ]; then
             echo "is_training_day=true" >> $GITHUB_OUTPUT
           else
             echo "is_training_day=false" >> $GITHUB_OUTPUT
@@ -43,6 +43,15 @@ jobs:
           key: ncaab-model-v2-${{ github.run_id }}
           restore-keys: |
             ncaab-model-v2-
+
+      - name: Check if model cache was restored
+        id: cache_check
+        run: |
+          if [ -d "Python scripts/model_cache" ]; then
+            echo "cache_found=true" >> $GITHUB_OUTPUT
+          else
+            echo "cache_found=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Set up Python 3.9
         uses: actions/setup-python@v5
@@ -72,31 +81,31 @@ jobs:
             lxml
 
       - name: Step 1 — Scrape CBS training games (3 weeks ending yesterday)
-        if: steps.training_check.outputs.is_training_day == 'true'
+        if: steps.training_check.outputs.is_training_day == 'true' || steps.cache_check.outputs.cache_found == 'false'
         run: python "Python scripts/cbs_scraper.py"
 
       - name: Step 2 — Collect sentiment features
-        if: steps.training_check.outputs.is_training_day == 'true'
+        if: steps.training_check.outputs.is_training_day == 'true' || steps.cache_check.outputs.cache_found == 'false'
         run: python "Python scripts/sentiment_features.py"
 
       - name: Step 3 — Collect efficiency metrics
-        if: steps.training_check.outputs.is_training_day == 'true'
+        if: steps.training_check.outputs.is_training_day == 'true' || steps.cache_check.outputs.cache_found == 'false'
         run: python "Python scripts/efficiency_metrics.py"
 
       - name: Step 4 — Collect KenPom ratings
-        if: steps.training_check.outputs.is_training_day == 'true'
+        if: steps.training_check.outputs.is_training_day == 'true' || steps.cache_check.outputs.cache_found == 'false'
         run: python "Python scripts/kenpom_ratings.py"
 
       - name: Step 5 — Assemble training_df.csv
-        if: steps.training_check.outputs.is_training_day == 'true'
+        if: steps.training_check.outputs.is_training_day == 'true' || steps.cache_check.outputs.cache_found == 'false'
         run: python "Python scripts/feature_assembly.py"
 
       - name: Step 6 — Train all 6 models
-        if: steps.training_check.outputs.is_training_day == 'true'
+        if: steps.training_check.outputs.is_training_day == 'true' || steps.cache_check.outputs.cache_found == 'false'
         run: python "Python scripts/model_training.py"
 
       - name: Save model cache
-        if: steps.training_check.outputs.is_training_day == 'true'
+        if: steps.training_check.outputs.is_training_day == 'true' || steps.cache_check.outputs.cache_found == 'false'
         uses: actions/cache/save@v4
         with:
           path: |
