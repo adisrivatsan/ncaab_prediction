@@ -2,10 +2,7 @@ name: Daily NCAAB Predictions
 
 on:
   schedule:
-    - cron: '0 19 * * 1-5'   # Mon-Fri 3pm EDT (19:00 UTC)
-    - cron: '0 14 * * 0,6'   # Sat-Sun 10am EDT (14:00 UTC)
-    # Note: GitHub Actions uses UTC. 19:00 UTC = 3pm EDT; 14:00 UTC = 10am EDT.
-    # Off by 1hr during EST months (Nov–Mar) — acceptable for this season.
+    - cron: '0 16 * * *'     # Every day 12pm EDT (16:00 UTC)
   workflow_dispatch:         # manual trigger from GitHub Actions UI
 
 permissions:
