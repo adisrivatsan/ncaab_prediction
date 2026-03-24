@@ -1046,16 +1046,16 @@
           "team1": "Tennessee",
           "seed2": 11,
           "team2": "SMU",
-          "team1_prob": 0.4037,
-          "team2_prob": 0.5963,
+          "team1_prob": 0.459,
+          "team2_prob": 0.541,
           "winner": "SMU",
           "winner_seed": 11,
-          "winner_prob": 0.5963,
-          "confidence": "MED",
-          "prob_std": 0.141,
-          "reg_diff": -5.34,
-          "team1_ml": "+148",
-          "team2_ml": "-148",
+          "winner_prob": 0.541,
+          "confidence": "LOW",
+          "prob_std": 0.1482,
+          "reg_diff": -3.54,
+          "team1_ml": "+118",
+          "team2_ml": "-118",
           "is_upset": true
         },
         {
@@ -1311,7 +1311,7 @@
     "is_upset": false
   },
   "champion": "Florida",
-  "generated_at": "2026-03-23T17:14:17",
+  "generated_at": "2026-03-24T16:26:58",
   "tournament_year": 2026,
   "model_schema_version": "2.0",
   "tf_available": true
