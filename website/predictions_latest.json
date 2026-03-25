@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-24T16:26:47",
-  "date": "2026-03-24",
+  "generated_at": "2026-03-25T16:30:01",
+  "date": "2026-03-25",
   "summary": {
     "total_games": 2,
-    "home_picks": 2,
-    "away_picks": 0,
+    "home_picks": 1,
+    "away_picks": 1,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 0,
-      "MED": 0,
-      "LOW": 2
+      "MED": 1,
+      "LOW": 1
     },
-    "combined_ev": 0
+    "combined_ev": -0.0038
   },
   "model_performance": {
     "schema_version": "2.0",
@@ -71,27 +71,47 @@
       }
     }
   },
-  "top_picks": [],
+  "top_picks": [
+    {
+      "pick": "Auburn",
+      "matchup": "Nevada @ Auburn",
+      "home_team": "Auburn",
+      "away_team": "Nevada",
+      "bet_side": "HOME",
+      "ml": "-312",
+      "win_prob": 0.757,
+      "confidence": "MED",
+      "stake": 5.0,
+      "if_win": 1.6,
+      "ev": -0.0038,
+      "vegas_ml": "N/A",
+      "vegas_spread": "N/A",
+      "odds_movement": "\u2014",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "rank": 1
+    }
+  ],
   "predictions": [
     {
-      "home_team": "Tulsa",
-      "away_team": "Wichita St.",
+      "home_team": "Dayton",
+      "away_team": "Illinois St.",
       "status": "",
-      "ridge_diff": -0.64,
-      "gb_diff": -1.17,
-      "nn_reg_diff": 0.89,
-      "reg_ensemble_diff": -0.19,
-      "logistic_prob": 0.489,
-      "bayes_prob": 0.245,
-      "nn_cls_prob": 0.73,
-      "cls_ensemble_prob": 0.549,
-      "reg_implied_prob": 0.495,
-      "final_win_prob_home": 0.519,
-      "final_win_prob_away": 0.481,
-      "predicted_winner": "Tulsa",
-      "home_ml": "-108",
-      "away_ml": "+108",
-      "model_std_dev": 0.171,
+      "ridge_diff": 0.4,
+      "gb_diff": -0.18,
+      "nn_reg_diff": -1.02,
+      "reg_ensemble_diff": -0.34,
+      "logistic_prob": 0.589,
+      "bayes_prob": 0.383,
+      "nn_cls_prob": 0.386,
+      "cls_ensemble_prob": 0.456,
+      "reg_implied_prob": 0.491,
+      "final_win_prob_home": 0.476,
+      "final_win_prob_away": 0.524,
+      "predicted_winner": "Illinois St.",
+      "home_ml": "+110",
+      "away_ml": "-110",
+      "model_std_dev": 0.085,
       "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -100,30 +120,93 @@
       "articles_away": []
     },
     {
-      "home_team": "New Mexico",
-      "away_team": "Saint Joseph's",
+      "home_team": "Auburn",
+      "away_team": "Nevada",
       "status": "",
-      "ridge_diff": 0.82,
-      "gb_diff": 0.39,
-      "nn_reg_diff": 0.36,
-      "reg_ensemble_diff": 0.51,
-      "logistic_prob": 0.497,
-      "bayes_prob": 0.374,
-      "nn_cls_prob": 0.655,
-      "cls_ensemble_prob": 0.544,
-      "reg_implied_prob": 0.513,
-      "final_win_prob_home": 0.527,
-      "final_win_prob_away": 0.473,
-      "predicted_winner": "New Mexico",
-      "home_ml": "-111",
-      "away_ml": "+111",
-      "model_std_dev": 0.1,
-      "confidence": "LOW",
+      "ridge_diff": 6.99,
+      "gb_diff": 5.83,
+      "nn_reg_diff": 7.89,
+      "reg_ensemble_diff": 7.0,
+      "logistic_prob": 0.756,
+      "bayes_prob": 0.863,
+      "nn_cls_prob": 0.954,
+      "cls_ensemble_prob": 0.866,
+      "reg_implied_prob": 0.668,
+      "final_win_prob_home": 0.757,
+      "final_win_prob_away": 0.243,
+      "predicted_winner": "Auburn",
+      "home_ml": "-312",
+      "away_ml": "+312",
+      "model_std_dev": 0.108,
+      "confidence": "MED",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
+      "feature_drivers": [
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 0.9956,
+          "favors_home": true
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 0.6971,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_sent_headlines",
+          "label": "\u0394 Sent Headlines",
+          "contribution": 0.5932,
+          "favors_home": true
+        },
+        {
+          "feature": "home_orb_pct",
+          "label": "Home Orb Pct",
+          "contribution": 0.3922,
+          "favors_home": true
+        },
+        {
+          "feature": "away_adj_em",
+          "label": "Away Adj Em",
+          "contribution": -0.3827,
+          "favors_home": false
+        }
+      ],
+      "articles_home": [
+        {
+          "title": "Auburn Tigers vs Nevada Wolf Pack Box Score - March 25, 2026 - The Athletic - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQOU9hOWpMcmJMRngxSzBpZjR6UzFtTE5VVkhFQ184SUc5ZEZlLWFCTDBIX3IzbkoyY1lPUklCeWJOV2ZHOW1tdTRUcnVobkpkWFoxN2FUOEZ2LVd1TmZuV2hMX1RNRTV4QnBqSE40WE5GYWxwUlNGOVRoQi1CWUtxdUZaN1daZmE0NTd3R1U3bmhPd1dTWWZDdWlqMFF0RXlJS2hWY2JDZC1DN0Zm?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Who's in NIT semifinals? Updated NIT bracket, schedule - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQT3RiZjBpOG82bUdveFI1ZGVIbEM5ZDlKM2Z3R3RLbmdmOUJVcVRsdV8zcWhZUkhJR25OSllDVFllMEFFbENlTXVGSUJ1VkFfUkZHQVNoS1cxckFQQ1NjWG1hYUxTUmpNc2tEZ2xkTjFOZFkxMTBkUXhoOHV3OElLVURFSndqd1Y2alY4T3d5LTFRU083LVRDMFlaWFJoSnh0NVlXdWZzOGtFUEJSTGF2V2Q0c21RQXFBR0d2eVZ3?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "History of 4 seeds vs. 13 seeds in March Madness - NCAA.com",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeHhwWGpLeVBmSWdwaUllY3JqdGVRRzRCTFoxcUl6bUc1MWJ5UmJSTEFxd25kZlo2ZUJzTHhGZ2JoS2p2blRFSU8zZEI2SG9VU1N5cjN1SUpOVU5Zc3pXVTVwSThzdkQ4NmdnNVFNRmE1Z05QejFyTjRlWGtIcE1TcXAtdE5MQzdYZ011LVVhX19VR0M1UEwxX2s5Tk9NLW1sUEtN0gGoAUFVX3lxTFA2aXYwSk1YaExLbUxXbXNsX3JCSXdBaFY2b1d3YlVCQTJpWHZXS28tU0Z3aldocy1VRTltRGJ1dE45cjM2RW9wc3o5LW8zOUlSS3RMQWpGQW8wMW03TFFIUTFnQjQ4aURxeWRtejBaTHFFNEZ3SUUxWWhXSVR5NHpPVWY1YW41bTB4cnhTY21KLWNKVS0xYmJyaUxuZ0dmRHVUOUdqS2p6cQ?oc=5",
+          "source": "Google News"
+        }
+      ],
+      "articles_away": [
+        {
+          "title": "Auburn Tigers vs Nevada Wolf Pack Box Score - March 25, 2026 - The Athletic - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQOU9hOWpMcmJMRngxSzBpZjR6UzFtTE5VVkhFQ184SUc5ZEZlLWFCTDBIX3IzbkoyY1lPUklCeWJOV2ZHOW1tdTRUcnVobkpkWFoxN2FUOEZ2LVd1TmZuV2hMX1RNRTV4QnBqSE40WE5GYWxwUlNGOVRoQi1CWUtxdUZaN1daZmE0NTd3R1U3bmhPd1dTWWZDdWlqMFF0RXlJS2hWY2JDZC1DN0Zm?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Nevada Wolf Pack @ Auburn Tigers: Live game updates, stats, play-by-play - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQa0QyUzBpVUVpV2o3Z2FVdmxGdmF6ckhWWEhlNUY3UkwtZzA3MFdUSTN3Q0NQMXhhcGpqM0xHb3Q1dFpuRjdJUEpaclItMVZKN3Q3UDhtMU9oQU91V1BYRzBtcjlRN3pFZHdoOWFQVmo0bTl1ZjI3dzJqX01RX2ctTA?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Nevada vs. Auburn (Mar 25, 2026) Live Score - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQRFlNaDNDcWotTXRiUDZrN2FTblIzU3gtdk9HNFgyNU9NMGpkZG45cVB2bmxZMWZZUl9WTHEwLWEwY1RYWnBWeXNWX195TlRRMnNJSDE2bURzYWhUQ01HZ1Uxdzhyc1VyU01IdWc1UGx4S3p4Z21aV1JKX1o2NXhyeVJjUzNMLWFudGc?oc=5",
+          "source": "Google News"
+        }
+      ]
     }
   ]
 }
