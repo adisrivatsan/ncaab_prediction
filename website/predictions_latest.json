@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-25T16:30:01",
-  "date": "2026-03-25",
+  "generated_at": "2026-03-26T16:29:48",
+  "date": "2026-03-26",
   "summary": {
-    "total_games": 2,
-    "home_picks": 1,
+    "total_games": 4,
+    "home_picks": 3,
     "away_picks": 1,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 0,
-      "MED": 1,
+      "MED": 3,
       "LOW": 1
     },
-    "combined_ev": -0.0038
+    "combined_ev": 0.0021
   },
   "model_performance": {
     "schema_version": "2.0",
@@ -73,45 +73,83 @@
   },
   "top_picks": [
     {
-      "pick": "Auburn",
-      "matchup": "Nevada @ Auburn",
-      "home_team": "Auburn",
-      "away_team": "Nevada",
+      "pick": "Houston",
+      "matchup": "Illinois @ Houston",
+      "home_team": "Houston",
+      "away_team": "Illinois",
       "bet_side": "HOME",
-      "ml": "-312",
-      "win_prob": 0.757,
+      "ml": "-166",
+      "win_prob": 0.625,
       "confidence": "MED",
       "stake": 5.0,
-      "if_win": 1.6,
-      "ev": -0.0038,
+      "if_win": 3.01,
+      "ev": 0.0062,
       "vegas_ml": "N/A",
       "vegas_spread": "N/A",
       "odds_movement": "\u2014",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
       "rank": 1
+    },
+    {
+      "pick": "Arizona",
+      "matchup": "Arkansas @ Arizona",
+      "home_team": "Arizona",
+      "away_team": "Arkansas",
+      "bet_side": "HOME",
+      "ml": "-306",
+      "win_prob": 0.754,
+      "confidence": "MED",
+      "stake": 5.0,
+      "if_win": 1.63,
+      "ev": -0.001,
+      "vegas_ml": "N/A",
+      "vegas_spread": "N/A",
+      "odds_movement": "\u2014",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "rank": 2
+    },
+    {
+      "pick": "Iowa",
+      "matchup": "Iowa @ Nebraska",
+      "home_team": "Nebraska",
+      "away_team": "Iowa",
+      "bet_side": "AWAY",
+      "ml": "-281",
+      "win_prob": 0.737,
+      "confidence": "MED",
+      "stake": 5.0,
+      "if_win": 1.78,
+      "ev": -0.0031,
+      "vegas_ml": "N/A",
+      "vegas_spread": "N/A",
+      "odds_movement": "\u2014",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "rank": 3
     }
   ],
   "predictions": [
     {
-      "home_team": "Dayton",
-      "away_team": "Illinois St.",
+      "home_team": "Purdue",
+      "away_team": "Texas",
       "status": "",
-      "ridge_diff": 0.4,
-      "gb_diff": -0.18,
-      "nn_reg_diff": -1.02,
-      "reg_ensemble_diff": -0.34,
-      "logistic_prob": 0.589,
-      "bayes_prob": 0.383,
-      "nn_cls_prob": 0.386,
-      "cls_ensemble_prob": 0.456,
-      "reg_implied_prob": 0.491,
-      "final_win_prob_home": 0.476,
-      "final_win_prob_away": 0.524,
-      "predicted_winner": "Illinois St.",
-      "home_ml": "+110",
-      "away_ml": "-110",
-      "model_std_dev": 0.085,
+      "ridge_diff": 8.66,
+      "gb_diff": 5.46,
+      "nn_reg_diff": 9.19,
+      "reg_ensemble_diff": 7.91,
+      "logistic_prob": 0.802,
+      "bayes_prob": 0.948,
+      "nn_cls_prob": 0.473,
+      "cls_ensemble_prob": 0.683,
+      "reg_implied_prob": 0.688,
+      "final_win_prob_home": 0.686,
+      "final_win_prob_away": 0.314,
+      "predicted_winner": "Purdue",
+      "home_ml": "-218",
+      "away_ml": "+218",
+      "model_std_dev": 0.173,
       "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -120,24 +158,24 @@
       "articles_away": []
     },
     {
-      "home_team": "Auburn",
-      "away_team": "Nevada",
+      "home_team": "Nebraska",
+      "away_team": "Iowa",
       "status": "",
-      "ridge_diff": 6.99,
-      "gb_diff": 5.83,
-      "nn_reg_diff": 7.89,
-      "reg_ensemble_diff": 7.0,
-      "logistic_prob": 0.756,
-      "bayes_prob": 0.863,
-      "nn_cls_prob": 0.954,
-      "cls_ensemble_prob": 0.866,
-      "reg_implied_prob": 0.668,
-      "final_win_prob_home": 0.757,
-      "final_win_prob_away": 0.243,
-      "predicted_winner": "Auburn",
-      "home_ml": "-312",
-      "away_ml": "+312",
-      "model_std_dev": 0.108,
+      "ridge_diff": -6.87,
+      "gb_diff": -4.22,
+      "nn_reg_diff": -6.74,
+      "reg_ensemble_diff": -6.02,
+      "logistic_prob": 0.255,
+      "bayes_prob": 0.138,
+      "nn_cls_prob": 0.076,
+      "cls_ensemble_prob": 0.151,
+      "reg_implied_prob": 0.354,
+      "final_win_prob_home": 0.263,
+      "final_win_prob_away": 0.737,
+      "predicted_winner": "Iowa",
+      "home_ml": "+281",
+      "away_ml": "-281",
+      "model_std_dev": 0.107,
       "confidence": "MED",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -145,65 +183,243 @@
         {
           "feature": "diff_adj_em",
           "label": "\u0394 Adj Em",
-          "contribution": 0.9956,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.6971,
-          "favors_home": true
+          "contribution": -1.981,
+          "favors_home": false
         },
         {
           "feature": "diff_sent_headlines",
           "label": "\u0394 Sent Headlines",
-          "contribution": 0.5932,
-          "favors_home": true
-        },
-        {
-          "feature": "home_orb_pct",
-          "label": "Home Orb Pct",
-          "contribution": 0.3922,
-          "favors_home": true
+          "contribution": -1.1109,
+          "favors_home": false
         },
         {
           "feature": "away_adj_em",
           "label": "Away Adj Em",
-          "contribution": -0.3827,
+          "contribution": -0.9176,
           "favors_home": false
+        },
+        {
+          "feature": "away_sent_headlines",
+          "label": "Away Sent Headlines",
+          "contribution": -0.7334,
+          "favors_home": false
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 0.2996,
+          "favors_home": true
         }
       ],
       "articles_home": [
         {
-          "title": "Auburn Tigers vs Nevada Wolf Pack Box Score - March 25, 2026 - The Athletic - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQOU9hOWpMcmJMRngxSzBpZjR6UzFtTE5VVkhFQ184SUc5ZEZlLWFCTDBIX3IzbkoyY1lPUklCeWJOV2ZHOW1tdTRUcnVobkpkWFoxN2FUOEZ2LVd1TmZuV2hMX1RNRTV4QnBqSE40WE5GYWxwUlNGOVRoQi1CWUtxdUZaN1daZmE0NTd3R1U3bmhPd1dTWWZDdWlqMFF0RXlJS2hWY2JDZC1DN0Zm?oc=5",
+          "title": "Sweet 16 predictions: Experts pick who will advance in March Madness bracket - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUVBpRkpkNXRtSzdUUkFYOGc3OWFTSWRsQ0Z4RU1tUExxTTZjejNRYkdPYWp2UkdkdHJUWXNsdnhQX2k2WHZrSFVub1dMbVRBTzJFYUVobWRiWkJGQ3pmVl8wZk51bTRDdm96N1B4eW15dHNIYzdrcGY2SGEzdFJ1TGgyaGp4Z2dIbkJ5YkJIbktYeDFXaDNIek1MV09KLUwxUDVhTmI0a2t3MHpwYmJBWE9BR0RvckpoSm9HR1hnd2M?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Who's in NIT semifinals? Updated NIT bracket, schedule - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQT3RiZjBpOG82bUdveFI1ZGVIbEM5ZDlKM2Z3R3RLbmdmOUJVcVRsdV8zcWhZUkhJR25OSllDVFllMEFFbENlTXVGSUJ1VkFfUkZHQVNoS1cxckFQQ1NjWG1hYUxTUmpNc2tEZ2xkTjFOZFkxMTBkUXhoOHV3OElLVURFSndqd1Y2alY4T3d5LTFRU083LVRDMFlaWFJoSnh0NVlXdWZzOGtFUEJSTGF2V2Q0c21RQXFBR0d2eVZ3?oc=5",
+          "title": "Nobody expected Iowa-Nebraska in basketball. That\u2019s what makes it the Sweet 16 game to watch - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUXRBQnNtRExZenpZRlc3TEhuMXFNX1lOaFJiRmdJVWJUSmNJc1l4RzVVYXNzUDNoczRXbGxtV1hUOXkwOGdmVFZuc1IwLW9idlZVMVFoUGo0WWo1OVdoczNRX0dpak9QdEFHeUlwcTIyZU0xbGpocmlIUnVMRTl2enR0VjFCSk53MnJ3ck5aemJSbm5KSFBLNw?oc=5",
           "source": "Google News"
         },
         {
-          "title": "History of 4 seeds vs. 13 seeds in March Madness - NCAA.com",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeHhwWGpLeVBmSWdwaUllY3JqdGVRRzRCTFoxcUl6bUc1MWJ5UmJSTEFxd25kZlo2ZUJzTHhGZ2JoS2p2blRFSU8zZEI2SG9VU1N5cjN1SUpOVU5Zc3pXVTVwSThzdkQ4NmdnNVFNRmE1Z05QejFyTjRlWGtIcE1TcXAtdE5MQzdYZ011LVVhX19VR0M1UEwxX2s5Tk9NLW1sUEtN0gGoAUFVX3lxTFA2aXYwSk1YaExLbUxXbXNsX3JCSXdBaFY2b1d3YlVCQTJpWHZXS28tU0Z3aldocy1VRTltRGJ1dE45cjM2RW9wc3o5LW8zOUlSS3RMQWpGQW8wMW03TFFIUTFnQjQ4aURxeWRtejBaTHFFNEZ3SUUxWWhXSVR5NHpPVWY1YW41bTB4cnhTY21KLWNKVS0xYmJyaUxuZ0dmRHVUOUdqS2p6cQ?oc=5",
+          "title": "No. 9 Iowa vs. No. 4 Nebraska NCAA Tournament Sweet 16 predictions: Odds, recent stats, trends, and best bets - NBC Spor",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOMVJjRXJlTkpiVVlybWlkZTBYMXg0U2RqOEVUUklqbDRLaUZFUDJZeUNnTGN5X1RJN1NaVHhaYzVXOWF2YUNaOXdfU3UtNjdmVlE1U1ZvUGhBUm5mdjc5SUltdUlraC1rWjhnQ0F3NmhFUjh4alZGUjUwMUlDWjJSWnpqcGhPcl9wb2x0MEdTNTlZRHR0d0trUjE3djNNcDhBMG9EVXpTR2VoVERUd1RoSG1ZSGxLbU1CblpMZUs2T0E4WGdvZXJsTzRmOXlLb205MTRNdlJUNWxkYi0tVGFHU3FNWjlLQkF5amN5Q2Vn?oc=5",
           "source": "Google News"
         }
       ],
       "articles_away": [
         {
-          "title": "Auburn Tigers vs Nevada Wolf Pack Box Score - March 25, 2026 - The Athletic - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQOU9hOWpMcmJMRngxSzBpZjR6UzFtTE5VVkhFQ184SUc5ZEZlLWFCTDBIX3IzbkoyY1lPUklCeWJOV2ZHOW1tdTRUcnVobkpkWFoxN2FUOEZ2LVd1TmZuV2hMX1RNRTV4QnBqSE40WE5GYWxwUlNGOVRoQi1CWUtxdUZaN1daZmE0NTd3R1U3bmhPd1dTWWZDdWlqMFF0RXlJS2hWY2JDZC1DN0Zm?oc=5",
+          "title": "Sweet 16 predictions: Experts pick who will advance in March Madness bracket - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUVBpRkpkNXRtSzdUUkFYOGc3OWFTSWRsQ0Z4RU1tUExxTTZjejNRYkdPYWp2UkdkdHJUWXNsdnhQX2k2WHZrSFVub1dMbVRBTzJFYUVobWRiWkJGQ3pmVl8wZk51bTRDdm96N1B4eW15dHNIYzdrcGY2SGEzdFJ1TGgyaGp4Z2dIbkJ5YkJIbktYeDFXaDNIek1MV09KLUwxUDVhTmI0a2t3MHpwYmJBWE9BR0RvckpoSm9HR1hnd2M?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Nevada Wolf Pack @ Auburn Tigers: Live game updates, stats, play-by-play - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQa0QyUzBpVUVpV2o3Z2FVdmxGdmF6ckhWWEhlNUY3UkwtZzA3MFdUSTN3Q0NQMXhhcGpqM0xHb3Q1dFpuRjdJUEpaclItMVZKN3Q3UDhtMU9oQU91V1BYRzBtcjlRN3pFZHdoOWFQVmo0bTl1ZjI3dzJqX01RX2ctTA?oc=5",
+          "title": "Nobody expected Iowa-Nebraska in basketball. That\u2019s what makes it the Sweet 16 game to watch - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUXRBQnNtRExZenpZRlc3TEhuMXFNX1lOaFJiRmdJVWJUSmNJc1l4RzVVYXNzUDNoczRXbGxtV1hUOXkwOGdmVFZuc1IwLW9idlZVMVFoUGo0WWo1OVdoczNRX0dpak9QdEFHeUlwcTIyZU0xbGpocmlIUnVMRTl2enR0VjFCSk53MnJ3ck5aemJSbm5KSFBLNw?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Nevada vs. Auburn (Mar 25, 2026) Live Score - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQRFlNaDNDcWotTXRiUDZrN2FTblIzU3gtdk9HNFgyNU9NMGpkZG45cVB2bmxZMWZZUl9WTHEwLWEwY1RYWnBWeXNWX195TlRRMnNJSDE2bURzYWhUQ01HZ1Uxdzhyc1VyU01IdWc1UGx4S3p4Z21aV1JKX1o2NXhyeVJjUzNMLWFudGc?oc=5",
+          "title": "Michigan 71-68 Iowa (Mar 5, 2026) Final Score - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZ21QcS1qOElkcWRzZGhZTk5zR0w5dVU1TEZSbzRnbU1pS0VJU0xYYlRBdzV0OFpEOXFkNWUzckNKbFA2QzQ0MmpFYnhXS19LSk9YOVlyTGcyY2I3TVp4OTgtNmd2eDVRSl9UemxhUVA2NW5haXNld0duU3hJNnhFbDZBQ0FtaDZFS2c?oc=5",
+          "source": "Google News"
+        }
+      ]
+    },
+    {
+      "home_team": "Arizona",
+      "away_team": "Arkansas",
+      "status": "",
+      "ridge_diff": 5.87,
+      "gb_diff": 8.19,
+      "nn_reg_diff": 6.96,
+      "reg_ensemble_diff": 7.0,
+      "logistic_prob": 0.717,
+      "bayes_prob": 0.947,
+      "nn_cls_prob": 0.929,
+      "cls_ensemble_prob": 0.858,
+      "reg_implied_prob": 0.668,
+      "final_win_prob_home": 0.754,
+      "final_win_prob_away": 0.246,
+      "predicted_winner": "Arizona",
+      "home_ml": "-306",
+      "away_ml": "+306",
+      "model_std_dev": 0.124,
+      "confidence": "MED",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "feature_drivers": [
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 1.4716,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 1.349,
+          "favors_home": true
+        },
+        {
+          "feature": "away_adj_em",
+          "label": "Away Adj Em",
+          "contribution": -1.0365,
+          "favors_home": false
+        },
+        {
+          "feature": "home_orb_pct",
+          "label": "Home Orb Pct",
+          "contribution": 0.4485,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_orb_pct",
+          "label": "\u0394 Orb Pct",
+          "contribution": 0.3203,
+          "favors_home": true
+        }
+      ],
+      "articles_home": [
+        {
+          "title": "Arizona vs Arkansas prediction, analysis, Sweet 16 expert picks for men's March Madness - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQd1BTWGFoQnJNZXc3ZGJFV1ZTaWd5UWF1MEVCUDYwM3NuSzhOLThlUW5xeXlDNG5qTXNrUFFCQ2lsX19OZ0FkNFhjTHVaOUxNVW8zRWpsZmQ0ZlVPRDN5NGZxVkxsT3VpQVhCYVUzbkQxS1FkQUpxUGE3UDRXZ0lwTldaY2xDengyTjB5YnctVkVGSVFaZ3BUY3JxeXo3WW45TWhXZEFDbEFTb0ZLUkZJdzdBSm5ISHpoOFlNRm9qdVBrOGZKSXZ3V3RHYw?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Arizona 79-74 Houston (Mar 14, 2026) Final Score - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPT1hoWkxaeHRrY2J6SkR2bXBocWpnTFZpR2FEeFE5dGdKaG4wUFQ1YzU0THYzOEk5UnRnXzhTNXgxSHRwa3Z2ZUM3SkpEYXR2NlhhMnNIUzJ3OW9kSWNaVjJ0WXhZWHhCNGFFMGs5MjJrYXI0NnY3YUlTVXpkdDZQTjQ3Qmdsa3BKa29CTg?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "March Madness 2026: How to watch the Arizona vs. Arkansas Sweet 16 game in the men's NCAA basketball tournament - Yahoo ",
+          "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQY1I5M0NnSEJzLWp4cU1HdkkwdzBhZTI3Zms4VlRtUmJKQTJyekJqZWdhX3BESUxKQmZFa09YVXBpakVvOVM0aWNZREplYm4xR3JPcVpXT3d4a3lQdmJGd2FMUnRqYXI4ZUwyMVRlZ3FPaHhZWDJPQ0xTNWptT1kweXdPcXVPQkJlUHJMdmpaMmRfbTBPSWo0eGpXMzJPRFVsWGxjZ09FcDVzYWNiS2FkdTZ3Z2JUTHV2SDlHZWxLRDdjcHpnc1FnSTR0SVBteVF4N2tCbk1OMGVUNnBNV0JVWDN5NlZEcXJtYmprNk5RYTdmNHJWalZma1NoMUZkT1QxQkNtcGV0SVplbHM0?oc=5",
+          "source": "Google News"
+        }
+      ],
+      "articles_away": [
+        {
+          "title": "Arizona vs Arkansas prediction, analysis, Sweet 16 expert picks for men's March Madness - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQd1BTWGFoQnJNZXc3ZGJFV1ZTaWd5UWF1MEVCUDYwM3NuSzhOLThlUW5xeXlDNG5qTXNrUFFCQ2lsX19OZ0FkNFhjTHVaOUxNVW8zRWpsZmQ0ZlVPRDN5NGZxVkxsT3VpQVhCYVUzbkQxS1FkQUpxUGE3UDRXZ0lwTldaY2xDengyTjB5YnctVkVGSVFaZ3BUY3JxeXo3WW45TWhXZEFDbEFTb0ZLUkZJdzdBSm5ISHpoOFlNRm9qdVBrOGZKSXZ3V3RHYw?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Alabama 117-115 Arkansas (Feb 18, 2026) Final Score - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbTBSVm9IZDNmeDVxZVgtdkVDRmhoZ0dlSlNMMG5TdW5lWXJQb0V5WWlmT0w4V1R1WGxHOUFwN2VNR3N3cHl5RjRNRE5DWVRzM1BFNTZ0U2lWNVZVMGxOOFZwaGtJSVBHc0FxLUlhckE4Z2JvQjFUOE94WURERk5kOVV4TjkzSlQyZ19STERn?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Hawai'i Rainbow Warriors 78 - Arkansas Razorbacks 97: Final score, results, recap, box score, stats - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOLWRHQ1dPOU5TdC1zQkMxRmVEMnRpbTd3U2ljUlpTLWhET3hOUjU2Ukc5RzYya28tTHJZcHNidnJYOUpjMV9hRGpKajdYcWlRamxYaGZyVmdsT0gxYUhudVdkNW1lQVdnX0VtbXB5RG1CaFJxbEJIMHBlY3lsZ21sbXRaT0NaNWtGOUdDYWlJR3o4QQ?oc=5",
+          "source": "Google News"
+        }
+      ]
+    },
+    {
+      "home_team": "Houston",
+      "away_team": "Illinois",
+      "status": "",
+      "ridge_diff": 6.14,
+      "gb_diff": 5.55,
+      "nn_reg_diff": 5.19,
+      "reg_ensemble_diff": 5.58,
+      "logistic_prob": 0.729,
+      "bayes_prob": 0.819,
+      "nn_cls_prob": 0.425,
+      "cls_ensemble_prob": 0.61,
+      "reg_implied_prob": 0.636,
+      "final_win_prob_home": 0.625,
+      "final_win_prob_away": 0.375,
+      "predicted_winner": "Houston",
+      "home_ml": "-166",
+      "away_ml": "+166",
+      "model_std_dev": 0.146,
+      "confidence": "MED",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "feature_drivers": [
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 1.9827,
+          "favors_home": true
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 1.3898,
+          "favors_home": true
+        },
+        {
+          "feature": "away_adj_em",
+          "label": "Away Adj Em",
+          "contribution": -0.7637,
+          "favors_home": false
+        },
+        {
+          "feature": "away_orb_pct",
+          "label": "Away Orb Pct",
+          "contribution": -0.4504,
+          "favors_home": false
+        },
+        {
+          "feature": "home_orb_pct",
+          "label": "Home Orb Pct",
+          "contribution": 0.336,
+          "favors_home": true
+        }
+      ],
+      "articles_home": [
+        {
+          "title": "2026 March Madness: Men's NCAA tournament schedule, dates - NCAA.com",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdl9hWXh3b3hZRm1YQnFpY01wU0x4YUYtbDhoTGk2TXZ3U3JmMlVnejhCa19jQVlSMElTMUpuU0VIR001cklVeE9oVmRSbks4c2N0ZkFIS0tsbXFwYy1tZk9URzVFTm1TZUkyNVpDY1hVV2RWNW5RbW1id3Iwbi1JYWJPY3RTaUFaZmtKU1BOOWV3WVNhYUxyRHl3U015bVdzNkNyVHpKZFkySjlmUXZxTlhPM0bSAboBQVVfeXFMTnp3UldaRlltaDlOdC1FazRMWnpaTGU1Zl9uYnJQdlhiekw1ZVNkNFY5WTBWWTdyczBZMHNBSE0yODZsWVJEMjJZSmg1S1F3SjF4UEk3NmxBOTZwMW1ieWx2R24tZmtnMk1pRkh0X01vSWJpY2hyYktJTzM2NHE5Uy1yWV85aklBbUZXelVLTHFOVDQ4eV85QlliTkRLeHRrSE9uUkRaM3RqaW1QekdzMGZ3bkVBVEZvSWhR?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "March Madness 2026: How to watch the Houston vs. Illinois Sweet 16 game in the men's NCAA basketball tournament tonight ",
+          "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNMl9OLVZDLUR4aG8wVEhmMnlQWmVScUNQT3JYcEN6ME9RbXlQcGJxeFhyWTgxWkIxOFF1RnhjOXNkRHl0WEp1bndidkpLd3dVQ2JzUl80ZXlDZ2oyRFpSQUZjejlKM3NVZjFwUUZlRTFnQ2Izdkx4U2NvUVlDRUotYWt1bkhuQ0NmbTBmdktET09jS0s4MWZRWnlIb3lzUWZ5UFJBMnVwVGpqX0E2ZjFYZWZXMVotSWhaclA3d2FscjdCYlRCcFhKYWt4YTNqOERZa1ZXdU5BNE1TZ3hmbW9yelU1R2RDYy1CY25pQ2ZWNGVHRkpYSkwtSk1NbFIta2h2alF3Rng2bkRPYWZNMFowclhRUjBHOFE?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Where to watch Houston vs Illinois in March Madness Sweet 16: Time, TV Channel - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcHhHNmp3b0NoQ0oyTThaeHlyTnNNYVBEdHJBclpsNHVZbW85bjhOQ1JMeVpZYXdUdFZZRkl4OFdEZGh2WHFTRjdhZUdjZ2FYa3ZBa2JNSXJUY3dwM0VWeTB2S1JTOWxWZUx0OVEzeFJ1RXFtQ25Pck9vSDdvcU50X0xHVUt0OFpiZ3VpMlVoM05wZm9uVjRZSjFyWlVIWi11MjJ5UUpXdTl0eUlnc0VHSUZWSG5QTVB2LURUWQ?oc=5",
+          "source": "Google News"
+        }
+      ],
+      "articles_away": [
+        {
+          "title": "Houston vs Illinois prediction, analysis, Sweet 16 expert picks for men's March Madness - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOeFB3cUZFdEVoU2lhNmRmQUhFbzlNMjFHR3IycFFXOXVHR3F6Sk5QVEFFSHVSLURRSWh3MDFzR3I0LV9KUGg4NkxkVWtLYlZqaV9UdkxYVlMtVVcyWU9ack1HMVhVNXVjdjNncU42SW5naTVDSVZpWUdZUVBhT1AxNGtNWnd4VlVuUm1nUVU3ZC03aFRBT2sxdE1lekFDQ2g2eUYtU0ZrV2Q1UWZUOEtyU2hIOEVadDBNSV9CVUhVZlpodmN6OUltbTlXWQ?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Wisconsin 91-88 Illinois (Mar 13, 2026) Final Score - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeGt5TGdZanNTMXRzdncxclltaWhGdXRFOW5jTkxMN0JSZVB1SGhpanI2U2FrZ01IcmRGcmZvX3NDdVRKUk1XTVUtLWh6YVdJR2FMUjNJUGllODM0ZHh0LWJpOXVoUUZkQXRYTnRITDZ5SzdUUkVzbUxUR0xGUGxQNVo1X0dKQ2NSNFpfS253SUM?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Sweet 16 Preview: 3 Illinois vs 2 Houston Stream of NCAA Basketball - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPR0JQdHJfS1k0QkFnNEMyT3JUcGxuQ3ozYVFZbnVKcnEtTWc4QTFud0U3cmVVYVE0Y1hIM2NpSGJQNGsxYXZhb0ducEFnWHNCOXJNWXVaZTIzY2w0c0NRTGhWN2thTUY2V3JESW9zTVB3dVZNWm1ZY3pxNnltT18wS3lDc2VGU0dhS2tKYU1YaHFLcThzQ1FuNlhvckp3dw?oc=5",
           "source": "Google News"
         }
       ]
