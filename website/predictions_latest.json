@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-27T16:21:08",
-  "date": "2026-03-27",
+  "generated_at": "2026-03-28T16:10:04",
+  "date": "2026-03-28",
   "summary": {
-    "total_games": 4,
-    "home_picks": 3,
+    "total_games": 2,
+    "home_picks": 1,
     "away_picks": 1,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 0,
-      "MED": 3,
+      "MED": 1,
       "LOW": 1
     },
-    "combined_ev": 0.0013
+    "combined_ev": -0.002
   },
   "model_performance": {
     "schema_version": "2.0",
@@ -73,83 +73,45 @@
   },
   "top_picks": [
     {
-      "pick": "Iowa St.",
-      "matchup": "Tennessee @ Iowa St.",
-      "home_team": "Iowa St.",
-      "away_team": "Tennessee",
+      "pick": "Arizona",
+      "matchup": "Purdue @ Arizona",
+      "home_team": "Arizona",
+      "away_team": "Purdue",
       "bet_side": "HOME",
-      "ml": "-418",
-      "win_prob": 0.807,
+      "ml": "-143",
+      "win_prob": 0.588,
       "confidence": "MED",
       "stake": 5.0,
-      "if_win": 1.2,
-      "ev": 0.0034,
+      "if_win": 3.5,
+      "ev": -0.002,
       "vegas_ml": "N/A",
       "vegas_spread": "N/A",
       "odds_movement": "\u2014",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
       "rank": 1
-    },
-    {
-      "pick": "Michigan St.",
-      "matchup": "Michigan St. @ UConn",
-      "home_team": "UConn",
-      "away_team": "Michigan St.",
-      "bet_side": "AWAY",
-      "ml": "-365",
-      "win_prob": 0.785,
-      "confidence": "MED",
-      "stake": 5.0,
-      "if_win": 1.37,
-      "ev": 0.0005,
-      "vegas_ml": "N/A",
-      "vegas_spread": "N/A",
-      "odds_movement": "\u2014",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "rank": 2
-    },
-    {
-      "pick": "Michigan",
-      "matchup": "Alabama @ Michigan",
-      "home_team": "Michigan",
-      "away_team": "Alabama",
-      "bet_side": "HOME",
-      "ml": "-279",
-      "win_prob": 0.736,
-      "confidence": "MED",
-      "stake": 5.0,
-      "if_win": 1.79,
-      "ev": -0.0026,
-      "vegas_ml": "N/A",
-      "vegas_spread": "N/A",
-      "odds_movement": "\u2014",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "rank": 3
     }
   ],
   "predictions": [
     {
-      "home_team": "Duke",
-      "away_team": "St. John's",
+      "home_team": "Illinois",
+      "away_team": "Iowa",
       "status": "",
-      "ridge_diff": 4.12,
-      "gb_diff": 4.82,
-      "nn_reg_diff": 5.56,
-      "reg_ensemble_diff": 4.91,
-      "logistic_prob": 0.687,
-      "bayes_prob": 0.678,
-      "nn_cls_prob": 0.31,
-      "cls_ensemble_prob": 0.515,
-      "reg_implied_prob": 0.62,
-      "final_win_prob_home": 0.573,
-      "final_win_prob_away": 0.427,
-      "predicted_winner": "Duke",
-      "home_ml": "-134",
-      "away_ml": "+134",
-      "model_std_dev": 0.155,
+      "ridge_diff": 2.68,
+      "gb_diff": -0.94,
+      "nn_reg_diff": -0.15,
+      "reg_ensemble_diff": 0.46,
+      "logistic_prob": 0.523,
+      "bayes_prob": 0.701,
+      "nn_cls_prob": 0.147,
+      "cls_ensemble_prob": 0.39,
+      "reg_implied_prob": 0.512,
+      "final_win_prob_home": 0.457,
+      "final_win_prob_away": 0.543,
+      "predicted_winner": "Iowa",
+      "home_ml": "+119",
+      "away_ml": "-119",
+      "model_std_dev": 0.201,
       "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -158,24 +120,24 @@
       "articles_away": []
     },
     {
-      "home_team": "Michigan",
-      "away_team": "Alabama",
+      "home_team": "Arizona",
+      "away_team": "Purdue",
       "status": "",
-      "ridge_diff": 5.53,
-      "gb_diff": 4.22,
-      "nn_reg_diff": 6.84,
-      "reg_ensemble_diff": 5.66,
-      "logistic_prob": 0.735,
-      "bayes_prob": 0.925,
-      "nn_cls_prob": 0.919,
-      "cls_ensemble_prob": 0.855,
-      "reg_implied_prob": 0.638,
-      "final_win_prob_home": 0.736,
-      "final_win_prob_away": 0.264,
-      "predicted_winner": "Michigan",
-      "home_ml": "-279",
-      "away_ml": "+279",
-      "model_std_dev": 0.122,
+      "ridge_diff": 1.92,
+      "gb_diff": 0.33,
+      "nn_reg_diff": 0.22,
+      "reg_ensemble_diff": 0.76,
+      "logistic_prob": 0.556,
+      "bayes_prob": 0.789,
+      "nn_cls_prob": 0.709,
+      "cls_ensemble_prob": 0.672,
+      "reg_implied_prob": 0.519,
+      "final_win_prob_home": 0.588,
+      "final_win_prob_away": 0.412,
+      "predicted_winner": "Arizona",
+      "home_ml": "-143",
+      "away_ml": "+143",
+      "model_std_dev": 0.11,
       "confidence": "MED",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -183,243 +145,65 @@
         {
           "feature": "home_adj_em",
           "label": "Home Adj Em",
-          "contribution": 1.5003,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 1.1786,
+          "contribution": 1.4716,
           "favors_home": true
         },
         {
           "feature": "away_adj_em",
           "label": "Away Adj Em",
-          "contribution": -1.1165,
+          "contribution": -1.3324,
           "favors_home": false
-        },
-        {
-          "feature": "diff_sent_headlines",
-          "label": "\u0394 Sent Headlines",
-          "contribution": 0.6904,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_tov_pct",
-          "label": "\u0394 Tov Pct",
-          "contribution": -0.3964,
-          "favors_home": false
-        }
-      ],
-      "articles_home": [
-        {
-          "title": "Alabama Crimson Tide vs. Michigan Wolverines odds, picks and predictions - Sportsbook Wire",
-          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPdnJabXlRcHJ1aS05UXlJbVFmUldMT28tOUxKV0F3WXFoeGR3S0pGSEgyZklYRTRHTzNZMzduN3F5aVlUQUN5MTVmUVBfRWh5VjlMMkQ1ZFZqSWFHRmJJN2NiV191LTZqdFd2VERCNGhXdDVLSkdtVGs3a2RaQXN2LXVPUlFpSTMyeGN2eml1aWdyQjAzYWNXTlZ6clctaUNoblRVY3ZGOEM4QVNOQS04X0U4QjEwOGp1eEl5REU3YTJlUW9oZlIycU5CQlBfakNvMDA1ZDc2dlM?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Michigan 101-80 Howard (Mar 19, 2026) Final Score - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZXJ4cm14a2dPV1hydkxmRU0zTUI5ZUwwZWxXaUVLQVNsMC1DZHlQYUMwMFF6Qmp5NlRxdHAzMEF6ZEJ1YlIyZGJuVzN5Z3B3U2NiVFh1QTMxS3d5eHVJVnBvS2tqSkRFa2xfYUhVNV9uOHZHQ2dOdUlqZXpyM2FvWDdlMXVsczlKbExJSA?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "NCAA Men's Basketball Tournament: Ranking the Top 16 Players in the Sweet 16 - FOX Sports",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZER2dWtZMlpLZGFKdW5kanA4THhwLVdEUU9TRmZZMjZiTUEyc0FYdEs0dDk0bUViczJrOW5tREdjSE1nbmZiTGtNMmZxNTlxai1Edk42NVY1cDhoYW5uV25nVS1DbGRTYTdZbHhfcEI5dEhrRnp2WnMzazRWRm5yQzllQkw5aHJuc0RDWUhWS0FkOXk0U19sZGg0TnlXS1ExWDQ1dzBIZGVGa0lrT0xVcjN0Mjg3MEHSAbcBQVVfeXFMTkVtdUN1SzlMaTlDQmpKeVZIcGJ2UlNmS3Y0ZE96WWhrczRKSDJfRXJybkxoMHBzRkNIN3BDYU5uSlJDUTNXbW1RQ1MxT0syY0Q0UG16X3FSV1pzMmZoNkY3QUxYaExnMGxMbHBMbTNvS0Z4RjB4aGpxYk85ZzZGa3R0dEZRSlIwZHAyN2w4WUhrX0Z4eXg1Q2VYUUJhdXNrX1FpTThyMS1HZGswaUNXcFpDRlcxYmw4?oc=5",
-          "source": "Google News"
-        }
-      ],
-      "articles_away": [
-        {
-          "title": "Michigan vs Alabama live updates: Prediction, time, how to watch Sweet 16 game - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNZHctTGNBdFdMWVlOdkhEV0hMeUJPOTRnLWNiQnp4ZjNHZkt1TS1CS19ycUJILWp0Wjg3OTVHcTJDd2RfckttQ1Q0X1d3VnBIWHA4UFk4T21qa1d4R2JYSUtqUGdsdzFFT3JHTFh4aTA1NnlyZEIzN1duVGdmVk1KMmtTTjhjdmF0VEttNUhSbTktUmJHaVRGZjB6Y202aWlwbldDSDhabTJsR05ScTd1M0xVWENkQVJXWjZRR0Rxc3hoZjZva0xlam01MDM5UjZQa2ZmcXdTM1RXaU85cmp6U01EX3BtYjJjWjlMU1Z6b1J5T0wxamc?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Alabama 117-115 Arkansas (Feb 18, 2026) Final Score - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbTBSVm9IZDNmeDVxZVgtdkVDRmhoZ0dlSlNMMG5TdW5lWXJQb0V5WWlmT0w4V1R1WGxHOUFwN2VNR3N3cHl5RjRNRE5DWVRzM1BFNTZ0U2lWNVZVMGxOOFZwaGtJSVBHc0FxLUlhckE4Z2JvQjFUOE94WURERk5kOVV4TjkzSlQyZ19STERn?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Keys To Alabama-Michigan Stream of NCAA Basketball - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb1Bwak1PS1pTcU5TV3hIUlN4VGVIeXcyOHhfX0k2WjdpYy1LanJEVWtGUnpsX1BSc2V2azZSdXAwMFFmdXh1eGhJdUthOHd1azFhMjZqTjBQZUxJaERtRWVPb0E4VGFSNjNtc1lFZ2FsTWRDbnlfQnZPMElTVWlJMXZVU2xsVm1Z?oc=5",
-          "source": "Google News"
-        }
-      ]
-    },
-    {
-      "home_team": "UConn",
-      "away_team": "Michigan St.",
-      "status": "",
-      "ridge_diff": -11.54,
-      "gb_diff": -6.06,
-      "nn_reg_diff": -6.56,
-      "reg_ensemble_diff": -7.9,
-      "logistic_prob": 0.152,
-      "bayes_prob": 0.0,
-      "nn_cls_prob": 0.096,
-      "cls_ensemble_prob": 0.097,
-      "reg_implied_prob": 0.312,
-      "final_win_prob_home": 0.215,
-      "final_win_prob_away": 0.785,
-      "predicted_winner": "Michigan St.",
-      "home_ml": "+365",
-      "away_ml": "-365",
-      "model_std_dev": 0.113,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_tov_pct",
-          "label": "\u0394 Tov Pct",
-          "contribution": 1.9377,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_orb_pct",
-          "label": "\u0394 Orb Pct",
-          "contribution": -1.7786,
-          "favors_home": false
-        },
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": -1.7533,
-          "favors_home": false
-        },
-        {
-          "feature": "home_tov_pct",
-          "label": "Home Tov Pct",
-          "contribution": 1.3382,
-          "favors_home": true
         },
         {
           "feature": "home_orb_pct",
           "label": "Home Orb Pct",
-          "contribution": -1.0797,
-          "favors_home": false
-        }
-      ],
-      "articles_home": [
-        {
-          "title": "Boston College names UConn\u2019s Luke Murray head men\u2019s basketball coach - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ1I0Tzlzekp0c05mVWgzcmw3aGRlLWNDOGx1aTVaN2ZhRDdtWTZpcVhCN1BPdzNadW95RzZuZ091QUlrYmd0VmhfZ0VweVE1NEJOYlJubUNyYjJ2QzJVVmVQT0pFX184WHI1Vjgxb05Nc3ZqM1d3eDZWblNNOEpTa2pRQkFBcmRJeUdjMjU5ZVVUNHYtZm1oNEtVUTVkdzljaDBJ?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Who's in Elite 8? Updated March Madness bracket, NCAA Tournament schedule - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQS3hHMjk5MS1LMDJyczdHVHpjQVZwWGswblU2MVpKUkNTWV95eXZ6NHBGVW9ROXJYLTRmWF80cTNQTzJoMnFSdjlIQUNVcDJjejB5ZGRSZkZ5M1VyaTNRR3VBemF1Nm9YbURza1VIWmFUWTBVbHBERXlydHd2M0RQbm1scDdKV0lYeVFjeGY3NGVRckJfb2pVSjVCcW13WTlUU3FfTWo4TmJwZHBYUDZKSkFITkxxTWdnUkgteGozWG5DSVhiVjR3NA?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "UConn's Luke Murray could be heading to a new team. Here's what Dan Hurley said - CT Insider",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU3ZPeHJ4MXBwRENGUnFhMnZNOC1wRW5idHlqSlc5dHhDb1JBbU5nSDBxeG9FdFdoajByM29pdkxQejRESDBXTkZ1d0kxWkgtNDJKWTlHZmpaczZsMEphdS15TWtMcl9VQ2JKTjd6X2hLZ3dSSjl2YzJlWEtDbVlUZmk0VndxMEMyUGZXeGR2Q3d0STNHUk1yVmg5TDFYSjB0WEZERHNXUGFCZHozcVhfdHp5VV9oelhHOEE?oc=5",
-          "source": "Google News"
-        }
-      ],
-      "articles_away": [
-        {
-          "title": "2026 March Madness: Men's NCAA tournament schedule, dates - NCAA.com",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWi1lWjFLcHNTVVNTWXJJZ0ZfczZIN2ZPdkhuUDhQRDEwT0tIbHpEY2NhbzBBeVRHZ0h2dkltMFZXa2xNUXBhQmNiNkUyY1J0UDlQaXZDR3p0NHcxbzlMMEVZWnBvdjhvNGdmT1ZqUWZRcmpNRGt5MkI5YndOTG1KRnlsZG8zTElkYkI2WG80elRlRncxbERQVHVtMzNMM2dMb3lIUVozcjY5RHZMbkZXOWNIbHHSAboBQVVfeXFMT3B0Q3N1SEdfVWgyRmFHb0k1V2pTbDJKVllmeGJ0MTIwQzZlSFRoY25xaE05al9hTkVKUlhMS1dRcUZKXzE1QnZuSzl2RW92MTE5UVA4cFliR044a1BNcDF3UkI1eEhuYXJxaTVjSTV1dlNHYzFaUXpKSzJGU2xFb1ZMZjg4WHNqOFk3TVhDdFFUYUhjQ0E5WnU5MEs4YTdtYmRYNkJ1aF9ma1ZEeFUxVkhpVUhwVDV5ZlVn?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "What time is UConn vs Michigan State in Sweet 16 today? Start time, location, TV Channel - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeHJMc3hiV1B6aDJsX0Q0UzBLOEZKXzhsamZuQ3JZdk1CYy1ORmV1a3RHOUNyYU5kSWd6UUlwdGl6b3AxVDBWeVFUQnZEZ1pzNHhGMXhxQzFPUXBEMlhEZGc3ZkRxSnM1UXlzSWZoMzJTbkkyQVRaVEhUWmQ2b2ZxaTdBdXNMUVJRTnpJUG9nQ3NPYk45bTFjdHY4N0pRMndLMXVkSnQzXzkyYnY4VkdSRkRMSE9OaGNoTDZyZG13RTRpZWNV?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Men's March Madness: Predictions, previews for every Sweet 16 game Friday - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQ3F0Z0hjRC1RYWhPbnhESGViOFlVYkUzNU9WNW9NeWQxRHlZR2h1dlY4aUZNdHY3bXlmMmZlM2VHcEcxWjNoYl9CT29QNU9uSmNsajhIcC1XNlpCRllpT2RpS1NvQUlIS1dWRmtGM1FUek9Gam4wUnNFdDlOVEZNTXNMbXZXMllveDREdjR6cjJsRDJNdnNoS0NVTHFHZ09EOWQ2Yk9ZRTFsb3ktcDhyUXdvQzZSdl9hVGRCdTR6RXVWS2dFUjU3YXVlT2pxdw?oc=5",
-          "source": "Google News"
-        }
-      ]
-    },
-    {
-      "home_team": "Iowa St.",
-      "away_team": "Tennessee",
-      "status": "",
-      "ridge_diff": 11.32,
-      "gb_diff": 8.75,
-      "nn_reg_diff": 12.65,
-      "reg_ensemble_diff": 11.08,
-      "logistic_prob": 0.883,
-      "bayes_prob": 0.979,
-      "nn_cls_prob": 0.821,
-      "cls_ensemble_prob": 0.874,
-      "reg_implied_prob": 0.752,
-      "final_win_prob_home": 0.807,
-      "final_win_prob_away": 0.193,
-      "predicted_winner": "Iowa St.",
-      "home_ml": "-418",
-      "away_ml": "+418",
-      "model_std_dev": 0.084,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 4.4602,
+          "contribution": 0.4485,
           "favors_home": true
         },
         {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 1.2802,
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 0.3746,
           "favors_home": true
         },
         {
           "feature": "away_orb_pct",
           "label": "Away Orb Pct",
-          "contribution": -0.6685,
+          "contribution": -0.3414,
           "favors_home": false
-        },
-        {
-          "feature": "diff_orb_pct",
-          "label": "\u0394 Orb Pct",
-          "contribution": -0.4364,
-          "favors_home": false
-        },
-        {
-          "feature": "home_orb_pct",
-          "label": "Home Orb Pct",
-          "contribution": 0.3159,
-          "favors_home": true
         }
       ],
       "articles_home": [
         {
-          "title": "What time is Iowa State vs Tennessee in Sweet 16 today? Start time, location, TV Channel - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOX2MtVGxncGlweXJZcWNWdm5LaFZZcC15bkNHOGRaUFlIV3JXRlR3LVVkVlhYQlpySTlfVy1XZVU1MlRKZ01RNFZ2azRtOTV1ekoya2VoaXRHOG9PbW11T3BBNGljYWtkRjQ1OVhSU2VjVTFlUloxUHRPT0tobGVGUDhETWdDbWIyRnFIOFF4MjAxMG9kSG05RVpsMWg1M0xOd0xkejlDRlBzX0l4aUZ6NzlwUW9NYmlfbUE0TEF3Q3BsVTNT?oc=5",
+          "title": "Arizona's Sweet 16 beatdown shows its ready for March Madness breakthrough - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPenRfeDJRWHRwWEd3aHlDVjhqa3lEYzNBV3ZIOEVya1lfb1FaY1A4dGJ6WkZuZmcxMHRuVHZtdzV6LUV3VGdlSEw3Y3RQdmFaYk9IMFZ2dVhJVjM2WUNSSzZ5bW9Wb0VqdmJsLV9ZeHo5OW9Oam9nZzE4NjRwUHJRbkNuWFRuNWJLY1pNdHdBVGYtRXFQUUtINlV2ZjZudFRBcFpKTUFRQnBkclQxdTVnTA?oc=5",
           "source": "Google News"
         },
         {
-          "title": "March Madness 2026: How to watch the Iowa State vs. Tennessee Sweet 16 game in the men's NCAA basketball tournament - Ya",
-          "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNaGR4YzlRV0NNSDNWc0l0U2dfdVRNNVhvSF93YkZYa3dkLTNOc0liZXdyR3hmblcxWFZaWE1idWJYMjNnN2pnZVFrcVp4NzZOTHlCWGE5SDJubS1GbHZwUnNMQnJNNFRGVnZMYkhwMl9jQkY2VnhVV3J0eVRlNEFOSVhJZUROWFlpRzV6a0NXQktqWEFvNGUxUExiMExJOHo1UUg4b3ZldGRFMTA2SnhndXZ5NTE1Z1ktVEdYVDFUak4wU2xjUllWbmp1dTdIbFBnT2dPWjdlY1lyVzV6OXdobTY4dm1Ec3RIQ0NJREVaVk9MR0ZHODV2MWhwdHgzeWEzMkNiUDA2NGNlVlVzSEVYVkFn?oc=5",
+          "title": "Purdue Boilermakers @ Arizona Wildcats: Live game updates, stats, play-by-play - sports.yahoo.com",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaS1ocG5fT2xhbG1IcW1SZEZ6TnRYZ3Q1QlhLVlNrbGRxWm9GVU5WSTVjM002NUFRb1c0aGRCZDBzUjl5NTEtamtQeHBwZDZyWUxYRG5kbXFsMlVMM1EwTkt0bG1NMWI2M21XWHU2NmhfUk1yNmZZbmJjQmRDVnJyOG9Kb1NyMGpv?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Men's March Madness: Predictions, previews for every Sweet 16 game Friday - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQ3F0Z0hjRC1RYWhPbnhESGViOFlVYkUzNU9WNW9NeWQxRHlZR2h1dlY4aUZNdHY3bXlmMmZlM2VHcEcxWjNoYl9CT29QNU9uSmNsajhIcC1XNlpCRllpT2RpS1NvQUlIS1dWRmtGM1FUek9Gam4wUnNFdDlOVEZNTXNMbXZXMllveDREdjR6cjJsRDJNdnNoS0NVTHFHZ09EOWQ2Yk9ZRTFsb3ktcDhyUXdvQzZSdl9hVGRCdTR6RXVWS2dFUjU3YXVlT2pxdw?oc=5",
+          "title": "Arizona vs Purdue live updates, predictions, time, how to watch Elite 8 game - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQakYxY0haa3ViOF9vS2ROajRJOVBONVFCbENsNC1TWGFWZnEtZlhPRlIyVjc3WUtGODdiTVZ1eGExbHNKYk1OVEp2OVh5d0xRTVdYOFh0MnU0STlsbnpVa3kxRzBCcG9TSHdBN2REcF9IMnd0ZEZCU3ZPQ0xYQ1FoWk9TVm1VSXRhMTBUTlFhRVBOUjNZa3BZS25iZC14U3Vkd3p0QXNGeDVtb0o1MWIxZ2NpTm50MTd6NGY4OHN6czRaOTRJcVVDcGlNNzNUWVVQcDZpN1NVUHRXWWxoTi1CUnZpTkpGbG85ZXh1SFE5R3JYWnFK?oc=5",
           "source": "Google News"
         }
       ],
       "articles_away": [
         {
-          "title": "Rick Barnes isn't on any UNC wish list. He doesn't need to be with NIL - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVEJ3bjl4aS12V0lSbWFvYjZQc2dCSmlJbThNWFlYeVd0OC1laEIyd191ZlJqX19uTHg5aGtCY09WdFp1Sl8yYWRueDBic2RnSnRkRlZ5UTZ6VlZoQW5iTnVZajlzYS1FMzVqWkxfZFRSQUpoZ0o3c2k3UnNMQnVOMGhlVEhpQmJuNjE2bjhka2JCMjY0VzNNVW9mRnhHX2hfcTg4VE1fWlBqelRGaFMzV25yMDRINy0x?oc=5",
+          "title": "Arizona vs Purdue live updates, predictions, time, how to watch Elite 8 game - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQakYxY0haa3ViOF9vS2ROajRJOVBONVFCbENsNC1TWGFWZnEtZlhPRlIyVjc3WUtGODdiTVZ1eGExbHNKYk1OVEp2OVh5d0xRTVdYOFh0MnU0STlsbnpVa3kxRzBCcG9TSHdBN2REcF9IMnd0ZEZCU3ZPQ0xYQ1FoWk9TVm1VSXRhMTBUTlFhRVBOUjNZa3BZS25iZC14U3Vkd3p0QXNGeDVtb0o1MWIxZ2NpTm50MTd6NGY4OHN6czRaOTRJcVVDcGlNNzNUWVVQcDZpN1NVUHRXWWxoTi1CUnZpTkpGbG85ZXh1SFE5R3JYWnFK?oc=5",
           "source": "Google News"
         },
         {
-          "title": "March Madness 2026: How to watch the Iowa State vs. Tennessee Sweet 16 game in the men's NCAA basketball tournament - Ya",
-          "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNaGR4YzlRV0NNSDNWc0l0U2dfdVRNNVhvSF93YkZYa3dkLTNOc0liZXdyR3hmblcxWFZaWE1idWJYMjNnN2pnZVFrcVp4NzZOTHlCWGE5SDJubS1GbHZwUnNMQnJNNFRGVnZMYkhwMl9jQkY2VnhVV3J0eVRlNEFOSVhJZUROWFlpRzV6a0NXQktqWEFvNGUxUExiMExJOHo1UUg4b3ZldGRFMTA2SnhndXZ5NTE1Z1ktVEdYVDFUak4wU2xjUllWbmp1dTdIbFBnT2dPWjdlY1lyVzV6OXdobTY4dm1Ec3RIQ0NJREVaVk9MR0ZHODV2MWhwdHgzeWEzMkNiUDA2NGNlVlVzSEVYVkFn?oc=5",
+          "title": "Purdue Boilermakers @ Arizona Wildcats: Live game updates, stats, play-by-play - sports.yahoo.com",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaS1ocG5fT2xhbG1IcW1SZEZ6TnRYZ3Q1QlhLVlNrbGRxWm9GVU5WSTVjM002NUFRb1c0aGRCZDBzUjl5NTEtamtQeHBwZDZyWUxYRG5kbXFsMlVMM1EwTkt0bG1NMWI2M21XWHU2NmhfUk1yNmZZbmJjQmRDVnJyOG9Kb1NyMGpv?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Missouri 73-69 Tennessee (Feb 24, 2026) Final Score - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUUZBcDRYbmFDc1lPMTh6YkRvREJVQXMtdHlfM2VZTTVFSVcxUXlxQTE0YUlNdTJSQ0g3cWRXOWJDYlVNa3ZGQTFkWDQwZ2t1SDdTdExXX1NBdHJHaFF1V0Y4SHVGMFpXWVVCRkdOQldYUkdIYW0tOHNSWkk1aU92dk1yREg4TnNtNXZCWVdBX3U?oc=5",
+          "title": "Recap: March Madness Sweet Sixteen, Day 1 | Arizona, Illinois, Purdue, Iowa advance - nba.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORl9oellNVGhNajg0Y2RBVXNQRDlUWU9GQ0JQbTZVOUlIcnJCU0RGclZ3dHRJcWdXSUQ4T0ZCckNJSnR0U2VnbGE3bWtFTU15VG5mYUJmVG9nQm14Sm8xd1VjWlNTMWZ1NjBycWJ6RTdhYjJWdEJDZzE2ZVZMNmYyTFctazg3eEpTRFVuTlNibHc3LV9FWWNn?oc=5",
           "source": "Google News"
         }
       ]
