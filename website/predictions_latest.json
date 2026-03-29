@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-28T16:10:04",
-  "date": "2026-03-28",
+  "generated_at": "2026-03-29T14:29:59",
+  "date": "2026-03-29",
   "summary": {
     "total_games": 2,
-    "home_picks": 1,
-    "away_picks": 1,
+    "home_picks": 2,
+    "away_picks": 0,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 0,
-      "MED": 1,
-      "LOW": 1
+      "MED": 2,
+      "LOW": 0
     },
-    "combined_ev": -0.002
+    "combined_ev": -0.0058
   },
   "model_performance": {
     "schema_version": "2.0",
@@ -73,137 +73,219 @@
   },
   "top_picks": [
     {
-      "pick": "Arizona",
-      "matchup": "Purdue @ Arizona",
-      "home_team": "Arizona",
-      "away_team": "Purdue",
+      "pick": "Duke",
+      "matchup": "UConn @ Duke",
+      "home_team": "Duke",
+      "away_team": "UConn",
       "bet_side": "HOME",
-      "ml": "-143",
-      "win_prob": 0.588,
+      "ml": "-736",
+      "win_prob": 0.88,
       "confidence": "MED",
       "stake": 5.0,
-      "if_win": 3.5,
-      "ev": -0.002,
+      "if_win": 0.68,
+      "ev": -0.0016,
       "vegas_ml": "N/A",
       "vegas_spread": "N/A",
       "odds_movement": "\u2014",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
       "rank": 1
+    },
+    {
+      "pick": "Michigan",
+      "matchup": "Tennessee @ Michigan",
+      "home_team": "Michigan",
+      "away_team": "Tennessee",
+      "bet_side": "HOME",
+      "ml": "-721",
+      "win_prob": 0.878,
+      "confidence": "MED",
+      "stake": 5.0,
+      "if_win": 0.69,
+      "ev": -0.0042,
+      "vegas_ml": "N/A",
+      "vegas_spread": "N/A",
+      "odds_movement": "\u2014",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "rank": 2
     }
   ],
   "predictions": [
     {
-      "home_team": "Illinois",
-      "away_team": "Iowa",
+      "home_team": "Michigan",
+      "away_team": "Tennessee",
       "status": "",
-      "ridge_diff": 2.68,
-      "gb_diff": -0.94,
-      "nn_reg_diff": -0.15,
-      "reg_ensemble_diff": 0.46,
-      "logistic_prob": 0.523,
-      "bayes_prob": 0.701,
-      "nn_cls_prob": 0.147,
-      "cls_ensemble_prob": 0.39,
-      "reg_implied_prob": 0.512,
-      "final_win_prob_home": 0.457,
-      "final_win_prob_away": 0.543,
-      "predicted_winner": "Iowa",
-      "home_ml": "+119",
-      "away_ml": "-119",
-      "model_std_dev": 0.201,
-      "confidence": "LOW",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [],
-      "articles_home": [],
-      "articles_away": []
-    },
-    {
-      "home_team": "Arizona",
-      "away_team": "Purdue",
-      "status": "",
-      "ridge_diff": 1.92,
-      "gb_diff": 0.33,
-      "nn_reg_diff": 0.22,
-      "reg_ensemble_diff": 0.76,
-      "logistic_prob": 0.556,
-      "bayes_prob": 0.789,
-      "nn_cls_prob": 0.709,
-      "cls_ensemble_prob": 0.672,
-      "reg_implied_prob": 0.519,
-      "final_win_prob_home": 0.588,
-      "final_win_prob_away": 0.412,
-      "predicted_winner": "Arizona",
-      "home_ml": "-143",
-      "away_ml": "+143",
-      "model_std_dev": 0.11,
+      "ridge_diff": 16.17,
+      "gb_diff": 9.37,
+      "nn_reg_diff": 14.54,
+      "reg_ensemble_diff": 13.48,
+      "logistic_prob": 0.951,
+      "bayes_prob": 0.999,
+      "nn_cls_prob": 0.997,
+      "cls_ensemble_prob": 0.981,
+      "reg_implied_prob": 0.794,
+      "final_win_prob_home": 0.878,
+      "final_win_prob_away": 0.122,
+      "predicted_winner": "Michigan",
+      "home_ml": "-721",
+      "away_ml": "+721",
+      "model_std_dev": 0.084,
       "confidence": "MED",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
       "feature_drivers": [
         {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 1.4716,
-          "favors_home": true
-        },
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": -1.3324,
-          "favors_home": false
-        },
-        {
-          "feature": "home_orb_pct",
-          "label": "Home Orb Pct",
-          "contribution": 0.4485,
-          "favors_home": true
-        },
-        {
           "feature": "diff_adj_em",
           "label": "\u0394 Adj Em",
-          "contribution": 0.3746,
+          "contribution": 5.1728,
+          "favors_home": true
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 1.5003,
           "favors_home": true
         },
         {
           "feature": "away_orb_pct",
           "label": "Away Orb Pct",
-          "contribution": -0.3414,
+          "contribution": -0.6685,
           "favors_home": false
+        },
+        {
+          "feature": "diff_orb_pct",
+          "label": "\u0394 Orb Pct",
+          "contribution": -0.4599,
+          "favors_home": false
+        },
+        {
+          "feature": "home_sent_headlines",
+          "label": "Home Sent Headlines",
+          "contribution": 0.3754,
+          "favors_home": true
         }
       ],
       "articles_home": [
         {
-          "title": "Arizona's Sweet 16 beatdown shows its ready for March Madness breakthrough - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPenRfeDJRWHRwWEd3aHlDVjhqa3lEYzNBV3ZIOEVya1lfb1FaY1A4dGJ6WkZuZmcxMHRuVHZtdzV6LUV3VGdlSEw3Y3RQdmFaYk9IMFZ2dVhJVjM2WUNSSzZ5bW9Wb0VqdmJsLV9ZeHo5OW9Oam9nZzE4NjRwUHJRbkNuWFRuNWJLY1pNdHdBVGYtRXFQUUtINlV2ZjZudFRBcFpKTUFRQnBkclQxdTVnTA?oc=5",
+          "title": "March Madness games today: Full schedule for Sunday's Elite 8 games - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPYWNESHlGeFY0OThSWlUzRE5Ed2ZyUHlpYkhZOUxtNWt2QjZTQkItVUtGSW96MUE1VUhnMkZTdEZ4SjJWaGJDcmJDVk1QQ0lzNXpaa2IzUm5sRTVOemJzNkN2S0ZHU2VOaHlxV0lmbi1LNXVCbU45UGRXQmJTN2pMdXZGWVM5X0I0M0k0S0hUZXkydDFCMktaR09pLUlZODkzREQ2ZnE0ckVNOWkxbFFUczZFYzY4MjkwdHdYblZzdEtrbUhPbC0xaXoyNU8xM00td3pRbGRJNE9ZSlpF?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Purdue Boilermakers @ Arizona Wildcats: Live game updates, stats, play-by-play - sports.yahoo.com",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaS1ocG5fT2xhbG1IcW1SZEZ6TnRYZ3Q1QlhLVlNrbGRxWm9GVU5WSTVjM002NUFRb1c0aGRCZDBzUjl5NTEtamtQeHBwZDZyWUxYRG5kbXFsMlVMM1EwTkt0bG1NMWI2M21XWHU2NmhfUk1yNmZZbmJjQmRDVnJyOG9Kb1NyMGpv?oc=5",
+          "title": "Tennessee vs. Michigan prediction: March Madness 2026 pick, odds, best bet for Elite Eight Sunday - New York Post",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNb092WDkzcHFRU2ZHVTlBODhPdUNnZWJWOGhkVUV0alpOVURDRUFaOTNyTGJ6YlhyR3htejVOcVJZaEFiTUtVTXo2QXlMd2pmWUV0RHpqdXl3cjIxY3NKZ1UtRWUwdGQ2VHM1UldBcF9CWV9UdmNKb2ZUOEhnNjhHR2o4QWpxanZYVTYyamRIX1h4OURJT25kRkZaQ0tMY1Y3YnJnREc5UmJpWjFIOW5YRHpYUzF5RVRTT2hGT2M1RFBpMkhDcFJibDJ0czU?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Arizona vs Purdue live updates, predictions, time, how to watch Elite 8 game - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQakYxY0haa3ViOF9vS2ROajRJOVBONVFCbENsNC1TWGFWZnEtZlhPRlIyVjc3WUtGODdiTVZ1eGExbHNKYk1OVEp2OVh5d0xRTVdYOFh0MnU0STlsbnpVa3kxRzBCcG9TSHdBN2REcF9IMnd0ZEZCU3ZPQ0xYQ1FoWk9TVm1VSXRhMTBUTlFhRVBOUjNZa3BZS25iZC14U3Vkd3p0QXNGeDVtb0o1MWIxZ2NpTm50MTd6NGY4OHN6czRaOTRJcVVDcGlNNzNUWVVQcDZpN1NVUHRXWWxoTi1CUnZpTkpGbG85ZXh1SFE5R3JYWnFK?oc=5",
+          "title": "Michigan vs Tennessee live updates, predictions, time, how to watch Elite 8 game - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOd0dfZWFLVGVIdHJ1QVdLQzFwRHJqNjRxNmQ0djZ1aWxDcURERGcwRnl3V1JYZFpsT1FMalhfdU5ybWRZTENXWExJUXo3SkxmNXlrNmFYR0F2b0xYREVrSXZ2b25CalY5dmJCWHZOY2lqeU1tSl9ySm5LZlJnU1FQVUIxUkxaLTltRjBoa1FzVVU2SmJPZ3o2NW15YWdGYXpZQzBzWS0tWko0LUpWbWxCcHoxMk1pTjBhTnhPMm15U0dNcGNVQU5MbXFnTkp6RFE4YVdEVXY1YzU1dDBMN3NKbXBRVTB0OU1jU2Iwa0xhd19RdG9zamVBLXRR?oc=5",
           "source": "Google News"
         }
       ],
       "articles_away": [
         {
-          "title": "Arizona vs Purdue live updates, predictions, time, how to watch Elite 8 game - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQakYxY0haa3ViOF9vS2ROajRJOVBONVFCbENsNC1TWGFWZnEtZlhPRlIyVjc3WUtGODdiTVZ1eGExbHNKYk1OVEp2OVh5d0xRTVdYOFh0MnU0STlsbnpVa3kxRzBCcG9TSHdBN2REcF9IMnd0ZEZCU3ZPQ0xYQ1FoWk9TVm1VSXRhMTBUTlFhRVBOUjNZa3BZS25iZC14U3Vkd3p0QXNGeDVtb0o1MWIxZ2NpTm50MTd6NGY4OHN6czRaOTRJcVVDcGlNNzNUWVVQcDZpN1NVUHRXWWxoTi1CUnZpTkpGbG85ZXh1SFE5R3JYWnFK?oc=5",
+          "title": "Michigan vs Tennessee live updates, predictions, time, how to watch Elite 8 game - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOd0dfZWFLVGVIdHJ1QVdLQzFwRHJqNjRxNmQ0djZ1aWxDcURERGcwRnl3V1JYZFpsT1FMalhfdU5ybWRZTENXWExJUXo3SkxmNXlrNmFYR0F2b0xYREVrSXZ2b25CalY5dmJCWHZOY2lqeU1tSl9ySm5LZlJnU1FQVUIxUkxaLTltRjBoa1FzVVU2SmJPZ3o2NW15YWdGYXpZQzBzWS0tWko0LUpWbWxCcHoxMk1pTjBhTnhPMm15U0dNcGNVQU5MbXFnTkp6RFE4YVdEVXY1YzU1dDBMN3NKbXBRVTB0OU1jU2Iwa0xhd19RdG9zamVBLXRR?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Purdue Boilermakers @ Arizona Wildcats: Live game updates, stats, play-by-play - sports.yahoo.com",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaS1ocG5fT2xhbG1IcW1SZEZ6TnRYZ3Q1QlhLVlNrbGRxWm9GVU5WSTVjM002NUFRb1c0aGRCZDBzUjl5NTEtamtQeHBwZDZyWUxYRG5kbXFsMlVMM1EwTkt0bG1NMWI2M21XWHU2NmhfUk1yNmZZbmJjQmRDVnJyOG9Kb1NyMGpv?oc=5",
+          "title": "Has Tennessee ever made a Final Four? Vols hope third time's a charm under Barnes - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOSFo4Y0pJdFFQTDFjT3d6ek5QYWJmV1dYRll2UlMwVzdUX1ZqU2tyQklhS2tVVVRvb3hXZDMxd0VCd3I0X0lhakNUak9sdzZxQ2xTaXRSNEctUUxDT2NaNmxhX1BFSnZXWUhHZFNFYWxjdFBWVUpYYjlveWJnZTdsTmxGX3luVnpmN1kzYnhaNXk3b01QSWZ0UFF3bW4zbjBvcThXd1RfUmNNREttNHJLbXE3Z2VsYy1hOFRQX2VtMkdmRFJ1ck9mWU1KcVhzMUJsdWpNUTgxa0lmTkti?oc=5",
           "source": "Google News"
         },
         {
-          "title": "Recap: March Madness Sweet Sixteen, Day 1 | Arizona, Illinois, Purdue, Iowa advance - nba.com",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORl9oellNVGhNajg0Y2RBVXNQRDlUWU9GQ0JQbTZVOUlIcnJCU0RGclZ3dHRJcWdXSUQ4T0ZCckNJSnR0U2VnbGE3bWtFTU15VG5mYUJmVG9nQm14Sm8xd1VjWlNTMWZ1NjBycWJ6RTdhYjJWdEJDZzE2ZVZMNmYyTFctazg3eEpTRFVuTlNibHc3LV9FWWNn?oc=5",
+          "title": "Michigan vs. Tennessee NCAA Tournament Elite Eight predictions: Odds, recent stats, trends and best bets - NBC Sports",
+          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQeDRaT0dlOXdkVzJscS1uM0k1dXNKdmU1WFRjWEh0eFUxZTYxSlZNbjhvSG4zNGk0UkpJMklGdzl2cTdxaUxPbVJualdJT05jUEdnLU51OEZ5QUZWcHowcFlaZ21McFB4R3Q3T3ZEZGdGMk8wQ1cxNjZlQUhQS0h5WjNiNmd6VWUwV2RlUFRYRHVJeVZ5LVMtRHZ6elRqMzFHdTN0N20zanVsTXlIa1BVVWktbTRZX25iWTlyQUo2NGYzSVZrYW9kN1JZOC1OWjJHeTdMZTN0bURBX0JMUDlTZWVUejFqRVUyMlVB?oc=5",
+          "source": "Google News"
+        }
+      ]
+    },
+    {
+      "home_team": "Duke",
+      "away_team": "UConn",
+      "status": "",
+      "ridge_diff": 22.61,
+      "gb_diff": 10.21,
+      "nn_reg_diff": 9.79,
+      "reg_ensemble_diff": 13.76,
+      "logistic_prob": 0.976,
+      "bayes_prob": 1.0,
+      "nn_cls_prob": 0.975,
+      "cls_ensemble_prob": 0.981,
+      "reg_implied_prob": 0.798,
+      "final_win_prob_home": 0.88,
+      "final_win_prob_away": 0.12,
+      "predicted_winner": "Duke",
+      "home_ml": "-736",
+      "away_ml": "+736",
+      "model_std_dev": 0.081,
+      "confidence": "MED",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "feature_drivers": [
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 4.9948,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_orb_pct",
+          "label": "\u0394 Orb Pct",
+          "contribution": 1.8309,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_tov_pct",
+          "label": "\u0394 Tov Pct",
+          "contribution": -1.7705,
+          "favors_home": false
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 1.4629,
+          "favors_home": true
+        },
+        {
+          "feature": "away_tov_pct",
+          "label": "Away Tov Pct",
+          "contribution": -1.3145,
+          "favors_home": false
+        }
+      ],
+      "articles_home": [
+        {
+          "title": "What time is Duke vs St. John's in Sweet 16 today? Start time, location, TV Channel - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNaTBabDFSMmxrdkFQdENNcUJ2aGgtOHJMUThmZnN6N2dSWFowUTVCcXFWZzJlMHYwUV93ZHFERUFCU1R3WmpFQlFOLUo5U1l4dVJxak9QYzZwQkNQMElKU0ZLU2pnU29ScnBYbzhaQWxWTDE2enZ1bzc1VmJkMjM2ZTZSMUFSSk9PT3lmXzB3TGRSU1R3R003UEREenN5VWtFMHRxeHVJWDBGX1VRclQzcFBrclBVQmtRTVRj?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Duke men\u2019s basketball GM Rachel Baker has \u2018an impact on everything\u2019 for the Blue Devils - Andscape",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQ0pkLUZwT052eUtvN0N4UDR1NzYzRjFrMHJkT3NSbXZxN25QX05MWGZJZlFHOTNtVmRSaGV3cVdUS2dqaklfdEphcXBTQkE4aVpfbG9qYnlQZmpsX0NEQ1owZU1zdi1HeGhnNEUxQ2YxY2hKQ0daVHBhaWdGdGpXd2JXZ3BGR1ppT2kwZnhmekxtdVYxd0tkR1N4SXdhTXVoQTVyOXg4X2hDZ1RHamc?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Duke vs UConn live updates, predictions, time, how to watch Elite 8 game - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQeXVYTVJaaGZ1S0ZvR2hkWjFvaV9TSnFaNXBFb25kMVVyTmNJOVBkdzhLMnl2enNZb0k0OUR6ajhDRFdVNkhTbWlIZ0Iwa3VLSEZYSVZDUF9TczFCcmxlTjF5RnlUc2N0VUVZVUdhOUV6bDRZUUp5OGNGSF9VR0o4Qnh6UTZidFNjTnFJUVFWRTROb1VGTGVicXYtSzdGT3pVdURYUTlrc3R1cFU4UUhUNUlpWmk2b0pxYm41NjNkTHVvRlhVeF9TajhPY20xZ0dieEh6X3NBb2xfNDRQMV9IMGNxVmVOc3dmVThLN0Fqaw?oc=5",
+          "source": "Google News"
+        }
+      ],
+      "articles_away": [
+        {
+          "title": "UConn\u2019s Final Four hopes rest on Alex Karaban, a 4-year starter and Dan Hurley\u2019s kindred spirit - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNR0lqd2kyOWZLSVVxYmVBc3JuOVhKZnkzUkpqSVNwVXRoRWVJUGU3NS16S3RiZjhNVmFqbGtwamRQMHZRWjJBNE1mRnd4dmF1ODFBa0wxNTc2dVJXM3ROYkUwbHhDR3ZWcWpGWFhXVDluQ29sTWFVSlJJMDhQMno4bUp4Y0hXZUJYRFNhV0dHU3ZycVpZ?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "What channel is Duke vs UConn basketball today? Time, TV schedule to watch Elite 8 game - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxObU5EcVg2a3Rac2ZXU0JRN0dlVDZQeEFrYmVUclhlTHlMeHM2NEZMOXU3LTN4UTZoUkFrVkM4ek91SE4ydm05QjI4c0xuOWRGUE95SFVxSnZhQjhrRlpWY2VBbEFadHlOSWpwSHBhaFBGSlJSc2RKXzcySjk3Si1nUHJLWDZNbnZDaEt3VHczdzFTQXh0akR4dnlQZHhzd0ZTa3hGdUd3enAzMDJrNVFiMEYtdjVjV3E4NDFDTnB3anI5QUJ4UHA0TlRfd3F0S1F1WXRUNw?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "UConn Huskies vs. Duke Blue Devils odds, picks and predictions - Sportsbook Wire",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbVhLdnY1LXN5UkVCUER1OEk5eTZBYWJyelFTN3BNc01TU1p5YXFpeFlsUDRwS21hMC1XWThfYjFUN3RfcGJPcE4wOHhDcDljekxQWTFibmRrbkpic1hGNk1JYjVyUGJPd0JybFBlaXJnenJ6cnh3eWdFZmhPYzFQa0FSUkVfY285U0MzRzRBV3dlN2lNSDlLRHJ3aFVuVGVCV01NdGY5VkVWam44LTAxT3hyYzZDWHV3ZzFNNDREaHNJY0JQbkE5UTh0UWQ4cnVr?oc=5",
           "source": "Google News"
         }
       ]
