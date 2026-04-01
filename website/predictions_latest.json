@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-29T16:10:32",
-  "date": "2026-03-29",
+  "generated_at": "2026-04-01T16:23:14",
+  "date": "2026-04-01",
   "summary": {
     "total_games": 2,
-    "home_picks": 2,
-    "away_picks": 0,
+    "home_picks": 0,
+    "away_picks": 2,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 0,
-      "MED": 2,
-      "LOW": 0
+      "MED": 0,
+      "LOW": 2
     },
-    "combined_ev": -0.0058
+    "combined_ev": 0
   },
   "model_performance": {
     "schema_version": "2.0",
@@ -71,224 +71,59 @@
       }
     }
   },
-  "top_picks": [
-    {
-      "pick": "Duke",
-      "matchup": "UConn @ Duke",
-      "home_team": "Duke",
-      "away_team": "UConn",
-      "bet_side": "HOME",
-      "ml": "-736",
-      "win_prob": 0.88,
-      "confidence": "MED",
-      "stake": 5.0,
-      "if_win": 0.68,
-      "ev": -0.0016,
-      "vegas_ml": "N/A",
-      "vegas_spread": "N/A",
-      "odds_movement": "\u2014",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "rank": 1
-    },
-    {
-      "pick": "Michigan",
-      "matchup": "Tennessee @ Michigan",
-      "home_team": "Michigan",
-      "away_team": "Tennessee",
-      "bet_side": "HOME",
-      "ml": "-721",
-      "win_prob": 0.878,
-      "confidence": "MED",
-      "stake": 5.0,
-      "if_win": 0.69,
-      "ev": -0.0042,
-      "vegas_ml": "N/A",
-      "vegas_spread": "N/A",
-      "odds_movement": "\u2014",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "rank": 2
-    }
-  ],
+  "top_picks": [],
   "predictions": [
     {
-      "home_team": "Michigan",
-      "away_team": "Tennessee",
+      "home_team": "Colorado",
+      "away_team": "Oklahoma",
       "status": "",
-      "ridge_diff": 16.17,
-      "gb_diff": 9.37,
-      "nn_reg_diff": 14.54,
-      "reg_ensemble_diff": 13.48,
-      "logistic_prob": 0.951,
-      "bayes_prob": 0.999,
-      "nn_cls_prob": 0.997,
-      "cls_ensemble_prob": 0.981,
-      "reg_implied_prob": 0.794,
-      "final_win_prob_home": 0.878,
-      "final_win_prob_away": 0.122,
-      "predicted_winner": "Michigan",
-      "home_ml": "-721",
-      "away_ml": "+721",
-      "model_std_dev": 0.084,
-      "confidence": "MED",
+      "ridge_diff": -4.08,
+      "gb_diff": -1.6,
+      "nn_reg_diff": -3.53,
+      "reg_ensemble_diff": -3.12,
+      "logistic_prob": 0.391,
+      "bayes_prob": 0.46,
+      "nn_cls_prob": 0.606,
+      "cls_ensemble_prob": 0.502,
+      "reg_implied_prob": 0.423,
+      "final_win_prob_home": 0.458,
+      "final_win_prob_away": 0.542,
+      "predicted_winner": "Oklahoma",
+      "home_ml": "+118",
+      "away_ml": "-118",
+      "model_std_dev": 0.082,
+      "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 5.1728,
-          "favors_home": true
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 1.5003,
-          "favors_home": true
-        },
-        {
-          "feature": "away_orb_pct",
-          "label": "Away Orb Pct",
-          "contribution": -0.6685,
-          "favors_home": false
-        },
-        {
-          "feature": "diff_orb_pct",
-          "label": "\u0394 Orb Pct",
-          "contribution": -0.4599,
-          "favors_home": false
-        },
-        {
-          "feature": "home_sent_headlines",
-          "label": "Home Sent Headlines",
-          "contribution": 0.3754,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [
-        {
-          "title": "Michigan vs Tennessee live updates, predictions, time, how to watch Elite 8 game - usatoday.com",
-          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOd0dfZWFLVGVIdHJ1QVdLQzFwRHJqNjRxNmQ0djZ1aWxDcURERGcwRnl3V1JYZFpsT1FMalhfdU5ybWRZTENXWExJUXo3SkxmNXlrNmFYR0F2b0xYREVrSXZ2b25CalY5dmJCWHZOY2lqeU1tSl9ySm5LZlJnU1FQVUIxUkxaLTltRjBoa1FzVVU2SmJPZ3o2NW15YWdGYXpZQzBzWS0tWko0LUpWbWxCcHoxMk1pTjBhTnhPMm15U0dNcGNVQU5MbXFnTkp6RFE4YVdEVXY1YzU1dDBMN3NKbXBRVTB0OU1jU2Iwa0xhd19RdG9zamVBLXRR?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Tennessee vs. Michigan prediction: March Madness 2026 pick, odds, best bet for Elite Eight Sunday - New York Post",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNb092WDkzcHFRU2ZHVTlBODhPdUNnZWJWOGhkVUV0alpOVURDRUFaOTNyTGJ6YlhyR3htejVOcVJZaEFiTUtVTXo2QXlMd2pmWUV0RHpqdXl3cjIxY3NKZ1UtRWUwdGQ2VHM1UldBcF9CWV9UdmNKb2ZUOEhnNjhHR2o4QWpxanZYVTYyamRIX1h4OURJT25kRkZaQ0tMY1Y3YnJnREc5UmJpWjFIOW5YRHpYUzF5RVRTT2hGT2M1RFBpMkhDcFJibDJ0czU?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Men's NCAA Tournament expert picks: Predictions for Elite 8 games Sunday - usatoday.com",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQk5DTjFwUlNGT0ZFQzBCZ1hhUVh1UFc4ZUo3WmpOQ1o3TVd5aG9VNnY3SWI4N2dNVncwWFg1V0J1QnlBWVBnQXFiZFdLTWxtZHliYU5EZjdDeXA2bkN2R2NxQldEdGx2YUs2b255ZTNmdXA5UlRqallndldob19nWGNLalVLbEFDVDdyQ2xTM3NoRGVJZHdmYlZWM0EyZUxHWWhGVDdBTFBRREFiWDBfNExUSldGdGVNQk9xUWNBalZ5VnpzZ0dKaGl0MjdBdw?oc=5",
-          "source": "Google News"
-        }
-      ],
-      "articles_away": [
-        {
-          "title": "Michigan vs Tennessee live updates, predictions, time, how to watch Elite 8 game - usatoday.com",
-          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOd0dfZWFLVGVIdHJ1QVdLQzFwRHJqNjRxNmQ0djZ1aWxDcURERGcwRnl3V1JYZFpsT1FMalhfdU5ybWRZTENXWExJUXo3SkxmNXlrNmFYR0F2b0xYREVrSXZ2b25CalY5dmJCWHZOY2lqeU1tSl9ySm5LZlJnU1FQVUIxUkxaLTltRjBoa1FzVVU2SmJPZ3o2NW15YWdGYXpZQzBzWS0tWko0LUpWbWxCcHoxMk1pTjBhTnhPMm15U0dNcGNVQU5MbXFnTkp6RFE4YVdEVXY1YzU1dDBMN3NKbXBRVTB0OU1jU2Iwa0xhd19RdG9zamVBLXRR?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Tennessee vs. Michigan prediction: March Madness 2026 pick, odds, best bet for Elite Eight Sunday - New York Post",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNb092WDkzcHFRU2ZHVTlBODhPdUNnZWJWOGhkVUV0alpOVURDRUFaOTNyTGJ6YlhyR3htejVOcVJZaEFiTUtVTXo2QXlMd2pmWUV0RHpqdXl3cjIxY3NKZ1UtRWUwdGQ2VHM1UldBcF9CWV9UdmNKb2ZUOEhnNjhHR2o4QWpxanZYVTYyamRIX1h4OURJT25kRkZaQ0tMY1Y3YnJnREc5UmJpWjFIOW5YRHpYUzF5RVRTT2hGT2M1RFBpMkhDcFJibDJ0czU?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Tennessee Volunteers @ Michigan Wolverines: Live game updates, stats, play-by-play - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTFJTdVNVTGRidlBFcWNONlpONTF3eDAxM0haOXpaVlZsc1FySmxSdDJseWJXSGJwS2d6Z3R4WjRhaGVTVkQzY0pLMDlPR3JPNUFSLUNSNExMLW5WVzFhS1VoNC1QY3VSaDZvSDlrMWRYQVVfVXlYb2xIUHU2UEdRdG1yaU5xcjlsQ3BrWW1B?oc=5",
-          "source": "Google News"
-        }
-      ]
+      "feature_drivers": [],
+      "articles_home": [],
+      "articles_away": []
     },
     {
-      "home_team": "Duke",
-      "away_team": "UConn",
+      "home_team": "Minnesota",
+      "away_team": "Baylor",
       "status": "",
-      "ridge_diff": 22.61,
-      "gb_diff": 10.21,
-      "nn_reg_diff": 9.79,
-      "reg_ensemble_diff": 13.76,
-      "logistic_prob": 0.976,
-      "bayes_prob": 1.0,
-      "nn_cls_prob": 0.975,
-      "cls_ensemble_prob": 0.981,
-      "reg_implied_prob": 0.798,
-      "final_win_prob_home": 0.88,
-      "final_win_prob_away": 0.12,
-      "predicted_winner": "Duke",
-      "home_ml": "-736",
-      "away_ml": "+736",
-      "model_std_dev": 0.081,
-      "confidence": "MED",
+      "ridge_diff": -7.23,
+      "gb_diff": -0.57,
+      "nn_reg_diff": -4.86,
+      "reg_ensemble_diff": -4.28,
+      "logistic_prob": 0.348,
+      "bayes_prob": 0.936,
+      "nn_cls_prob": 0.37,
+      "cls_ensemble_prob": 0.476,
+      "reg_implied_prob": 0.395,
+      "final_win_prob_home": 0.431,
+      "final_win_prob_away": 0.569,
+      "predicted_winner": "Baylor",
+      "home_ml": "+132",
+      "away_ml": "-132",
+      "model_std_dev": 0.245,
+      "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 4.9948,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_orb_pct",
-          "label": "\u0394 Orb Pct",
-          "contribution": 1.8309,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_tov_pct",
-          "label": "\u0394 Tov Pct",
-          "contribution": -1.7705,
-          "favors_home": false
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 1.4629,
-          "favors_home": true
-        },
-        {
-          "feature": "away_tov_pct",
-          "label": "Away Tov Pct",
-          "contribution": -1.3145,
-          "favors_home": false
-        }
-      ],
-      "articles_home": [
-        {
-          "title": "Duke men\u2019s basketball GM Rachel Baker has \u2018an impact on everything\u2019 for the Blue Devils - Andscape",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQ0pkLUZwT052eUtvN0N4UDR1NzYzRjFrMHJkT3NSbXZxN25QX05MWGZJZlFHOTNtVmRSaGV3cVdUS2dqaklfdEphcXBTQkE4aVpfbG9qYnlQZmpsX0NEQ1owZU1zdi1HeGhnNEUxQ2YxY2hKQ0daVHBhaWdGdGpXd2JXZ3BGR1ppT2kwZnhmekxtdVYxd0tkR1N4SXdhTXVoQTVyOXg4X2hDZ1RHamc?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Duke vs UConn live updates, predictions, time, how to watch Elite 8 game - usatoday.com",
-          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQeXVYTVJaaGZ1S0ZvR2hkWjFvaV9TSnFaNXBFb25kMVVyTmNJOVBkdzhLMnl2enNZb0k0OUR6ajhDRFdVNkhTbWlIZ0Iwa3VLSEZYSVZDUF9TczFCcmxlTjF5RnlUc2N0VUVZVUdhOUV6bDRZUUp5OGNGSF9VR0o4Qnh6UTZidFNjTnFJUVFWRTROb1VGTGVicXYtSzdGT3pVdURYUTlrc3R1cFU4UUhUNUlpWmk2b0pxYm41NjNkTHVvRlhVeF9TajhPY20xZ0dieEh6X3NBb2xfNDRQMV9IMGNxVmVOc3dmVThLN0Fqaw?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Men's NCAA Tournament expert picks: Predictions for Elite 8 games Sunday - usatoday.com",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQk5DTjFwUlNGT0ZFQzBCZ1hhUVh1UFc4ZUo3WmpOQ1o3TVd5aG9VNnY3SWI4N2dNVncwWFg1V0J1QnlBWVBnQXFiZFdLTWxtZHliYU5EZjdDeXA2bkN2R2NxQldEdGx2YUs2b255ZTNmdXA5UlRqallndldob19nWGNLalVLbEFDVDdyQ2xTM3NoRGVJZHdmYlZWM0EyZUxHWWhGVDdBTFBRREFiWDBfNExUSldGdGVNQk9xUWNBalZ5VnpzZ0dKaGl0MjdBdw?oc=5",
-          "source": "Google News"
-        }
-      ],
-      "articles_away": [
-        {
-          "title": "Men's NCAA Tournament expert picks: Predictions for Elite 8 games Sunday - usatoday.com",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQk5DTjFwUlNGT0ZFQzBCZ1hhUVh1UFc4ZUo3WmpOQ1o3TVd5aG9VNnY3SWI4N2dNVncwWFg1V0J1QnlBWVBnQXFiZFdLTWxtZHliYU5EZjdDeXA2bkN2R2NxQldEdGx2YUs2b255ZTNmdXA5UlRqallndldob19nWGNLalVLbEFDVDdyQ2xTM3NoRGVJZHdmYlZWM0EyZUxHWWhGVDdBTFBRREFiWDBfNExUSldGdGVNQk9xUWNBalZ5VnpzZ0dKaGl0MjdBdw?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Duke vs UConn live updates, predictions, time, how to watch Elite 8 game - usatoday.com",
-          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQeXVYTVJaaGZ1S0ZvR2hkWjFvaV9TSnFaNXBFb25kMVVyTmNJOVBkdzhLMnl2enNZb0k0OUR6ajhDRFdVNkhTbWlIZ0Iwa3VLSEZYSVZDUF9TczFCcmxlTjF5RnlUc2N0VUVZVUdhOUV6bDRZUUp5OGNGSF9VR0o4Qnh6UTZidFNjTnFJUVFWRTROb1VGTGVicXYtSzdGT3pVdURYUTlrc3R1cFU4UUhUNUlpWmk2b0pxYm41NjNkTHVvRlhVeF9TajhPY20xZ0dieEh6X3NBb2xfNDRQMV9IMGNxVmVOc3dmVThLN0Fqaw?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "UConn 82-71 Furman (Mar 20, 2026) Final Score - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLWFLMDlLS1hDMFVwekZva2lnQW5zUGFLLU1UcDZaTXFQZ3gtbXZ3SzlXYlVTMkhKa2d5YU1CbklqOGZZZkVXRGlSZTU2c1NDbFVRaXRXVTdYdWRiRC1OMVNLczUwT2FPaGFINm9pTHk5N2N5WllkNzJZTnRneGhTVXFsRjdiVUt4?oc=5",
-          "source": "Google News"
-        }
-      ]
+      "feature_drivers": [],
+      "articles_home": [],
+      "articles_away": []
     }
   ]
 }
