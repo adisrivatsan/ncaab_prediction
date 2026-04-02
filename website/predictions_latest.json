@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-01T16:23:14",
-  "date": "2026-04-01",
+  "generated_at": "2026-04-02T16:23:52",
+  "date": "2026-04-02",
   "summary": {
-    "total_games": 2,
-    "home_picks": 0,
+    "total_games": 4,
+    "home_picks": 2,
     "away_picks": 2,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 0,
-      "MED": 0,
+      "MED": 2,
       "LOW": 2
     },
-    "combined_ev": 0
+    "combined_ev": -0.0034
   },
   "model_performance": {
     "schema_version": "2.0",
@@ -71,27 +71,66 @@
       }
     }
   },
-  "top_picks": [],
+  "top_picks": [
+    {
+      "pick": "Auburn",
+      "matchup": "Illinois St. @ Auburn",
+      "home_team": "Auburn",
+      "away_team": "Illinois St.",
+      "bet_side": "HOME",
+      "ml": "-261",
+      "win_prob": 0.723,
+      "confidence": "MED",
+      "stake": 5.0,
+      "if_win": 1.92,
+      "ev": 0.0032,
+      "vegas_ml": "N/A",
+      "vegas_spread": "N/A",
+      "odds_movement": "\u2014",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "rank": 1
+    },
+    {
+      "pick": "West Virginia",
+      "matchup": "Stanford @ West Virginia",
+      "home_team": "West Virginia",
+      "away_team": "Stanford",
+      "bet_side": "HOME",
+      "ml": "-179",
+      "win_prob": 0.641,
+      "confidence": "MED",
+      "stake": 5.0,
+      "if_win": 2.79,
+      "ev": -0.0066,
+      "vegas_ml": "N/A",
+      "vegas_spread": "N/A",
+      "odds_movement": "\u2014",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "rank": 2
+    }
+  ],
   "predictions": [
     {
-      "home_team": "Colorado",
-      "away_team": "Oklahoma",
+      "home_team": "New Mexico",
+      "away_team": "Tulsa",
       "status": "",
-      "ridge_diff": -4.08,
-      "gb_diff": -1.6,
-      "nn_reg_diff": -3.53,
-      "reg_ensemble_diff": -3.12,
-      "logistic_prob": 0.391,
-      "bayes_prob": 0.46,
-      "nn_cls_prob": 0.606,
-      "cls_ensemble_prob": 0.502,
-      "reg_implied_prob": 0.423,
-      "final_win_prob_home": 0.458,
-      "final_win_prob_away": 0.542,
-      "predicted_winner": "Oklahoma",
-      "home_ml": "+118",
-      "away_ml": "-118",
-      "model_std_dev": 0.082,
+      "ridge_diff": -1.74,
+      "gb_diff": -2.86,
+      "nn_reg_diff": -2.47,
+      "reg_ensemble_diff": -2.37,
+      "logistic_prob": 0.453,
+      "bayes_prob": 0.493,
+      "nn_cls_prob": 0.619,
+      "cls_ensemble_prob": 0.535,
+      "reg_implied_prob": 0.441,
+      "final_win_prob_home": 0.484,
+      "final_win_prob_away": 0.516,
+      "predicted_winner": "Tulsa",
+      "home_ml": "+107",
+      "away_ml": "-107",
+      "model_std_dev": 0.07,
       "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
@@ -100,24 +139,202 @@
       "articles_away": []
     },
     {
-      "home_team": "Minnesota",
-      "away_team": "Baylor",
+      "home_team": "West Virginia",
+      "away_team": "Stanford",
       "status": "",
-      "ridge_diff": -7.23,
-      "gb_diff": -0.57,
-      "nn_reg_diff": -4.86,
-      "reg_ensemble_diff": -4.28,
-      "logistic_prob": 0.348,
-      "bayes_prob": 0.936,
-      "nn_cls_prob": 0.37,
-      "cls_ensemble_prob": 0.476,
-      "reg_implied_prob": 0.395,
-      "final_win_prob_home": 0.431,
-      "final_win_prob_away": 0.569,
-      "predicted_winner": "Baylor",
-      "home_ml": "+132",
-      "away_ml": "-132",
-      "model_std_dev": 0.245,
+      "ridge_diff": 2.98,
+      "gb_diff": 5.12,
+      "nn_reg_diff": 7.17,
+      "reg_ensemble_diff": 5.3,
+      "logistic_prob": 0.637,
+      "bayes_prob": 0.762,
+      "nn_cls_prob": 0.623,
+      "cls_ensemble_prob": 0.656,
+      "reg_implied_prob": 0.629,
+      "final_win_prob_home": 0.641,
+      "final_win_prob_away": 0.359,
+      "predicted_winner": "West Virginia",
+      "home_ml": "-179",
+      "away_ml": "+179",
+      "model_std_dev": 0.057,
+      "confidence": "MED",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "feature_drivers": [
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 1.5941,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_sent_headlines",
+          "label": "\u0394 Sent Headlines",
+          "contribution": 0.4942,
+          "favors_home": true
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 0.4199,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_momentum_net",
+          "label": "\u0394 Momentum Net",
+          "contribution": -0.2573,
+          "favors_home": false
+        },
+        {
+          "feature": "home_tov_pct",
+          "label": "Home Tov Pct",
+          "contribution": -0.2532,
+          "favors_home": false
+        }
+      ],
+      "articles_home": [
+        {
+          "title": "Mountaineers to Conclude 2025-26 Campaign This Weekend in Las Vegas - West Virginia University Athletics",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQanBJNzFEMlFzR0RwZlhFMW8tcU9MOUluUzNZX1dISGFuWkthT1NEVFBUb2RVRmRicVMtLVlYaWViX2JhaDZzUW5pcHJVOGlyb0lPa1NSYm5XeU1HOGJsal9CbUt4MzdadjZnQ2wxelk4eU1Ba29XcjR5aU1IZndCV1ZvSFh5azRDLVVuNkVXQ2QzYVhOeUptLXZubXc0TmRxQUxpM2kyVHR3X01FWUVna0lpdlJzWU4tZ19F?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Men's Basketball Faces West Virginia in College Basketball Crown - Stanford Cardinal",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPY1h6MWFKLXZlVzBpNHFUWlROdXdDQ1dMZ0ZzLUtEcmZXb1hwcEVHZGlxU1o5Tk9hbmxJblV1Z2FGSElySmtVcG4yN3ZTZUV1MGJrSWJyc2l1bjkyQ0dZRjFaV1VPbnlkQm1xRUNCUUtVbFoydmRfTEdjYnNQcUZkNlVnSWZfRDMzQVcxeW5WbDF1QTZmd2t2cFY1cFBqaGViMzI0TA?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Stanford vs. West Virginia odds, predictions: 2026 College Basketball Crown quarterfinal picks by proven model - CBS Spo",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNN3p0a2QtN0w2S2ZmQXRyZ2NSN3QxMEswTVBWRTJHUFlnVExUb3RIeDl5NkdKTGwybnlUalBqTXdZU2hCRDB4SU5VVGZQUExxc2pxaUJWclk3OFJuTG9yRF90WWNWeFIzdlk2YzR6ZlNxMDE1eEhyelRrY1V5QkF3VUVsSXpNRW8wQ0ExVk02X0xuXzNCNUV5X09oTHZIUlNqd3h5Um5QaktPdW9fS0ozbGVEZEdDYkRJOURnc2RpYnpKb2VKbWx3?oc=5",
+          "source": "Google News"
+        }
+      ],
+      "articles_away": [
+        {
+          "title": "Men\u2019s Basketball Selected to College Basketball Crown - Stanford Cardinal",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxON0NKQWNmZjd1Njc1RzZhWG8xNEtPdFB1S09QdDBra2txY3I5el9qdmZpZE1aNzlpdkk0cC1GZTBEbnA2dG9UZGxEelJ0ZklvQzkwcmo4TDR0bnlGZHJ5RFl3cXU1eUFpU2tINU9SNjFsaUJZLVZwaFRaNmN4cUVtM1FFUnEzeHFXS3F4OW5KRzBhZk5sdXc?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Stanford vs. West Virginia odds, predictions: 2026 College Basketball Crown quarterfinal picks by proven model - CBS Spo",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNN3p0a2QtN0w2S2ZmQXRyZ2NSN3QxMEswTVBWRTJHUFlnVExUb3RIeDl5NkdKTGwybnlUalBqTXdZU2hCRDB4SU5VVGZQUExxc2pxaUJWclk3OFJuTG9yRF90WWNWeFIzdlk2YzR6ZlNxMDE1eEhyelRrY1V5QkF3VUVsSXpNRW8wQ0ExVk02X0xuXzNCNUV5X09oTHZIUlNqd3h5Um5QaktPdW9fS0ozbGVEZEdDYkRJOURnc2RpYnpKb2VKbWx3?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Stanford head coach Kyle Smith looks ahead to the College Basketball Crown - On3",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPOHQzR3M1azRpNlBDZ2Nlc1dpR1JiMGs3TUxmNWlJOVJqUTV1TUdWdXU3OU1zdWhLX05Pa1VseFY4eFJpX3RObFo5YjFkRzRGSF9LRUJ4OGJieGdzdnN5WnNGU3l2eTVTeU1ZbUZ3VVk3SnlfSzZPeDI1OElhWDlsRVJTdHBIZUpCRGNWWkhoeng3RzJwOU9MeDlqVnIwY2w5MEkyMm1kNDVkT09sc0x3LU52c3BaQzMxcWQzd0VhbEFnRHozYU9aZg?oc=5",
+          "source": "Google News"
+        }
+      ]
+    },
+    {
+      "home_team": "Auburn",
+      "away_team": "Illinois St.",
+      "status": "",
+      "ridge_diff": 9.13,
+      "gb_diff": 6.84,
+      "nn_reg_diff": 7.41,
+      "reg_ensemble_diff": 7.76,
+      "logistic_prob": 0.806,
+      "bayes_prob": 0.594,
+      "nn_cls_prob": 0.82,
+      "cls_ensemble_prob": 0.77,
+      "reg_implied_prob": 0.685,
+      "final_win_prob_home": 0.723,
+      "final_win_prob_away": 0.277,
+      "predicted_winner": "Auburn",
+      "home_ml": "-261",
+      "away_ml": "+261",
+      "model_std_dev": 0.093,
+      "confidence": "MED",
+      "home_ml_movement": "\u2014",
+      "away_ml_movement": "\u2014",
+      "feature_drivers": [
+        {
+          "feature": "diff_adj_em",
+          "label": "\u0394 Adj Em",
+          "contribution": 1.4363,
+          "favors_home": true
+        },
+        {
+          "feature": "home_adj_em",
+          "label": "Home Adj Em",
+          "contribution": 0.7023,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_sent_headlines",
+          "label": "\u0394 Sent Headlines",
+          "contribution": 0.5044,
+          "favors_home": true
+        },
+        {
+          "feature": "diff_orb_pct",
+          "label": "\u0394 Orb Pct",
+          "contribution": 0.4207,
+          "favors_home": true
+        },
+        {
+          "feature": "home_sent_headlines",
+          "label": "Home Sent Headlines",
+          "contribution": 0.3997,
+          "favors_home": true
+        }
+      ],
+      "articles_home": [
+        {
+          "title": "How to watch NIT semifinals: Schedule for Auburn vs. Illinois St., New Mexico vs. Tulsa - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORm9kMGJqbWVOSzVRM3ZCanpXWXdiOWV1MjZPVk8tWE5GSEFWQ2VWbmFvcDBXV19ORTNXRldfQ1YxbWRKUUE1dUViNHVYOHZBUVNtcnRJNkZtYlN5WHhEWGFCV3NIanEtbUJWOERySHd5clZ0NDZHMDhRbC1EZGUyNUFCSGdPYmliUndSTDVzazFGdGVsYWxLR0dpd2Izd2xINHpV?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "Auburn embraces postseason second chance in the NIT semifinals - ncaa.com",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT1hwSXpnYTN3VFhGMVE4ZTVQOFExTnBpbGk5VG5zOWtsZmh6MklLaWw3U1B2dnNUYWdPZzNWRW01QkdJYXBDN0F4YVN2cUVPdnJrV1N0c241RlgwcW01WGQ2bnBwbkVhcTJ2TkozSWthLVlnYnV5T2hRcG9fdk4tdWFMMkluSGlqbXFFdmxTc25nUDdNWVRBNW5ON2FwQ29tZ0tiUXl5R1Q4Zy1ZZl9XWmV2Y2lsQdIBuwFBVV95cUxNeXRUVjYtTmNzYjAzc09mMzVoN0RHa0VjS3g4bGxyZkdYcVNVWFRNcHFmakRoczdtQ0ctMi1nbGczSjNab1c2WXFzVEVjeUdvYVF1NUZGSlBRWG9icjhoLVJIS21OTTlNZHIzRy1kakZkeGpTejhWcUVWWUloVHhtMTg5anpONnlhX0xVSjU4YUVoa0wtRkRBR3JBX0syZ2JFaUdWUXpFaXhSSmc5ZFQ4R1Noakw2TWVJODhj?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "NCAA wouldn't dare put a 16-loss Auburn in March Madness. Would it? - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOS3lpUHVFYzNVVVZWV3ZndWlQVVo0VVZmQ3lEejVMUVptUmpuUG5kQmwydUtoVFpXRXN3MjJ4ZV9Kb1ZSMDJqNDMyYXVjMlZEeFNsbkZETHNvU2RVR2gtc1dDNTBXaXNKeXB4b054MTBjMW9vUTJWV0FGcU5PYkpxc21UYVNiYTNLcUVac2tmSVNHNUdZM0NJV0NQb3lLeDZFNjJ5dkNzd2J0QUZWVEtiYThIZk1jc1BuTTJiWUpZUG54SU5tYjh1RA?oc=5",
+          "source": "Google News"
+        }
+      ],
+      "articles_away": [
+        {
+          "title": "Wake Forest vs Illinois State Live Stream: How to Watch Men\u2019s College Basketball - Fubo",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObEtudEJQeV9SUUFKYW9WZU1pWVJfdGxHazU1bHZ4UGVhWUVYV1dPXzAtWjRyZVJCMnRQcGtMX0RYRVk2YUlYSTFHdjdUN3JqVDZsMWZhUENXRUpYOFJQelBTcnE4cDdMcGY3Z3lWZnBkVEI5MXNBWlF0QUZMOWN4amdSeWRJRzBxQWdHdnJEdktYLWxNTGh5d3owTVRBNjlyYk9yMk9fdGIydWhtaWkw?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "How to watch Northern Iowa vs. Illinois State men\u2019s basketball: MVC Tournament TV channel and streaming options for Marc",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOZXlCbkJNOGZ0VXNydDdoZ29KRWVPSGQzSkIzaGVXbDh2aW81MW1INzVfVVhnVF80cmhfOUZrYlA0dnBKSzVYdzJGN1RlRVVwU21GRXNrODhCbGRKbGI5Nm16ampUQ0RNUlRob19QU1NHZHlPWmdoeEdHal9GNWl0V19TRmVsSGJVdUVXQmtsd3pXaWRtUlBuUnZFOERuUVdWLTk1WGF5WjRIWHA2eV9hU2VsTTJYaDBHbVpPbVh2YlNWNkFJcWZ1UTRBaWJsR3VrTXFQT1hNN1hvV2xCalJfN0tQMUpxTVhlNFlfOG9KUDcxaGZiOFlhN1ZSd2JQM2tILW04?oc=5",
+          "source": "Google News"
+        },
+        {
+          "title": "USC 87-67 Illinois State (Nov 14, 2025) Final Score - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdThSZl9HejcwMDZ4Y0NHeGFHU195N0JXRUxsTFdiTlQ0RHR1ZC1yalZCWGRmY1RZZUJVWTA2bU5uaHdudTdmSUdEU2ZjMW14aFcyWkFIRUhsb3lORVBVMldVZnNSTTZkWkFaTHZHYUdaalNuU1ZkQUVLTDF6VjJoLV9qV3l4RTUtNFZjaA?oc=5",
+          "source": "Google News"
+        }
+      ]
+    },
+    {
+      "home_team": "Creighton",
+      "away_team": "Rutgers",
+      "status": "",
+      "ridge_diff": -3.81,
+      "gb_diff": -5.33,
+      "nn_reg_diff": -4.02,
+      "reg_ensemble_diff": -4.35,
+      "logistic_prob": 0.366,
+      "bayes_prob": 0.002,
+      "nn_cls_prob": 0.048,
+      "cls_ensemble_prob": 0.15,
+      "reg_implied_prob": 0.393,
+      "final_win_prob_home": 0.284,
+      "final_win_prob_away": 0.716,
+      "predicted_winner": "Rutgers",
+      "home_ml": "+253",
+      "away_ml": "-253",
+      "model_std_dev": 0.178,
       "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
