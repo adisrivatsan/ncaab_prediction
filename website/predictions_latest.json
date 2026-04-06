@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-05T16:11:38",
-  "date": "2026-04-05",
+  "generated_at": "2026-04-06T16:35:29",
+  "date": "2026-04-06",
   "summary": {
-    "total_games": 2,
+    "total_games": 1,
     "home_picks": 1,
-    "away_picks": 1,
+    "away_picks": 0,
     "tensorflow_available": true,
     "confidence": {
       "HIGH": 0,
-      "MED": 2,
-      "LOW": 0
+      "MED": 0,
+      "LOW": 1
     },
-    "combined_ev": 0.0037
+    "combined_ev": 0
   },
   "model_performance": {
     "schema_version": "2.0",
@@ -71,224 +71,33 @@
       }
     }
   },
-  "top_picks": [
-    {
-      "pick": "Oklahoma",
-      "matchup": "Oklahoma @ West Virginia",
-      "home_team": "West Virginia",
-      "away_team": "Oklahoma",
-      "bet_side": "AWAY",
-      "ml": "-233",
-      "win_prob": 0.7,
-      "confidence": "MED",
-      "stake": 5.0,
-      "if_win": 2.15,
-      "ev": 0.005,
-      "vegas_ml": "N/A",
-      "vegas_spread": "N/A",
-      "odds_movement": "\u2014",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "rank": 1
-    },
-    {
-      "pick": "Auburn",
-      "matchup": "Tulsa @ Auburn",
-      "home_team": "Auburn",
-      "away_team": "Tulsa",
-      "bet_side": "HOME",
-      "ml": "-320",
-      "win_prob": 0.762,
-      "confidence": "MED",
-      "stake": 5.0,
-      "if_win": 1.56,
-      "ev": -0.0013,
-      "vegas_ml": "N/A",
-      "vegas_spread": "N/A",
-      "odds_movement": "\u2014",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "rank": 2
-    }
-  ],
+  "top_picks": [],
   "predictions": [
     {
-      "home_team": "West Virginia",
-      "away_team": "Oklahoma",
+      "home_team": "Michigan",
+      "away_team": "UConn",
       "status": "",
-      "ridge_diff": -4.68,
-      "gb_diff": -0.68,
-      "nn_reg_diff": -5.16,
-      "reg_ensemble_diff": -3.67,
-      "logistic_prob": 0.331,
-      "bayes_prob": 0.212,
-      "nn_cls_prob": 0.018,
-      "cls_ensemble_prob": 0.166,
-      "reg_implied_prob": 0.409,
-      "final_win_prob_home": 0.3,
-      "final_win_prob_away": 0.7,
-      "predicted_winner": "Oklahoma",
-      "home_ml": "+233",
-      "away_ml": "-233",
-      "model_std_dev": 0.147,
-      "confidence": "MED",
+      "ridge_diff": 3.84,
+      "gb_diff": 0.56,
+      "nn_reg_diff": -1.77,
+      "reg_ensemble_diff": 0.61,
+      "logistic_prob": 0.671,
+      "bayes_prob": 0.972,
+      "nn_cls_prob": 0.91,
+      "cls_ensemble_prob": 0.839,
+      "reg_implied_prob": 0.515,
+      "final_win_prob_home": 0.661,
+      "final_win_prob_away": 0.339,
+      "predicted_winner": "Michigan",
+      "home_ml": "-195",
+      "away_ml": "+195",
+      "model_std_dev": 0.184,
+      "confidence": "LOW",
       "home_ml_movement": "\u2014",
       "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": -0.5435,
-          "favors_home": false
-        },
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.4199,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": -0.4159,
-          "favors_home": false
-        },
-        {
-          "feature": "away_sent_headlines",
-          "label": "Away Sent Headlines",
-          "contribution": -0.3948,
-          "favors_home": false
-        },
-        {
-          "feature": "diff_sent_headlines",
-          "label": "\u0394 Sent Headlines",
-          "contribution": -0.2892,
-          "favors_home": false
-        }
-      ],
-      "articles_home": [
-        {
-          "title": "Oklahoma vs. West Virginia: Final odds and prediction for College Basketball Crown championship - Stormin in Norman",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZ3A2ZGFrX190Y0djYlpJLVBBVWVhaE1FdTB4R2ZZcWtVS0twMElmd1dmdjB4UDVzZkJqQlZFMjZlaHZINGdDZ1VXeGdPZ1lJM1QtcE5zNF92dGF4R0dpU18yVXJjY2ZieV9ZcHBzbXBtRjVDb0tRaGFXYXJOdGhwLWQwLTZ0RUo0ZEVCcUcxNmt1UjBCZFlLQlpjUTlqaXhqZG9lUXZiR2Z2ME0wcW5SS3p2eXdGNnZo?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "What channel is OU basketball vs West Virginia on today? CBC title game time, TV schedule - The Oklahoman",
-          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQR0FtNGJsQkNiZ0Rqb3FIcTFCUXBvakkydFZJblRHcTlBdmIxZTBGMVJIOUJxaE96RXA2d2dVVDZ3Ql9uYWU3VTJDQl9CaV9Wd0hkdzRJbWljT2xYalhrR3A3dkE5b2ozc1lJZ3ZKdmp6TURzbHVDSVBhTkFBNTZ5Sl9LcXE3cEdyN1VCYlNtUUdPQS0xOXVFNTU3VGJPZEl6XzBHVjFNNDlTenA5d2ptWGh2WFRDLVVRcVZJRkpsdUY3dzE2OVNXNE1pQ210ZEtVMnVuWlNfSlhReFloRUF4YXdySTJEbXlTTGpEOWJtNEl2YW9ab0NCeXAycEpvQ3FJVFE?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "College Basketball Crown championship 2026: How to watch Oklahoma vs. West Virginia - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUzI2SHVHLUNDNTdoeGRwNzJVenFSQTJLaURCVDlZTFNjMXBfbjZrOHFHdG5jb0RmRGRPTFotalFMcG8tcjRNb1gxY2xIVUtJR2QwRHNqWEJfN0gwZndCNzdBNmo1Q1BhbEJYM3dLZXJNS05PSFM1YlVNY0hJSFJ5UEwtNlY4dFFNdmg4bXA1Qk9CTTBPX202ejdmOF8xcFBURFNBa21mRDZvaUVFbUdUeW52WQ?oc=5",
-          "source": "Google News"
-        }
-      ],
-      "articles_away": [
-        {
-          "title": "College Basketball Crown championship 2026: How to watch Oklahoma vs. West Virginia - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUzI2SHVHLUNDNTdoeGRwNzJVenFSQTJLaURCVDlZTFNjMXBfbjZrOHFHdG5jb0RmRGRPTFotalFMcG8tcjRNb1gxY2xIVUtJR2QwRHNqWEJfN0gwZndCNzdBNmo1Q1BhbEJYM3dLZXJNS05PSFM1YlVNY0hJSFJ5UEwtNlY4dFFNdmg4bXA1Qk9CTTBPX202ejdmOF8xcFBURFNBa21mRDZvaUVFbUdUeW52WQ?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "OU Men's Basketball to Participate in College Basketball Crown - University of Oklahoma - soonersports.com",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeGhyLTR2RERtdWVadXQ2c1ZETzhaOTgzV21BczFrdlE3cjkzcUI5dndzSkRpU1phdWFBZGFqZk0yMFh3SmxnOFdwbzVibEFFTVBhRXRnU3lxR2laRkdtTE45TkJnZDl0MHdtM0E5VE5EVHV6N0ZhdlNrQ1pIRUdjaU5iVVpVSEtiejlLTmZZNXNzeDJBdEVCczNTUVE5eFRkZmE0?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Oklahoma vs. West Virginia odds, prediction, time: 2026 Crown tournament championship picks by proven model - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONjJrSWRsNm1oZ3lleXRicFJINjR5UmZ4UkQwd3p5cThwY1pTMnZVLVh2aG9ud04wdGUyLWhzd3hCMmNoelZqVUNadlpjM1A0RDBOcHZwd09uWVpBU3VHZlpuUnI1T0ZtTnlGN09kWVBxcHFhb1FmYlNMREpXQ3M2TjVfVnBYY0thWnh0MmRlaGlWckNxeFBTcFNHc1U3U2owSnFSQmJiUGJxOFczdmhSeEtmcWNQNTVTZ2VNOVVHNFkwZw?oc=5",
-          "source": "Google News"
-        }
-      ]
-    },
-    {
-      "home_team": "Auburn",
-      "away_team": "Tulsa",
-      "status": "",
-      "ridge_diff": 5.96,
-      "gb_diff": 4.01,
-      "nn_reg_diff": 8.99,
-      "reg_ensemble_diff": 6.58,
-      "logistic_prob": 0.772,
-      "bayes_prob": 0.869,
-      "nn_cls_prob": 0.987,
-      "cls_ensemble_prob": 0.888,
-      "reg_implied_prob": 0.659,
-      "final_win_prob_home": 0.762,
-      "final_win_prob_away": 0.238,
-      "predicted_winner": "Auburn",
-      "home_ml": "-320",
-      "away_ml": "+320",
-      "model_std_dev": 0.121,
-      "confidence": "MED",
-      "home_ml_movement": "\u2014",
-      "away_ml_movement": "\u2014",
-      "feature_drivers": [
-        {
-          "feature": "home_adj_em",
-          "label": "Home Adj Em",
-          "contribution": 0.7023,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_adj_em",
-          "label": "\u0394 Adj Em",
-          "contribution": 0.652,
-          "favors_home": true
-        },
-        {
-          "feature": "diff_sent_headlines",
-          "label": "\u0394 Sent Headlines",
-          "contribution": 0.6453,
-          "favors_home": true
-        },
-        {
-          "feature": "away_adj_em",
-          "label": "Away Adj Em",
-          "contribution": -0.4922,
-          "favors_home": false
-        },
-        {
-          "feature": "home_sent_headlines",
-          "label": "Home Sent Headlines",
-          "contribution": 0.3997,
-          "favors_home": true
-        }
-      ],
-      "articles_home": [
-        {
-          "title": "Tulsa Golden Hurricane @ Auburn Tigers: Live game updates, stats, play-by-play - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcS1JdS1CUWJKVjhIWDJsYW1SS2NZaWw0LUpVNFllTjFsMFpGNTB3R01la1FWcURHYlJrbVFKMnJtREhMeTlVcm5fWVMzT3p6WUZIZjc0MUdoVFlsdVJLT3lRNkN6MVJBdUE5d2J6N1JrZ2RLVm5CcERYZ29GWE5wcWtUTzNid0Jp?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Auburn Tigers vs Tulsa Golden Hurricane Box Score - April 05, 2026 - The Athletic - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOR1pmdV9VUmItN096THFoZ0lINUlrVHlfdEtHaGJ3dlVYaExzaUdjdlVBLUJFMDBpZ3JBNmJIYnU4bU8tbVZkWVpSZnZxdmpMTWl6ZDlWWGV3b1NYSkFtemVoOEk3NEZvSEhyZTRSQUdHVFJ4NjYxXzhwdXpWVy1jQ0M5eWN6YnRQek12VWp5bTNIWU5UeFJEczNjR19kcjVLM08tbW9RZUI3SE5wRGJCYkdNbko?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "What channel is NIT championship game today? Time, TV for Auburn-Tulsa - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRmZCRWdCUUNBUjctbm9oRWR4QjE2SURVRDN6bnZOd2gtaEtkTFhGekRnZGRoZXhzWk0yWXlqR0R6REt3LW9xR0owRjNmZUE3dVc5UUI0MDZlaFZYRzZqLTFKS0JsUVBXb2N1ek5rV282Zi1lWnFZNEs4bnVJWGxLZUNBY1J3UjJFODJuVVNXVFpBWXpZdEg2RENzRXFPY0tzNTdtNWxUWUNJS3J2YU1KRVEtRjRTaTM3ZHJlQ1ZleWE4QQ?oc=5",
-          "source": "Google News"
-        }
-      ],
-      "articles_away": [
-        {
-          "title": "Tulsa Golden Hurricane @ Auburn Tigers: Live game updates, stats, play-by-play - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcS1JdS1CUWJKVjhIWDJsYW1SS2NZaWw0LUpVNFllTjFsMFpGNTB3R01la1FWcURHYlJrbVFKMnJtREhMeTlVcm5fWVMzT3p6WUZIZjc0MUdoVFlsdVJLT3lRNkN6MVJBdUE5d2J6N1JrZ2RLVm5CcERYZ29GWE5wcWtUTzNid0Jp?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "Auburn Tigers vs Tulsa Golden Hurricane Box Score - April 05, 2026 - The Athletic - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOR1pmdV9VUmItN096THFoZ0lINUlrVHlfdEtHaGJ3dlVYaExzaUdjdlVBLUJFMDBpZ3JBNmJIYnU4bU8tbVZkWVpSZnZxdmpMTWl6ZDlWWGV3b1NYSkFtemVoOEk3NEZvSEhyZTRSQUdHVFJ4NjYxXzhwdXpWVy1jQ0M5eWN6YnRQek12VWp5bTNIWU5UeFJEczNjR19kcjVLM08tbW9RZUI3SE5wRGJCYkdNbko?oc=5",
-          "source": "Google News"
-        },
-        {
-          "title": "What channel is NIT championship game today? Time, TV for Auburn-Tulsa - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRmZCRWdCUUNBUjctbm9oRWR4QjE2SURVRDN6bnZOd2gtaEtkTFhGekRnZGRoZXhzWk0yWXlqR0R6REt3LW9xR0owRjNmZUE3dVc5UUI0MDZlaFZYRzZqLTFKS0JsUVBXb2N1ek5rV282Zi1lWnFZNEs4bnVJWGxLZUNBY1J3UjJFODJuVVNXVFpBWXpZdEg2RENzRXFPY0tzNTdtNWxUWUNJS3J2YU1KRVEtRjRTaTM3ZHJlQ1ZleWE4QQ?oc=5",
-          "source": "Google News"
-        }
-      ]
+      "feature_drivers": [],
+      "articles_home": [],
+      "articles_away": []
     }
   ]
 }
