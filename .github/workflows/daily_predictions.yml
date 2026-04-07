@@ -1,8 +1,9 @@
 name: Daily NCAAB Predictions
 
 on:
-  schedule:
-    - cron: '0 16 * * *'     # Every day 12pm EDT (16:00 UTC)
+  # Schedule disabled — season over (2026-04-07). Re-enable for next season.
+  # schedule:
+  #   - cron: '0 16 * * *'     # Every day 12pm EDT (16:00 UTC)
   workflow_dispatch:         # manual trigger from GitHub Actions UI
 
 permissions:
